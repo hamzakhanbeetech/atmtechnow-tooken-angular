@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#FFF" d="M.889 3.556h30.222v27.556H.889z"/>
+        <path fill="#A7A7A7" fill-rule="nonzero" d="M29.334 3H25V1a1 1 0 1 0-2 0v2h-6V1a1 1 0 1 0-2 0v2H9V1a1 1 0 1 0-2 0v2H2.667A2.666 2.666 0 0 0 0 5.666v23.667A2.667 2.667 0 0 0 2.667 32h26.667A2.666 2.666 0 0 0 32 29.333V5.666A2.665 2.665 0 0 0 29.334 3zM30 29.333a.667.667 0 0 1-.666.667H2.667A.667.667 0 0 1 2 29.333V5.666C2 5.299 2.299 5 2.667 5H7v2a1 1 0 1 0 2 0V5h6v2a1 1 0 1 0 2 0V5h6v2a1 1 0 1 0 2 0V5h4.334c.367 0 .666.299.666.666v23.667z"/>
+        <rect width="4" height="3" x="7" y="12" fill="#A7A7A7" fill-rule="nonzero" opacity=".5" rx="1.5"/>
+        <rect width="4" height="3" x="7" y="17" fill="#6CC64D" fill-rule="nonzero" rx="1.5"/>
+        <rect width="4" height="3" x="7" y="22" fill="#A7A7A7" fill-rule="nonzero" opacity=".5" rx="1.5"/>
+        <rect width="4" height="3" x="14" y="22" fill="#A7A7A7" fill-rule="nonzero" opacity=".5" rx="1.5"/>
+        <rect width="4" height="3" x="14" y="17" fill="#A7A7A7" fill-rule="nonzero" opacity=".5" rx="1.5"/>
+        <rect width="4" height="3" x="14" y="12" fill="#6CC64D" fill-rule="nonzero" rx="1.5"/>
+        <rect width="4" height="3" x="21" y="22" fill="#FF4A00" fill-rule="nonzero" rx="1.5"/>
+        <rect width="4" height="3" x="21" y="17" fill="#A7A7A7" fill-rule="nonzero" opacity=".5" rx="1.5"/>
+        <rect width="4" height="3" x="21" y="12" fill="#6CC64D" fill-rule="nonzero" rx="1.5"/>
+    </g>
+</svg>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="27px" height="15px" viewBox="0 0 27 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="New_Features" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Control-Agent-Schedule_Tutorial_After_Activating" transform="translate(-112.000000, -272.000000)">
+            <g id="Group-7-Copy" transform="translate(0.000000, 261.000000)">
+                <g id="Group" transform="translate(112.000000, 11.000000)">
+                    <path d="M0,1.99424756 C0,0.892855047 0.898338318,1.23574855e-14 2.00732994,1.17912621e-14 L24.9926701,5.55211394e-17 C26.1012878,-5.10511392e-16 27,0.89817788 27,1.99380643 L27,9.45256897 C27,10.5537179 26.1040837,11.4517447 25.0020067,11.4582237 C25.0020067,11.4582237 10.6236265,11.5462429 5.06742354,11.5462429 C0.820639543,11.5571269 0,14.5619769 0,14.5619769 L0,1.99424756 Z" id="Rectangle-3" fill="#F03838"></path>
+                    <text id="New" font-family="ProximaNova-Regular, Proxima Nova" font-size="9" font-weight="normal" fill="#FFFFFF">
+                        <tspan x="4.2962963" y="8">New</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
