@@ -1,0 +1,27 @@
+@import '~assets/css/variables';
+.fancy-form .form-group label:not([class*=col-]), .fancy-modal .form-group label:not([class*=col-]), .panel-box label {
+  text-transform: uppercase;
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: .6px;
+  color: rgba(0,0,0,.5);
+  margin-bottom: 0;
+  padding: 0 10px 0 0;
+}
+.fancy-form .form-control, .fancy-form .form-group input, .fancy-form .form-group textarea, .fancy-modal .form-control.ui-select-container, .fancy-modal .form-group input, .fancy-modal .form-group textarea {
+  background: 0 0;
+  border: none;
+  outline: 0;
+  border-bottom: 1px solid #c8c8c8;
+  width: 100%;
+  padding: 3px 10px 10px;
+  border-radius: 0;
+  color: rgba(0,0,0,.71);
+  font-family: $proxima-reg;
+  letter-spacing: .9px;
+  position: relative;
+}

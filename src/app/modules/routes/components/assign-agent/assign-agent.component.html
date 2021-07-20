@@ -1,0 +1,30 @@
+<div class="modal-body">
+  <form [formGroup]="assignAgentForm" class="fancy-form bot-noGap assign-agent-form">
+
+    <div class="col-12">
+      <label class="control-label">
+       Select Team
+      </label>
+    </div>
+    <div class="col-lg-12">
+      <div class="form-group">
+        <!-- teams dropdown -->
+        <p-dropdown class="add-dev-form-control" [filter]="true" filterPlaceholder="Select Team" [placeholder]="'Select Team'"  [options]="teamList" formControlName="team" optionLabel="team_name" (onChange)="onTeamSelection()"></p-dropdown>
+      </div>
+    </div>
+
+    <div class="col-12 mt-3">
+      <label class="control-label">
+        Select Agent
+      </label>
+    </div>
+    <div class="col-lg-12">
+      <div class="form-group">
+        <!-- Agents dropdown -->
+        <p-dropdown class="add-dev-form-control" [filter]="true" filterPlaceholder="Select Agent"  [placeholder]="'Select Agent'" [options]="agentsList" formControlName="fleet_id" optionLabel="fleet_name" (onChange)="onAgentSelection()"></p-dropdown>
+      </div>
+    </div>
+
+  </form>
+
+</div>

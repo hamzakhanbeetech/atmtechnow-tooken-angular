@@ -1,0 +1,104 @@
+.centerContent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.card{
+    max-width: 500px;
+    box-shadow: 3px 3px 8px 0 rgba(0,0,0,0.05);
+    border-radius: 12px;
+    width: 100%;
+    border: none;
+}
+.card-title {
+    color: #131415 !important;
+    font-family: AvenirNext !important;
+    letter-spacing: 0.08em !important;
+    font-size: 24px !important;
+    font-weight: bold;
+}
+.has-feedback .form-control {
+    color: #131415 !important;
+    font-family: AvenirNext !important;
+    border-radius: 10px !important;
+    height: 50px !important;
+    letter-spacing: 0.08em !important;
+    font-size: 16px !important;
+    background: #ffffff;
+    border: solid 1px #c2c2c2;
+    padding-right: 21px;
+    padding-left: 45px !important;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 35px;
+    padding: 6px 16px;
+    font-size: 14px;
+    line-height: 1.52857143;
+    color: #3a3f51;
+    background-color: #ffffff;
+    background-image: none;
+    border: 1px solid #dde6e9;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-control:focus {
+    border-color: #4bc1a1;
+    outline: 0;
+}
+
+.form-control::-moz-placeholder {
+    color: #b7bac9;
+    opacity: 1;
+}
+
+.form-control:-ms-input-placeholder {
+    color: #b7bac9;
+}
+
+.form-control::-webkit-input-placeholder {
+    color: #b7bac9;
+}
+
+.fa-icons {
+    position: absolute;
+    top: 17px;
+    left: 30px;
+    color: #000000;
+    font-size: 16px !important;
+    opacity: 0.6;
+}
+
+.custom-button {
+    width: 100%;
+    max-width: 350px;
+    height: 50px;
+    background-color: #1394ff;
+    border-color: #1394ff;
+    font-family: AvenirNext !important;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 5px !important;
+    }
+    
+    .custom-button:hover {
+        background: white;
+        color: #1394ff;
+    }
+    .disabled{
+        cursor: not-allowed !important;
+    }
+

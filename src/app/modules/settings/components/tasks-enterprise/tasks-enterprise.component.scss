@@ -1,0 +1,13 @@
+button.add-button {
+    color: white;
+    background-color:#1394ff;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 140px;
+    
+    &:hover {
+      color:#1394ff;
+      background-color: white;
+      border: solid 1px #1394ff;
+    }
+  }

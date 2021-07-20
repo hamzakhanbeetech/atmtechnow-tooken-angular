@@ -1,0 +1,134 @@
+@import '~assets/css/variables';
+
+.sidebar-div{
+  width: 100%;
+  max-width: 100%;
+  box-shadow: 5px 0 30px 0 rgba(0,0,0,.5);
+  transition: all .2s;
+  min-height: 100%;
+  height: 100%;
+  background-color: $color-secondary;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  transition-delay: 0s;
+  transform: translate3d(-100%,0,0);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+  &.show{
+    transform: translate3d(0,0,0);
+    opacity: 1;
+    visibility: visible;  
+    z-index: 99;  
+  }
+  .logo_space{
+    height: 60px;
+    display: block;
+    padding-left: 24px;
+    color: #fff;
+    text-decoration: none!important;
+    white-space: nowrap;
+    transition: all .3s;
+    outline: 0;
+    background-color: $color-secondary;
+    font-size: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .img-logo{
+    margin-left: 15px;
+    max-height: 55px;
+  }
+ 
+  div.items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-height: calc(100% - 60px);
+    background-color: #1c1c1c;
+  }
+  ul.bottom-navbar,ul.top-navbar{
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    li{
+      font-weight: 400;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: .5px;
+      color: #939393;
+      transition: all .5s;
+      height: 60px;
+      padding: 17px 20px;
+      letter-spacing: 1.8px;
+      font-size: 15px;
+      white-space: nowrap;
+      border-bottom: 1px solid rgba(255,255,255,.05);
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      &:hover{
+        color: white;
+        background-color: $color-secondary;
+      }
+      &.active{
+        color: white;
+        background-color:#1984ff
+      }
+
+      span.menu-img .tf-new{
+        &::before{
+        font-size: 20px;
+        }
+        .path1::before,{
+          font-size: 20px;
+        }
+        .path2::before{
+          font-size: 21px;
+        }
+      }
+      span.menu-img{
+        width: 40px;
+      }
+      span.full-text {
+        margin-left: 20px;
+        width: 75%;
+      }
+    }
+  }
+}
+
+@media (min-width:996px){
+  .sidebar-div{
+    max-width: 256px;
+  }
+}
+
+
+.hippo-icon .menu-img {
+  background-image: url('/assets/images/hippo-chat-icon-sidebar.svg');
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.hippo-icon:hover .menu-img{
+  background-image: url('/assets/images/hippo-chat-icon-sidebar-hover.svg');
+}
+.tookan-guide .menu-img {
+  background-image: url('/assets/images/tookan-guide-sidebar-icon.png');
+  height: 20px;
+  background-repeat: no-repeat;
+}
+.tookan-guide:hover .menu-img{
+  background-image: url('/assets/images/tookan-guide-sidebar-icon-hover.png');
+}
+.new-tag-sidebar{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}

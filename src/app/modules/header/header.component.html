@@ -1,0 +1,60 @@
+<div class="top-header">
+  <div class="left-side-header">
+    <ul class="header-ul">
+      <li class="tf-new icon-Main_Menu cp" (click)="showSidebar=!showSidebar"></li>
+      <li class="d-flex">
+        <span class="full-logo cp d-flex">
+          <img [src]="commonService.loginData.logo||'assets/images/tookan-new-logo.svg'" (click)="redirectToDashboard()" [ngClass]="{'others':commonService.loginData.logo}"
+          /> </span>
+      </li>
+    </ul>
+    <ul class="header-left">
+      <ng-container #dynLeftLi></ng-container>
+    </ul>
+  </div>
+
+  <ul class="header-right">
+    <li  class="d-none d-md-block cp" (click)="commonService.emitDataToParentWindow('app.settings.billingdetails')" *ngIf="( !!!commonService.loginData.is_dispatcher && commonService.loginData.billing_popup && (commonService.loginData.billing_popup.tasks_left >= 0 || commonService.loginData.billing_popup.days_left<=30) )">
+      <div style="display:none;" class="billing-remaining proxima-thin text-uppercase" [ngClass]="{'high-alert': commonService.loginData.billing_popup.days_left==1}">
+        <a class="billing-trail-period" *ngIf="(commonService.loginData.billing_popup.days_left <= 30 && commonService.loginData.billing_popup.days_left >= 0) || (commonService.loginData.billing_popup.tasks_left >= 0)"
+          (click)="goToBillingPage(2)">
+          <div class="billing-trail-days">
+            <span class="proxima-thin" *ngIf="commonService.loginData.billing_plan != 1"> {{commonService.loginData.billing_popup.days_left}} </span>
+            <span class="proxima-thin" *ngIf="commonService.loginData.billing_plan == 1"> {{commonService.loginData.billing_popup.tasks_left}} </span>
+          </div>
+          <div class="billing-trail-text" >
+            <span *ngIf="commonService.loginData.billing_plan != 1 && commonService.loginData.billing_popup.days_left>1" i18n>Days Remaining</span>
+            <span *ngIf="commonService.loginData.billing_plan != 1 && commonService.loginData.billing_popup.days_left<=1" i18n>Day Remaining</span>
+
+            <span *ngIf="commonService.loginData.billing_plan == 1 && commonService.loginData.billing_popup.tasks_left>1">{{commonService.loginData.call_tasks_as||'Task'}}s remaining</span>
+            <span *ngIf="commonService.loginData.billing_plan == 1 && commonService.loginData.billing_popup.tasks_left <= 1">{{commonService.loginData.call_tasks_as||'Task'}} remaining</span>
+          </div>
+        </a>
+        <!-- <a class="trail_period_exp" *ngIf="!isDispatcher && billingPlan == 0 && trailDaysLeft < 0" ng-click="goToBillingPage(2)">
+          {{ 'topbar.TRAIL_PERIOD' | translate }}
+        </a> -->
+      </div>
+    </li>
+    <!-- <li class="d-none d-md-block" *ngIf="!isMobile && paymentLeft && ( !!!commonService.loginData.is_dispatcher ) && ($parent.state=='app.dashboard')">
+      <div class="billing-remaining text-uppercase payment-info">
+        <a class="billing-trail-period" ng-click="goToBillingPage(3)">
+          <div class="billing-trail-text">
+            <i class="material-icons info-icon pulse">error</i>
+            <span>Payment Due</span>
+          </div>
+        </a>
+      </div>
+    </li> -->
+    <ng-container #dynRightLi></ng-container>
+    <!-- <li *ngIf="showLogoutButton">
+      <button class="btn-logout material-icons btn" (click)="onLogoutClick()">power_settings_new</button>
+    </li> -->
+    <li *ngFor="let app of topbarApps">
+      <button class="btn-logout btn" [ngClass]="app.icon" (click)="onTopbarAppClick(app)"></button>
+    </li>
+  </ul>
+</div>
+<div class="sidebar-container" [ngClass]="{'show':showSidebar}" (click)="showSidebar=false">
+
+  <app-sidebar [(visible)]="showSidebar" [customApps]="sidebarApps"></app-sidebar>
+</div>

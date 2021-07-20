@@ -1,0 +1,28 @@
+<div class="rights-container" id="formContainer">
+  <div class="inner-padding">
+    <!-- <h2 class="page-heading">Rights</h2> -->
+    <p class="main-sub-heading pro-rg-font">We take security seriously and are proud to exceed the industry standards when it comes to protecting your personal information.</p>
+    <div class="rights-panel">
+      <form [formGroup]="rightsForm" (ngSubmit)="onSubmitClick()">
+        <div class="form-group rights-class">
+          <p-dropdown [options]="rights" placeholder="Select your rights" [style]="{'width':'270px'}" optionLabel="label" formControlName="option"></p-dropdown>
+          <control-messages [control]="rightsForm.controls.option"></control-messages>
+        </div>
+        <div class="form-group">
+          <textarea formControlName="reason" class="form-control text-area" placeholder="Reason" rows="4"></textarea>
+          <control-messages [control]="rightsForm.controls.reason"></control-messages>
+        </div>
+        <div class="text-right">
+          <button id="create-button" class="btn common-btn-green export_btn text-area">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

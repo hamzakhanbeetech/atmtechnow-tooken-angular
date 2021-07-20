@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>cross</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cross" fill-rule="nonzero">
+            <circle id="Oval" fill="#EC253C" cx="8" cy="8" r="8"></circle>
+            <g id="Group" transform="translate(8.500000, 8.000000) rotate(45.000000) translate(-8.500000, -8.000000) translate(4.000000, 3.000000)" fill="#FFFFFF">
+                <path d="M1.77635684e-15,5 C1.8408475e-15,4.44771525 0.452384666,4 0.998262846,4 L7.41595072,4 C7.96727606,4 8.41421356,4.44386482 8.41421356,5 L8.41421356,5 C8.41421356,5.55228475 7.9618289,6 7.41595072,6 L0.998262846,6 C0.4469375,6 1.71141656e-15,5.55613518 1.77635684e-15,5 L1.77635684e-15,5 Z" id="Rectangle-path" transform="translate(4.207107, 5.000000) rotate(90.000000) translate(-4.207107, -5.000000) "></path>
+                <path d="M8.8817842e-16,5 C8.8817842e-16,4.44771525 0.452384666,4 0.998262846,4 L7.41595072,4 C7.96727606,4 8.41421356,4.44386482 8.41421356,5 L8.41421356,5 C8.41421356,5.55228475 7.9618289,6 7.41595072,6 L0.998262846,6 C0.4469375,6 8.8817842e-16,5.55613518 8.8817842e-16,5 L8.8817842e-16,5 Z" id="Rectangle-path-Copy" transform="translate(4.207107, 5.000000) scale(-1, 1) translate(-4.207107, -5.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

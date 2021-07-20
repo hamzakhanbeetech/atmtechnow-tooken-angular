@@ -1,0 +1,66 @@
+@import "~assets/css/variables";
+.add-dev-form-control {
+    background: 0 0;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid #c8c8c8;
+    width: 100%;
+    padding: 5px 0 0 0;
+    border-radius: 0;
+    color: rgba(0, 0, 0, 0.71);
+    font-family: $proxima-reg;
+    letter-spacing: 0.9px;
+    position: relative;
+  }
+  label.control-label {
+    text-transform: uppercase;
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0;
+    padding: 0 10px 0 0;
+  }
+
+.form-group {
+    margin-top: 10px;
+}
+
+:host /deep/ .ui-dropdown {
+    border: none;
+    width: 70% !important;
+}
+
+
+:host /deep/ .ui-dropdown-label {
+    margin-bottom: 15px;
+}
+
+:host /deep/ .ui-dropdown-panel.ui-widget-content {
+    top: 29px !important;
+}
+
+:host /deep/ input.ui-dropdown-filter.ui-inputtext.ui-widget.ui-state-default.ui-corner-all {
+    /* box-shadow: none; */
+    padding-left: 10px;
+    outline: none;
+    border: 0;
+  }
+  :host /deep/ .ui-dropdown-panel .ui-dropdown-filter-container .fa {
+    position: absolute;
+    top: 9px;
+    right: 1em;
+  }
+  :host /deep/ .ui-dropdown-panel .ui-dropdown-filter-container {
+      border-bottom: 1px solid #ced4da;
+      padding: 3px 0px 3px 0px;
+  }
+  
+  :host /deep/ .ui-dropdown-panel.ui-widget-content.ui-corner-all
+  {
+    top: 0 !important;
+  }

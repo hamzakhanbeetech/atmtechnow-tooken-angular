@@ -1,0 +1,166 @@
+<div class="sidemenu-div">
+  <ul id="sidemenu" class="scroll">
+    <h3 class="heading">
+      <span class="montserrat-reg">
+        <i class="tf tfont setting"></i>
+        <ng-container i18n>Settings</ng-container>
+      </span>
+    </h3>
+    <li routerLinkActive="active" [routerLink]="['/settings/preferences']" (click)="emit('app.preferences')" i18n>
+      Preferences</li>
+    <li routerLinkActive="active"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.profile==1?true:false):true"
+      [routerLink]="['/settings/profile']" (click)="emit('app.account')" i18n>Profile</li>
+    <!-- <li routerLinkActive="active" [routerLink]="['/settings/rights']" (click)="emit('app.settings.rights')" i18n *ngIf="!(!!commonService.loginData.is_dispatcher || !!commonService.loginData.reseller)">Rights</li> -->
+    <li routerLinkActive="active"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.templates==1?true:false):true"
+      (click)="emit('app.settings.template.home')" i18n class="not-show-in-mob">Templates</li>
+
+
+
+
+    <li routerLinkActive="active" (click)="emit('app.settings.assignment.geofence.home')" i18n class="not-show-in-mob"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.geofence==1?true:false):true">
+      Geo Fence</li>
+
+    <li routerLinkActive="active" [routerLink]="['/settings/assignment']" (click)="emit('app.settings.assignment.auto')"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.autoAllocation==1?true:false):true"
+      i18n>Auto Allocation</li>
+    <li style="display: none;" class="divider-inner-sidebar" *ngIf="!!!commonService.loginData.is_merchant"></li>
+    <li routerLinkActive="active"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.teams==1?true:false):true"
+      (click)="emit('app.settings.teams')" [routerLink]="['/settings/teams']" i18n>Teams</li>
+    <!-- <li routerLinkActive="active" [routerLink]="['/settings/manager']" (click)="emit('app.settings.managers')" *ngIf="!!!commonService.loginData.is_dispatcher && !!!commonService.loginData.is_merchant">{{commonService.loginData.call_dispatcher_as||"Manager"}}</li> -->
+
+
+    <!-- <li routerLinkActive="active" [routerLink]="['/settings/manager']" (click)="emit('app.settings.managers')"
+        *ngIf="commonService.loginData.add_manager==1||(commonService.loginData.is_dispatcher==0&&commonService.loginData.is_merchant==0)" >
+
+
+         {{commonService.loginData.call_dispatcher_as||"Manager"}}</li> -->
+    <li routerLinkActive="active" [routerLink]="['/settings/manager']" (click)="emit('app.settings.managers')"
+      *ngIf="commonService.loginData.is_merchant?(commonService.loginData.merchant_permissions.add_manager?true:false):(commonService.loginData.is_dispatcher?false:true)">
+      {{commonService.loginData.call_dispatcher_as||"Manager"}}</li>
+
+
+    <li routerLinkActive="active" [routerLink]="['/settings/company-reports']"
+      (click)="emit('app.settings.companyreports')"
+      *ngIf="commonService.loginData.is_dispatcher === 0 && commonService.loginData.is_merchant ===0">Reports Affiliate
+      Program</li>
+
+    <li routerLinkActive="active" [routerLink]="['/settings/agent-app']" (click)="emit('app.agentmobileapp')"
+      *ngIf="!!!commonService.loginData.is_dispatcher">{{commonService.loginData.call_fleet_as||"Fleet"}} App</li>
+
+    <li
+      *ngIf="commonService.loginData.add_catalogue==1||(commonService.loginData.is_dispatcher==0&&commonService.loginData.is_merchant==0)"
+      routerLinkActive="active" [routerLink]="['/settings/agent-skill']" (click)="emit('app.settings.agentskills')">
+      {{commonService.loginData.call_fleet_as||"Fleet"}} Skill</li>
+
+
+
+    <li
+      *ngIf="commonService.loginData.add_catalogue==1||(commonService.loginData.is_dispatcher==0&&commonService.loginData.is_merchant==0)"
+      routerLinkActive="active" [routerLink]="['/settings/addon-services']"
+      (click)="emit('app.settings.addonservices')">Addon Services</li>
+
+
+
+    <li routerLinkActive="active" [routerLink]="['/settings/video-links']" (click)="emit('app.settings.videolinks')"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.add_video_links==1?true:false):true">
+      Video Links
+    </li>
+
+    <li
+      *ngIf="commonService.loginData.is_dispatcher==0 || (commonService.loginData.is_merchant?(commonService.loginData.merchant_permissions.add_software?true:false):false)"
+      routerLinkActive="active" [routerLink]="['/settings/software-upload']" (click)="emit('app.settings.software')">
+      Software</li>
+
+
+    <li
+      *ngIf="commonService.loginData.is_dispatcher==0 || (commonService.loginData.is_merchant?(commonService.loginData.merchant_permissions.add_custom_notifications?true:false):false)"
+      routerLinkActive="active" [routerLink]="['/settings/custom-notifications']"
+      (click)="emit('app.settings.customnotifications')">Custom Notifications</li>
+
+
+
+    <!-- <li routerLinkActive="active" [routerLink]="['/settings/manager']">{{commonService.loginData.call_dispatcher_as||"Manager"}}</li>
+    <li routerLinkActive="active" [routerLink]="['/settings/agent-app']">{{commonService.loginData.call_fleet_as||"Fleet"}} App</li> -->
+    <li routerLinkActive="active" (click)="emit('app.settings.availability')"
+      *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.technician_schedule==1?true:false):true"
+      class="not-show-in-mob">{{commonService.loginData.call_fleet_as||"Fleet"}} Schedule</li>
+    <li routerLinkActive="active" [routerLink]="['/settings/driverWallet']" (click)="emit('app.driverWallet')"
+      *ngIf="!!commonService.loginData.fleet_wallet" class="not-show-in-mob">
+      {{commonService.loginData.call_fleet_as||"Fleet"}} Wallet</li>
+    <li routerLinkActive="active" (click)="emit('app.settings.notifications')" i18n class="not-show-in-mob">
+      Notifications</li>
+    <ng-container>
+
+      <li style="display: none;" routerLinkActive="active" (click)="emit('app.settings.vendor-setting')"
+        class="not-show-in-mob" *ngIf="!!commonService.loginData.vendor_form && !!!commonService.loginData.is_merchant"
+        i18n>Form Editor</li>
+      <li
+        *ngIf="commonService.loginData.add_catalogue==1||(commonService.loginData.is_dispatcher==0&&commonService.loginData.is_merchant==0)"
+        routerLinkActive="active" class="not-show-in-mob" (click)="emit('app.settings.dynamicCatalogue.dc_select_app')">
+        Customer Apps</li>
+      <li routerLinkActive="active"
+        *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.spareParts==1?true:false):true"
+        [routerLink]="['/settings/spareParts']" (click)="emit('app.settings.spareParts')" i18n>Spare Parts</li>
+      <li routerLinkActive="active"
+        *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.quickBooks==1?true:false):true"
+        [routerLink]="['/settings/quickBooks']" (click)="emit('app.settings.quickBooks')" i18n>Quick Books</li>
+      <li routerLinkActive="active" [routerLink]="['/settings/taxes']" (click)="emit('app.settings.taxes')" i18n>Taxes
+      </li>
+      <li routerLinkActive="active" [routerLink]="['/settings/disputes']" (click)="emit('app.settings.disputes')" i18n>
+        Disputes</li>
+        <li routerLinkActive="active" *ngIf="commonService.loginData.is_merchant==1" [routerLink]="['/settings/stripe']" (click)="emit('app.settings.stripe')" i18n>
+        Add Card</li>
+        <li routerLinkActive="active" *ngIf="commonService.loginData.is_merchant==0&&commonService.loginData.is_dispatcher==0"  [routerLink]="['/settings/enterprise-tasks']" (click)="emit('app.settings.enterprise-tasks')" i18n>
+        Enterprise Tasks</li>
+      <!-- <li routerLinkActive="active" class="not-show-in-mob" (click)="emit('app.settings.dynamicCatalogue.dc_select_app')" *ngIf="(!!commonService.loginData.custom_business_app || !!commonService.loginData.business_app ) && !!!commonService.loginData.is_merchant"
+        i18n>Customer Apps</li> -->
+      <!-- <li routerLinkActive="active" class="not-show-in-mob" (click)="emit('app.settings.dynamicCatalogue.dc_select_app')" *ngIf="(!!commonService.loginData.custom_business_app || !!commonService.loginData.business_app ) && ((commonService.loginData.is_merchant==1&&commonService.loginData.is_dispatcher==0)||commonService.loginData.is_merchant==0&&commonService.loginData.is_dispatcher==0)"
+        i18n>Customer Apps</li> -->
+      <!-- <li class="divider-inner-sidebar not-show-in-mob" *ngIf="!!commonService.loginData.vendor_form || (!!commonService.loginData.custom_business_app || !!commonService.loginData.business_app) && !!!commonService.loginData.is_merchant"></li> -->
+      <li routerLinkActive="active" *ngIf="commonService.loginData.is_dispatcher==0"
+        (click)="emit('app.settings.smsWallet')" class="not-show-in-mob" i18n>SMS</li>
+      <li routerLinkActive="active" (click)="emit('app.requestotp')" class="not-show-in-mob"
+        [routerLink]="['/settings/requestotp']"
+        *ngIf="(!!commonService.loginData.customer_otp_service && !!!commonService.loginData.is_dispatcher) && !!!commonService.loginData.is_merchant"
+        i18n>Request OTP</li>
+      <li routerLinkActive="active"
+        *ngIf="(!!commonService.loginData.is_video_enabled && !!!commonService.loginData.is_dispatcher) && !!!commonService.loginData.is_merchant"
+        [routerLink]="['/settings/callhistory']" (click)="emit('app.callhistory')" class="not-show-in-mob" i18n>Video
+        Call</li>
+      <li style="display:none;" routerLinkActive="active" [routerLink]="['/settings/email']"
+        (click)="emit('app.settings.email')" *ngIf="!!!commonService.loginData.is_merchant" class="not-show-in-mob"
+        i18n>Email</li>
+      <li style="display: none;" routerLinkActive="active" (click)="emit('app.settings.billingdetails')"
+        *ngIf="!!!commonService.loginData.is_merchant" i18n>Billing</li>
+
+      <li routerLinkActive="active"
+        *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.payments==1?true:false):true"
+        [routerLink]="['/settings/payments']" (click)="emit('app.settings.payments')" class="not-show-in-mob" i18n>
+        Payments</li>
+      <!-- <li class="divider-inner-sidebar not-show-in-mob"></li> -->
+      <!-- <li routerLinkActive="active" (click)="emit('app.settings.developer')">Developers</li> -->
+      <li style="display: none;" routerLinkActive="active" [routerLink]="['/settings/developer']"
+        class="not-show-in-mob" (click)="emit('app.settings.developer')"
+        *ngIf="!commonService.loginData.reseller && !!!commonService.loginData.is_merchant" i18n>Developers</li>
+      <li routerLinkActive="active" [routerLink]="['/settings/apiKey']" (click)="emit('app.settings.apikey')"
+        class="not-show-in-mob"
+        *ngIf="!!!commonService.loginData.is_merchant && !!!commonService.loginData.is_dispatcher" i18n>API Keys</li>
+      <li routerLinkActive="active" [routerLink]="['/settings/contactus']" class="not-show-in-mob"
+        (click)="emit('app.settings.contactus')" i18n>Contact Us</li>
+      <li routerLinkActive="active" [routerLink]="['/settings/cancellation-policy']" class="not-show-in-mob"
+        *ngIf="commonService.loginData.is_merchant==1?(commonService.loginData.merchant_permissions.cancellation_policy==1?true:false):true"
+        (click)="emit('app.settings.cancellationpolicy')" i18n>Charges Page</li>
+      <!-- <li class="divider-inner-sidebar not-show-in-mob"></li> -->
+    </ng-container>
+    <!-- <li class="divider-inner-sidebar" *ngIf="commonService.loginData.is_merchant?(commonService.loginData.merchant_permissions.add_video_links?true:false):(commonService.loginData.is_dispatcher?((commonService.loginData.dispatcher_permissions.add_video_links || commonService.loginData.dispatcher_permissions.add_custom_notifications)?true:false):false)"></li> -->
+    <li routerLinkActive="active" class="" (click)="onLogoutClick()" i18n>Logout </li>
+
+  </ul>
+  <!-- <ul id="logout-ul" class="scroll">
+    <li routerLinkActive="active" class="logout-btn show-logout" (click)="onLogoutClick()" i18n>Logout  <button class="btn-logout material-icons btn logoutButton" style="font-size: 14px"  >power_settings_new</button></li>
+  </ul> -->
+</div>

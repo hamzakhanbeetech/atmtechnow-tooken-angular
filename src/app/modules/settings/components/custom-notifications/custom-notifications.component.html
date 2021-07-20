@@ -1,0 +1,230 @@
+<div class="container-dispatcher-page  ele-ht">
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Custom Notifications</h2>
+    </div>
+    <button type="button" class="btn common-btn-green export_btn add-button" (click)="showAddPopup()">
+      <ng-container i18n>Create </ng-container> Notifications</button>
+  </div>
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <!-- Table -->
+        <p-table #dt [columns]="columns" [value]="notificationsList" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true" [rows]="rows"
+          [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,notificationsList)" (onFilter)="onFilterChange($event)"
+          (onSort)="onPageChange({ rows: +rows, first: 0 },rows,notificationsList)" [autoLayout]='true' sortField="id"
+          sortOrder="-1">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search Notifications" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'id'" class="pl-4">
+                <ng-container i18n>ID</ng-container>
+                <p-sortIcon [field]="'id'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'name'">
+                <ng-container i18n>Title</ng-container>
+                <p-sortIcon [field]="'title'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'creation_datetime'">
+                <ng-container i18n>Description</ng-container>
+                <p-sortIcon [field]="'description'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'creation_datetime'">
+                <ng-container i18n>Added on</ng-container>
+                <p-sortIcon [field]="'added_on'"></p-sortIcon>
+              </th>
+              <th>
+                <ng-container>ACTIONS</ng-container>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td style="padding-left: 25px">{{item.notification_id}}</td>
+              <td>{{item.title}}</td>
+              <td>{{item.description}}</td>
+              <td>{{item.created_at | date: "MM/dd/yyyy HH:mm:ss"}}</td>
+              <td class="actions-td">
+                <div class="menu-box">
+                  <i class="tf more-menu" (click)="showActionMenu($event)"></i>
+                  <ul class="menu-list" id="actionMenu" style="width:160px;">
+                    <li class="list-item" (click)="editNotification(item)">
+                      <ng-container i18n>Edit</ng-container>
+                    </li>
+                    <li class="list-item" (click)="deleteNotificationItem(item)">
+                      <ng-container i18n>Delete</ng-container>
+                    </li>
+                    <li class="list-item" (click)="sendCustomers(item)">
+                        <ng-container i18n>Send Notifications</ng-container>
+                      </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            {{infotext}}
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows" (change)="onPageChange({ rows: +rows, first: 0 },rows,serviceList)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+  <!-- popup for add/edit service -->
+  <app-popup *ngIf="showAddNotificationPopup" [minHeight]="'250px'" [header]="service_popup_action_title" (onClose)="onCancelClick()">
+    <div body>
+      <form [formGroup]="addCustomNotificationForm">
+        <input type="email" name="email" class="form-control add-dev-form-control" style="display: none" />
+        <input type="password" name="password" class="form-control add-dev-form-control input-box-agent" style="display: none" />
+        <div class="row d-flex">
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>Title</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+            <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="service_name" class="form-control add-dev-form-control" formControlName="title" autofocus/>
+            <control-messages [control]="addCustomNotificationForm.controls.title"></control-messages>
+          </div>
+          <div class="form-group col-sm-6">
+              <label class="control-label">
+                <ng-container i18n>Description</ng-container>
+                <span style='color:#FF0000'>*</span>
+              </label>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+               name="service_price" class="form-control add-dev-form-control" formControlName="description"/>
+              <control-messages [control]="addCustomNotificationForm.controls.description"></control-messages>
+            </div>
+            <div class="form-group col-sm-12 row">
+                <div class="radio col-12 col-md-4">
+                  <input id="radio-1" name="acknowledgement"  type="radio" value="0" [checked]="ImageVideoSelected" (change)="updateImageVideo(0)">
+                  <label for="radio-1" class="radio-label" i18n>Browse Image</label>
+                </div>
+                <div class="radio col-12 col-md-4">
+                  <input id="radio-2" name="acknowledgement" type="radio" value="1" [checked]="!ImageVideoSelected" (change)="updateImageVideo(1)">
+                  <label for="radio-2" class="radio-label" i18n>Video</label>
+                </div>
+              </div>
+            <div class="form-group col-sm-6 " *ngIf="ImageVideoSelected">
+                  <div class="col-12 row m-0 p-0">
+                      <div class="col-sm-8 p-0">
+                          <img class="driver-image img-circle img-responsive" [src]="addCustomNotificationForm.controls.image.value||'assets/images/default-user.png'">
+                          <control-messages [control]="addCustomNotificationForm.controls.image"></control-messages>
+                        </div>
+                        <div class="col-sm-4 p-0">
+                          <button class="btn-uplaod btn" (click)="fileInput.click()">
+                            <span class="fa fa-folder-open"></span> Upload</button>
+                          <input type="file" class="d-none" accept="image/gif, image/jpeg, image/png" (change)="onUpload($event)" #fileInput>
+                        </div>
+                  </div> 
+            </div>
+            <div class="form-group col-sm-6" *ngIf="!ImageVideoSelected">
+                <label class="control-label">
+                    <ng-container i18n>Video Url</ng-container>
+                  </label>
+                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                 name="service_price" class="form-control add-dev-form-control" formControlName="videoUrl"/>
+                <control-messages [control]="addCustomNotificationForm.controls.videoUrl"></control-messages>
+              </div>
+            <!-- <div class="col-12 row m-0" >
+              <div class="col-12 col-md-4 p-0">
+                <img class="driver-image img-circle img-responsive" [src]="addCustomNotificationForm.controls.image.value||'assets/images/default-user.png'">
+                <control-messages [control]="addCustomNotificationForm.controls.image"></control-messages>
+              </div>
+              <div class="col-12 col-md-2 p-0">
+                <button class="btn-uplaod btn" (click)="fileInput.click()">
+                  <span class="fa fa-folder-open"></span> Upload</button>
+                <input type="file" class="d-none" (change)="onUpload($event)" #fileInput>
+              </div>
+            </div> -->
+          
+            <div class="col-12 row m-0 milestone-mobile">
+              <div class="col-12 col-md-4 p-l-0 padding-mobile" >
+                <label class="checkbox-box ">
+                  <div class="check-radio">
+                    <input value="0" type="checkbox" id="radio-cn-1" formControlName="merchant">
+                    <span class="tf check"></span>
+                  </div>
+                  <label for="radio-cn-1" class="radio-ck-label" i18n>Merchant</label>
+                </label>
+              </div>
+              <div class="col-12 col-md-4 p-l-0 padding-mobile" >
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-cn-3" formControlName="atmOperator">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-cn-3" class="radio-ck-label" i18n>Atm Operator</label>
+                  </label>
+                </div>
+              <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                <label class="checkbox-box ">
+                  <div class="check-radio">
+                    <input value="2" type="checkbox" id="radio-cn-2" formControlName="technician">
+                    <span class="tf check"></span>
+                  </div>
+                  <label for="radio-cn-2" class="radio-ck-label" i18n>Technician</label>
+                </label>
+              </div>
+              <div *ngIf="commonService.loginData.is_merchant || commonService.loginData.is_dispatcher" class="col-12" style="padding: 0;"><span *ngIf="oneRequired" style="color:red;font-size: 14px;">This is required.</span></div>
+              <div *ngIf="!commonService.loginData.is_merchant && !commonService.loginData.is_dispatcher" class="col-12" style="padding: 0;"><span *ngIf="oneRequired" style="color:red;font-size: 14px;">Please select atleast one.</span></div>
+             
+            </div>
+
+
+            <div class="form-group col-sm-6" *ngIf="showPassword">
+                <label class="control-label">
+                  <ng-container i18n>Password</ng-container>
+                  <span style='color:#FF0000'>*</span>
+                </label>
+                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" placeholder="Enter Password"
+                 name="password" class="form-control add-dev-form-control" formControlName="password"/>
+                <control-messages [control]="addCustomNotificationForm.controls.password"></control-messages>
+              </div>
+        </div>
+      </form>
+    </div>
+    <div footer class="footer-buttons " style="text-align: right">
+      <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+      <button id="create-button" class="btn common-btn-green export_btn add-button" (click)="addNotification()">
+        <ng-container *ngIf="!is_editing_notification">
+          <ng-container i18n>Create</ng-container>
+        </ng-container>
+        <ng-container *ngIf="is_editing_notification">
+          <ng-container i18n>Update</ng-container>
+        </ng-container>
+      </button>
+    </div>
+  </app-popup>
+
+</div>
+
+

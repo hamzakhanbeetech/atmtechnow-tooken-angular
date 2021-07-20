@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/css/variables";
+@import "assets/css/tookan-font";
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('assets/fonts/ProximaNova/ProximaNova-Reg.woff') format('woff');
+  font-style: normal
+}
+@font-face {
+  font-family: 'ProximaNova-Semi-Bold';
+  src: url('assets/fonts/ProximaNova/proximanova-semibold-webfont.woff') format('woff');
+  font-style: normal
+}
+@font-face {
+  font-family: 'ProximaNova-Bold';
+  src: url('assets/fonts/ProximaNova/proximanova-bold-webfont.woff');
+}
+@font-face {
+  font-family: 'ProximaNova-Thin';
+  src: url('assets/fonts/ProximaNova/ProximaNova-Thin.woff');
+}
+@font-face {
+  font-family: 'tookan-icon';
+  src: url('assets/fonts/Tookan/tookan-dashboard-icon-font.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'tookan-icon-2';
+  src:url('assets/fonts/Tookan/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('assets/fonts/Montserrat/Montserrat-Light.woff') format('woff');
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url('assets/fonts/Material/material_icon.woff2') format('woff2'),
+}
+
+body{
+  overscroll-behavior: none;
+}
+*{
+  font-family:'ProximaNova-Regular';
+}
+.tf{
+  font-family: 'tookan-icon';
+}
+.proxima-semi-bold{
+  font-family: 'ProximaNova-Semi-Bold';
+}
+.proxima-reg{
+  font-family: 'ProximaNova-Regular';
+}
+.proxima-bold{
+  font-family: 'ProximaNova-Bold';
+}
+.proxima-thin{
+  font-family: 'ProximaNova-Thin';
+}
+.montserrat-reg{
+  font-family: 'Montserrat-Regular';
+}
+.montserrat-light{
+  font-family: 'Montserrat-Light';
+}
+// .material-icons {
+//   font-family: 'Material Icons';
+//   font-weight: normal;
+//   font-style: normal;
+//   font-size: 24px;  /* Preferred icon size */
+//   display: inline-block;
+//   line-height: 1;
+//   text-transform: none;
+//   letter-spacing: normal;
+//   word-wrap: normal;
+//   white-space: nowrap;
+//   direction: ltr;
+
+//   /* Support for all WebKit browsers. */
+//   -webkit-font-smoothing: antialiased;
+//   /* Support for Safari and Chrome. */
+//   text-rendering: optimizeLegibility;
+
+//   /* Support for Firefox. */
+//   -moz-osx-font-smoothing: grayscale;
+
+//   /* Support for IE. */
+//   font-feature-settings: 'liga';
+//   text-rendering: optimizeLegibility;
+//   font-feature-settings: 'liga';
+//   -ms-font-feature-settings:'liga';
+// }
+
+.p-l-0{
+  padding-left: 0;
+}
+.p-r-0{
+  padding-right: 0;
+}
+.p-0{
+  padding: 0;
+}
+.m-0{
+  margin: 0;
+}
+.m-r-0{
+  margin-right: 0;
+}
+.m-l-0{
+  margin-left: 0;
+}
+.tk-link {
+  letter-spacing: .4px;
+  font-size: 14px;
+  color: $color-primary!important;
+  font-family: $mont-light;
+  position: relative;
+  line-height: normal;
+  cursor: pointer;
+}
+a.tk-link:hover{
+  text-decoration: none
+}
+.text-uppercase{
+  text-transform: uppercase;
+}
+.text-lowercase{
+  text-transform: lowercase;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.cp{
+  cursor: pointer;
+}
+.btn:focus {
+  box-shadow: none;
+}
+.list-group.scrollable-menu{
+  background-color: white;
+}

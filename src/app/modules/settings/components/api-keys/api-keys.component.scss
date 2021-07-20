@@ -1,0 +1,78 @@
+@import '~assets/css/fancy-form';
+@import '~assets/css/variables';
+@import '~assets/css/actionsdrop';
+
+h5.page-sub-heading {
+  font-size: 15px;
+}
+.page-sub-heading {
+  font-size: 16px;
+  letter-spacing: .2px;
+  color: rgba(51,51,51,.8);
+  margin: 0 0 5px;
+}
+a#api-key-btn {
+  position: absolute;
+  right: 0px;
+  top: 14px;
+  margin-right: 0;
+}
+.v2-api-key-header {
+  height: 70px;
+  line-height: 3;
+  letter-spacing: .9px;
+  color: rgba(0,0,0,.79);
+  margin: 0;
+  padding: 0;
+}
+.v2-api-keys {
+  letter-spacing: 0.2px;
+  margin: 0 0 5px;
+  font-family: $proxima-semi-bold;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 0.8);
+  font-size: 14px;
+}
+.generate-key-div {
+  border-radius: 0;
+  background-color: #fff;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+.api-copy{
+  margin-right:15px;
+}
+.nopad-h{
+  padding: 5px 0px 10px 0px!important;
+  font-size: 14px;
+}
+.pos-rel{
+  position: relative;
+}
+.sm-font {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.key-container{
+  word-break: break-all;
+  padding-right: 15px;
+}
+.div-acc-tkn{
+  border-bottom: 1px solid #c8c8c8;
+}
+.apikey-panel-box{
+  padding-bottom: 20px;
+}
+.acc_tkn{
+  max-width: calc(100% - 60px);
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+.copied {
+  display: none;
+}
+.api-copied {
+  a:hover {
+    text-decoration: none !important;
+  }
+}

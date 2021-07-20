@@ -1,0 +1,102 @@
+@import "~assets/css/checkbox-radio";
+@import "~assets/css/radio-button";
+@import "~assets/css/multiselect";
+:host /deep/ .intl-tel-input .form-control {
+  padding-left: 50px !important;
+  border-color: #bcbcbc;
+  border: 0;
+  border-bottom: 1px solid #bcbcbc;
+  outline: 0 none;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+:host /deep/ p-multiselect .ui-multiselect{
+  border: none;
+  border-bottom: 1px solid #bcbcbc;
+  outline: 0 none;
+  box-shadow: none;
+  border-radius: 0;
+}
+:host /deep/ .intl-tel-input{
+  width: 100%;
+  
+}
+.p-top-10{
+  padding-top: 10px;
+}
+
+.m-b-10{
+  margin-bottom: 10px;
+}
+:host /deep/ p-multiSelect .ui-multiselect, :host /deep/ .intl-tel-input input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+}
+:host /deep/ .show-header-multiselect .ui-widget-header {
+  display: block;
+}
+:host /deep/ .intl-tel-input .country-list.dropup{
+  top:100%!important;
+  bottom:auto!important;
+}
+button.add-button {
+  color: white;
+  background-color:  $color-blue;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 170px;
+  &:hover {
+    color: $color-blue;
+    background-color: white;
+    border: solid 1px  $color-blue;
+  }
+}
+.column-search{
+  font-size: 15px !important;
+  background-color: white !important;
+}
+.icon_search{
+  padding-left: 15px;
+  color: rgb(226, 224, 224);
+}
+.search-control{
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+.driver-image{
+  max-height: 120px;
+  border-radius: 75px;
+  max-width: 150px;
+  min-height:100px;
+}
+.btn-uplaod{
+  border-radius: 25px;
+  backdrop-filter: blur(3px);
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+  color: $color-blue;
+  padding: 10px !important;
+  font-size: 13.1px !important;
+  font-family: $mont-light;
+  text-transform: uppercase;
+  min-width: 120px;
+}
+.m-0{
+  margin: 10px 0 !important;
+}
+@media (max-width: 768px) {
+  .milestone-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .padding-mobile {
+    padding: 0px 0px !important;
+  }
+}
+// .intl-tel-input .scrollable-menu{
+//   max-height: 150px!important;
+// }

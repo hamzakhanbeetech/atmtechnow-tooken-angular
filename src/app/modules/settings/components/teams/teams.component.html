@@ -1,0 +1,169 @@
+<div class="container-dispatcher-page  ele-ht">
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">
+        <ng-container i18n>Teams</ng-container>
+      </h2>
+      <p class="main-sub-heading pro-rg-font">
+        <ng-container i18n>Organize your</ng-container> {{commonService.loginData.call_fleet_as}}
+        <ng-container i18n>into logical groups to efficiently manage your field operations.</ng-container>
+        <ng-container i18n>You may group them on the basis of location, geography, type of service and so on and so forth.</ng-container>
+      </p>
+    </div>
+    <div class="add-team-div">
+      <span *ngIf="!(!!commonService.loginData.is_dispatcher)">
+        <button type="button" class="btn common-btn-green export_btn create-button" (click)="showAddPopup()" i18n>Add Team</button>
+      </span>
+      <!-- <div class="search-control">
+        <i class="tf search icon_search"></i>
+        <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search Team" i18n-placeholder>
+      </div> -->
+    </div>
+    <div class="fullwidth team-list-panel">
+      <div class=" row d-flex">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-12 team-chip-size" *ngFor="let team of filteredTeams;let i = index">
+          <div class="row team-tile">
+            <div class="col-8">
+              {{team.team_name}}
+            </div>
+            <div class="col-4 p-0">
+              <div class="float-right team-action-btn" *ngIf="!(!!commonService.loginData.is_dispatcher)">
+                <!-- <span class="easy-3s delete-team" *ngIf="!(!!commonService.loginData.is_dispatcher)" (click)="deleteTeamItem(team)" pTooltip="Delete"
+                  tooltipPosition="top">
+                  <i class="fa fa-trash icons"></i>
+                </span>
+                <span class="easy-3s edit-team" *ngIf="!(!!commonService.loginData.is_dispatcher)" (click)="editTeamItem(team)" pTooltip="Edit"
+                  tooltipPosition="top">
+                  <i class="fa fa-pencil icons"></i>
+                </span> -->
+                <div class="menu-box">
+                    <i class="tf more-menu" style="color: rgba(37, 45, 71, 0.62)" (click)="showActionMenu($event)"></i>
+                  <ul class="menu-list">
+                    <li class="list-item" (click)="editTeamItem(team)">
+                      <ng-container i18n>Edit</ng-container>
+                    </li>
+                    <li class="list-item" (click)="deleteTeamItem(team)">
+                        <ng-container i18n>Delete</ng-container>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 team-id">
+              ID: {{team.team_id}}
+            </div>
+            <div class="row d-flex team-members">
+              <ul class="list-inline">
+                <li *ngFor='let fleet of (team.fleets) | slice:0:4;let j = index'>
+                  <div class="media">
+                    <img pTooltip="{{fleet.fleet_name}}" tooltipPosition="top" src="{{(fleet.fleet_thumb_image)==='' ? fleet.fleet_image : fleet.fleet_thumb_image}}"
+                      alt="Follower" class="img-responsive img-circle team-thumb">
+                  </div>
+
+                </li>
+                <li *ngIf="team.fleets.length>4">
+                  <div class="media">
+                    <img src="assets/images/default-user.png" alt="Follower" class="img-responsive img-circle team-thumb">
+
+                    <div class="overlay-image">+{{team.fleets.length - 4}}
+                    </div>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p-paginator [rows]="itemsPerPage" [totalRecords]="teamList.length" (onPageChange)="paginate($event)" #paginator></p-paginator>
+    </div>
+
+
+
+    <!-- popup for add/edit team -->
+    <app-popup *ngIf="showAddTeamPopup" [minHeight]="'250px'" [header]="team_popup_action_title" (onClose)="onCancelClick()">
+      <div body>
+        <form [formGroup]="addTeamForm">
+          <div class="row d-flex">
+            <div class="form-group col-12">
+              <label class="control-label">
+                <ng-container i18n>TEAM NAME</ng-container>
+                <span style='color:#FF0000'>*</span>
+              </label>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="team_name" class="form-control add-dev-form-control" formControlName="team_name" />
+              <control-messages [control]="addTeamForm.controls.team_name"></control-messages>
+            </div>
+            <div class="form-group col-sm-12">
+              <label class="control-label" i18n>SET LOCATION ACCURACY FOR DRIVER APP</label>
+              <select name="battery_usage" id="battery_usage" formControlName="battery_usage">
+                <option value="0" i18n>Low</option>
+                <option value="1" i18n>Medium</option>
+                <option value="2" i18n>High</option>
+                <option value="3" i18n>No Tracking</option>
+              </select>
+              <i class="material-icons help-icons cp" id="battery_help_outline" #i1 (mouseenter)="op1.toggle($event,i1)" (mouseleave)="op1.toggle($event,i1)">help_outline</i>
+              <control-messages [control]="addTeamForm.controls.battery_usage"></control-messages>
+            </div>
+            <div class="form-group col-12 tags-container">
+              <label class="control-label" i18n>TAGS</label>
+              <p-chips formControlName="tags" [addOnTab]=true [addOnBlur]=true [allowDuplicate]=false></p-chips>
+              <i class="material-icons help-icons cp" #i2 (mouseenter)="op2.toggle($event,i2)" (mouseleave)="op2.toggle($event,i2)">help_outline</i>
+              <control-messages [control]="addTeamForm.controls.tags"></control-messages>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div footer class="footer-buttons " style="text-align: right">
+        <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+          <ng-container i18n>Cancel</ng-container>
+        </button>
+        <button id="create-button" class="btn common-btn-green export_btn create-button" (click)="addTeam()">
+          <ng-container *ngIf="!is_editing_team" i18n>Create</ng-container>
+          <ng-container *ngIf="is_editing_team" i18n>Update</ng-container>
+        </button>
+      </div>
+    </app-popup>
+
+  </div>
+</div>
+<!-- <ng-template #buttonTemplate>
+  <li *ngIf="!(!!commonService.loginData.is_dispatcher)">
+    <button type="button" class="btn btn-primary dev-add-button" (click)="showAddPopup()" i18n>Add Team</button>
+  </li>
+</ng-template> -->
+<p-overlayPanel #op1>
+  <div class="proxima-semi-bold">
+    <ng-container i18n>Set Location Accuracy for</ng-container>
+    {{commonService.loginData.call_fleet_as}}
+    <ng-container i18n>App</ng-container>
+  </div>
+  <div i18n>(For Battery Optimization)</div>
+  <div>
+    <ul>
+      <li>
+        <ng-container i18n>High</ng-container> :
+        <ng-container i18n>(3 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)</ng-container>
+      </li>
+      <li>
+        <ng-container i18n>Medium</ng-container> :
+        <ng-container i18n>(30 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)</ng-container>
+      </li>
+      <li>
+        <ng-container i18n>Low</ng-container> :
+        <ng-container i18n>(60 Seconds Location Refresh Rate + 60 Seconds Server Hit) (Network Location Only)</ng-container>
+      </li>
+      <li>
+        <ng-container i18n>No Tracking</ng-container> :
+        <ng-container i18n>Location tracked only for task status changes and when the agent opens the app</ng-container>
+      </li>
+    </ul>
+  </div>
+</p-overlayPanel>
+<p-overlayPanel #op2>
+  <div class="proxima-semi-bold capitalize" i18n>TAGS</div>
+  <div>
+    <ng-container i18n>Please insert comma separated values. These tags will be used to categorize your</ng-container>
+    <ng-container i18n>team</ng-container>
+  </div>
+</p-overlayPanel>

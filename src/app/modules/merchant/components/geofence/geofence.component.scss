@@ -1,0 +1,276 @@
+
+  // geofence
+  @import "~assets/css/variables";
+  .action-buttons {
+    cursor: pointer;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    // display: inline-block;
+  }
+  
+  .map-card {
+    height: 100%;
+    width: 100%;
+  }
+  .map-container {
+    height: 100%;
+    width: 100%;
+  }
+  
+  // edit geofence
+  .geofence-form-container {
+    background: #fff;
+    margin: 0;
+    height: 100%;
+    border: width border-style color;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  }
+  
+
+
+.map-option {
+  right: 15px;
+  left: inherit;
+  top: auto;
+  padding: 8px 0px 0px 0px;
+  // padding: 10px 0 0;
+  letter-spacing: 1px;
+  position: absolute;
+  // left: 100px;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.78);
+  // padding: 20px 0;
+  width: 180px;
+  height: 180px;
+  z-index: 8;
+  color: #fff;
+  border-radius: 3px;
+}
+.map-option ul i {
+  line-height: 3.56;
+}
+
+
+.map-option .search-wrapper span.search {
+  position: absolute;
+  left: 20px;
+  // top: 8px;
+  opacity: .6;
+  color: #fff;
+}
+.map-option .search-wrapper input {
+  padding-left: 30px;
+  color: #fff;
+  border: none;
+}
+.map-option input {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-weight: 100;
+  width: 100%;
+}
+
+
+.form-control-map {
+  display: block;
+  height: 35px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 1.52857143;
+  box-shadow: none;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.map-option ul li {
+  width: 31%;
+  float: left;
+  text-align: center;
+  margin-left: 3px;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.map-option ul i {
+  display: block;
+  color: rgba(255, 255, 255, 0.49);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.12);
+  height: 50px;
+  line-height: 2.56;
+  margin-bottom: 10px;
+  &:hover {
+      border: 1px solid #2296FF;
+  }
+}
+
+
+.map-option ul a:hover {
+  color: #fff;
+}
+
+
+.map-option ul a {
+  padding: 10px 4px;
+  color: rgba(255, 255, 255, 0.49);
+  font-size: 12px;
+}
+.add-geo {
+  min-height: 450px !important;
+}
+
+
+.panel-box .panel {
+  padding: 15px 15px 5px;
+  border-radius: 0;
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+  font-family: $proxima-thin ;
+  height: 80%;
+}
+
+
+.light-font {
+  font-family: $proxima-thin 
+}
+
+.form-label {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  font-family: $proxima-bold;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+}
+.scroller {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+.create-task-input {
+  border-radius: 2px !important;
+  height: 40px !important;
+  line-height: 16px !important;
+  font-size: 14px !important;
+  padding: 10px !important;
+  border: solid 1px rgba(0, 0, 0, 0.11) !important;
+  position: relative;
+}
+
+.create-task-input:focus {
+  border: 1px solid #4695f6 !important;
+}
+
+.chars-left {
+  padding: 0;
+  font-size:12px;
+  float: right;
+}
+
+// preview
+
+.geofence-cards-main {
+  height: calc(100% - 50px);
+  margin: 0;
+  padding: 100px 25px 0 0;
+}
+.geofence-cards , .all-geofence-map {
+  height: 100%;
+}
+.geofence-cards{
+  margin-top: 20px;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  position: relative;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.geofence-cards-main.no-region{
+  padding-top: 0;
+}
+.geofence-cards-main.no-region .geofence-description{
+  position: relative !important;
+  padding-bottom: 20px !important;
+}
+
+.geofence-card-content {
+  height: 100%;
+  overflow-y: auto;
+  // overflow-x: hidden;
+}
+.geofence-single-card {
+  margin: 0;
+  padding: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+.geofence-single-card:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+}
+#geofence-single-card0 {
+  margin-top: 0;
+}
+
+.geofence-single-card:hover .card-name , .geofence-single-card:hover .card-description , .geofence-single-card:hover .card-last-updated {
+  color: rgba(0,0,0,1);
+}
+
+
+.card-name {
+  font-size: 16px;
+  letter-spacing: 1.2px;
+  color: #31353c;
+  font-family: $proxima-semi-bold;
+  display: flex;
+  justify-content: space-between;
+}
+.card-description , .card-last-updated {
+  font-family: $proxima-thin;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: #31353c;
+}
+.card-description{
+  font-size: 14px;
+}
+
+.main-sub-heading {
+  font-size: 16px;
+  letter-spacing: 0.4px;
+  margin: 0 0 10px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.pro-rg-font {
+  font-family: $proxima-reg;
+}
+
+// For autocomplete scss
+:host /deep/ .input-box {
+  font-family: $proxima-thin;
+  display: block;
+  height: 35px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 1.52857143;
+  box-shadow: none;
+  color: white;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  width: 100% !important;
+  padding-left: 34px !important;
+}

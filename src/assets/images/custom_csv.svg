@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="36" viewBox="0 0 32 36">
+    <defs>
+        <path id="a" d="M6.774 0a2.26 2.26 0 0 0-2.258 2.25v31.5A2.26 2.26 0 0 0 6.774 36h22.578a2.26 2.26 0 0 0 2.258-2.25V9l-9.032-9H6.774z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g fill-rule="nonzero">
+            <use fill="#FAFAFA" fill-rule="evenodd" xlink:href="#a"/>
+            <path stroke="#A7A7A7" stroke-width=".878" d="M31.17 9.182L22.398.44H6.774c-1 0-1.82.816-1.82 1.811v31.5c0 .995.82 1.811 1.82 1.811h22.578c1 0 1.819-.816 1.819-1.811V9.182z"/>
+        </g>
+        <path fill="#A7A7A7" fill-rule="nonzero" d="M24.836 9h5.896L22.578.878V6.75A2.26 2.26 0 0 0 24.836 9z"/>
+        <path fill="#1394FF" fill-rule="nonzero" d="M25.338 28.18a1.13 1.13 0 0 1-1.129 1.125H1.13A1.13 1.13 0 0 1 0 28.18v-9.494a1.13 1.13 0 0 1 1.129-1.125h23.08c.621 0 1.129.506 1.129 1.125v9.494z"/>
+        <text fill="#FFF" font-family="ArialRoundedMTBold, Arial Rounded MT Bold" font-size="8.429" letter-spacing=".615">
+            <tspan x="3.287" y="26.439">CS</tspan> <tspan x="16.378" y="26.439">V</tspan>
+        </text>
+    </g>
+</svg>

@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="second-top-nav" (click)="toggleSidebar()">
+  <i class="tf tfont right-chevron"></i>
+</div>
+<div>
+  <div class="side-menu-container" [ngClass]="{'show-in-sm':isSidebarVisible}">
+    <i class="tf tfont left-chevron sm-sidemenu-hide" (click)="toggleSidebar()"></i>
+    <app-sidemenu></app-sidemenu>
+  </div>
+  <div class="settings-content-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

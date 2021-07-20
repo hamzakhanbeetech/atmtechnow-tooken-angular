@@ -1,0 +1,25 @@
+$color-primary: #1394ff;
+$color-secondary: #282828;
+$color-tertiary: #e2e4e6;
+
+$color-blue: #1394ff;
+$color-black: #282828;
+$color-gray: #e2e4e6;
+$color-orange: #ff8f00;
+$color-radio: $color-blue;
+
+// font names
+$proxima-reg : 'ProximaNova-Regular';
+$proxima-thin : 'ProximaNova-Thin';
+$proxima-semi-bold : 'ProximaNova-Semi-Bold';
+$proxima-bold : 'ProximaNova-Bold';
+$mont-reg : 'Montserrat-Regular';
+$mont-light : 'Montserrat-Light';
+
+
+:root{
+  --blue:#1394ff;
+  --black:#282828;
+  --gray: #e2e4e6;
+  --orange: #ff8f00;
+}

@@ -1,0 +1,127 @@
+<div class="container-dispatcher-page  ele-ht p-0">
+    <div class="col-12 row inner-paddin p-1 m-0">
+        <div class="fullwidth col-12 w-100">
+            
+            <div class="col-xl-11 col-lg-11 col-md-12 col-sm-12 col-12 p-0">
+                <div class="panel">
+                    <div class="col-12 row m-0 header">
+                        <!-- Left header -->
+                        <div class="col-12 col-md-6 text-left">
+                            <div>{{merchantReport.first_name+' '+merchantReport.last_name}}</div>
+                            <div>{{merchantReport.address}}</div>
+                            <div>{{merchantReport.email}}</div>
+                        </div>
+                        <!-- Right Header -->
+                        <div class="col-5 mid">
+                            <div>MID: {{merchantReport.merchant_id}}</div>
+                        </div>
+                    </div>
+                    <div class="col-12 body">
+                        <div class="col-12 col-md-4">
+                            <label class="checkbox-box ">
+                                <div>
+                                    <p class="radio-ck-label" i18n>Total Agents</p>
+                                    <p class="radio-ck-label2 text-center" i18n>{{merchantReport.total_agents}}</p>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label class="checkbox-box ">
+                                <div>
+                                    <p class="radio-ck-label" i18n>Completed Tasks</p>
+                                    <p class="radio-ck-label2 text-center" i18n>{{merchantReport.completed_task}}</p>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label class="checkbox-box ">
+                                <div>
+                                    <p class="radio-ck-label" i18n>Failed Tasks</p>
+                                    <p class="radio-ck-label2 text-center" i18n>{{merchantReport.failed_task}}</p>
+                                </div>
+
+                            </label>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <label class="checkbox-box ">
+                                <div>
+                                    <p class="radio-ck-label" i18n>Merchant Rating</p>
+                                    <p-rating class="text-center rating" [ngModel]="merchantReport.merchant_rating" readonly="true" stars="5" [cancel]="false"></p-rating>
+                                    <!-- <p class="radio-ck-label2 " i18n>stars</p> -->
+                                </div>
+
+                            </label>
+                        </div>
+                   
+                        <div class="col-12 view-buttons">
+                            <button id="create-button" class="btn common-btn-green export_btn" (click)="viewAgents()">
+                                <ng-container i18n>View Agents</ng-container>
+                            </button>
+                            <button id="create-button" class="btn common-btn-green export_btn btn2" (click)="viewGeofence()">
+                                <ng-container i18n>View Geofence Area</ng-container>
+                            </button>
+                        </div>
+                   
+                         <!-- If documents are present  *ngIf="true" -->
+                    <div class="col-12 col-md-5 documents" *ngIf="showDocuments">
+                        <label class="checkbox-box ">
+                            <div class="prev-doc" *ngFor="let doc of merchantReport.document; let i = index;">
+                                <div class="col-12 pr-3" *ngIf="doc.data_type=='document'">
+                                    <p class="radio-ck-label ml-0" i18n>{{doc.display_name}}</p>
+                                    <p class="radio-ck-label2" i18n>Expiry Date: {{doc.expiry_date | date}}</p>
+                                </div>
+                                <a [href]="doc.value" target="_blank" class="view-button">View</a>
+                            </div>
+
+                        </label>
+                    </div>
+                   
+                    </div>
+                    
+
+                   
+
+                    <div class="col-12 text-right">
+                        <button id="close-button" class="btn btn-default" (click)="backToMerchantList()">
+                            <ng-container i18n>
+                                <i class="fa fa-chevron-left pr-3" aria-hidden="true"></i>Back</ng-container>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- GEOFENCE POPUP -->
+<app-popup *ngIf="showGeofencePopup" [minHeight]="'250px'" header="Geofence" i18n-header (onClose)="onPopupCancelClick()">
+    <div body>
+        <app-geofence [data]="geofenceData" [listMode]="true" [events]="triggerGeoFenceEvents.asObservable()" (onSave)="onPopupCancelClick()"></app-geofence>
+    </div>
+    <div footer>
+        <div class="action-buttons" style="margin-top: 10px;">
+            <!-- <button id="create-button" class="btn common-btn-green export_btn" (click)="emitEventToReview()">
+                <ng-container i18n>Save</ng-container>
+            </button> -->
+            <button id="close-button" class="btn btn-default" (click)="onPopupCancelClick()">
+                <ng-container i18n>Cancel</ng-container>
+            </button>
+        </div>
+    </div>
+</app-popup>
+
+<!-- Agents Popup -->
+<app-popup *ngIf="showAgentPopup" [minHeight]="'250px'" header="View Agents" i18n-header (onClose)="onAgentPopupCancelClick()">
+    <div body>
+        <app-agent-list [merchantID]="merchant_id"></app-agent-list>
+    </div>
+    <div footer>
+        <div class="action-buttons" style="margin-top: 10px;">
+            <button id="close-button" class="btn btn-default" (click)="onAgentPopupCancelClick()">
+                <ng-container i18n>Cancel</ng-container>
+            </button>
+        </div>
+    </div>
+</app-popup>

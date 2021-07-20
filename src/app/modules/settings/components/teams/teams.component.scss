@@ -1,0 +1,173 @@
+@import '~assets/css/variables';
+@import '~assets/css/chips';
+@import '~assets/css/overlaypanel';
+
+@media (min-width: 767px){
+    :host /deep/ .modal-lg {
+        max-width: 600px !important;
+    }
+}
+@media (max-width: 767px){
+    :host /deep/ .modal-lg {
+        max-width: 400px !important;
+    }
+}
+:host /deep/ select{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #c8c8c8;
+    background: #fff;
+    -webkit-appearance: none;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    padding-left: 7px;
+    background-position: right 50%;
+    background-repeat: no-repeat;
+    padding: .5em;
+    padding-bottom: 0px;
+    outline: 0;
+    padding-right: 1.5em;
+    background-image: url(data:image/svg+xml,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%20%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd%22%3E%20%3Csvg%20version%3D%221.1%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20x%3D%220px%22%20y%3D%220px%22%20width%3D%2214px%22%20height%3D%2212px%22%20viewBox%3D%220%200%2014%2012%22%20enable-background%3D%22new%200%200%2014%2012%22%20xml%3Aspace%3D%22preserve%22%3E%20%3Cpolygon%20points%3D%223.862%2C7.931%200%2C4.069%207.725%2C4.069%20%22/%3E%3C/svg%3E);
+}
+:host /deep/ #battery_help_outline{
+    right: 35px;
+}
+:host /deep/ .help-icons{
+    position: absolute;
+    top: 14px;
+    right: 15px;
+}
+.team-tile{
+    padding: 15px 15px 0;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin: 15px 0;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    -webkit-transition: all 3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    position: relative;
+    font-size: 14px;
+    width: 100%;
+}
+.team-tile:hover{
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px 2px rgba(0, 0, 0, 0.1);
+    transform: translate3d(0,-2px,0);
+}
+.team-action-btn .delete-team{
+    margin-right: 10px;
+}
+.team-tile li {
+    width: 20%;
+    float: left;
+}
+.team-tile .list-inline{
+    width: 100%;
+}
+.team-tile .list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+}
+.team-tile .media {
+    position: relative;
+    overflow: visible;
+}
+
+.team-members .media img{
+    border-radius: 50%;
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.team-members .media .overlay-image{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+    line-height: 1.8;
+    border-radius: 50%;
+    background-color: #999;
+    opacity: 0.7;
+    text-align: center;
+    padding-top: 11px;
+    color: #fff;
+}
+.team-tile .team-members{
+    padding: 15px;
+    margin: 6px 0;
+    float: left;
+    width: 100%;
+    min-height: 106px;
+}
+.team-tile .team-id{
+    font-family : $proxima-thin;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+.team-action-btn{
+    cursor: pointer;
+}
+:host /deep/ .ui-paginator{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+:host /deep/ p-chips .ui-inputtext {
+    padding-right: 30px;
+}
+
+.team-chip-size {
+    flex-grow: 1;
+    display: flex;
+    flex: auto;
+}
+
+.column-search{
+    font-size: 15px !important;
+    background-color: white !important;
+  }
+  .icon_search{
+    padding-left: 15px;
+    color: rgb(226, 224, 224);
+  }
+  .search-control{
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 18px;
+  }
+  button.create-button {
+    color: white;
+    background-color: $color-blue;
+    border-radius: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    width: 130px;
+    &:hover {
+      color: $color-blue;
+      background-color: white;
+      border: solid 1px $color-blue;
+    }
+  }
+  .add-team-div{
+      width: 100%;
+  }
+
+  .menu-list {
+    right: -3px !important;
+    .list-item {
+        width: 100%;
+    }
+  }
+
+  .menu-box {
+    &:hover .menu-list {
+        display: flex !important;
+        flex-direction: column  !important;
+      }
+  }

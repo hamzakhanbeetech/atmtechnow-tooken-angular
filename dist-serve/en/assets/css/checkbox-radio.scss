@@ -1,0 +1,77 @@
+// //radio button as checkbox
+@import '~assets/css/variables';
+
+.check-radio input{
+  opacity:0;
+  position: absolute;
+  // margin-top: 17px;
+  // margin-left: 3px;
+  z-index: 9;
+}
+.check-radio input+span{
+  border-radius: 110px;
+  border: solid 1.1px rgba(151, 151, 151, 0.53);
+  width: 17px;
+  height: 17px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: -3px;
+  transition: all 250ms ease;
+  color: #fff;
+}
+.check-radio input:checked + span{
+  background-color: $color-blue;
+  border: solid 1.1px transparent;  
+  color: #fff;
+}
+.check-radio span.overlay{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:2;
+  width:100%;
+  height:100%;
+  background: rgba(255, 255, 255, 0.67);
+}
+.check-radio input:checked + span+span.overlay{
+  box-shadow: 0 5px 15px 4px rgba(0, 0, 0, 0.15);
+  background: transparent;
+}
+.check-radio input + span:after {
+  content: '\E92A';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity:0;
+  line-height: 16px;
+  font-size: 8px !important;
+}
+.check-radio input:checked  + span:after{
+  animation: load8 .5s;
+  opacity:1;
+}
+.radio-ck-label{
+  font-size: 14px;
+}
+//checkbox box with border
+.checkbox-box {
+  position: relative;
+  border: solid 1px rgba(0, 0, 0, 0.1);
+  padding: 13px 20px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  *{
+    cursor: pointer;      
+  }
+  .radio-ck-label{
+    margin:0 0 0 15px;
+    font-size: 14px;
+  }
+}

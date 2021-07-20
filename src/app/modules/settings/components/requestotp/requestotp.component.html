@@ -1,0 +1,45 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading" i18n>Custom OTP Message</h2>
+      <p class="main-sub-heading pro-rg-font">
+        <ng-container i18n>Request OTP for order verification is activated. Now</ng-container> {{commonService.loginData.call_tasks_as}} <ng-container i18n>has to input the OTP before starting the</ng-container> {{commonService.loginData.call_tasks_as}}.
+      </p>
+    </div>
+  </div>
+
+  <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+      <div class="form-group inner-padding" style="margin-top: 25px">
+         <form class="" [formGroup]="otpForm" >
+        <h5 class="page-sub-heading">
+            <ng-container i18n>Request OTP Message</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="taskHeader">
+              <div class="col-12">
+                <p class="taskHeaderSub tk-para">
+                  <ng-container i18n>Customize the OTP Message to be send on Customer mobile.</ng-container>
+                </p>
+              </div>
+            </div>
+            <div class="col-12 row m-0">
+              <div class="col-12 p-l-0">
+                <textarea rows="5" cols="" maxlength="160" formControlName="sms_text" class="requestotp" placeholder="Eg. Dear Customer, OTP for your [TaskName] #[TaskId] is [TaskOtp]. Please share this with [FleetName] to start your [TaskName]."></textarea>
+                <div class="verify-char">
+                  <label class="characters-label">{{160 - otpForm.controls.sms_text.value.length}}
+                    <ng-container i18n>characters remaining</ng-container>
+                  </label>
+                </div>
+                <control-messages [control]="otpForm.controls.sms_text"></control-messages>
+              </div>
+            </div>
+            <div class="col-12 text-right mt-5">
+                <button id="create-button" class="" (click)="onOtpMessageSubmit()">
+                  <ng-container i18n>Update</ng-container>
+                </button>
+            </div>
+          </div>
+        </form> 
+        </div>
+    </div>
+</div>

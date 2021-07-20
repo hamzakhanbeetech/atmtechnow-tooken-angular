@@ -1,0 +1,257 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding topModule">
+    <div class="fullwidth1">
+      <ul class="nav heightfull">
+        <li (click)="openCustomerEarning(0)" [ngClass]="{'borderColor':style1 , 'borderColorBoth':!style1}"
+          class="liItem"> Technician</li>
+        <li (click)="openCustomerEarning(1)" [ngClass]="{'borderColor':!style1 , 'borderColorBoth':style1}"
+          class="liItem">Operator</li>
+      </ul>
+    </div>
+  </div>
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Payments</h2>
+    </div>
+  </div>
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding" *ngIf="style1">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <!-- Table -->
+        <!-- <p-table #dt [columns]="columns" [value]="technicianEarningData" (onLazyLoad)="onLazyLoad($event)" [totalRecords]="totalRecords"
+            [lazy]="true" [pageLinks]="8" [paginator]="true" [rows]="rows" [style]="{width:'100%'}"> -->
+
+
+        <p-table #dt [columns]="columns" [value]="technicianEarningData" [paginator]="true" [pageLinks]="8"
+          [alwaysShowPaginator]="true" [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}"
+          (onPage)="onPageChange($event,rows,technicianEarningData?technicianEarningData:[])"
+          (onFilter)="onFilterChange($event)"
+          (onSort)="onPageChange({ rows: +rows, first: 0 },rows,technicianEarningData?technicianEarningData:[])"
+          [autoLayout]='true' sortField="fleet_id" sortOrder="-1">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search"
+                i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'fleet_id'" class="">
+                <ng-container i18n>Technician Id</ng-container>
+                <p-sortIcon [field]="'fleet_id'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'username'" class="">
+                <ng-container i18n>Technician Name</ng-container>
+                <p-sortIcon [field]="'username'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'company_name'" class="">
+                <ng-container i18n>Company</ng-container>
+                <p-sortIcon [field]="'company_name'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'number_of_services'" class="">
+                <ng-container i18n>Number of Services Completed</ng-container>
+                <p-sortIcon [field]="'services_completed'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'total_amount'" class="">
+                <ng-container i18n>Job Amount($)</ng-container>
+                <p-sortIcon [field]="'total_amount'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'service_price'" class="">
+                <ng-container i18n>Additional Service Amount($)</ng-container>
+                <p-sortIcon [field]="'service_price'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'total_earnings'" class="">
+                <ng-container i18n>Total Earnings($)</ng-container>
+                <p-sortIcon [field]="'total_earnings'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'total_earnings'" class="">
+                <ng-container i18n>Admin Amount($)</ng-container>
+                <p-sortIcon [field]="'admin_amount'"></p-sortIcon>
+              </th>
+              <th class="">
+                <ng-container i18n>Actions</ng-container>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td>{{item.fleet_id}}</td>
+              <td>{{item.username}}</td>
+              <td>{{item.company_name}}</td>
+              <td>{{item.number_of_services}}</td>
+              <td>{{item.total_amount}}</td>
+              <td>{{item.service_price}}</td>
+              <td>{{item.total_earnings}}</td>
+              <td>{{item.admin_amount}}</td>
+              <td><span class="tk-link" (click)="showTechnicianBreakdown(item)">View Details</span></td>
+
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            {{infotext}}
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows"
+                  (change)="onPageChange({ rows: +rows, first: 0 },rows,technicianEarningData)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding" *ngIf="!style1">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <p-table #dt [columns]="customer_columns" [value]="customerEarningData" [paginator]="true" [pageLinks]="8"
+          [alwaysShowPaginator]="true" [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}"
+          (onPage)="onPageChange($event,rows,customerEarningData?customerEarningData:[])"
+          (onFilter)="onFilterChange($event)"
+          (onSort)="onPageChange({ rows: +rows, first: 0 },rows,customerEarningData?customerEarningData:[])"
+          [autoLayout]='true' sortField="fleet_id" sortOrder="-1">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search"
+                i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'customer_id'" class="">
+                <ng-container i18n>Operator Id</ng-container>
+                <p-sortIcon [field]="'customer_id'"></p-sortIcon>
+              <th [pSortableColumn]="'email'" class="">
+                <ng-container i18n>Operator Name</ng-container>
+                <p-sortIcon [field]="'email'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'number_of_bookings'" class="">
+                <ng-container i18n>Total Number of Requests Raised</ng-container>
+                <p-sortIcon [field]="'number_of_bookings'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'add_on_price'" class="">
+                <ng-container i18n>Add-ons Charges($)</ng-container>
+                <p-sortIcon [field]="'add_on_price'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'cancellation_amount'" class="">
+                <ng-container i18n>Cancellation Charges($)</ng-container>
+                <p-sortIcon [field]="'cancellation_amount'"></p-sortIcon>
+              </th>
+              <!-- <th [pSortableColumn]="'tip_amount'" class="">
+                        <ng-container i18n>Tips($)</ng-container>
+                        <p-sortIcon [field]="'tip_amount'"></p-sortIcon>
+                      </th> -->
+              <th [pSortableColumn]="'total_amount'" class="">
+                <ng-container i18n>Service/Task Charges($)</ng-container>
+                <p-sortIcon [field]="'total_amount'"></p-sortIcon>
+              </th>
+              <th class="">
+                <ng-container i18n>Actions</ng-container>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td>{{item.customer_id}}</td>
+              <td>{{item.email}}</td>
+              <td>{{item.number_of_bookings}}</td>
+              <td>{{item.add_on_price}}</td>
+              <td>{{item.cancellation_amount}}</td>
+              <!-- <td>{{item.tip_amount}}</td> -->
+              <td>{{item.total_amount}}</td>
+              <td><span class="tk-link" (click)="showCustomerBreakdown(item)">View Details</span></td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            {{infotext}}
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows"
+                  (change)="onPageChange({ rows: +rows, first: 0 },rows,customerEarningData)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="customer_columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+<app-popup *ngIf="showPopup" [minHeight]="'250px'" header="Service Request History" [modalType]="popupModalType.MEDIUM"
+  i18n-header (onClose)="onPopupCancelClick()">
+  <div body class="setHeight">
+    <div class="card" *ngFor="let data of serviceData">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="card-text bold-font">{{data.job_id}}</div>
+          </div>
+          <div class="col-sm-6">
+            <div class="card-text status-label pull-right">Completed</div>
+          </div>
+        </div>
+        <div class="card-text mt-2">{{data.creation_datetime | date: "MM/dd/yyyy HH:mm:ss"}}</div>
+        <div class="card-text mt-2">Earnings : $ {{data.total_amount}}</div>
+        <div class="card-text mt-2">{{data.job_address}}</div>
+      </div>
+    </div>
+  </div>
+
+</app-popup>
+<ng-template #buttonTemplate>
+  <li>
+    <div class="inline-datepicker enhanced-datepicker ">
+      <button class="md-raised dropdown task-dateRange">
+        <div class="fullwidth">
+          <span class="inline-btn">
+            <span class="dummy-date easy-3s" *ngIf="daterange.label!='Today'">{{daterange.start | date:"dd, MMM"}} -
+              {{daterange.end | date:"dd, MMM"}}</span>
+            <span class="dummy-date easy-3s" *ngIf="daterange.label=='Today'">Today</span>
+          </span>
+        </div>
+        <input type="text" name="daterangeInput" daterangepicker [options]="options"
+          (selected)="onSelectedDate($event, daterange)" />
+      </button>
+    </div>
+  </li>
+  <li style="position:absolute;right:20px;" *ngIf="!ismerchant">
+    <button (click)="exportEarning(daterange)" class="tf tfont export-round btn"></button>
+  </li>
+</ng-template>

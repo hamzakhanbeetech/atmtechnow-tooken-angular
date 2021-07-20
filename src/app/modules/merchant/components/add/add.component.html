@@ -1,0 +1,723 @@
+<div class="container-dispatcher-page p-0 ele-ht">
+  <div class="col-12 row inner-paddin p-1 m-0">
+    <!-- DYNAMIC POPUP -->
+    <div class="fullwidth col-12 w-100">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+        <h5>{{merchantEditMode ? 'Edit' : 'Add'}} Enterprise Platform</h5>
+        <div class="panel">
+          <div class="taskHeader">
+            <div class="col-12">
+              <p class="taskHeaderSub tk-para">
+
+              </p>
+            </div>
+          </div>
+          <div class=" row m-0 p-0">
+            <form [formGroup]="addMerchantForm" class=" col-12 p-0 d-flex">
+              <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="text-align: center">
+                <div>
+                  <img class="driver-image img-circle img-responsive"
+                    [src]="addMerchantForm.controls.image.value||'assets/images/user.png'" width="200px" height="200px">
+                  <control-messages [control]="addMerchantForm.controls.image"></control-messages>
+                </div>
+                <br>
+
+
+
+                <button class="btn-uplaod btn" (click)="fileInput.click()">
+                  Upload Logo
+                </button>
+                <input type="file" class="d-none" (change)="onUpload($event)" #fileInput>
+
+              </div>
+              <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+                <div class="row d-flex">
+
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Enterprise Platform</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="companyName"
+                      class="form-control add-dev-form-control" formControlName="companyName" />
+                    <control-messages [control]="addMerchantForm.controls.companyName"></control-messages>
+
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>PHONE</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <int-phone-prefix #intlTelInput class="pl-0 focusable" [locale]="'en'" formControlName="phone"
+                      [placeholder]="''"></int-phone-prefix>
+                    <control-messages [control]="addMerchantForm.controls.phone"></control-messages>
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>EMAIL</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="email" name="email" class="form-control add-dev-form-control" hidden>
+                    <input type="email" autocomplete="off" name="email" class="form-control add-dev-form-control"
+                      formControlName="email" />
+                    <control-messages [control]="addMerchantForm.controls.email"></control-messages>
+                  </div>
+                </div>
+                <div class="row d-flex mrgn-top">
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>ENTER Enterprise Platform ADDRESS</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <app-autocomplete formControlName="companyAddress" (latLng)="onLatLngEvent($event)">
+                    </app-autocomplete>
+                    <control-messages [control]="addMerchantForm.controls.companyAddress"></control-messages>
+
+                    <!-- <input type="text" name="companyAddress" class="form-control add-dev-form-control" formControlName="companyAddress" /> -->
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Contact Person</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" autocomplete="off"
+                      name="fname" class="form-control add-dev-form-control" formControlName="fullname" autofocus />
+                    <control-messages [control]="addMerchantForm.controls.fullname"></control-messages>
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Enterprise Platform Number</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="registrationNumber"
+                      class="form-control add-dev-form-control" formControlName="registrationNumber" />
+                    <control-messages [control]="addMerchantForm.controls.registrationNumber"></control-messages>
+
+                  </div>
+                </div>
+
+                <div class="row d-flex mrgn-top">
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Enterprise Platform Website</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="companyWebsite"
+                      class="form-control add-dev-form-control" formControlName="companyWebsite" />
+                    <control-messages [control]="addMerchantForm.controls.companyWebsite"></control-messages>
+
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Enterprise Platform Structure</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="companyStructure"
+                      class="form-control add-dev-form-control" formControlName="companyStructure" />
+                    <!-- <select class="form-control add-dev-form-control" name="companyStructure" id="companyStructure" formControlName="companyStructure">
+          <option value="0" i18n>100-200</option>
+          <option value="1" i18n>200-500</option>
+          <option value="2" i18n>500+</option>
+        </select> -->
+                    <control-messages [control]="addMerchantForm.controls.companyStructure"></control-messages>
+                    <!-- <p-dropdown class="col-10 add-category-input dropwdownMobile dir" [options]="customFieldsOption" optionLabel="label" formControlName="data_type"
+        (onChange)="onDataTypeChange(i)"></p-dropdown> -->
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Subscription price ($)</ng-container>
+                      <span class="required-class">*</span>
+                    </label>
+                    <input type="text" autocomplete="off" pInputText [pKeyFilter]="commonService.blockSpecial"
+                      name="companyPrice" class="form-control add-dev-form-control" formControlName="companyPrice" />
+                    <control-messages [control]="addMerchantForm.controls.companyPrice"></control-messages>
+
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>PASSWORD</ng-container>
+                      <span class="required-class" *ngIf="!merchantEditMode">*</span>
+                    </label>
+
+                    <input type="password" name="password" class="form-control add-dev-form-control" hidden />
+                    <input type="password" autocomplete="off" id="merchantPassword" name="password"
+                      class="form-control add-dev-form-control" formControlName="password" />
+                    <control-messages [control]="addMerchantForm.controls.password"></control-messages>
+                  </div>
+
+                </div>
+
+
+                <!-- QUICK BOOKS -->
+
+                <div class="row d-flex mrgn-top">
+
+
+
+                  <div class="col-12 row  acknowledge-mobile" style="margin-top:2%;margin-bottom:2%;">
+                    <label class="control-label col-12 pl-3 mb-2 allow-all-opt" style="font-weight: bold !important;
+      font-size: 12px;">
+                      <ng-container i18n>Quick Books</ng-container>
+                    </label>
+                  </div>
+                  <br>
+
+
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Realm Id / Company Id</ng-container>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" formControlName="realm_id"
+                      autocomplete="off" name="companyName" class="form-control add-dev-form-control" />
+
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Client Id</ng-container>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                      formControlName="consumer_key" autocomplete="off" name="companyName"
+                      class="form-control add-dev-form-control" />
+
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label class="control-label">
+                      <ng-container i18n>Client Secret</ng-container>
+                    </label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                      formControlName="consumer_secret" autocomplete="off" name="companyName"
+                      class="form-control add-dev-form-control" />
+
+                  </div>
+
+
+
+                </div>
+
+
+                <br>
+
+                <!-- PERMISSION -->
+                <div class="row d-flex mrgn-top" formGroupName="permission">
+                  <div class="col-12 row  acknowledge-mobile">
+                    <label class="control-label col-12 pl-3 mb-2 allow-all-opt">
+                      <ng-container i18n>PERMISSIONS</ng-container>
+
+                      <div class="check-radio">
+                        <input value="1" type="checkbox" id="radiock5" (change)="onAllPermissions($event)"
+                          formControlName="selectAll">
+                        <span class="tf check"></span>
+                        <label for="radiock5" class="radio-ck-label" i18n>Allow All</label>
+                      </div>
+
+                    </label>
+                    <div class="col-12 col-md-4">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock1" (change)="onPermissionsChange()"
+                            formControlName="createTask">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock1" class="radio-ck-label" i18n>Create Service Request</label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock3" (change)="onPermissionsChange()"
+                            formControlName="editTask">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock3" class="radio-ck-label" i18n>Edit Service Request</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock2" (change)="onPermissionsChange()"
+                            formControlName="createAgent">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock2" class="radio-ck-label" i18n>Add Technician</label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock4" (change)="onPermissionsChange()"
+                            formControlName="addManager">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock4" class="radio-ck-label" i18n>Add Manager</label>
+                      </label>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock7" (change)="onPermissionsChange()"
+                            formControlName="addVideo">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock7" class="radio-ck-label" i18n>Add / View Video Links</label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock6" (change)="onPermissionsChange()"
+                            formControlName="addNotification">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock6" class="radio-ck-label" i18n>Custom Notifications</label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock8" (change)="onPermissionsChange()"
+                            formControlName="addCatalogue">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock8" class="radio-ck-label" i18n>Add Catalogue, Technician Skill, Addon
+                          Services </label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock9" (change)="onPermissionsChange()"
+                            formControlName="addSoftware">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock9" class="radio-ck-label" i18n>Add Software</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock10" (change)="onPermissionsChange()"
+                            formControlName="geofence">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock10" class="radio-ck-label" i18n>Geofence</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4  padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock11" (change)="onPermissionsChange()"
+                            formControlName="teams">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock11" class="radio-ck-label" i18n>Teams</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock12" (change)="onPermissionsChange()"
+                            formControlName="spareParts">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock12" class="radio-ck-label" i18n>Spare Parts</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock13" (change)="onPermissionsChange()"
+                            formControlName="quickBooks">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock13" class="radio-ck-label" i18n>Quick Books</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock14" (change)="onPermissionsChange()"
+                            formControlName="autoAllocation">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock14" class="radio-ck-label" i18n>Auto Allocation</label>
+                      </label>
+                    </div>
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock15" (change)="onPermissionsChange()"
+                            formControlName="profile">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock15" class="radio-ck-label" i18n>Profile</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock16" (change)="onPermissionsChange()"
+                            formControlName="technician_schedule">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock16" class="radio-ck-label" i18n>Technician Schedule</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock17" (change)="onPermissionsChange()"
+                            formControlName="payments">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock17" class="radio-ck-label" i18n>Payments</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock18" (change)="onPermissionsChange()"
+                            formControlName="templates">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock18" class="radio-ck-label" i18n>Templates</label>
+                      </label>
+                    </div>
+
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock19" (change)="onPermissionsChange()"
+                            formControlName="cancellation_policy">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock19" class="radio-ck-label" i18n>Cancellation Policy</label>
+                      </label>
+                    </div>
+
+                    <div class="col-12 col-md-4 padding-mobile">
+                      <label class="checkbox-box ">
+                        <div class="check-radio">
+                          <input value="1" type="checkbox" id="radiock20" (change)="onPermissionsChange()"
+                            formControlName="route">
+                          <span class="tf check"></span>
+                        </div>
+                        <label for="radiock20" class="radio-ck-label" i18n>Route Optimization</label>
+                      </label>
+                    </div>
+
+                  </div>
+                </div>
+
+
+
+
+              </div>
+
+
+
+            </form>
+
+
+
+
+
+
+
+            <!-- ENABLE CUSTOM FIELDS -->
+            <!-- <div class="col-12 d-flex p-0" style="align-items: center">
+                <label class="control-label col-5 col-md-2 mb-2">
+                  <ng-container i18n>ENABLE ADDITIONAL FIELDS</ng-container>
+                </label>
+                <label class="switch switch custom-switch" style="margin-bottom: 0px">
+                  <input type="checkbox" (change)="enableCustomField($event)" [checked]="enableCustomFieldSwitch">
+                  <span></span>
+                </label>
+              </div> -->
+
+
+            <!-- <div style="width: 100%" *ngIf="enableCustomFieldSwitch">
+  
+                <hr class="col-12 p-0 m-0"> -->
+
+            <!-- Additional Data -->
+            <!-- <div class="col-12 p-0 row d-flex mrgn-top additional-data" style="margin-top: 30px">
+                  <div class="col-12 row  p-0 acknowledge-mobile ">
+                    <div class="col-12 add-doc">
+                      <label class="control-label col-12 pl-3" style="font-size: 13px;">
+                        <ng-container i18n>ADDITIONAL DATA</ng-container>
+                        <span class="required-class">*</span>
+                      </label>
+                    </div>
+  
+                    <div class="col-12 w-100 mt-3 ml-3">
+                      <div class="d-none d-sm-flex account-row">
+                        <div class="col-lg-2 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">Label</span>
+                          </label>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">FIELD NAME</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Field names reflect directly in the app, so keep them relevant." tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+                        <div class="col-lg-2 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">FIELD TYPE</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Select the type of field you want to enter." tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+  
+                        <div class="col-lg-2 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">VALUE</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Pre-define the value of the field. for Multi/Single-Select use comma separated values"
+                              tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+  
+                        <div class="col-lg-2 col-sm-3 col-md-3 col-3 pl-0 dir" hidden>
+                          <label class="heading">
+                            <span class="dir">MANDATORY</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Choose whether the field is mandatory or not while signup." tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+                        <div class="col-lg-1 col-sm-1 col-md-1 col-1"></div>
+                      </div>
+                      <form [formGroup]="additionalFieldForm">
+                        <div class="mt-3" formArrayName="items" *ngFor="let item of additionalFieldForm.get('items')['controls']; let i = index;">
+                          <div class="account-row mt-2 mb-2 doc-row" [formGroupName]="i">
+                            <div class="formControlDiv col-12 col-lg-2 col-sm-3 col-md-3 pl-0">
+                              <div class="d-flex">
+                                <label class="labelClass d-block p-0 col-2 d-sm-none">Label: </label>
+                                <input class="add-category-input col-10 mobileInput dir" formControlName="label" placeholder="Label" pInputText [pKeyFilter]="commonService.blockSpecial" type="text">
+                              </div>
+                              <control-messages [control]="additionalFieldForm.get('items')['controls'][i]['controls']['label']"></control-messages>
+                            </div>
+  
+                            <div class="formControlDiv col-12 col-lg-2 col-sm-3 col-md-3 col-3 pl-0">
+                              <div class="d-flex">
+                                <label class="labelClass p-0 col-2 d-block d-sm-none">Field Name: </label>
+                                <input class="add-category-input mobileInput dir col-10" formControlName="display_name" placeholder="Field Name" pInputText [pKeyFilter]="commonService.blockSpecial"  type="text">
+                              </div>
+                              <control-messages [control]="additionalFieldForm.get('items')['controls'][i]['controls']['display_name']"></control-messages>
+                            </div>
+  
+                            <div class="formControlDiv col-12 col-lg-2 col-sm-3 col-md-3 col-3 pl-0">
+                              <div class="d-flex">
+                                <label class="labelClass p-0 col-2 d-block d-sm-none">Field Type: </label>
+                                <p-dropdown class="col-10 add-category-input dropwdownMobile dir" [options]="customFieldsOption" optionLabel="label" formControlName="data_type"
+                                  (onChange)="onDataTypeChange(i)"></p-dropdown>
+                              </div>
+                              <control-messages [control]="additionalFieldForm.get('items')['controls'][i]['controls']['data_type']"></control-messages>
+  
+                            </div>
+                            <div class="formControlDiv d-flex col-12 col-lg-2 col-sm-3 col-md-3 col-3 pl-0">
+                              SWITCH CASE {{item.controls.data_type.value.label}}
+                              <label class="labelClass p-0 col-2 d-block d-sm-none">Value: </label>
+  
+                              <div [ngSwitch]="item.controls.data_type.value.label">
+                                <input type="checkbox" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.CHECKBOX">
+  
+                                <input type="email" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.EMAIL">
+                                <div *ngSwitchCase="dataEnumType.IMAGE" (click)="onImageSelectionClick2(fileInput2)">
+                                  <input type="text" formControlName="value" placeholder="Upload File" class="add-category-input dir">
+                                  <input class="add-category-input dir" accept="image/jpeg,image/jpg,image/png" placeholder="Upload document" type="file" #fileInput2
+                                    (change)="onFileInput2($event , i)" hidden>
+                                </div>
+                                <p-calendar placeholder="value" class="add-category-input dir exp-date" formControlName="value" *ngSwitchCase="dataEnumType.DATE"></p-calendar>
+  
+                                <p-calendar [minDate]="null" placeholder="value" [maxDate]="currentDate" class="add-category-input dir exp-date" formControlName="value"
+                                  *ngSwitchCase="dataEnumType.DATE_PAST"></p-calendar>
+                                <p-calendar [minDate]="currentDate" placeholder="value" [maxDate]="null" class="add-category-input dir exp-date" formControlName="value"
+                                  *ngSwitchCase="dataEnumType.DATE_FUTURE"></p-calendar>
+                                <p-calendar showTime="true" placeholder="value" class="add-category-input dir exp-date" formControlName="value" *ngSwitchCase="dataEnumType.DATE_TIME"></p-calendar>
+                                <p-calendar showTime="true" placeholder="value" [maxDate]="null" [minDate]="currentDate" class="add-category-input dir exp-date"
+                                  formControlName="value" *ngSwitchCase="dataEnumType.DATETIME_FUTURE"></p-calendar>
+                                <p-calendar showTime="true" placeholder="value" [maxDate]="currentDate" [minDate]="null" class="add-category-input dir exp-date"
+                                  formControlName="value" *ngSwitchCase="dataEnumType.DATETIME_PAST"></p-calendar>
+                                <input type="file" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.IMAGE">
+                                <input type="number" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.NUMBER">
+                                <input type="number" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.TELEPHONE">
+                                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.SINGLESELECT">
+                                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.MULTISELECT">
+                                <int-phone-prefix [locale]="'en'" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.TELEPHONE"></int-phone-prefix>
+                                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="add-category-input dir" formControlName="value" placeholder="Value" *ngSwitchCase="dataEnumType.TEXT">
+                                <p-calendar placeholder="value" class="add-category-input dir exp-date" formControlName="value" *ngSwitchDefault></p-calendar>
+                              </div>
+                            </div>
+                            <div class="col-lg-2 col-sm-2 col-md-2 col-2" hidden>
+                              <div style="text-align: center;max-width: 86.5px;height: 25px">
+                                <input class=" dir" formControlName="mandatory" type="checkbox">
+                              </div>
+                            </div>
+                            <div class="col-12 col-lg-1 col-sm-1 col-md-1 col-1 dir">
+                              <div role="button" class="col-2 deleteMobile delete-icon" [ngClass]="{'cursor-not': (i == 0 )}">
+                                <i class="fa fa-trash-o" (click)="deleteAdditionalDoc(i)" pTooltip="Delete" tooltipposition="bottom"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="d-block d-sm-none">
+                        </div>
+                      </form>
+                      <div class="mrgn-top">
+                        <button id="create-button" class="btn common-btn-green export_btn" (click)="addMoreFields()">
+                          <ng-container i18n>Add More</ng-container>
+                        </button>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div> -->
+
+            <!-- Upload documents -->
+            <!-- <div class="col-10 p-0 row d-flex mrgn-top additional-data" style="margin-top: 30px">
+                  <div class="col-12 row p-0 acknowledge-mobile">
+                    <div class="col-12 add-doc">
+                      <label class="control-label col-12 pl-3" style="font-size: 13px;">
+                        <ng-container i18n>UPLOAD DOCUMENTS</ng-container>
+                        <span class="required-class">*</span>
+                      </label>
+                    </div>
+  
+  
+                    <div class="col-12 w-100 mt-3 ml-3">
+                      <div class="d-none d-sm-flex account-row">
+  
+  
+                        <div class="col-lg-3 col-sm-3 col-md-3 col-3 pl-0 dir">
+  
+                          <label class="heading">
+                            <span class="dir">Label</span>
+                          </label>
+                        </div>
+                        <div class="col-lg-3 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">VALUE</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Upload a file" tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+                        <div class="col-lg-3 col-sm-3 col-md-3 col-3 pl-0 dir">
+                          <label class="heading">
+                            <span class="dir">EXPIRY DATE</span>
+                            <i class="fa fa-info-circle dir" pTooltip="Enter the expiry date for the document." tooltipposition="bottom"></i>
+                          </label>
+                        </div>
+  
+                        <div class="col-lg-1 col-sm-1 col-md-1 col-1"></div>
+                      </div>
+                      <form [formGroup]="uploadDocForm">
+                        <div class="mt-3" formArrayName="uploadDoc" *ngFor="let item of uploadDocForm.get('uploadDoc')['controls']; let i = index;">
+                          <div class="account-row  mt-2 mb-2 doc-row" [formGroupName]="i">
+                            <div class="formControlDiv col-12 col-lg-3 col-sm-3 col-md-3 col-3 pl-0 pr-0">
+                              <div class="d-flex">
+                                <label class="labelClass d-block p-0 col-2 d-sm-none">Label: </label>
+                                <input class="add-category-input col-10 mobileInput dir" formControlName="label" placeholder="Label" pInputText [pKeyFilter]="commonService.blockSpecial" type="text">
+                              </div>
+                              <control-messages [control]="uploadDocForm.get('uploadDoc')['controls'][i]['controls']['label']"></control-messages>
+  
+                            </div>
+                            <div class="formControlDiv col-12 col-lg-3 col-sm-3 col-md-3 col-3 pl-0 pr-0" (click)="onImageSelectionClick(fileInput)">
+                              <button class="btn btn-secondary">Upload
+                                <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                              </button>
+                              <div class="d-flex">
+                                <label class="labelClass d-block p-0 col-2 d-sm-none">Value: </label>
+                                <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" formControlName="value" placeholder="Upload File" class="add-category-input col-10 mobileInput dir upload-file"
+                                  disabled>
+                                <i class="fa fa-cloud-upload icon-cloud" aria-hidden="true"></i>
+                                <input class="add-category-input dir" placeholder="Upload document" type="file" #fileInput (change)="onFileInput($event , i)"
+                                  hidden>
+                              </div>
+                              <control-messages [control]="uploadDocForm.get('uploadDoc')['controls'][i]['controls']['value']"></control-messages>
+                            </div>
+  
+                            <div class="formControlDiv col-12 col-lg-3 col-sm-3 col-md-3 col-3 pl-0">
+                              <div class="d-flex">
+                                <label class="labelClass d-block p-0 col-2 d-sm-none">Expiry Date: </label>
+                                <input class="add-category-input dir" formControlName="expiry_date" placeholder="Enter expiry Date" type="date">
+                                <p-calendar class="add-category-input dir col-10 exp-date" formControlName="expiry_date" placeholder="Enter expiry Date"
+                                  [minDate]="currentDate" [maxDate]="null" readonlyInput="true"></p-calendar>
+                              </div>
+                              <control-messages class="expiry_date" [control]="uploadDocForm.get('uploadDoc')['controls'][i]['controls']['expiry_date']"></control-messages>
+  
+                            </div>
+                            <div class="col-lg-1 col-sm-1 col-md-1 col-1 dir">
+                              <div role="button" class="delete-icon" [ngClass]="{'cursor-not': (i == 0 )}">
+                                <i class="fa fa-trash-o" (click)="deleteUploadDoc(i)" pTooltip="Delete" tooltipposition="bottom"></i>
+                              </div>
+                            </div>
+                          </div>
+                          <hr class="d-block d-sm-none">
+  
+                        </div>
+                      </form>
+  
+  
+                      <div class="mrgn-top">
+                        <button id="create-button" class="btn common-btn-green export_btn" (click)="uploadMoreDocuments()">
+                          <ng-container i18n>Add More</ng-container>
+                        </button>
+                      </div>
+                    </div>
+  
+                  </div>
+                </div> -->
+            <!-- </div> -->
+
+
+            <!-- BUTTONS -->
+            <div class="col-12 text-right mrgn-top">
+              <button *ngIf="!merchantEditMode" id="create-button" class="btn common-btn-green export_btn"
+                (click)="addMerchantSubmit()">
+                <ng-container i18n>Submit</ng-container>
+              </button>
+              <button *ngIf="merchantEditMode" id="create-button" class="btn common-btn-green export_btn"
+                (click)="addMerchantSubmit()">
+                <ng-container i18n>Update</ng-container>
+              </button>
+              <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+                <ng-container i18n>Cancel</ng-container>
+              </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- popup for geofence-->
+<app-popup *ngIf="showGeofencePopup" [minHeight]="'250px'" [header]="merchantEditMode ? 'Edit Geofence':'Add Geofence'"
+  i18n-header (onClose)="onPopupCancelClick()">
+  <div body>
+    <app-geofence [data]="geoFenceData" [listMode]="false" [events]="triggerGeoFenceEvents.asObservable()"
+      (onSave)="onPopupCancelClick()"></app-geofence>
+  </div>
+  <div footer>
+    <div class="action-buttons" style="margin-top: 10px;">
+      <button id="create-button" class="btn common-btn-green export_btn" (click)="emitEventToReview()">
+        <ng-container i18n>Save</ng-container>
+      </button>
+      <button id="close-button" class="btn btn-default" (click)="onPopupCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+    </div>
+  </div>
+</app-popup>

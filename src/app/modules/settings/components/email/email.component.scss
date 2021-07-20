@@ -1,0 +1,283 @@
+@import '~assets/css/variables';
+.wallet-panel .wallet-box{
+    padding: 15px;
+    position: relative;
+    height: 170px;
+}
+.wallet-panel .wallet-box h4{
+    margin-top: 0;
+}
+.wallet-panel .wallet-box:first-child{
+    border-right: 1px solid #e5e5e5;
+}
+.container-sms-wallet-page .single-wallet{
+    margin-bottom: 10px;
+}
+.single-wallet .tk-panel-box{
+    padding-top: 0;
+}
+.single-wallet .plan-buttons{
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    padding: 0 15px;
+}
+.wallet-panel .wallet-box .price{
+    margin: 10px 0 9px;
+}
+.tmp-para{
+    text-align: center;
+    font-size: 17px!important;
+    opacity: 0.7;
+    padding: 20px;
+}
+.tk-para,
+.tk-para-dark{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-family: $proxima-reg;
+}
+.tk-panel{
+    max-width: 750px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+    border: solid 1px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.tk-panel .tk-panel-heading{
+    border-bottom: solid 2px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    height: 58px;
+    padding: 17px 19px;
+}
+.tk-panel .tk-panel-content{
+    padding: 19px;
+}
+.tk-panel .tk-panel-action{
+    text-align: right;
+    // border-top: solid 2px rgba(0, 0, 0, 0.16);
+    font-size: 20px;
+    padding: 19px;
+}
+.container-sms-wallet-page .tk-panel .tk-panel-action {
+    border-top: 0px;
+    padding-top: 10px;
+}
+.container-sms-wallet-page .tk-panel .tk-panel-content{
+    padding-bottom: 10px;
+}
+.tk-panel label,
+.panel-box.tk-panel label{
+    font-weight: normal;
+    cursor: pointer;
+}
+.tk-panel .tk-panel-box{
+    float: left;
+    width:100%;
+    padding: 15px 0;
+    border-radius: 5px;
+    margin: 14px 0;
+    border: solid 1px rgba(0, 0, 0, 0.1);
+}
+.tk-panel.wallet-panel .tk-panel-heading.select-heading{
+    padding-top: 9px;
+}
+
+.wallet-panel .plan-buttons .tk-select{
+    display: inline-block;
+    float: right;
+    margin-bottom: 18px;
+    margin-top: -12px;
+}
+.wallet-panel .configure-btn{
+    position: relative;
+    padding: 0;
+    margin-top: 18px;
+}
+#rechargeWalletModal .parsley-errors-list{
+    position: absolute;
+    top: 100%;
+}
+.tk-panel .tk-panel-content.hide-content{
+    display: none;
+}
+.tk-panel .tk-panel-content.hide-content+.tk-panel-action{
+    border-top: none;
+}
+.tk-panel-action .tk-link{
+    float: left;
+    margin-top: 9px;
+}
+
+.tk-blue-btn,
+.tk-cancel-btn,
+{
+    height: 30px;
+    line-height: 25px;
+    min-width: 126px;
+}
+
+.tk-select select{
+    border: solid 1px rgba(0, 0, 0, 0.11);
+    height: 32px;
+    line-height: 32px;
+    background: #fff;
+    font-size: 14px;
+    outline: none;
+    width: 40%;
+    padding: 7px;
+    border-radius: 15px;
+}
+.tk-select select:disabled{
+    background: #cecece;
+}
+@media only screen and (max-width: 992px){
+    .wallet-panel .wallet-box{
+        width:100%;
+        height: auto;
+    }
+    .wallet-panel .wallet-box:first-child{
+        border-right:none;
+        border-bottom: 1px solid #e5e5e5;
+        padding-bottom: 40px;
+        margin-bottom: 20px;
+    }
+    .single-wallet .plan-buttons{
+        bottom: 10px;
+        position: static;
+        padding: 0;
+    }
+    .wallet-panel .plan-buttons .tk-select {
+        margin-bottom: 14px;
+        margin-top: 8px;
+        width: 100%;
+    }
+}
+
+button#create-button {
+    border: white;
+}
+
+.desc {
+    font-size: 16px;
+    font-family:  $proxima-semi-bold;
+    color: rgba(51, 51, 51, 0.8);
+}
+.email-heading {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: solid 1px rgba(0, 0, 0, 0.16);
+    font-size: 17px;
+    height: auto;
+    padding: 7px 19px;
+    margin: 20px;
+    margin-top: 0;
+    table tr td:first-child{
+        width: 100px;
+    }
+}
+
+label.desc {
+    font-size: 16px;
+    font-family:  $proxima-semi-bold;
+    color: rgba(51, 51, 51, 0.8); 
+}
+.mail-span {
+    // margin-left: 25px;
+    font-size: 15px;
+}
+
+.custom-input {
+    width: 50%;
+    height: 32px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: $proxima-reg;
+    // margin-left: 20px;
+}
+
+:host /deep/ .ui-dropdown-label.ui-inputtext {
+    padding-left: 10px;
+    font-family: $proxima-reg;
+    color: rgba(51, 51, 51, 0.8); 
+    cursor: pointer !important;
+    height: 30px;
+    padding-top: 4px;
+}
+
+:host /deep/ .ui-dropdown {
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+:host /deep/ .ui-dropdown-trigger{
+    padding-right: 25px;
+    padding-top: 3px;
+}
+:host /deep/ .ui-dropdown-items.ui-dropdown-list {
+    font-family: $proxima-reg;
+}
+
+:host /deep/ .ui-dropdown-item{
+    &:hover {
+        background: #eaedf0 !important;
+    }
+}
+
+@media (max-width: 575px) {
+    .inner-padding {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .tk-panel-action {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 0px 0px 10px 0px;
+    }
+    label.desc {
+        display: flex;
+        flex-direction: column;
+    }
+    .mail-span {
+        margin-left: 0px;
+    }
+    h4.desc {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .custom-input {
+        margin-left: 0px;
+        width: 90%;
+    }
+}
+
+.preview{
+    font-family: $proxima-semi-bold;
+    padding-left: 20px!important;
+    margin-top: 15px;
+    padding-bottom: 3px!important;
+}
+.custom-input{
+    box-shadow: none!important;
+}
+.btn-ok{
+    background-color: #1394ff;
+    border: 2px solid #1394ff;
+    color: white;
+    min-width: 130px;
+    height: 38px;
+    font-size: 14px;
+    font-family: "Montserrat-Light";
+    cursor: pointer;
+    border-radius: 100px;
+}
+.btn-ok:hover{
+    background-color: transparent;
+    color: #1394ff;
+    border: 2px solid #1394ff !important;
+}

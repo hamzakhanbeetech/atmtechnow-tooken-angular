@@ -1,0 +1,2335 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="d7b35c384aecd25a516200d6921836374613dfe7" datatype="html">
+        <source>Cancel</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/jw-notifications/components/confirm/confirm.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">236</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">97</context>
+        </context-group>
+				<target>Anuluj</target>
+      </trans-unit>
+      <trans-unit id="68e710782ccb5398b3acb8844caf0b199da2c3da" datatype="html">
+        <source>Confirm</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/jw-notifications/components/confirm/confirm.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+				<target>Potwierdź</target>
+      </trans-unit>
+      <trans-unit id="09d61409d98c86bf6de7e732aaaa4ba6f02c7be3" datatype="html">
+        <source>Days Remaining</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/header/header.component.ts</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+				<target>Pozostały dzień</target>
+      </trans-unit>
+      <trans-unit id="d9d9f39921138a0a063b8db40321005790c250cd" datatype="html">
+        <source>Day Remaining</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/header/header.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+				<target>Pozostałe dni</target>
+      </trans-unit>
+      <trans-unit id="f65253954b66e929a8b4d5ecaf61f9129f8cec64" datatype="html">
+        <source>Dashboard</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+				<target>Menu główne</target>
+      </trans-unit>
+      <trans-unit id="dd5bba9d8d3f50c9a9928405a8b2f1d44547efc0" datatype="html">
+        <source>Customers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+				<target>Klienci </target>
+      </trans-unit>
+      <trans-unit id="efbe55685ffef5af777f95b5b512f2c8b15cbfcc" datatype="html">
+        <source>Analytics</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+				<target>Analizy</target>
+      </trans-unit>
+      <trans-unit id="121cc5391cd2a5115bc2b3160379ee5b36cd7716" datatype="html">
+        <source>Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+				<target>Ustawienia</target>
+      </trans-unit>
+      <trans-unit id="bd5631860246399c0ee56937da916848c9633e41" datatype="html">
+        <source>Hippo Chat</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+				<target>Hippo Chat</target>
+      </trans-unit>
+      <trans-unit id="975d7a14bb4b923caf6fff68273730235ebeaf2d" datatype="html">
+        <source>Marketplace</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+				<target>Rynek</target>
+      </trans-unit>
+      <trans-unit id="b5629d298ff1a69b8db19a4ba2995c76b52da604" datatype="html">
+        <source>Support</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/sidebar/sidebar.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+				<target>Pomoc</target>
+      </trans-unit>
+      <trans-unit id="f384e03c86eea481be4697ecde3b48fdca0a13d0" datatype="html">
+        <source>Preferences</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+				<target>Preferences</target>
+      </trans-unit>
+      <trans-unit id="994363f08f9fbfa3b3994ff7b35c6904fdff18d8" datatype="html">
+        <source>Profile</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+				<target>Profil</target>
+      </trans-unit>
+      <trans-unit id="0ff736fd2d2de1e6c6a94919e2d172d3850674cd" datatype="html">
+        <source>Templates</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+				<target>Szkice</target>
+      </trans-unit>
+      <trans-unit id="02ba5c0406c25bac7000db080fea353cef4aca83" datatype="html">
+        <source>Geo Fence</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+				<target>Geofence</target>
+      </trans-unit>
+      <trans-unit id="bed068c2ee25f049a9c162f01446e65d17ecd1e5" datatype="html">
+        <source>Auto Allocation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">15</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+				<target>Automatryczne przypisywanie włączone</target>
+      </trans-unit>
+      <trans-unit id="8a6afcf38cbb3107a31ae8636805be7f65182dc8" datatype="html">
+        <source>Teams</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+				<target>Zespoły</target>
+      </trans-unit>
+      <trans-unit id="8bcabdf6b16cad0313a86c7e940c5e3ad7f9f8ab" datatype="html">
+        <source>Notifications</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+				<target>Powiadomienia</target>
+      </trans-unit>
+      <trans-unit id="30738487869ac361f1d6710efdd8848c11c1d522" datatype="html">
+        <source>Form Editor</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+				<target>Formy rezerwacji (aplikacja edytor)</target>
+      </trans-unit>
+      <trans-unit id="30837f631dc8e334998f32454a75d162857c0476" datatype="html">
+        <source>Customer Apps</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+				<target>Customer Apps</target>
+      </trans-unit>
+      <trans-unit id="9cfc24b69059eceab71ce2989a0edde02e75db0c" datatype="html">
+        <source>SMS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+				<target>SMS</target>
+      </trans-unit>
+      <trans-unit id="244aae9346da82b0922506c2d2581373a15641cc" datatype="html">
+        <source>Email</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+				<target>Email</target>
+      </trans-unit>
+      <trans-unit id="d773c2ac54d3c952e1859daaa6bd35841bd61b2e" datatype="html">
+        <source>Billing</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">34</context>
+        </context-group>
+				<target>Rozliczenia</target>
+      </trans-unit>
+      <trans-unit id="0c7f255903e77d61fb2ed40959c63a42ab4b26e0" datatype="html">
+        <source>Developers</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+				<target>Developers</target>
+      </trans-unit>
+      <trans-unit id="d5c7bf95713c4c1f3a14155b639498286fae5052" datatype="html">
+        <source>API Keys</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/sidemenu/sidemenu.component.ts</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+				<target>Klucz API</target>
+      </trans-unit>
+      <trans-unit id="2e7e3bcba95b2d0ec3505ab94de3839661febda2" datatype="html">
+        <source>Personal Access Token</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+				<target>Indywidualny token dostępu</target>
+      </trans-unit>
+      <trans-unit id="86fe6392df5274884a53adde8073659534c02d18" datatype="html">
+        <source>V1 API ACCESS TOKEN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+				<target>Dostęp tokena V1 API</target>
+      </trans-unit>
+      <trans-unit id="1979da7460819153e11d2078244645d94291b69c" datatype="html">
+        <source>Copy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+				<target>Kopia</target>
+      </trans-unit>
+      <trans-unit id="ef90545bc832876c0d7f9a10363c75137472bbb5" datatype="html">
+        <source>Copied</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+				<target>Skopiowano</target>
+      </trans-unit>
+      <trans-unit id="5f05f5b19d73b137df8ffabd8ac0419eef6248cc" datatype="html">
+        <source>V2 API KEYS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+				<target>KLUCZE V2 API</target>
+      </trans-unit>
+      <trans-unit id="c401dbe5c66d977fb4a7ce4ccb5acf808a1edb36" datatype="html">
+        <source>Generate Key</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+				<target>Utwórz klucz</target>
+      </trans-unit>
+      <trans-unit id="f5064c6fe2799db47482063ee0c6505ec122360c" datatype="html">
+        <source>help_outline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">27</context>
+        </context-group>
+				<target>pomóż zarysować</target>
+      </trans-unit>
+      <trans-unit id="8179f84338f1fa1d19f8de47929e9b8accf6cf95" datatype="html">
+        <source>No API keys</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+				<target>Brak kluczy API</target>
+      </trans-unit>
+      <trans-unit id="5f77d97fc9489f496927d93f4040f60ca5ebf24b" datatype="html">
+        <source>You can refer to the v2 API documentation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+				<target>Możesz powołać się na dokumentację v2 API</target>
+      </trans-unit>
+      <trans-unit id="16bd21c1b48036d54c6a595f5cff2540cfba7f60" datatype="html">
+        <source>here</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+				<target>tutaj</target>
+      </trans-unit>
+      <trans-unit id="5f38a003b431108725089cbdba6987bd8ebefa33" datatype="html">
+        <source>Keys are used to authenticate all v2 API requests.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/api-keys/api-keys.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+				<target>Klucze są użyte dla autentyczności wszystkich próśb v2 API.</target>
+      </trans-unit>
+      <trans-unit id="0a0d79a8e32f318d8c1b7f2a1d06ace623eb77df" datatype="html">
+        <source>You can add developers who would have the ability to create and manage marketplace applications for your account.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+				<target>You can add developers who would have the ability to create and manage marketplace applications for your account.</target>
+      </trans-unit>
+      <trans-unit id="8c594434e9353b80d74d4fb25ffd8748337e20c8" datatype="html">
+        <source>Search Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+				<target>Search Developer</target>
+      </trans-unit>
+      <trans-unit id="5d1e500cd4ff2ebcf566f820fb3633e3c7c8ca24" datatype="html">
+        <source>NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">33</context>
+        </context-group>
+				<target>Jak masz na imię</target>
+      </trans-unit>
+      <trans-unit id="d5e31741c591719630b5bba1ba38f8c1a04c10e3" datatype="html">
+        <source>EMAIL</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+				<target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="51fcb9d9c54645aee8b56c05a054ca987545f78b" datatype="html">
+        <source>ACTIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+				<target>Czynności</target>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">66</context>
+        </context-group>
+				<target>Usuń</target>
+      </trans-unit>
+      <trans-unit id="b1b869da78d31aa7fc72a1177c1d6a3a9ee66f5f" datatype="html">
+        <source>records per page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">70</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+				<target>zapisy na stronie</target>
+      </trans-unit>
+      <trans-unit id="408d8a1d79a2252a5df04f67c437331bed15dfdd" datatype="html">
+        <source>FIRST NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">95</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">112</context>
+        </context-group>
+				<target>Pierwsze imię</target>
+      </trans-unit>
+      <trans-unit id="b120db0746bf1bafdafd03fecc65f20adfa43b32" datatype="html">
+        <source>LAST NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">103</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+				<target>Drugie imię</target>
+      </trans-unit>
+      <trans-unit id="913177c049c8e4b32cf47fccca6ca2f4fbb9570b" datatype="html">
+        <source>PASSWORD(MINIMUM 6)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">122</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+				<target>Hasło </target>
+      </trans-unit>
+      <trans-unit id="70a67e04629f6d412db0a12d51820b480788d795" datatype="html">
+        <source>Create</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">239</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">100</context>
+        </context-group>
+				<target>Utwórz</target>
+      </trans-unit>
+      <trans-unit id="2e0f2ce43352a01581ed9c436c46369d47f3d715" datatype="html">
+        <source>Add Developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+				<target>Add Developer</target>
+      </trans-unit>
+      <trans-unit id="32cdf02562f66e592786b392b8c48314ef616067" datatype="html">
+        <source>Add developer</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/developers/developers.component.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+				<target>Add developer</target>
+      </trans-unit>
+      <trans-unit id="ca8e8a48d5f4503d9518bad577e384bcabbcbbd5" datatype="html">
+        <source>Enable this option to automatically assign</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+				<target>Włącz funkcję automatycznego przypisywania zadań swojemu kierowcy. Możesz wybrać logiczny przypis, który najlepiej będzie pasować do twoich firmowych potrzeb. </target>
+      </trans-unit>
+      <trans-unit id="7a9ec40d0a7b56d727558496666e6dc0e54571a6" datatype="html">
+        <source>to your</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+				<target>dla twojego</target>
+      </trans-unit>
+      <trans-unit id="3ad6d7e425efffd0fcc693fc0e0eb058dafd0b2a" datatype="html">
+        <source>You can select the assignment logic that best suits your business needs.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+				<target>Możesz wybrać logicznie przypis, który najlepiej będzie odpowiadał twoim firmowym potrzebom. </target>
+      </trans-unit>
+      <trans-unit id="6e2c9c244e4b623137c4a85ae8a92930e4e96191" datatype="html">
+        <source>Select a method to auto-allocate the tasks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+				<target>Wybierz metodę automatycznego umieszczania zadań</target>
+      </trans-unit>
+      <trans-unit id="2c003ca99ef40e5f6258222cbd577d1ed603b8a3" datatype="html">
+        <source>One By One</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+				<target>Pojedynczo</target>
+      </trans-unit>
+      <trans-unit id="931e062fc5ef492a805926ea82d7b328209ede0b" datatype="html">
+        <source>Send To All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+				<target>Wyślij do wszystkich</target>
+      </trans-unit>
+      <trans-unit id="6508d8f187102b5b52f2c4ff41d2591e3a7a0b4c" datatype="html">
+        <source>Batch Wise</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+				<target>Rozsądna partia</target>
+      </trans-unit>
+      <trans-unit id="8010ebf8220c93cc81ed1c48848a08b2760ae3d0" datatype="html">
+        <source>Round Robin</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+				<target>Okrągły Robin</target>
+      </trans-unit>
+      <trans-unit id="4eab1c1f4cfb6e5ba10d9773f29119abc882921a" datatype="html">
+        <source>Nearest Available</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">113</context>
+        </context-group>
+				<target>Najbliższy dostępny</target>
+      </trans-unit>
+      <trans-unit id="6538fc43b41f4ed2d2230782d5e6e746e4ec9461" datatype="html">
+        <source>Sends the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">148</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">168</context>
+        </context-group>
+				<target>Sends the</target>
+      </trans-unit>
+      <trans-unit id="76d2b141a5db578afd8c375e6119e650941433df" datatype="html">
+        <source>request notification to the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">130</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+				<target>request notification to the</target>
+      </trans-unit>
+      <trans-unit id="ef56ef61aa20634f97e82987acda14dbc43dda1d" datatype="html">
+        <source>nearest to the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+				<target>nearest to the</target>
+      </trans-unit>
+      <trans-unit id="45c5fe78ce2f0fc1146742b3e34fdcf009300b50" datatype="html">
+        <source>location</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+				<target>location</target>
+      </trans-unit>
+      <trans-unit id="e9c8e2233e10bce32059b1e029229d9e8278980a" datatype="html">
+        <source>If the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+				<target>If the</target>
+      </trans-unit>
+      <trans-unit id="f8015c8fa0a8365ff202faafa7a013913acf4102" datatype="html">
+        <source>doesn’t accept the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+				<target>doesn’t accept the</target>
+      </trans-unit>
+      <trans-unit id="0b18cd983b2da7e9f378160aab4886c51da32279" datatype="html">
+        <source>within the request expiry time, the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">137</context>
+        </context-group>
+				<target>within the request expiry time, the</target>
+      </trans-unit>
+      <trans-unit id="e0e7d0f80dbb1d42919f4a11fdf18cd62980cf16" datatype="html">
+        <source>request is sent to the next nearest</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">139</context>
+        </context-group>
+				<target>request is sent to the next nearest</target>
+      </trans-unit>
+      <trans-unit id="7096d2426830e697da415bf10105d85da29b20eb" datatype="html">
+        <source>If no</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">180</context>
+        </context-group>
+				<target>Jeśli nie</target>
+      </trans-unit>
+      <trans-unit id="20dd79b676914430f3a3f31b4728f2a7db936a88" datatype="html">
+        <source>accepts the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">141</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">181</context>
+        </context-group>
+				<target>accepts the</target>
+      </trans-unit>
+      <trans-unit id="f986d2904276d3a419680f7bb3827d850b230da4" datatype="html">
+        <source>it remains unassigned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+				<target>it remains unassigned</target>
+      </trans-unit>
+      <trans-unit id="280242b6acfb1093af9bf7ed2bf89632cbc30d7d" datatype="html">
+        <source>available in the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+				<target>available in the</target>
+      </trans-unit>
+      <trans-unit id="b069b9a14e171b8a45b6d766ad7f9a0416a76fa9" datatype="html">
+        <source>time-slot</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">153</context>
+        </context-group>
+				<target>time-slot</target>
+      </trans-unit>
+      <trans-unit id="5f28402ae6da420dc3abfdc106e372c84ad08c12" datatype="html">
+        <source>The</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+				<target>The</target>
+      </trans-unit>
+      <trans-unit id="1e0689a9f73d8721fef96e76fdf64d218c660741" datatype="html">
+        <source>gets assigned to the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">156</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">176</context>
+        </context-group>
+				<target>gets assigned to the</target>
+      </trans-unit>
+      <trans-unit id="b889fc405309c1f7daeaef5a2e3380372de5d4eb" datatype="html">
+        <source>who accepts the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">177</context>
+        </context-group>
+				<target>who accepts the</target>
+      </trans-unit>
+      <trans-unit id="be1f56e8c96cf4d7b2e0c926654037dae649a06d" datatype="html">
+        <source>request first</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">159</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">179</context>
+        </context-group>
+				<target>request first</target>
+      </trans-unit>
+      <trans-unit id="157990d66a8b50590b64bf8b39910830d4d5d9af" datatype="html">
+        <source>request notification to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">170</context>
+        </context-group>
+				<target>request notification to</target>
+      </trans-unit>
+      <trans-unit id="33dd77e1973a198e01d846dd9bb6e31531163c70" datatype="html">
+        <source>in batches</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+				<target>in batches</target>
+      </trans-unit>
+      <trans-unit id="b53dc37f1d6a38b98b2e21a77a47f01f2d257e67" datatype="html">
+        <source>You can create batches based on distance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+				<target>You can create batches based on distance</target>
+      </trans-unit>
+      <trans-unit id="dbbc6dddbb0c19a0a9e18251cace9b4a19c1f894" datatype="html">
+        <source>time and group size settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">173</context>
+        </context-group>
+				<target>time and group size settings</target>
+      </trans-unit>
+      <trans-unit id="c513cbb88f67e6ab82a1c7b6f6213c25de3239e6" datatype="html">
+        <source>within a defined radius are circularly force assigned</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">189</context>
+        </context-group>
+				<target>Kierowcy w zdefiniowanym promieniu są przypisani sile okrężnej</target>
+      </trans-unit>
+      <trans-unit id="bb561532268cfd3a0bc01d56b469f102348313e0" datatype="html">
+        <source>Force assigns the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">194</context>
+        </context-group>
+				<target>Force assigns the</target>
+      </trans-unit>
+      <trans-unit id="e04356b41e0d85f3e2f7ebc72a3f75c6e1147663" datatype="html">
+        <source>to</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">196</context>
+        </context-group>
+				<target>to</target>
+      </trans-unit>
+      <trans-unit id="43adb9f98979d0a45c123a1df96a2163a812886d" datatype="html">
+        <source>based on availability and distance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+				<target>oparte na dostępności i odległości.</target>
+      </trans-unit>
+      <trans-unit id="80a8389e16633dfee1adbe92a0265a558c36997e" datatype="html">
+        <source>REQUEST EXPIRES IN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">209</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">232</context>
+        </context-group>
+				<target>Prośba wygasa w</target>
+      </trans-unit>
+      <trans-unit id="dca2541a0aa6f8172f9ea801db1c51d63551b9fe" datatype="html">
+        <source>(SEC)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">233</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">289</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">297</context>
+        </context-group>
+				<target>sekunda</target>
+      </trans-unit>
+      <trans-unit id="019de340d358377295d3359809f4a1058af5439d" datatype="html">
+        <source>NUMBER OF RETRIES</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">248</context>
+        </context-group>
+				<target>Liczba ponowionych prób</target>
+      </trans-unit>
+      <trans-unit id="3253f9aface58c15e89e3986d34d4ba9bb0b6537" datatype="html">
+        <source>Retries</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+				<target>Ponowne próby</target>
+      </trans-unit>
+      <trans-unit id="14631b538e689a6213b48785a945c2204f7aab23" datatype="html">
+        <source>Distance Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">253</context>
+        </context-group>
+				<target>Ustawienia odległości</target>
+      </trans-unit>
+      <trans-unit id="5e48453eb7900c9d2d8901fcabf026c4e9acc4fb" datatype="html">
+        <source>Start Radius</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+				<target>Promień początkowy</target>
+      </trans-unit>
+      <trans-unit id="dc14c95f9d2254740a1f0f2d00fd57d3cdc522ea" datatype="html">
+        <source>(KM)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">259</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">269</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">278</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">348</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">364</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">391</context>
+        </context-group>
+				<target>km</target>
+      </trans-unit>
+      <trans-unit id="95c0ff432899de7d63879aab19cfff5b1baf7750" datatype="html">
+        <source>Radius Increment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">267</context>
+        </context-group>
+				<target>Przyrost promienia</target>
+      </trans-unit>
+      <trans-unit id="ee4eb7ea0dba9e1f6bdabfedb7eb1b1bc863575b" datatype="html">
+        <source>MAXIMUM RADIUS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">277</context>
+        </context-group>
+				<target>Maksymalny promień</target>
+      </trans-unit>
+      <trans-unit id="2e10eba7746776ba2d1f9c33fff12b1b6aa4a19c" datatype="html">
+        <source>Time Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">284</context>
+        </context-group>
+				<target>Ustawienia czasu</target>
+      </trans-unit>
+      <trans-unit id="681c6c55d4df8ad48ad677757854edacf8466f2e" datatype="html">
+        <source>BATCH PROCESSING TIME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">288</context>
+        </context-group>
+				<target>Czas serii w toku</target>
+      </trans-unit>
+      <trans-unit id="0e31112c3bef328249b1723502dd7e98ba812404" datatype="html">
+        <source>REQUEST TIME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">296</context>
+        </context-group>
+				<target>Czas próbny</target>
+      </trans-unit>
+      <trans-unit id="12db29704ea2bb64bc4f88ffc7c05c11bf874cb8" datatype="html">
+        <source>Batch Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+				<target>Pakiet ustawień</target>
+      </trans-unit>
+      <trans-unit id="898515c0e0d35f98e05a78f53e64307948dcf737" datatype="html">
+        <source>MAXIMUM BATCH SIZE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">306</context>
+        </context-group>
+				<target>Maksymalny rozmiar serii</target>
+      </trans-unit>
+      <trans-unit id="697b6da90be48e07799390c164147a512bb2bfaa" datatype="html">
+        <source>MAXIMUM BATCH LIMIT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">311</context>
+        </context-group>
+				<target>Maksymalny limit serii</target>
+      </trans-unit>
+      <trans-unit id="0c8cc49b94923703d070bfdc1c9f0bd5dd9f678d" datatype="html">
+        <source>ASSIGN</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+				<target>Przypisz</target>
+      </trans-unit>
+      <trans-unit id="b0d4b927695fa15502609747c6f7ae75d73a23a0" datatype="html">
+        <source>TO OFF-DUTY/ LOGGED-OUT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">335</context>
+        </context-group>
+				<target>TO OFF-DUTY/ LOGGED-OUT</target>
+      </trans-unit>
+      <trans-unit id="cea7a8b822cf4662e5840ad7bca430c11a54dcbe" datatype="html">
+        <source>MAXIMUM TASKS ALLOWED</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">341</context>
+        </context-group>
+				<target>MAXIMUM TASKS ALLOWED</target>
+      </trans-unit>
+      <trans-unit id="e38612e5603d8bffef886063876066dfd24ca348" datatype="html">
+        <source>RADIUS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">347</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">363</context>
+        </context-group>
+				<target>Promień</target>
+      </trans-unit>
+      <trans-unit id="f05d9d5237dc731fcb6ccde09938dfda0526606f" datatype="html">
+        <source>Maximum Radius:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">361</context>
+        </context-group>
+				<target>Maksymalny promień</target>
+      </trans-unit>
+      <trans-unit id="fcd9c79f1190058cbefa6888fc5ee966710d5513" datatype="html">
+        <source>Enable Pool</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">378</context>
+        </context-group>
+				<target>Enable Pool</target>
+      </trans-unit>
+      <trans-unit id="c8b581d9caef19377c3aafd97278534d5a9a8f63" datatype="html">
+        <source>Threshold Radius</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">390</context>
+        </context-group>
+				<target>Threshold Radius</target>
+      </trans-unit>
+      <trans-unit id="cb2d7bcba0e326187c8113f5e1ee9e2add45d786" datatype="html">
+        <source>Waiting time at first pickup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">398</context>
+        </context-group>
+				<target>Waiting time at first pickup</target>
+      </trans-unit>
+      <trans-unit id="8cbf356edbd01be3a818ee5c5c40708fdcba2122" datatype="html">
+        <source>(MINUTES)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">399</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">408</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">416</context>
+        </context-group>
+				<target>(MINUTES)</target>
+      </trans-unit>
+      <trans-unit id="a4c99283276b78c2c75193d796fa0f9596adaf81" datatype="html">
+        <source>ETA AT Pickup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">407</context>
+        </context-group>
+				<target>ETA AT Pickup</target>
+      </trans-unit>
+      <trans-unit id="1512026e430641b620d60646fe536cbd8fe5060c" datatype="html">
+        <source>SLA of Delivery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">415</context>
+        </context-group>
+				<target>SLA of Delivery</target>
+      </trans-unit>
+      <trans-unit id="8a96ef60fda448d6951f65fafc0ea974ca501e62" datatype="html">
+        <source>Send push to busy</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">425</context>
+        </context-group>
+				<target>Send push to busy</target>
+      </trans-unit>
+      <trans-unit id="3c5046ae8a1e0d0ca6dc309795af3cddc756660a" datatype="html">
+        <source>in first slot</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">427</context>
+        </context-group>
+				<target>in first slot</target>
+      </trans-unit>
+      <trans-unit id="4f20f2d5a6882190892e58b85f6ccbedfa737952" datatype="html">
+        <source>Yes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">432</context>
+        </context-group>
+				<target>Yes</target>
+      </trans-unit>
+      <trans-unit id="3d3ae7deebc5949b0c1c78b9847886a94321d9fd" datatype="html">
+        <source>No</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/auto-allocation/auto-allocation.component.ts</context>
+          <context context-type="linenumber">435</context>
+        </context-group>
+				<target>No</target>
+      </trans-unit>
+      <trans-unit id="b14aef773ff072eb6d538717170e3e961d98fd42" datatype="html">
+        <source>You can add managers so that they have the ability to create or edit the tasks. Multiple teams can be assigned to managers. Managers in-turn can manage unassigned tasks, permission to add drivers and assign them to tasks etc.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+				<target>You can add managers so that they have the ability to create or edit the tasks. Multiple teams can be assigned to managers. Managers in-turn can manage unassigned tasks, permission to add drivers and assign them to tasks etc.</target>
+      </trans-unit>
+      <trans-unit id="9e87315cb2f92654a5221045b64053e2d051d82e" datatype="html">
+        <source>Search Manager</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+				<target>Przeszukaj menedżera</target>
+      </trans-unit>
+      <trans-unit id="45cc8ca94b5a50842a9a8ef804a5ab089a38ae5c" datatype="html">
+        <source>ID</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+				<target>Identyfikator</target>
+      </trans-unit>
+      <trans-unit id="6934d8edd276d59e050006fe91b695ebad0218f8" datatype="html">
+        <source>Phone</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+				<target>Telefon</target>
+      </trans-unit>
+      <trans-unit id="28f86ffd419b869711aa13f5e5ff54be6d70731c" datatype="html">
+        <source>Edit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">65</context>
+        </context-group>
+				<target>Edytuj</target>
+      </trans-unit>
+      <trans-unit id="07f576517e5827898b0b413ae42a57783ca6b220" datatype="html">
+        <source>PHONE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">126</context>
+        </context-group>
+				<target>Telefon</target>
+      </trans-unit>
+      <trans-unit id="526f2e3d5b2ccab9528185f01efe9963973966e1" datatype="html">
+        <source>ASSIGN TEAM(S)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+				<target>Przypisz zespołom</target>
+      </trans-unit>
+      <trans-unit id="cd0e7652994470494f56fbff4807b49000527466" datatype="html">
+        <source>PERMISSIONS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">162</context>
+        </context-group>
+				<target>Zgody</target>
+      </trans-unit>
+      <trans-unit id="a7e7ceeb9cf8ee5485d50283126b2b391674e147" datatype="html">
+        <source>Allow All</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">164</context>
+        </context-group>
+				<target>Allow All</target>
+      </trans-unit>
+      <trans-unit id="e71517c9d754ff3e4a6a07cf9f9b79109daa1db7" datatype="html">
+        <source>Allow Access to Unassigned Tasks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">174</context>
+        </context-group>
+				<target>Allow Access to Unassigned Tasks</target>
+      </trans-unit>
+      <trans-unit id="006b1d38f4f8ef2bd02f4fe65c72ad106032ea1f" datatype="html">
+        <source>Allow Add Agent</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+				<target>Allow Add Agent</target>
+      </trans-unit>
+      <trans-unit id="5e209514eab64ebf9fbc1388532ff494b94dae1a" datatype="html">
+        <source>Allow Create Task</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">192</context>
+        </context-group>
+				<target>Zezwól na utworzenie zadania</target>
+      </trans-unit>
+      <trans-unit id="77ecee8203d3c2de9a2c44df1e8b95566455fb98" datatype="html">
+        <source>Allow Edit Task</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">201</context>
+        </context-group>
+				<target>Zezwól na edycję zadania</target>
+      </trans-unit>
+      <trans-unit id="5d99440fca3a0c3930d7fb1bbf87b88fe1fe85e1" datatype="html">
+        <source>Allow Access to Auto Allocaton</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">210</context>
+        </context-group>
+				<target>Allow Access to Auto Allocaton</target>
+      </trans-unit>
+      <trans-unit id="ac656845ff6e6fac36e40148b4afd720ccdf1bcd" datatype="html">
+        <source>FLEET SCHEDULE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">215</context>
+        </context-group>
+				<target>FLEET SCHEDULE</target>
+      </trans-unit>
+      <trans-unit id="5930b2b3b4b6350b3aac6fa2b2c6c176aacad975" datatype="html">
+        <source>CAN’T ACCESS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">219</context>
+        </context-group>
+				<target>Kierowca nie może połączyć się</target>
+      </trans-unit>
+      <trans-unit id="568aec9ae0914f55a283e47229da790aa5dacb87" datatype="html">
+        <source>VIEW ONLY</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">223</context>
+        </context-group>
+				<target>Tylko zobacz</target>
+      </trans-unit>
+      <trans-unit id="bd18ec7bf4a4317ea49927d60c24369e4c0d6311" datatype="html">
+        <source>CAN VIEW &amp; EDIT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+				<target>Można obejrzeć i edytować</target>
+      </trans-unit>
+      <trans-unit id="047f50bc5b5d17b5bec0196355953e1a5c590ddb" datatype="html">
+        <source>Update</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">240</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">439</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">101</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">299</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">321</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">345</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">365</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">435</context>
+        </context-group>
+				<target>Aktualizacja</target>
+      </trans-unit>
+      <trans-unit id="f6755cff4957d5c3c89bafce5651f1b6fa2b1fd9" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/manager/manager.component.ts</context>
+          <context context-type="linenumber">248</context>
+        </context-group>
+				<target>Dodaj</target>
+      </trans-unit>
+      <trans-unit id="70fbb8b7ccbca4208cdb0ac7dc541a09bbb30c6e" datatype="html">
+        <source>Acknowledgement Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+				<target>Typ uznania</target>
+      </trans-unit>
+      <trans-unit id="feeee71731d6893c80b4c37b8e14bca0733dce40" datatype="html">
+        <source>can either acknowledge the receipt of the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+				<target>can either acknowledge the receipt of the</target>
+      </trans-unit>
+      <trans-unit id="14f98595ac163e7b1a8702c17d04700be45ec8e1" datatype="html">
+        <source>or accept/decline a</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+				<target>lub zaakceptuj/odmów</target>
+      </trans-unit>
+      <trans-unit id="9e8cb45ebf973b29bf672d440c602edf3a96f092" datatype="html">
+        <source>based on your selection below</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+				<target>oparte na twoim poniższym wyborze.</target>
+      </trans-unit>
+      <trans-unit id="8a3904aca29e588a4e4a1a43e6f7b9b87e64a6f2" datatype="html">
+        <source>Acknowledge</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">25</context>
+        </context-group>
+				<target>Uznanie</target>
+      </trans-unit>
+      <trans-unit id="a3a48ea234631780fa85b8848dcb310b143c64fc" datatype="html">
+        <source>Accept/Decline</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">29</context>
+        </context-group>
+				<target>Akceptacja/Odmowa</target>
+      </trans-unit>
+      <trans-unit id="a2f14a73f7a6e94479f67423cc51102da8d6f524" datatype="html">
+        <source>None</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+				<target>Żaden</target>
+      </trans-unit>
+      <trans-unit id="ef15cd92acfd4f7996f1715ec9690fce4dc632b5" datatype="html">
+        <source>App Milestones</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+				<target>Dodaj ważne punkty</target>
+      </trans-unit>
+      <trans-unit id="aa8272dffecbdcefa004b68c5891242f25842a5d" datatype="html">
+        <source>Reduce the number of milestones required to complete a</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">52</context>
+        </context-group>
+				<target>Reduce the number of milestones required to complete a</target>
+      </trans-unit>
+      <trans-unit id="61875ffba30ffffbde20cc3b9749431c2f9182d0" datatype="html">
+        <source>Mandatory milestones include Start, Arrive, Successful</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+				<target>Podstawowe punkty kluczowe zawierają rozpoczęcie, przybycie, ukończenie.</target>
+      </trans-unit>
+      <trans-unit id="1cecb1b13a6101d4177179ee983c2655bdc9c194" datatype="html">
+        <source>Show Arrived Button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">64</context>
+        </context-group>
+				<target>Pokaż przycisk przybycia</target>
+      </trans-unit>
+      <trans-unit id="29d706e407622eb9cc35cf199d71226d9c909a3a" datatype="html">
+        <source>Hide Cancel Button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">73</context>
+        </context-group>
+				<target>Ukryj przycisk anulowania</target>
+      </trans-unit>
+      <trans-unit id="8c0cd2e394f4d760c2c8a9e91d5cc6f08286fddf" datatype="html">
+        <source>Hide Failed Button</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+				<target>Ukryj przycisk niepowodzenia</target>
+      </trans-unit>
+      <trans-unit id="25de9fc8e8fe12eab379753af573f988b1331f9e" datatype="html">
+        <source>Auto Arrival Distance</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">91</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+				<target>Auto Arrival Distance</target>
+      </trans-unit>
+      <trans-unit id="748224e072990b463947dff8f80a13167e3ff072" datatype="html">
+        <source>This will Auto Arrive</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">94</context>
+        </context-group>
+				<target>This will Auto Arrive</target>
+      </trans-unit>
+      <trans-unit id="ad90a23f1cb9eee3f93ef019ad4cc8aea9adeafd" datatype="html">
+        <source>is in the specified radius.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">98</context>
+        </context-group>
+				<target>is in the specified radius.</target>
+      </trans-unit>
+      <trans-unit id="b98fa583d3366d321196aaea07d085d032600a84" datatype="html">
+        <source>On-Demand Workflow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">125</context>
+        </context-group>
+				<target>On-Demand Workflow</target>
+      </trans-unit>
+      <trans-unit id="0f382f02b744babae2bf10d4eee7998cf7917853" datatype="html">
+        <source>Enable this configuration to optimize your</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+				<target>Enable this configuration to optimize your</target>
+      </trans-unit>
+      <trans-unit id="0131c32b02bea1b39084664621f5ebb6e3fbdaa8" datatype="html">
+        <source>workflow for on-demand businesses.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">133</context>
+        </context-group>
+				<target>workflow for on-demand businesses.</target>
+      </trans-unit>
+      <trans-unit id="f98a55ba3dd6b15dcba0f71d6aa5a3fdc4ec772a" datatype="html">
+        <source>This auto-starts the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">134</context>
+        </context-group>
+				<target>This auto-starts the</target>
+      </trans-unit>
+      <trans-unit id="d701ee03b6fa9028ee8532fec12ea3b09b9887f6" datatype="html">
+        <source>at acceptance by</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+				<target>at acceptance by</target>
+      </trans-unit>
+      <trans-unit id="cf474442ca066fe8bcdb0e6e4de5d701049b0f2a" datatype="html">
+        <source>and allows only one</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">138</context>
+        </context-group>
+				<target>and allows only one</target>
+      </trans-unit>
+      <trans-unit id="751eacba2a0c8195513f44f831a6b4fcba9ec61a" datatype="html">
+        <source>Enable On-Demand workflow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">152</context>
+        </context-group>
+				<target>Enable On-Demand workflow</target>
+      </trans-unit>
+      <trans-unit id="db0969ff3d2ad3bbc9cd65bf8cd8f9c435341070" datatype="html">
+        <source>Connected</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">161</context>
+        </context-group>
+				<target>Connected</target>
+      </trans-unit>
+      <trans-unit id="6829218544e108e152f5fa72cb79c4ccb82e0d06" datatype="html">
+        <source>View</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">163</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">186</context>
+        </context-group>
+				<target>View</target>
+      </trans-unit>
+      <trans-unit id="9979b811404168e6bcb1b7db7028b4c2902243e3" datatype="html">
+        <source>Enable this setting to allow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">169</context>
+        </context-group>
+				<target>Enable this setting to allow</target>
+      </trans-unit>
+      <trans-unit id="e4ce6f2fae6cc916f788a4040201b9314941ab17" datatype="html">
+        <source>to view only the upcoming stop.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">171</context>
+        </context-group>
+				<target>to view only the upcoming stop.</target>
+      </trans-unit>
+      <trans-unit id="e211ea666e9e7aca23c7409ab41f6daf1f791c54" datatype="html">
+        <source>Other stops will appear in the list but not clickable.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">172</context>
+        </context-group>
+				<target>Other stops will appear in the list but not clickable.</target>
+      </trans-unit>
+      <trans-unit id="461f90b6d4d8fc5cd650163486a5eab3b6379a99" datatype="html">
+        <source>Enable Restricted</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">184</context>
+        </context-group>
+				<target>Enable Restricted</target>
+      </trans-unit>
+      <trans-unit id="c5582fba7328417fc9a4a93de5491e0af169ebb4" datatype="html">
+        <source>Action Block</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">199</context>
+        </context-group>
+				<target>Blokada akcji</target>
+      </trans-unit>
+      <trans-unit id="2f9a12d9c29921598822fc828a06a2d9927afbf7" datatype="html">
+        <source>can add notes, images &amp; signature during a</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">206</context>
+        </context-group>
+				<target>can add notes, images &amp; signature during a</target>
+      </trans-unit>
+      <trans-unit id="8eb4b9a6e4288195b35dd0d6fe8d16dd6df9e401" datatype="html">
+        <source>Add Notes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">218</context>
+        </context-group>
+				<target>Dodaj notatki</target>
+      </trans-unit>
+      <trans-unit id="20da2718b078b92db625c8a6659ae183cb0b1869" datatype="html">
+        <source>Mandatory</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">227</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">246</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">265</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">284</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">303</context>
+        </context-group>
+				<target>Wymagane</target>
+      </trans-unit>
+      <trans-unit id="d923301510202f70bda4d2acad3453ed7c133361" datatype="html">
+        <source>Add Images</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">238</context>
+        </context-group>
+				<target>Dodaj obrazy</target>
+      </trans-unit>
+      <trans-unit id="1c68594b6650be83c9df00b19ea6520ef7e9d0e6" datatype="html">
+        <source>Add Signature</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+				<target>Dodaj podpis</target>
+      </trans-unit>
+      <trans-unit id="67cb520577c2ac106d759af9aca6dca64a97ad1d" datatype="html">
+        <source>Add Barcode</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">276</context>
+        </context-group>
+				<target>Dodaj kod kreskowy</target>
+      </trans-unit>
+      <trans-unit id="63a0b7b69e6b20e79bbeea9d2f9004f4b46c8ca7" datatype="html">
+        <source>Add Image Caption</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">295</context>
+        </context-group>
+				<target>Dodaj nagłówek obrazu</target>
+      </trans-unit>
+      <trans-unit id="5a607fc9c20650541548a2aa7cdc38b65bac9607" datatype="html">
+        <source>Task Management</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">312</context>
+        </context-group>
+				<target>Task Management</target>
+      </trans-unit>
+      <trans-unit id="b73a186f06dfa13659975a91d25560e351ad0610" datatype="html">
+        <source>Side</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">313</context>
+        </context-group>
+				<target>Side</target>
+      </trans-unit>
+      <trans-unit id="efff93433b14a8ba619daf43cf082f1088e01562" datatype="html">
+        <source>By default</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">319</context>
+        </context-group>
+				<target>By default</target>
+      </trans-unit>
+      <trans-unit id="cc8b1d2577eb5b94ac94a1b7c2c24460db60a217" datatype="html">
+        <source>can receive multiple requests at the same time, enable this to limit the</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">320</context>
+        </context-group>
+				<target>can receive multiple requests at the same time, enable this to limit the</target>
+      </trans-unit>
+      <trans-unit id="2ce8cbed78b8cf86df5132886251b4ac8f7d4ad5" datatype="html">
+        <source>to accept one task at a time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">321</context>
+        </context-group>
+				<target>to accept one task at a time</target>
+      </trans-unit>
+      <trans-unit id="93315c71442d1d7e06e18922eb64ef27152981b6" datatype="html">
+        <source>Disable multiple requests</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">332</context>
+        </context-group>
+				<target>Disable multiple requests</target>
+      </trans-unit>
+      <trans-unit id="8e8096e2bc0fc77c310fbfe6d6c2392e9095a642" datatype="html">
+        <source>Signup Setup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">367</context>
+        </context-group>
+				<target>Signup Setup</target>
+      </trans-unit>
+      <trans-unit id="11cb5f920afde2f59df615a14aea6d747edab3e9" datatype="html">
+        <source>SELECT TEMPLATE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">373</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">379</context>
+        </context-group>
+				<target>Wybierz szablon </target>
+      </trans-unit>
+      <trans-unit id="68f968a21a258ae8a3f0ef4138ba172fa15a0f1b" datatype="html">
+        <source>Auto Verification</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">392</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">404</context>
+        </context-group>
+				<target>Automatyczna weryfikacja</target>
+      </trans-unit>
+      <trans-unit id="1ad0b20dd4e53368c427267ef6c192b39a1383b5" datatype="html">
+        <source>AWAITING VERIFICATION TEXT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">398</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">410</context>
+        </context-group>
+				<target>Tekst oczekujący do weryfikacji</target>
+      </trans-unit>
+      <trans-unit id="d644bc9ab62364c6e0367c4917a52ffb90f55fdf" datatype="html">
+        <source>characters remaining</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">407</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">419</context>
+        </context-group>
+				<target>POZOSTAŁE ZNAKI</target>
+      </trans-unit>
+      <trans-unit id="2cab1984e151f8e1469875f1a50bf5c8630b9363" datatype="html">
+        <source>ALLOW</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">419</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">431</context>
+        </context-group>
+				<target>ALLOW</target>
+      </trans-unit>
+      <trans-unit id="71259f89d34080d5d6acb8e741f85c331bcc9206" datatype="html">
+        <source>TO SELECT TEAM OPTION</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">421</context>
+        </context-group>
+				<target>TO SELECT TEAM OPTION</target>
+      </trans-unit>
+      <trans-unit id="0ca5f4216229787b41edb57414c15666955f8b9e" datatype="html">
+        <source>TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/agent-app/agent-app.component.ts</context>
+          <context context-type="linenumber">433</context>
+        </context-group>
+				<target>TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</target>
+      </trans-unit>
+      <trans-unit id="3a5e2e5e454278df1e4a58031ab34de532c2e0d2" datatype="html">
+        <source>Organize your</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+				<target>Organize your</target>
+      </trans-unit>
+      <trans-unit id="a45ad6a4a875e4e6a1ef55331dedbe792c89f0b0" datatype="html">
+        <source>into logical groups to efficiently manage your field operations.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+				<target>into logical groups to efficiently manage your field operations.</target>
+      </trans-unit>
+      <trans-unit id="d2b7ac2384627e8a31a6dcf2fd7434042924c0db" datatype="html">
+        <source>You may group them on the basis of location, geography, type of service and so on and so forth.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">11</context>
+        </context-group>
+				<target>You may group them on the basis of location, geography, type of service and so on and so forth.</target>
+      </trans-unit>
+      <trans-unit id="ea50367ad9ec5130ebe205e2fa5024d1c9601aae" datatype="html">
+        <source>TEAM NAME</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">69</context>
+        </context-group>
+				<target>Nazwa zespołu</target>
+      </trans-unit>
+      <trans-unit id="c3e74b1e604294fd91353a6a6388e6eff75f6a2f" datatype="html">
+        <source>SET LOCATION ACCURACY FOR DRIVER APP</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+				<target>Ustaw lokalizację odpowiednią dla aplikacji kierowcy.</target>
+      </trans-unit>
+      <trans-unit id="9556266f0a2b1762a44b686f2bb21dbfefb01c12" datatype="html">
+        <source>Low</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">78</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">131</context>
+        </context-group>
+				<target>Nisko</target>
+      </trans-unit>
+      <trans-unit id="7d9241387918beed34b73911e9f9f8ad78b2b0c6" datatype="html">
+        <source>Medium</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">79</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">127</context>
+        </context-group>
+				<target>Średnio</target>
+      </trans-unit>
+      <trans-unit id="72279141a67cc042d9864102b703216cc8a428a3" datatype="html">
+        <source>High</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">80</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">123</context>
+        </context-group>
+				<target>Wysoko</target>
+      </trans-unit>
+      <trans-unit id="8c51f9ee5269fe7b22fac76a95c51e0cfbc9fe61" datatype="html">
+        <source>No Tracking</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">135</context>
+        </context-group>
+				<target>Brak śledzenia</target>
+      </trans-unit>
+      <trans-unit id="746a3b8851a895b1ca07c8779e2b509001a06c58" datatype="html">
+        <source>TAGS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">87</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">142</context>
+        </context-group>
+				<target>TAGI</target>
+      </trans-unit>
+      <trans-unit id="9bb0e194d61a6dfe9dbf6227657f2233feb379ca" datatype="html">
+        <source>Add Team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">110</context>
+        </context-group>
+				<target>Add Team</target>
+      </trans-unit>
+      <trans-unit id="094c1b2b8b9ed1060882a44bd049e4f7ed85715e" datatype="html">
+        <source>Set Location Accuracy for</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">115</context>
+        </context-group>
+				<target>Wybierz lokalizację odpowiednią dla aplikacji kierowcy</target>
+      </trans-unit>
+      <trans-unit id="570a2001afbfedbc2ef2142f331d5c7c11597059" datatype="html">
+        <source>App</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">117</context>
+        </context-group>
+				<target>Aplikacja</target>
+      </trans-unit>
+      <trans-unit id="a98454443ca7e31261cabd4d1637fd4f9daee5da" datatype="html">
+        <source>(For Battery Optimization)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">119</context>
+        </context-group>
+				<target>(Dla optymalizacji baterii)</target>
+      </trans-unit>
+      <trans-unit id="4e49c1b33a775451d444e1a7508448cb2d1b0ed9" datatype="html">
+        <source>(3 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">124</context>
+        </context-group>
+				<target>(3 sekundowy wskaźnik odświeżania lokalizacji + 30 sekundowe osiągniecie serwera) (GPS + lokalizacja sieci) </target>
+      </trans-unit>
+      <trans-unit id="b1b185abcadb0d69d92f6b54b2f90d1107a3ff77" datatype="html">
+        <source>(30 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">128</context>
+        </context-group>
+				<target>(30 sekundowy wskaźnik odświeżania lokalizacji + 30 sekundowe osiągniecie serwera) (GPS + lokalizacja sieci)</target>
+      </trans-unit>
+      <trans-unit id="9254d466aacd6380d34517f05e261a3332fcca03" datatype="html">
+        <source>(60 Seconds Location Refresh Rate + 60 Seconds Server Hit) (Network Location Only)</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+				<target>(60 sekundowy wskaźnik odświeżania lokalizacji + 60 sekundowe osiągniecie serwera) (tylko lokalizacja sieci)</target>
+      </trans-unit>
+      <trans-unit id="39b7529835359664519ac92284c736b05107a09f" datatype="html">
+        <source>Location tracked only for task status changes and when the agent opens the app</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+				<target>Lokalizacja śledzona tylko dla zmian statusów zadania i kiedy kierowca otwiera aplikację</target>
+      </trans-unit>
+      <trans-unit id="bba9c3230a211d0da234191c716315426118d6d1" datatype="html">
+        <source>Please insert comma separated values. These tags will be used to categorize your</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">144</context>
+        </context-group>
+				<target>Proszę wprowadzić wartości oddzielone przecinkiem. Te tagi będą użyte, aby skategoryzować twój </target>
+      </trans-unit>
+      <trans-unit id="2aad7a477375d68a4a7deff3a2cf83bd68e5d49b" datatype="html">
+        <source>team</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/teams/teams.component.ts</context>
+          <context context-type="linenumber">145</context>
+        </context-group>
+				<target>Zespół</target>
+      </trans-unit>
+      <trans-unit id="3ade122fba9b40ece9589896966b220b8211070e" datatype="html">
+        <source>Business Type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+				<target>Typ firmy</target>
+      </trans-unit>
+      <trans-unit id="c42c5609adaaff20d29eb3c1e35f22d536f7af34" datatype="html">
+        <source>Pick-Up &amp; Delivery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">31</context>
+        </context-group>
+				<target>Odbiór i dostawa</target>
+      </trans-unit>
+      <trans-unit id="267155136e2af787004245734edbee1c5df51e20" datatype="html">
+        <source>Manage on-demand pickups and deliveries efficiently.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+				<target>Zarządzaj odbiorami na żadanie i skutecznością dostaw.</target>
+      </trans-unit>
+      <trans-unit id="9b8909846b25754f27bf2a5b1adde3d0b2adc106" datatype="html">
+        <source>Business that use this workflow include:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">93</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">143</context>
+        </context-group>
+				<target>Interes, który używa takiej organizacji zadań obejmuje:</target>
+      </trans-unit>
+      <trans-unit id="3e34a7ccd74ba2caf0739ada40a523adfeb42a85" datatype="html">
+        <source>Food Delivery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">44</context>
+        </context-group>
+				<target>Dostawa jedzenia</target>
+      </trans-unit>
+      <trans-unit id="0df348e663f22e65ebcba1ec341c1db03dda8f3d" datatype="html">
+        <source>Courier Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+				<target>Usługi kurierskie</target>
+      </trans-unit>
+      <trans-unit id="c81812bec4e9bb5a3bd99f107d8fc56f3d5a333d" datatype="html">
+        <source>Grocery Delivery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">51</context>
+        </context-group>
+				<target>Dostawa ze sklepu spożywczego</target>
+      </trans-unit>
+      <trans-unit id="daedf0ed4002ee9129afa73670b773a3233a98a8" datatype="html">
+        <source>Alcohol Delivery</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+				<target>Dostawa alkoholu</target>
+      </trans-unit>
+      <trans-unit id="98f88dfc1b5e6663a7f2ae966d65b24b9eefdeb4" datatype="html">
+        <source>Laundry Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+				<target>Pralnia</target>
+      </trans-unit>
+      <trans-unit id="671944f21dd5a436970c13f3d8276db60c0a1a25" datatype="html">
+        <source>Appointment</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+				<target>Spotkanie</target>
+      </trans-unit>
+      <trans-unit id="a42bddc9c5b79f75a6e5b770cd2e5b308d216fbf" datatype="html">
+        <source>Manage at-home services and keep your customers happy.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">85</context>
+        </context-group>
+				<target>Zarządzaj usługami w domu i spraw, aby twoi klienci byli zadowoleni.</target>
+      </trans-unit>
+      <trans-unit id="5bf035eb4796d6c3bc9de0941c726b09cc93c866" datatype="html">
+        <source>Make Up Artists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">96</context>
+        </context-group>
+				<target>Wizażyści</target>
+      </trans-unit>
+      <trans-unit id="3b6ce6f35e98a62bfe3a408553c79738533e9a02" datatype="html">
+        <source>Wedding Stylists</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">99</context>
+        </context-group>
+				<target>Styliści ślubni</target>
+      </trans-unit>
+      <trans-unit id="0f751676789ca74ca874be739643e31d35b6ef65" datatype="html">
+        <source>Home Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">102</context>
+        </context-group>
+				<target>Usługi domowe</target>
+      </trans-unit>
+      <trans-unit id="7675af23e453dfc074c8e9c5c3db7794be7fa87f" datatype="html">
+        <source>Auto Repair Services</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">105</context>
+        </context-group>
+				<target>Serwis samochodowy</target>
+      </trans-unit>
+      <trans-unit id="125a077b1efade02451ad45955c77d621cb18f5a" datatype="html">
+        <source>Maid Cleaning</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">108</context>
+        </context-group>
+				<target>Pokojówka</target>
+      </trans-unit>
+      <trans-unit id="25d8587e34b983e29243916bc9ce29caf4b2afd6" datatype="html">
+        <source>Field-workforce</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">132</context>
+        </context-group>
+				<target>Pole siły roboczej</target>
+      </trans-unit>
+      <trans-unit id="809a72bac11ddc154403a7bc59161d55a0810d1d" datatype="html">
+        <source>Manage your on-street customer acquisition teams effortlessly.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">136</context>
+        </context-group>
+				<target>Zarządzaj bezproblemowo zespołami pozyskiwania klientów ulicznych.</target>
+      </trans-unit>
+      <trans-unit id="f7a55a7e8be35fd2c8734a12f84a1ab4d7c92e10" datatype="html">
+        <source>Field Marketting</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">147</context>
+        </context-group>
+				<target>Marketing terenowy</target>
+      </trans-unit>
+      <trans-unit id="e7a58fa2d82681dfe9b3cd3e7d36f893ed7cfbd4" datatype="html">
+        <source>Product Demo</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">150</context>
+        </context-group>
+				<target>Produkt pokazowy</target>
+      </trans-unit>
+      <trans-unit id="d61c0ae46599b1c98c874f183fd779d2f2baa232" datatype="html">
+        <source>Customer Acquisition/Development</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">154</context>
+        </context-group>
+				<target>Pozyskiwanie klienta/rozwój</target>
+      </trans-unit>
+      <trans-unit id="043a5288ce7792d189b398a29f34abb31b2b2f78" datatype="html">
+        <source>Target Marketing/Sales</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">157</context>
+        </context-group>
+				<target>Celowy marketing/wyprzedaż</target>
+      </trans-unit>
+      <trans-unit id="85896ec20ea33247845a2b345ff0f043384640e7" datatype="html">
+        <source>Market Research/Surveys</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">160</context>
+        </context-group>
+				<target>Badania rynku/ankiety</target>
+      </trans-unit>
+      <trans-unit id="1ac234c1977950b272fad72942259fbcd627ce09" datatype="html">
+        <source>Pane customisation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">175</context>
+        </context-group>
+				<target>Personalizacj sektora</target>
+      </trans-unit>
+      <trans-unit id="6c005f44dc353add35be7e4b9722728bdb7730cd" datatype="html">
+        <source>Customise the information shown in individual</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">182</context>
+        </context-group>
+				<target>Spersonalizuj informacje pokazane w indywidualnej płytce zadania, w podglądzie mapy.</target>
+      </trans-unit>
+      <trans-unit id="bbd1b006a407ec0c334bf7a8bc7393b8dae7dadd" datatype="html">
+        <source>tile in Map view</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">183</context>
+        </context-group>
+				<target>tile in Map view</target>
+      </trans-unit>
+      <trans-unit id="06c663bf1474713f57551123a46b34318543b67d" datatype="html">
+        <source>Reset</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">185</context>
+        </context-group>
+				<target>Resetowanie</target>
+      </trans-unit>
+      <trans-unit id="1cb5b66a05973a6b6ec7f09b8693224e13ff6ece" datatype="html">
+        <source>LINE1</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">197</context>
+        </context-group>
+				<target>LINIA 1</target>
+      </trans-unit>
+      <trans-unit id="0d70fa33ec8703d02ef47173a51627a9a793f578" datatype="html">
+        <source>LINE2</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">216</context>
+        </context-group>
+				<target>LINIA 2</target>
+      </trans-unit>
+      <trans-unit id="9be24f819035d32d3a5a548600d912132cddaf20" datatype="html">
+        <source>LINE3</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">235</context>
+        </context-group>
+				<target>LINIA 3</target>
+      </trans-unit>
+      <trans-unit id="c6dfd44c700d21b3a9518ddf32affcfb564fa6f8" datatype="html">
+        <source>PREVIEW</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">257</context>
+        </context-group>
+				<target>Podgląd</target>
+      </trans-unit>
+      <trans-unit id="706ad08d87bbac7d97144b04326ed3a681e17c1c" datatype="html">
+        <source>Default Dashboard View</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">310</context>
+        </context-group>
+				<target>Domyślny podgląd deski rozdzielczej</target>
+      </trans-unit>
+      <trans-unit id="1412a29c0466ddc54e066a14411ccf9730f0e748" datatype="html">
+        <source>DEFAULT DASHBOARD VIEW</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">315</context>
+        </context-group>
+				<target>Domyślny podgląd deski rozdzielczej</target>
+      </trans-unit>
+      <trans-unit id="fe46ccaae902ce974e2441abe752399288298619" datatype="html">
+        <source>Language</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">330</context>
+        </context-group>
+				<target>USTAW JĘZYK</target>
+      </trans-unit>
+      <trans-unit id="52dde38b70fa00a68f28e434f4e3f78528fb7aa3" datatype="html">
+        <source>DASHBOARD LANGUAGE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">335</context>
+        </context-group>
+				<target>WYBIERZ JĘZYK DESKI ROZDZIELCZEJ</target>
+      </trans-unit>
+      <trans-unit id="be8d3365548087ffe042202aca02f56d6fb847c8" datatype="html">
+        <source>TRACKING LINK LANGUAGE</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">339</context>
+        </context-group>
+				<target>WYBIERZ JĘZYK PANELU ŚLEDZENIA</target>
+      </trans-unit>
+      <trans-unit id="52030f4271e8abaea180422a30f78d3fe919a2a9" datatype="html">
+        <source>Distance Unit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">354</context>
+        </context-group>
+				<target>Distance Unit</target>
+      </trans-unit>
+      <trans-unit id="1856311a62c5344ee6dc086d9b2f2c2d7b285579" datatype="html">
+        <source>UNIT</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">359</context>
+        </context-group>
+				<target>Jednostkowe preferencje</target>
+      </trans-unit>
+      <trans-unit id="18d99a154e4bf5bf3ca69a1c7e0f67c89ca220a5" datatype="html">
+        <source>Customer Signup Setup</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">373</context>
+        </context-group>
+				<target>Ustawienia rejestracji klienta</target>
+      </trans-unit>
+      <trans-unit id="c188bb7dd179eef6e92849c5ea222465259f49b8" datatype="html">
+        <source>Awaiting verification text</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">414</context>
+        </context-group>
+				<target>Tekst oczekujący do weryfikacji</target>
+      </trans-unit>
+      <trans-unit id="653900dd0ac585a88489143114cda35d3d8ca568" datatype="html">
+        <source>ALLOW CUSTOMER TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">430</context>
+        </context-group>
+				<target>ALLOW CUSTOMER TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</target>
+      </trans-unit>
+      <trans-unit id="77b649e70133474551cf76e63ed9070ac1877a69" datatype="html">
+        <source>Customer Data Protection</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">444</context>
+        </context-group>
+				<target>Customer Data Protection</target>
+      </trans-unit>
+      <trans-unit id="e8d40937adea1ada2f28375e05ecf6467616874c" datatype="html">
+        <source>Enable Controlled Access</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">462</context>
+        </context-group>
+				<target>Enable Controlled Access</target>
+      </trans-unit>
+      <trans-unit id="6a7b0e137d748370d77cc2c19378aae5cc2546a9" datatype="html">
+        <source>Tracking Link Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">471</context>
+        </context-group>
+				<target>Tracking Link Settings</target>
+      </trans-unit>
+      <trans-unit id="c107ccda93d126294b6ae544e2738374a30b5fb1" datatype="html">
+        <source>Disable customer rating option on tracking link when tasks get completed</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">478</context>
+        </context-group>
+				<target>Disable customer rating option on tracking link when tasks get completed</target>
+      </trans-unit>
+      <trans-unit id="8d37c00f7aac3b01fd70374c357fd9c17dad9f7d" datatype="html">
+        <source>Disable Ratings on Tracking Link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">489</context>
+        </context-group>
+				<target>Disable Ratings on Tracking Link</target>
+      </trans-unit>
+      <trans-unit id="3c7eaaf5e40dcd61dbf545f6246e6eb35badc139" datatype="html">
+        <source>Enable single tracking link for connected tasks</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">498</context>
+        </context-group>
+				<target>Enable single tracking link for connected tasks</target>
+      </trans-unit>
+      <trans-unit id="edc1277686339d0335661933a2b85939a8fa03dd" datatype="html">
+        <source>Enable Single Tracking Link</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">509</context>
+        </context-group>
+				<target>Enable Single Tracking Link</target>
+      </trans-unit>
+      <trans-unit id="82d01eb40399b75edff36b7e0ca42db6be854c19" datatype="html">
+        <source>Auto Allocation Settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">521</context>
+        </context-group>
+				<target>Auto Allocation Settings</target>
+      </trans-unit>
+      <trans-unit id="8d67a4eb596852e4212ba24336573cb69fa08179" datatype="html">
+        <source>Enable Allocation settings at team level. This will enable Managers to override settings for their teams. You will have to additionally provide access to Managers in their profile section.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">529</context>
+        </context-group>
+				<target>Enable Allocation settings at team level. This will enable Managers to override settings for their teams. You will have to additionally provide access to Managers in their profile section.</target>
+      </trans-unit>
+      <trans-unit id="b4c394704f0d084f4ae3b79ae53ec9db648ec350" datatype="html">
+        <source>Enable Auto Allocation at Team level</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/modules/settings/components/preferences/preferences.component.ts</context>
+          <context context-type="linenumber">540</context>
+        </context-group>
+				<target>Enable Auto Allocation at Team level</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

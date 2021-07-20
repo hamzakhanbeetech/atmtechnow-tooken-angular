@@ -1,0 +1,113 @@
+<div class="col-12 row inner-padding">
+  <div class="fullwidth col-12 row m-0 add-geo">
+
+    <!-- Preview List Geofence -->
+    <div class="col-4 p-0" *ngIf="geoListMode">
+      <p class="main-sub-heading pro-rg-font">
+        It allows you to categorize {{commonService.loginData.call_fleet_as}} and simplifies the process of {{commonService.loginData.call_tasks_as}}
+        assignment by letting you create virtual boundaries.
+      </p>
+   
+
+      <!--Regions Scroll bar  -->
+      <div class="geofence-cards" style="overflow: hidden;" *ngIf="geoFenceData.length > 0">
+        <div class="geofence-card-content">
+          <div class="geofence-single-card" id="{{'geofence-single-card'+$index}}" *ngFor="let region of geoFenceData; let i = index;">
+            <div class="card-name">
+              {{region.region_name}}
+            </div>
+            <div class="card-description" [pTooltip]="region.region_description" [tooltipZIndex]="6" tooltipPosition="bottom">
+              {{region.region_description}}
+            </div>
+            <div class="card-last-updated">
+              <span>Last Updated</span>:
+              <span class="pro-sb-font">{{region.last_updated_at.split('T')[0]}}</span>
+              <!-- <span>|</span>
+              <span>{{commonService.loginData.call_fleet_as}}s:
+                <span class="pro-sb-font">{{region.fleets.length}}</span>
+              </span> -->
+            </div>
+          </div>
+          <div *ngIf="!geoFenceData.length" class="bold-font-proxinova no-geofence">No Geo-fence found.</div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- ADD / Edit GEOFENCE -->
+    <div class="col-4 p-0" *ngIf="!geoListMode">
+      <div class="geofence-form-container">
+        <div class="fullwidth panel-box fancy-form form-container" style="height: 100%;">
+          <div class="scroller">
+            <div class="light-font fullwidth panel" style="border-bottom: none !important">
+              <!-- Form -->
+              <form [formGroup]="geofenceForm">
+                <div class="form-group col-12" style="margin-bottom: 9px">
+                  <label class="form-label bold-font bold-font-proxinova">NAME
+                    <span class="required-class">*</span>
+                  </label>
+                  <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" id="focus-input" class="form-control create-task-input light-font" maxlength="35" placeholder="Enter Name"
+                    formControlName="geoName" />
+                  <control-messages [control]="geofenceForm.get('geoName')"></control-messages>
+                </div>
+                <div class="form-group col-12" style="margin-bottom:9px">
+                  <label class="form-label bold-font bold-font-proxinova">DESCRIPTION
+                    <span class="required-class">*</span>
+                  </label>
+                  
+                  <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" placeholder="Enter Description" class="form-control create-task-input light-font-proxinova" maxlength="50"
+                    formControlName="geoDescription" />
+                  <control-messages [control]="geofenceForm.get('geoDescription')"></control-messages>
+
+                  <label class="light-font chars-left">({{50 - geofenceForm.get('geoDescription').value.length }} characters left)</label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- MAP -->
+    <div class="col-8 map-container pl-5">
+      <div #geofenceMap class="map-card" id="geofence-map">
+
+      </div>
+
+      <!-- Add overlay options -->
+      <div class="map-option" *ngIf="!geoListMode">
+        <div class="col-sm-12">
+          <div class="search-wrapper fancy-search fullwidth">
+            <span class="tf search"></span>
+            <app-autocomplete [formControl]="mapSearchCtrl" [customPlaceholder]="'Search Map'" (latLng)="onLatLngEvent($event)"></app-autocomplete>
+            <!-- <input class="form-control-map light-font" placeholder="Search Map" /> -->
+          </div>
+          <div class="fullwidth p-0">
+            <ul class="nav mb-1">
+              <li class="light-font bold-font easy-3s">
+                <a>
+                  <i class="tf tf-delete" (click)="deletePolygonMarkedRegion();"></i>Clear Region</a>
+              </li>
+              <li class="light-font  bold-font easy-3s" *ngIf="!hideMapEditingOptions">
+                <a>
+                  <i class="tf tf-move" (click)="stopMarkRegion()"></i>Move Map</a>
+              </li>
+              <li class="light-font bold-font easy-3s" (click)="startMarkRegion()" *ngIf="!hideMapEditingOptions">
+                <a>
+                  <i class="tf tf-region"></i>Mark Region</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+<!-- (mouseover)="mouseOverGeofenceRegion(i)" (mouseleave)="mouseOutGeofenceRegion(i)" (click)="zoomBounds(i)" -->

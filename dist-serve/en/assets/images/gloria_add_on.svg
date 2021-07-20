@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>gloria_integration</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="99.5557608 96.8367185 0 96.8367185 0 0.999489304 99.5557608 0.999489304 99.5557608 96.8367185"></polygon>
+        <linearGradient x1="0%" y1="-12.7253537%" x2="0%" y2="91.5633138%" id="linearGradient-3">
+            <stop stop-color="#3AC1EC" offset="0%"></stop>
+            <stop stop-color="#1785A9" offset="100%"></stop>
+        </linearGradient>
+        <polygon id="path-4" points="57.6531869 0.4884 0 0.4884 0 56.32793 57.6531869 56.32793 57.6531869 0.4884"></polygon>
+    </defs>
+    <g id="new" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gloria_integration">
+            <g id="Page-1" transform="translate(0.000000, 2.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-2"></g>
+            </g>
+            <g id="Page-1" transform="translate(1.000000, 20.000000)">
+                <path d="M58.1376761,53.6783171 C58.1376761,53.6783171 56.8743179,42.2013902 66.3886612,36.9315854 C75.9118701,31.6662439 94.7691537,37.110122 98.4395418,38.3792195 C98.4395418,38.3792195 93.9032731,37.742439 87.3234672,47.319439 C80.7259299,56.8860244 75.9473328,64.3875366 62.4670791,56.9604146 C62.4670791,56.9604146 67.7997806,46.6692683 80.3018552,42.4632439 C80.3018552,42.4632439 67.1333776,42.4498537 58.1376761,53.6783171" id="Fill-4" fill="url(#linearGradient-3)"></path>
+                <mask id="mask-5" fill="white">
+                    <use xlink:href="#path-4"></use>
+                </mask>
+                <g id="Clip-2"></g>
+                <path d="M53.4623642,54.005039 C53.4623642,54.005039 63.6697075,36.5962341 52.2241254,21.3045756 C40.7696776,6.02333171 6.76243881,1.13291707 -0.000591044776,0.487209756 C-0.000591044776,0.487209756 7.68003582,2.74123415 11.3932746,22.7953561 C15.0991254,42.8286488 17.4115881,58.2765268 44.2509313,56.1281366 C44.2509313,56.1281366 43.0289463,35.8374537 26.0600507,20.1113561 C26.0600507,20.1113561 47.1071552,29.5961122 53.4623642,54.005039" id="Fill-1" fill="url(#linearGradient-3)" mask="url(#mask-5)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,27 @@
+<div class="intl-tel-input">
+    <span class="flagInput">
+        <div class="dropdown flag-container">
+            <button type="button" class="dropbtn btn" (click)="showDropDown($event)" [disabled]="disabled" tabindex="-1">
+                <span [class]="'iti-flag ' + selectedCountry.countryCode" *ngIf="selectedCountry"></span>
+                <!-- <span class="defaultCountry" *ngIf="!selectedCountry"></span> -->
+                <!-- <span class="country-code" >+{{selectedCountry.dialCode}}</span> -->
+                <div class="iti-arrow"></div>
+            </button>
+            <div class="dropdown-content country-list dropup" *ngIf="showDropdown" clickOutside>
+                <div class="list-group scrollable-menu">
+                    <a href="#" class="list-group-item" *ngFor="let country of countries | country: countryFilter" (click)="updateSelectedCountry($event, country.countryCode)">
+                        <div class="flag-box">
+                            <div [class]="'iti-flag ' + country.countryCode"></div>
+                        </div>
+                        <span class="country-name">{{ country.name }}
+                            <span class="dial-code">+ {{ country.dialCode}}</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </span>
+    <!-- <input [ngStyle]="{'padding-left': (selectedCountry.dialCode.toString().length * 9 + 54) + 'px' }" type="text" #i [onlyNumber]="onlyNumbers" [placeholder]="placeholder" class="form-control"  [disabled]="disabled" [(ngModel)]="phoneInput" (ngModelChange)="updatePhone()"> -->
+    <input  type="text" #i [onlyNumber]="onlyNumbers" [textMask]="{mask: mask}" [placeholder]="placeholder" class="form-control"  [disabled]="disabled" [(ngModel)]="phoneInput" (ngModelChange)="updatePhone()" (blur)="onTouch()">
+    
+</div>

@@ -1,0 +1,47 @@
+
+:host /deep/ .ui-growl-image{
+    display:none!important;
+}
+:host /deep/ .ui-growl-message{
+    margin-left: 0!important;
+}
+:host /deep/ .ui-growl-message-success{
+    color: #75FF8D;
+    background-color: #323232;
+}
+:host /deep/ .ui-growl-message-error{
+        background-color: #323232;
+        color: #FF6A6A;
+}
+:host /deep/ .ui-growl.ui-widget{
+    position: fixed;
+    bottom: 20px!important;
+    left: 20px!important;
+    max-width: calc(100vw - 50px);
+    min-width: 20em;
+    width: fit-content;
+    top: auto!important;
+}
+:host /deep/ .ui-growl-title{
+    display: none!important;
+}
+:host /deep/ .ui-growl-icon-close{
+    top: calc((100% - 20px)/2);
+    right: 10px;
+}
+:host /deep/ .ui-growl-message{
+    width: calc(100% - 10px);
+}
+:host /deep/ .ui-growl-icon-close.fa-close{
+    color: #ddd;
+}
+:host /deep/ .ui-growl.ui-widget {
+    z-index: 3010!important;
+}
+
+
+@media (max-width: 335px) {
+:host /deep/ .ui-growl.ui-widget {
+    min-width: 16em;
+}
+}

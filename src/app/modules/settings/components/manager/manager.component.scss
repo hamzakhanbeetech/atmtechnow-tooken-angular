@@ -1,0 +1,72 @@
+@import "~assets/css/checkbox-radio";
+@import "~assets/css/radio-button";
+@import "~assets/css/multiselect";
+:host /deep/ .intl-tel-input .form-control {
+  padding-left: 50px !important;
+  border-color: #bcbcbc;
+  border: 0;
+  border-bottom: 1px solid #bcbcbc;
+  outline: 0 none;
+  box-shadow: none;
+  border-radius: 0;
+  padding-top: 5px;
+  padding-bottom: 0px;
+}
+:host /deep/ p-multiselect .ui-multiselect{
+  border: none;
+  border-bottom: 1px solid #bcbcbc;
+  outline: 0 none;
+  box-shadow: none;
+  border-radius: 0;
+}
+:host /deep/ .intl-tel-input{
+  width: 100%;
+  
+}
+.p-top-10{
+  padding-top: 10px;
+}
+
+.m-b-10{
+  margin-bottom: 10px;
+}
+:host /deep/ p-multiSelect .ui-multiselect, :host /deep/ .intl-tel-input input {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0px;
+}
+:host /deep/ .show-header-multiselect .ui-widget-header {
+  display: block;
+}
+:host /deep/ .intl-tel-input .country-list.dropup{
+  top:100%!important;
+  bottom:auto!important;
+}
+button.add-button {
+  color: white;
+  background-color:  $color-blue;
+  border-radius: 25px;
+  cursor: pointer;
+  width: 130px;
+  &:hover {
+    color: $color-blue;
+    background-color: white;
+    border: solid 1px  $color-blue;
+  }
+}
+.column-search{
+  font-size: 15px !important;
+  background-color: white !important;
+}
+.icon_search{
+  padding-left: 15px;
+  color: rgb(226, 224, 224);
+}
+.search-control{
+  height: 50px;
+  border-radius: 10px;
+  background-color: white;
+}
+// .intl-tel-input .scrollable-menu{
+//   max-height: 150px!important;
+// }

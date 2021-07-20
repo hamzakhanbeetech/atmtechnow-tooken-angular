@@ -1,0 +1,60 @@
+
+/* multiselect */
+:host /deep/.ui-multiselect-panel{
+  background-color: white;
+}
+:host /deep/ .ui-multiselect-header .ui-multiselect-filter-container{
+  // width: 75%!important;
+}
+:host /deep/ .ui-chkbox {
+  display: inline-block;
+  cursor: pointer;
+  vertical-align: middle;
+  margin-right: .25em;
+}
+
+:host /deep/ .ui-chkbox .ui-chkbox-box {
+  width: 1.125em;
+  height: 1.125em;
+  line-height: 1.125em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-align: center;
+  border:1px solid #ddd;
+}
+
+:host /deep/ .ui-chkbox .ui-chkbox-icon {
+  display: block;
+}
+
+:host /deep/ .ui-chkbox-label {
+  vertical-align: middle;  
+}
+
+:host /deep/ .ui-multiselect-item.ui-corner-all{
+  margin-bottom: 4px;
+}
+:host /deep/ p-multiSelect:not(.show-header) .ui-multiselect-header{
+  display: none;
+}
+:host /deep/ .ui-multiselect{
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+}
+:host /deep/ .ui-multiselect-label, :host /deep/ .ui-multiselect-panel .ui-multiselect-item label{
+  margin: 0!important;
+}
+:host /deep/ .ui-multiselect.ui-state-disabled{
+  background-color: #eaecef;
+}
+:host /deep/ .ui-multiselect-header .ui-multiselect-close{
+display: none;
+}
+:host /deep/ .ui-multiselect-header .ui-multiselect-filter-container{
+  width: 90% !important;
+}
+:host /deep/ .ui-multiselect-header .ui-multiselect-filter-container .fa{
+  top: 0.4em
+}

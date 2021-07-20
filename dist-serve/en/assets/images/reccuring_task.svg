@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34">
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(0 2)">
+            <path fill="#FFF" d="M1 4h30v27H1z"/>
+            <path fill="#A7A7A7" fill-rule="nonzero" d="M29.334 3H25V1a1 1 0 1 0-2 0v2h-6V1a1 1 0 1 0-2 0v2H9V1a1 1 0 1 0-2 0v2H2.667A2.666 2.666 0 0 0 0 5.666v23.667A2.667 2.667 0 0 0 2.667 32h26.667A2.666 2.666 0 0 0 32 29.333V5.666A2.665 2.665 0 0 0 29.334 3zM30 29.333a.667.667 0 0 1-.666.667H2.667A.667.667 0 0 1 2 29.333V5.666C2 5.299 2.299 5 2.667 5H7v2a1 1 0 1 0 2 0V5h6v2a1 1 0 1 0 2 0V5h6v2a1 1 0 1 0 2 0V5h4.334c.367 0 .666.299.666.666v23.667z"/>
+            <rect width="4" height="3" x="7" y="12" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="7" y="17" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="7" y="22" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="14" y="22" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="14" y="17" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="14" y="12" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="21" y="22" fill="#FF4A00" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="21" y="17" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+            <rect width="4" height="3" x="21" y="12" fill="#A7A7A7" fill-rule="nonzero" rx="1.5"/>
+        </g>
+        <path fill="#76CC5B" d="M28.402 0c3.541 0 6.401 2.849 6.401 6.377 0 3.528-2.86 6.377-6.401 6.377C24.86 12.754 22 9.905 22 6.377 22 2.85 24.86 0 28.402 0z"/>
+        <path fill="#FFF" d="M29.228 2a.532.532 0 0 0-.506.53l-.002.527a3.87 3.87 0 0 0-3.39 2.296 3.873 3.873 0 1 0 7.418 1.563c.01-.718-1.077-.718-1.067 0a2.809 2.809 0 0 1-4.822 1.958 2.81 2.81 0 0 1-.552-3.093 2.797 2.797 0 0 1 2.41-1.663l-.001.5a.534.534 0 0 0 .935.351l.92-1.048a.53.53 0 0 0 0-.698l-.916-1.042a.534.534 0 0 0-.427-.18z"/>
+    </g>
+</svg>

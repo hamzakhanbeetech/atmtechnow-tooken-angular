@@ -1,0 +1,631 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding">
+    <div class="full-width">
+      <h2 class="page-heading">
+        <ng-container i18n>Auto Allocation</ng-container>
+        <!-- <label class="switch" style="margin-bottom: 0px">
+          <input type="checkbox" (change)="setAutoAssign($event)" [checked]="initialState" >
+          <span class="slider round"></span>
+        </label> -->
+        <label class="switch switch custom-switch" style="margin-bottom: 0px">
+          <input [disabled]="!enableActionAutoAssignment" type="checkbox" (change)="setAutoAssign($event)" [checked]="initialState">
+          <span></span>
+        </label>
+      </h2>
+      <p class="main-sub-heading pro-rg-font">
+        <ng-container i18n>Enable this option to automatically assign</ng-container> {{commonService.loginData.call_tasks_as}}
+        <ng-container i18n>to your</ng-container> {{commonService.loginData.call_fleet_as}}.
+        <ng-container i18n>You can select the assignment logic that best suits your business needs.</ng-container>
+      </p>
+      <span class="full-width small-text" i18n>Select a method to auto-allocate the tasks</span>
+      <div class="fullwidth allocations" [ngClass]="{'disable-cover': !autoAssignEnabled,'show-fifo': commonService.loginData.dispatcher_user_id==51262  || commonService.loginData.user_id==51262 || commonService.loginData.dispatcher_user_id==7756 || commonService.loginData.user_id==7756}">
+        <div class="allocation-box">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled }">
+            <img src="assets/images/one-by-one@2x.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [value]="autoAssignBroadcastEnum.BROADCAST_ONE" [(ngModel)]="selectedBroadcast" type="radio" [disabled]="!autoAssignEnabled"
+                    (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_ONE)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>One By One</ng-container>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="allocation-box">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled }">
+            <img src="assets/images/send-to-all@2x.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [disabled]="!autoAssignEnabled" [value]="autoAssignBroadcastEnum.BROADCAST_TWO" [(ngModel)]="selectedBroadcast"
+                    type="radio" (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_TWO)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>Send To All</ng-container>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="allocation-box">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled} ">
+            <img src="assets/images/batch-wise@2x.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [disabled]="!autoAssignEnabled" [value]="autoAssignBroadcastEnum.BROADCAST_THREE" [(ngModel)]="selectedBroadcast"
+                    type="radio" (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_THREE)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>Batch Wise</ng-container>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="allocation-box">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled} ">
+            <img src="assets/images/round-robin@2x.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [disabled]="!autoAssignEnabled" [value]="autoAssignBroadcastEnum.BROADCAST_FOUR" [(ngModel)]="selectedBroadcast"
+                    type="radio" (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_FOUR)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>Round Robin</ng-container>
+              </span>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="allocation-box">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled }">
+            <img src="assets/images/nearest-available@2x.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [disabled]="!autoAssignEnabled" [value]="autoAssignBroadcastEnum.BROADCAST_FIVE" [(ngModel)]="selectedBroadcast"
+                    type="radio" (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_FIVE)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>Nearest Available</ng-container>
+              </span>
+
+            </div>
+          </div>
+        </div>
+        <!--   -->
+        <div class="allocation-box" *ngIf="commonService.loginData.dispatcher_user_id==51262  || commonService.loginData.user_id==51262 || commonService.loginData.dispatcher_user_id==7756 || commonService.loginData.user_id==7756">
+          <div class="inner" [ngClass]="{'disabled-box' :!autoAssignEnabled} ">
+            <img src="assets/images/fifo.png" class="img-responsive" />
+            <div class="box-footer">
+              <div class="pull-left checkbox-outer">
+                <div class="check-radio">
+                  <input name="oneorall" [disabled]="!autoAssignEnabled" [value]="autoAssignBroadcastEnum.BROADCAST_SIX" [(ngModel)]="selectedBroadcast"
+                    type="radio" (click)="setRadioAssign(autoAssignBroadcastEnum.BROADCAST_SIX)">
+                  <span class="tf check"></span>
+                  <span class="overlay"></span>
+                </div>
+              </div>
+              <span class="div-overflow box-title">
+                <ng-container i18n>First-in, First-out</ng-container>
+              </span>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="fullwidth">
+    <div class="panel-box col-xs-12">
+      <!-- <div [ngClass]="{'topCover':!autoAssignEnabled}"></div> -->
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_ONE)">
+        <p class="light-font  col-12 inner-padding">
+          <ng-container i18n>Sends the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request notification to the</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>nearest to the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>location</ng-container>.
+          <ng-container i18n>If the</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>doesn’t accept the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>within the request expiry time, the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request is sent to the next nearest</ng-container> {{commonService.loginData.call_fleet_as}}.
+          <ng-container i18n>If no</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>accepts the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>,
+          <ng-container i18n>it remains unassigned</ng-container>.
+        </p>
+      </div>
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_TWO)">
+        <p class="light-font  col-12 inner-padding">
+          <ng-container i18n>Sends the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request notification to the</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>available in the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>time-slot</ng-container>.
+          <ng-container i18n>The</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>gets assigned to the</ng-container> "{{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>who accepts the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request first</ng-container>.
+          <ng-container i18n>If no</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>accepts the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>,
+          <ng-container i18n>it remains unassigned</ng-container>."
+        </p>
+      </div>
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_THREE)">
+        <p class="light-font  col-12 inner-padding">
+          <ng-container i18n>Sends the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request notification to</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>in batches</ng-container>.
+          <ng-container i18n>You can create batches based on distance</ng-container>,
+          <ng-container i18n>time and group size settings</ng-container> .
+          <ng-container i18n>The</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>gets assigned to the</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>who accepts the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request first</ng-container>.
+          <ng-container i18n>If no</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>accepts the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>,
+          <ng-container>it remains unassigned</ng-container>.
+        </p>
+      </div>
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_FOUR)">
+        <p class="light-font  col-12 inner-padding">
+          {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>within a defined radius are circularly force assigned</ng-container>.
+        </p>
+      </div>
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_FIVE)">
+        <p class="light-font  col-12 inner-padding">
+          <ng-container i18n>Force assigns the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>to</ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>based on availability and distance</ng-container>.
+        </p>
+      </div>
+      <div class="full-width" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_SIX)">
+        <p class="light-font  col-12 inner-padding">
+          <ng-container i18n>Send the</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>request notification based on First-in, First-out (FIFO). All the created</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>are arranged in a queue and the request for the second</ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>is not sent until first </ng-container>
+          <span class="lower-case">{{commonService.loginData.call_tasks_as}}</span>
+          <ng-container i18n>gets assigned. The request is sent to the </ng-container> {{commonService.loginData.call_fleet_as}}
+          <ng-container i18n>
+            in batches (same as batch wise allocation). You can create batches based on distance, time and group size settings
+          </ng-container>.
+        </p>
+      </div>
+      <div class="fullwidth panel-box">
+        <div class="fullwidth">
+          <a *ngIf="selectedTeam.team_id" class="tk-link float-right reset-settings-btn" (click)="resetDefaultSettings(0)">Reset Settings to Default</a>
+          <a *ngIf="autoAllocationTeamLevel && !selectedTeam.team_id && temaList" class="tk-link float-right reset-settings-btn" (click)="resetDefaultSettings(1)">Make Default For All Teams</a>
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_ONE)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastOneForm" class="col-12 d-flex flex-wrap p-0">
+                <div class="col-12 col-sm-6 form-group">
+                  <label class="form-label">
+                    <ng-container i18n>REQUEST EXPIRES IN</ng-container>
+                    <span i18n>(SEC)</span>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="expires_in" (blur)="updateWorkflow(broadcastOneForm ,1)">
+                  <control-messages [control]="broadcastOneForm.controls.expires_in"></control-messages>
+                </div>
+
+                <div class="col-12 col-sm-6 form-group">
+                  <label class="form-label">
+                    <ng-container i18n>NUMBER OF RETRIES</ng-container>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="retryLimit" (blur)="updateWorkflow(broadcastOneForm , 1)">
+                  <control-messages [control]="broadcastOneForm.controls.retryLimit"></control-messages>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_TWO)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastTwoForm" class="">
+                <div class="col-12 col-sm-6 form-group">
+                  <label class="form-label">
+                    <ng-container i18n>REQUEST EXPIRES IN</ng-container>
+                    <span i18n>(SEC)</span>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="send_to_all_expires_in" (blur)="updateWorkflow(broadcastTwoForm , 2)">
+                  <control-messages [control]="broadcastTwoForm.controls.send_to_all_expires_in"></control-messages>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_THREE)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastThreeForm" class="">
+                <div class="col-sm-6 form-group">
+                  <h4 class="page-sub-heading" i18n>Retries</h4>
+                  <label class="form-label">
+                    <ng-container i18n>NUMBER OF RETRIES</ng-container>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="retryLimit" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                  <control-messages [control]="broadcastThreeForm.controls.retryLimit"></control-messages>
+                </div>
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Distance Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>Start Radius</ng-container>
+                      <span>
+                        <ng-container i18n>(KM)</ng-container>
+                      </span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="startingRadius" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.startingRadius"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>Radius Increment</ng-container>
+                      <span>
+                        <ng-container i18n>(KM)</ng-container>
+                      </span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="incRadius" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.incRadius"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>MAXIMUM RADIUS</ng-container>
+                      <span i18n>(KM)</span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="radiusLimit" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.radiusLimit"></control-messages>
+                  </div>
+                </div>
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Time Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>BATCH PROCESSING TIME</ng-container>
+                      <span i18n></span>
+                      <ng-container i18n> (Time in sec after which system generates a new batch)</ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="batchTime" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.batchTime"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>REQUEST TIME</ng-container>
+                      <span i18n></span>
+                      <ng-container> (Time in sec available to the </ng-container>{{commonService.loginData.call_fleet_as}}
+                      <ng-container>for accepting the task)</ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="acceptTime" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.acceptTime"></control-messages>
+                  </div>
+                </div>
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Batch Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label" i18n>MAXIMUM BATCH SIZE
+                      <ng-container>(Maximum count of </ng-container> {{commonService.loginData.call_fleet_as}}
+                      <ng-container>who will be sent a request in an attempt)</ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="batchSize" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.batchSize"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label" i18n>MAXIMUM BATCH LIMIT
+                      <ng-container>(Number of batches formed in one try)</ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="attemptLimit" (blur)="updateWorkflow(broadcastThreeForm, 3)">
+                    <control-messages [control]="broadcastThreeForm.controls.attemptLimit"></control-messages>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_FOUR)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastFourForm" class="d-flex col-12 p-0" style="flex-wrap: wrap;">
+                <label class="col-12 d-flex ">
+                  <div class="">
+                    <div class="check-radio">
+                      <input name="custom" type="checkbox" id="assignTask" [value]="checked ? 1 : 0" formControlName="offline_agents" (change)="updateWorkflow(broadcastFourForm, 4)">
+                      <span class="tf check"></span>
+                    </div>
+                  </div>
+                  <div class="" style="padding-left: 10px" for="assignTask">
+                    <p class="page-sub-heading">
+                      <ng-container i18n>ASSIGN</ng-container>
+                      <span class="upper-case">a</span>
+                      <span class="upper-case">{{commonService.loginData.call_tasks_as}}</span>
+                      <ng-container i18n>TO OFF-DUTY/ LOGGED-OUT</ng-container>
+                      <span class="upper-case">{{commonService.loginData.call_fleet_as}}</span>
+                    </p>
+                  </div>
+                </label>
+                <div class="col-sm-6 form-group">
+                  <label class="form-label" i18n>MAXIMUM TASKS ALLOWED</label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="tasks" (blur)="updateWorkflow(broadcastFourForm, 4)">
+                  <control-messages [control]="broadcastFourForm.controls.tasks"></control-messages>
+                </div>
+                <div class="col-sm-6 form-group">
+                  <label class="form-label">
+                    <ng-container i18n>RADIUS</ng-container>
+                    <span i18n>(KM)</span>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="radius" (blur)="updateWorkflow(broadcastFourForm, 4)">
+                  <control-messages [control]="broadcastFourForm.controls.radius"></control-messages>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_FIVE)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastFiveForm" class="">
+                <div class="col-sm-6 form-group">
+                  <h4 class="page-sub-heading" i18n>Maximum Radius:</h4>
+                  <label class="form-label">
+                    <ng-container i18n>RADIUS</ng-container>
+                    <span i18n>(KM)</span>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="radius" (blur)="updateWorkflow(broadcastFiveForm, 5)">
+                  <control-messages [control]="broadcastFiveForm.controls.radius"></control-messages>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="fullwidth panel" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_SIX)">
+            <div class="fullwidth custom-form">
+              <form [formGroup]="broadcastSixForm" class="">
+                <!-- <div class="col-sm-6 form-group">
+                  <h4 class="page-sub-heading" i18n>Retries</h4>
+                  <label class="form-label">
+                    <ng-container i18n>NUMBER OF RETRIES</ng-container>
+                  </label>
+                  <input type="text" name="request" class="form-control fancy-fc" formControlName="retryLimit" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                  <control-messages [control]="broadcastSixForm.controls.retryLimit"></control-messages>
+                </div> -->
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Distance Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>Start Radius</ng-container>
+                      <span>
+                        <ng-container i18n>(KM)</ng-container>
+                      </span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="startingRadius" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.startingRadius"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>Radius Increment</ng-container>
+                      <span>
+                        <ng-container i18n>(KM)</ng-container>
+                      </span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="incRadius" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.incRadius"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>MAXIMUM RADIUS</ng-container>
+                      <span i18n>(KM)</span>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="radiusLimit" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.radiusLimit"></control-messages>
+                  </div>
+                </div>
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Time Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label">
+                      <ng-container i18n>BATCH PROCESSING TIME</ng-container>
+                      <span i18n></span>
+                      <ng-container i18n> (Time in sec after which system generates a new batch)</ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="batchTime" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.batchTime"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                      <label class="form-label">
+                          <ng-container i18n>REQUEST TIME</ng-container>
+                          <span i18n></span>
+                          <ng-container> (Time in sec available to the </ng-container>{{commonService.loginData.call_fleet_as}}
+                          <ng-container>for accepting the task)</ng-container>
+                        </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="acceptTime" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.acceptTime"></control-messages>
+                  </div>
+                </div>
+                <h4 class="page-sub-heading" style="padding-left: 15px" i18n>Batch Settings</h4>
+                <div class="col-12 full-width d-flex flex-wrap">
+                  <div class="col-sm-6 form-group">
+                      <label class="form-label" i18n>MAXIMUM BATCH SIZE
+                          <ng-container>(Maximum count of </ng-container> {{commonService.loginData.call_fleet_as}}
+                          <ng-container>who will be sent a request in an attempt)</ng-container>
+                        </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="batchSize" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.batchSize"></control-messages>
+                  </div>
+                  <div class="col-sm-6 form-group">
+                    <label class="form-label" i18n>MAXIMUM BATCH LIMIT
+                      <ng-container>(Number of batches formed in one try)</ng-container>
+                      <ng-container><br></ng-container>
+                    </label>
+                    <input type="text" name="request" class="form-control fancy-fc" formControlName="attemptLimit" (blur)="updateWorkflow(broadcastSixForm, 6)">
+                    <control-messages [control]="broadcastSixForm.controls.attemptLimit"></control-messages>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Enable Pool -->
+      <div class="full-width panel-box" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_THREE) && (commonService.loginData.layout_type == workflowTypeEnum.PICKUP_DELIVERY)">
+        <div class="fullwidth">
+          <h5 class="page-sub-heading" style="display: flex;align-items: center;">
+            <ng-container i18n>Enable Pool</ng-container>
+            <label class="switch switch custom-switch enable-pool" style="margin-bottom: 0px; margin-left: 8px">
+              <input type="checkbox" (change)="enablePool($event)" [checked]="isPoolEnabled">
+              <span></span>
+            </label>
+          </h5>
+        </div>
+        <div class="fullwidth panel">
+          <div class="fullwidth custom-form">
+            <form [formGroup]="poolForm" class="col-12 d-flex flex-wrap p-0">
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>Threshold Radius</ng-container>
+                  <span i18n>(KM)</span>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="pool_threshold_radius" maxlength="4" (blur)="updateWorkflow(poolForm , selectedBroadcast)">
+                <control-messages [control]="poolForm.controls.pool_threshold_radius"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>Waiting time at first pickup</ng-container>
+                  <span i18n>(MINUTES)</span>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="waiting_time_at_merchant" maxlength="4"
+                  (blur)="updateWorkflow(poolForm , selectedBroadcast)">
+                <control-messages [control]="poolForm.controls.waiting_time_at_merchant"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>ETA AT Pickup</ng-container>
+                  <span i18n>(MINUTES)</span>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="eta_at_pickup" maxlength="4" (blur)="updateWorkflow(poolForm , selectedBroadcast)">
+                <control-messages [control]="poolForm.controls.eta_at_pickup"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>SLA of Delivery</ng-container>
+                  <span i18n>(MINUTES)</span>
+                  <i class="fa fa-info-circle " pTooltip="You can define the approximate total time from Pickup starts to Delivery completes."
+                    tooltipPosition="top"></i>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="sla" maxlength="4" (blur)="updateWorkflow(poolForm , selectedBroadcast)">
+                <control-messages [control]="poolForm.controls.sla"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>Send push to busy</ng-container>
+                  {{commonService.loginData.call_fleet_as}}
+                  <ng-container i18n>in first slot</ng-container>
+                </label>
+                <div class="radio col-4 col-md-4" style="margin-top: 10px">
+                  <input id="radio-1" name="send_push_to_busy_driver_in_first_slot" formControlName="send_push_to_busy_driver_in_first_slot"
+                    type="radio" value="1" (change)="updateWorkflow(poolForm , selectedBroadcast)">
+                  <label for="radio-1" class="radio-label" i18n>Yes</label>
+                  <input id="radio-2" name="send_push_to_busy_driver_in_first_slot" formControlName="send_push_to_busy_driver_in_first_slot"
+                    type="radio" value="0" (change)="updateWorkflow(poolForm , selectedBroadcast)">
+                  <label for="radio-2" class="radio-label" style="margin-left: 10px;" i18n>No</label>
+                </div>
+                <control-messages [control]="poolForm.controls.send_push_to_busy_driver_in_first_slot"></control-messages>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- close pool -->
+
+      <!-- start clubbing  && (commonService.loginData.layout_type == workflowTypeEnum.PICKUP_DELIVERY)-->
+      <div class="full-width panel-box" *ngIf="autoAssignEnabled && (selectedBroadcast == autoAssignBroadcastEnum.BROADCAST_SIX) ">
+        <div class="fullwidth">
+          <h5 class="page-sub-heading" style="display: flex;align-items: center;">
+            <ng-container i18n>Enable Clubbing</ng-container>
+            <label class="switch switch custom-switch enable-pool" style="margin-bottom: 0px; margin-left: 8px">
+              <input type="checkbox" (change)="enableClubbing($event)" [checked]="isClubbingEnabled">
+              <span></span>
+            </label>
+          </h5>
+        </div>
+        <div class="fullwidth panel">
+          <div class="fullwidth custom-form">
+            <form [formGroup]="clubbingForm" class="col-12 d-flex flex-wrap p-0">
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>DELIVERY DISTANCE</ng-container>
+                  <span i18n>(KM)</span>
+                </label>
+                <input type="text" (keydown)="validateDeliveryDistance($event)" name="request" class="form-control fancy-fc" formControlName="delivery_distance" maxlength="17" (blur)="updateWorkflow(clubbingForm , selectedBroadcast)">
+                <control-messages [control]="clubbingForm.controls.delivery_distance"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>ORDER THRESHOLD TIME</ng-container>
+                  <span i18n>(SEC)</span>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="preparation_time" maxlength="4"
+                  (blur)="updateWorkflow(clubbingForm , selectedBroadcast)">
+                <control-messages [control]="clubbingForm.controls.preparation_time"></control-messages>
+              </div>
+              <div class="col-12 col-sm-6 form-group">
+                <label class="form-label">
+                  <ng-container i18n>Number of additional </ng-container>
+                  {{commonService.loginData.call_tasks_as}} 
+                  <ng-container> to be clubbed</ng-container>
+                  <span i18n></span>
+                </label>
+                <input type="text" name="request" class="form-control fancy-fc" formControlName="max_clubbed_orders" maxlength="4" (blur)="updateWorkflow(clubbingForm , selectedBroadcast)">
+                <control-messages [control]="clubbingForm.controls.max_clubbed_orders"></control-messages>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+<!-- close -->
+    </div>
+  </div>
+</div>
+<ng-template #buttonTemplate>
+  <li style="display:none;" *ngIf="autoAllocationTeamLevel && (!!!commonService.loginData.is_dispatcher || (commonService.loginData.is_dispatcher && temaList.length>1))">
+    <p-dropdown (onChange)="changeTeam(selectedTeam.team_id)" [(dropdownIcon)]="dropdownIcon" (onClick)="dropdownIcon==dropdownUpIcon?dropdownIcon=dropdownDownIcon:dropdownIcon=dropdownUpIcon"
+      [options]="temaList" [autoDisplayFirst]="true" optionLabel="team_name" [(ngModel)]="selectedTeam"></p-dropdown>
+  </li>
+</ng-template>

@@ -1,0 +1,244 @@
+<div class="container-dispatcher-page  ele-ht">
+
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Spare Parts</h2>
+
+    </div>
+
+  </div>
+  <div class="col-12 inner-padding">
+    <div style="float:right">
+
+      <button type="button" class="btn common-btn-green export_btn add-button" (click)="initAddPart()">
+        <ng-container i18n>Add Spare Part</ng-container>
+      </button>
+      <button type="button" class="btn common-btn-green export_btn add-button" (click)="onSelectingFile(fileInput)">
+        <ng-container i18n>Import</ng-container>
+      </button>
+      <input type="file" accept='.csv' class="d-none" (change)="onUploadSparePartCSV($event)" #fileInput>
+
+      <button type="button" class="btn common-btn-green export_btn add-button" (click)="exportSpareParts()">
+        <ng-container i18n>Get Sample</ng-container>
+      </button>
+
+    </div>
+  </div>
+
+
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+
+
+
+        <p-table #dt [columns]="columns" [value]="sparePartData" [paginator]="true" [pageLinks]="8"
+          [alwaysShowPaginator]="true" [rows]="10" [totalRecords]="10" [style]="{width:'100%'}" [autoLayout]='true'
+          (onPage)="onPageChange($event,rows,sparePartData)">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search"
+                i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'spare_part_unique_id'" class="">
+                <ng-container i18n>Spare Part Barcode</ng-container>
+                <p-sortIcon [field]="'spare_part_unique_id'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'spare_part_name'" class="">
+                <ng-container i18n>Part Name</ng-container>
+                <p-sortIcon [field]="'spare_part_name'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'spare_part_description'" class="">
+                <ng-container i18n>Description</ng-container>
+                <p-sortIcon [field]="'spare_part_description'"></p-sortIcon>
+              </th>
+              <th class="">
+                <ng-container i18n>Actions</ng-container>
+              </th>
+
+
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td>{{item.spare_part_unique_id}}</td>
+              <td>{{item.spare_part_name}}</td>
+              <td>{{item.spare_part_description}}</td>
+              <td>
+                <i class="fa fa-pencil" (click)='initEditSparePart(item)'
+                 style="color:grey;font-size: 15px;" pTooltip="Edit"
+                 tooltipPosition="top"></i>
+
+
+                  <i class="fa fa-trash-o"
+                  (click)='deleteSparePart(item)' pTooltip="Delete" tooltipPosition="top"
+                   style="color:grey;padding-left: 15px;font-size: 15px;"></i>
+              </td>
+
+
+            </tr>
+          </ng-template>
+        
+
+
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="paginatorleft" let-state>
+              {{infotext}}
+            </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+
+
+<!-- ADD/EDIT POPUP FOR SPARE PART -->
+
+<app-popup *ngIf="addPartModal" [minHeight]="'250px'" [header]="popup_title" (onClose)="onCancelClick()">
+  <div body>
+
+    <form [formGroup]="addSparePart">
+      <div class="row">
+
+
+        <!-- SPARE PART ID -->
+
+        <div class="col-6">
+          <label class="control-label">
+            <ng-container i18n>Spare Part ID</ng-container>
+            <span style='color:orange'>*</span>
+          </label>
+
+          <div class="input-group shift_from_top">
+<input type="text" class="form-control" formControlName="spare_part_unique_id">
+ </div>
+          <control-messages [control]="addSparePart.controls.spare_part_unique_id"></control-messages>
+
+        </div>
+
+
+        <!-- SPARE PART Name -->
+
+        <div class="col-6">
+          <label class="control-label">
+            <ng-container i18n>Spare Part Name</ng-container>
+            <span style='color:orange'>*</span>
+          </label>
+
+          <div class="input-group shift_from_top">
+
+
+
+            <input type="text" class="form-control" formControlName="spare_part_name">
+
+
+
+
+
+          </div>
+          <control-messages [control]="addSparePart.controls.spare_part_name"></control-messages>
+
+        </div>
+
+        <div class="col-6 shift_from_top">
+          <label class="control-label">
+            <ng-container i18n>Spare Part Price</ng-container>
+            <span style='color:orange'>*</span>
+          </label>
+
+          <div class="input-group shift_from_top">
+
+
+
+            <input type="text" class="form-control" formControlName="spare_part_price">
+
+
+
+
+
+          </div>
+          <control-messages [control]="addSparePart.controls.spare_part_price"></control-messages>
+
+        </div>
+      </div>
+
+
+      <div class="row">
+
+
+
+
+
+        <!-- SPARE PART DEscription -->
+
+        <div class="col-6 shift_from_top">
+          <label class="control-label">
+            <ng-container i18n>Spare Part Description</ng-container>
+            <span style='color:orange'>*</span>
+          </label>
+
+          <div class="input-group shift_from_top">
+
+
+
+            <textarea class="form-control" formControlName="spare_part_description" rows="3" id="comment"
+              name="text"></textarea>
+
+
+
+
+
+
+          </div>
+          <control-messages [control]="addSparePart.controls.spare_part_description"></control-messages>
+
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+    </form>
+  </div>
+
+
+
+
+  <div footer class="footer-buttons " style="text-align: right">
+    <button class="btn btn-danger" (click)="onCancelClick()" style="width:100px;">
+      <ng-container i18n>Cancel</ng-container>
+    </button>
+    <button id="create-button" class="btn btn-success" style="width:100px;"
+      (click)="is_add ? addNewPart() : editPart()">
+      {{add_or_edit}}
+    </button>
+  </div>
+</app-popup>

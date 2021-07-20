@@ -1,0 +1,182 @@
+@import "~assets/css/variables";
+@import '~assets/css/accordion';
+@import "~assets/css/radio-button";
+.profile-panel{
+  padding: 20px 0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+label.control-message{
+  text-transform: uppercase;
+  display: block;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 3px;
+}
+.profile-form{
+  .form-control{
+    width: 100%;
+    height: 40px;
+    // line-height: 40px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: none;
+    border-radius: 0;
+  }
+  &:focus{
+    border-color: $color-primary;
+    box-shadow: none;
+    outline: none;
+  }
+}
+.tk-link.danger{
+  color: red !important;
+  &:after{
+    background: red;
+  }
+}
+:host /deep/ .ui-accordion .ui-accordion-content{
+  padding: 0px;
+}
+:host /deep/ .ui-accordion-content .change-password-panel{
+  border-radius: 0px;
+}
+:host /deep/ .ui-accordion .ui-accordion-content .rights-accordin-panel{
+  padding-top: 0px;
+}
+:host /deep/ .ui-accordion .ui-accordion-content .rights-accordin-panel .inner-padding{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+// :host /deep/ .ui-accordion-header.ui-state-default.ui-corner-all{
+//   background-color: #fafafa;
+//   border: none;
+// }
+// :host /deep/ .ui-accordion-header.ui-state-default.ui-corner-all a{
+//   padding-left: 0px;
+//   padding-top: 0px;
+// }
+// :host /deep/ .ui-accordion-header.ui-state-default.ui-corner-all.ui-state-active a{
+//   padding-left: 1em;
+//   padding-top: 1em;
+// }
+// :host /deep/ .ui-accordion-header.ui-state-default.ui-corner-all .ui-accordion-toggle-icon.fa.fa-fw.fa-caret-down{
+//   opacity: 0;
+// }
+// :host /deep/ .ui-accordion-header.ui-state-default.ui-corner-all.ui-state-active{
+//   border-bottom: 1px solid rgba(115, 100, 100, 0.2);
+//   background-color: #fff;
+// }
+:host /deep/ int-phone-prefix input{
+  width: 100%;
+  font-size: 14px;
+  box-shadow: none;
+  border-radius: 0;
+  height: 40px;
+  // line-height: 40px;
+  padding-left: 45px;
+}
+:host /deep/ .intl-tel-input{
+  width: 100%;
+}
+:host /deep/ p-dropdown .ui-dropdown{
+  border: 1px solid rgb(206, 212, 218);
+  height: 40px;
+  width: 100%!important;
+}
+:host /deep/ p-dropdown .ui-dropdown label{
+  height: 100%!important;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+}
+:host /deep/ p-dropdown .ui-dropdown-trigger {
+  display: flex;
+  align-items: center;
+}
+:host /deep/ p-dropdown .ui-dropdown .ui-clickable {
+  margin: 0!important;
+}
+:host /deep/ p-dropdown .ui-dropdown-items li:hover{
+  background-color: #f5f5f5;
+}
+.h-100{
+  height:100%
+}
+.driver-image{
+  max-height: 145px;
+  border-radius: 8px;
+  max-width: 200px;
+}
+.btn-uplaod{
+  border-radius: 25px;
+  backdrop-filter: blur(3px);
+  background-color: #ffffff;
+  border: solid 1px rgba(0, 0, 0, 0.12);
+  color: $color-blue;
+  padding: 10px !important;
+  min-width: 150px;
+  font-size: 13.1px !important;
+  font-family: $mont-light;
+  text-transform: uppercase;
+}
+.btn-update{
+  color: white;
+  background-color: $color-blue;
+  border-radius: 25px;
+  border: solid 2px $color-blue;  
+  cursor: pointer;
+  width: 130px;
+  &:hover {
+    color: $color-blue;
+    background-color: white;
+  }
+}
+
+
+.display-image label{
+  font-size: 10px;
+}
+
+:host /deep/ input.ui-dropdown-filter.ui-inputtext.ui-widget.ui-state-default.ui-corner-all {
+  /* box-shadow: none; */
+  padding-left: 10px;
+  outline: none;
+  border: 0;
+}
+
+.span-tooltip {
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 3px;
+}
+
+:host /deep/ .ui-dropdown-panel .ui-dropdown-filter-container .fa {
+  position: absolute;
+  top: 9px;
+  right: 1em;
+}
+:host /deep/ .ui-dropdown-panel .ui-dropdown-filter-container {
+    border-bottom: 1px solid #ced4da;
+}
+
+:host /deep/ .ui-dropdown-panel.ui-widget-content.ui-corner-all
+{
+  top: 0 !important;
+}
+
+:host /deep/ .intl-tel-input .country-list.dropup {
+  top: 100%;
+}

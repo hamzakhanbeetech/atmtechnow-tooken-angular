@@ -1,0 +1,7 @@
+<agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="18" [styles]="styleArray"
+ (mapReady)="mapReady($event)">
+  <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+  <button id="Settings" class="toggle-button controls button" >
+    settings
+  </button>
+</agm-map>

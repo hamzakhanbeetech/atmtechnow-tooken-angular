@@ -1,0 +1,192 @@
+@import "~assets/css/variables";
+.top {
+    position: fixed;
+    width: 100%;
+    z-index: 7;
+    right: 0;
+    left: 0;
+    width: auto;
+    top: 60px;
+    padding: 14px 0 0 0;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,.05);
+    height: 57px;
+}
+.merchant-filter {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.tf-search {
+    left: 0px;
+    position: absolute;
+    top: -4px;
+    color: rgba(51,51,51,.79);
+    cursor: pointer;
+    font-size: 18px;
+}
+.search-merchant {
+    padding-left: 30px;
+    background: 0 0;
+    border: none;
+    outline: 0;
+    position: relative;
+    margin-left: 0;
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    color: rgba(0,0,0,.51);
+    font-family:  $proxima-reg;
+    width: 100%;
+}
+.dev-add-button {
+    background: #fff;
+    color: #333;
+    height: 30px;
+    font-size: 14px;
+    line-height: 26px;
+    vertical-align: middle;
+    border-color: #fff;
+    min-width: 75px;
+    font-family: $mont-light;
+    outline: none;
+    border-radius: 100px;
+    transition: all 0.3s;
+    text-align: center;
+    padding: 0 15px;
+    cursor: pointer;
+    transform: scale(1);  
+    display: inline-block;
+      &:hover {
+        background: #eaedf0 !important;
+        color: #333;
+      }
+  }
+
+
+.menu-box {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    .menu-list {
+      justify-content: center;
+      position: absolute;
+      border: 1px solid #dddddd;
+      z-index: 5;
+      background: white;
+      width: 100px;
+      margin-top: 4px;
+      // border-radius: 15px;
+      padding-left: 0px;
+      padding-top: 10px;
+      padding-bottom: 7px;
+      list-style: none;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      display: none;
+      right: 0;
+      li{
+        border-left: 3px solid transparent;
+        padding: 3px 10px;  
+        cursor: pointer;    
+        &:hover{
+          color: $color-primary;
+          border-left: 3px solid $color-primary;
+        }
+      }
+    }
+    &:hover .menu-list {
+      display: block;
+    }
+  }
+  
+  .menu-list::before {
+    content: " ";
+    border: 9px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    border-bottom: 7px solid #e5e5e5;
+    right: 2px;
+  }
+  .menu-list::after{
+    content: " ";
+    border: 9px solid transparent;
+    position: absolute;
+    bottom: 100%;
+    border-bottom: 7px solid transparent;
+    right: 0;
+    width: 100%;
+  }
+  ul.menu-list:hover {
+    border-left: 3px solid $color-primary;
+  }
+  .merchant-table {
+    width: 100%;
+    // margin-top: 20px;
+    padding: 12px 35px 72px;
+    // padding: 5px;
+  }
+
+  .search-control {
+    display: flex;
+    align-items: center;
+    // margin-left: 30px;
+    text-align: left;
+  }
+
+  // .table-head {
+  //   // display: flex;
+  //   // width: 100px;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+
+  .table-item {
+      // padding-left: 30px !important;
+  }
+
+  .custom-dropdown {
+    height: 24px;
+    border-radius: 2px !important;
+    background-color: #fff;
+    border: solid 1px #d9d9d9;
+    color: rgba(51, 51, 51, 0.51);
+    cursor: pointer;
+    outline: none;
+    font-family: $proxima-reg;
+  }
+
+  .red-color {
+    color: red !important;
+  }
+
+  .green-color {
+    color: green;
+  }
+
+  .table-item {
+    display: inline;
+  }
+
+@media (max-width: 575.98px){
+  .icon_search{
+    left: 5px;
+  }
+  .search-merchant{
+    padding-left: 35px;
+  }
+
+  .table-item {
+    display: flex !important;
+  }
+
+  .merchant-table {
+    padding: 12px 15px 72px;
+  }
+}
+
+:host /deep/ .ui-table-tbody > tr:nth-child(odd) {
+  background-color: #fff;
+}

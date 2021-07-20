@@ -1,0 +1,108 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Email</h2>
+      <p class="main-sub-heading pro-rg-font">
+        Choose Email paid plan to whitelabel "From email address" and "Sender Name" in the Email correspondences sent out from your
+        account.
+      </p>
+
+      <!-- 
+      FORM : company name||username||<contact@tookanapp class="com">Reply to : email</contact@tookanapp>
+
+      From  -->
+    </div>
+    <div class="fullwidth tk-panel wallet-panel">
+      <div class="tk-panel-heading select-heading">
+        <div class="tk-select tk-para">
+          <!-- <select [(ngModel)]="selectedOption">
+              <option value="free">Free</option>
+              <option value="paid">Paid</option>
+            </select> -->
+          <p-dropdown [options]="options" [style]="{'width':'200px'}" [(ngModel)]="selectedOption" placeholder="Select a plan" optionLabel="label"></p-dropdown>
+        </div>
+      </div>
+      <div class="single-wallet fullwidth" *ngIf="selectedOption.value == 'free'">
+        <label class="control-label preview">Preview</label>
+        <div class="email-heading select-heading">
+
+          <table>
+            <tr>
+              <td class="desc">From:</td>
+              <td>
+                <span class="mail-span">
+                  {{ commonService.loginData.company_name && commonService.loginData.company_name!='Company Name'? commonService.loginData.company_name
+                  : commonService.loginData.name || 'contact@tookanapp.com'}} &lt;contact@tookanapp.com &gt;
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">Reply To:</td>
+              <td>
+                <span class="mail-span">{{commonService.loginData.email}}</span>
+              </td>
+            </tr>
+          </table>
+          <small class="tk-para tmp-para">Message Content goes here.. </small>
+        </div>
+
+      </div>
+      <div class="single-wallet fullwidth" *ngIf="selectedOption.value == 'paid'">
+        <div class="" style="padding-left: 20px" [formGroup]="paidForm">
+          <h4 class="desc d-flex" style="align-items: center">Enter From Email ID
+            <div style="width: 500px;margin-left:20px">
+              <input type="text" class="form-control custom-input" formControlName="email" >
+              <control-messages [control]="paidForm.controls.email"></control-messages>
+            </div>
+          </h4>
+          <h4 class="desc d-flex" style="align-items: center">Enter Sender Name
+            <div style="width: 500px;margin-left:20px">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control custom-input" formControlName="sender">
+              <control-messages [control]="paidForm.controls.sender"></control-messages>
+            </div>
+          </h4>
+          <span class="tk-para">
+           
+          </span>
+        </div>
+        <label class="control-label preview">Preview</label>
+        <div class="email-heading select-heading">
+          <table>
+            <tr>
+              <td class="desc">From:</td>
+              <td>
+                <span class="mail-span">
+                  {{ !paidForm.controls.sender.value? (commonService.loginData.company_name!='Company Name' && commonService.loginData.company_name
+                  ? commonService.loginData.company_name : commonService.loginData.username): paidForm.controls.sender.value
+                  }} {{paidForm.controls.email.value?'&lt;'+paidForm.controls.email.value+'&gt;':''}}
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="desc">Reply To:</td>
+              <td>
+                <span class="mail-span">{{paidForm.controls.email.value}}</span>
+              </td>
+            </tr>
+          </table>
+          <small class="tk-para tmp-para">Message Content goes here.. </small>
+        </div>
+
+      </div>
+      <div class="tk-panel-action fullwidth" *ngIf="selectedOption.value == 'paid' && !hideSaveCancelBtn">
+
+        <button id="close-button" class="btn mr-1" (click)="onCancelClick()">Cancel</button>
+        <button id="create-button" class="btn mr-1 btn-ok" (click)="onSaveClick()">Save</button>
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+

@@ -1,0 +1,529 @@
+.tf:after{
+  font-size: 20px;
+  font-family: 'tookan-icon';
+  content: '\E952';
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+.tfont:after{
+  font-size: inherit !important;
+  font-family: 'tookan-icon';
+  content: '\E952';
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+.tf-new:before,.tf-new[class^="icon-"], .tf-new[class*=" icon-"]{
+  // font-size: inherit;
+  // font-family: 'tookan-icon-2';
+  // speak: none;
+  // font-weight: normal;
+  // font-variant: normal;
+  // text-transform: none;
+  // -webkit-font-smoothing: antialiased;
+  // font-style: normal;
+  font-size: 14px;
+  font-family: tookan-icon-2;
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+}
+.csv.tf:after {
+  content: '\E902';
+}
+.tf.sm:after{
+  font-size: 12px;
+}
+.tf.md:after{
+  font-size: 14px;
+}
+.tf.short-logo:after{
+  content: '\E953';
+  font-size: 27px;
+}
+.tf.left-arrow:after{
+  content: '\E90D';
+}
+
+.full-logo.tf:after{
+  content: '\E951';
+}
+.cross.tf:after{
+  content: '\E940';
+  font-size: 12px;
+}
+.login-text.tf:after{
+  content: '\E90F';
+}
+.create-text.tf:after{
+  content: '\E90E';
+}
+.eye.tf:after{
+  content: '\E916';
+}
+.open-eye.tf:after{
+  content: '\E915';
+  font-size:12px;
+  margin-top: 7px;
+  display: inline-block;
+}
+.plus-ison.tf:after{
+  content: '\E938';
+}
+.hamburger.tf:after{
+  content: '\E93B';
+}
+.reward-icon.tf:after{
+  content: '\E93C';
+}
+.plus-icon.tf:after{
+  content: '\E938';
+}
+.plus.tf:after{
+  content: '\E938';
+}
+.edit-icon.tf:after{
+  content: '\E943';
+}
+.image.tf:after{
+  content: '\E913';
+}
+.delete.tf:after{
+  content: '\E92B';
+}
+.block.tf:after{
+  content: '\E92C';
+}
+.filter.tf:after{
+  content: '\E928';
+}
+.refresh.tf:after{
+  content: '\E937';
+}
+.drag.tf:after{
+  content: '\E934';
+  font-size: 15px;
+}
+.pickup.tf:after{
+  content: '\E945';
+}
+.delivery.tf:after{
+  content: '\E944';
+}
+.battery.tf:after{
+  content: '\E933';
+}
+.version.tf:after{
+  content: '\E932';
+}
+.apple.tf:after{
+  content: '\E931';
+}
+.full-star.tf:after{
+  content: '\E930';
+}
+.half-star.tf:after{
+  content: '\E92E';
+}
+.empty-star.tf:after{
+  content: '\E92F';
+}
+.check.tf:after{
+  content: '\E92A';
+}
+.light-check.tf:after{
+  content: '\E93A';
+}
+.agent-icon.tf:after{
+  content: '\E94F';
+}
+.calendar.tf:after{
+  content: '\E946';
+}
+.customer.tf:after{
+  content: '\E94E';
+}
+.analytics.tf:after{
+  content: '\E94D';
+}
+.setting.tf:after{
+  content: '\E94C';
+}
+.right-chevron.tf:after{
+  content: '\E949';
+}
+.right-chevron-full.tf:after{
+  content: '\E906';
+  font-size: inherit;
+}
+.down-chevron.tf:after{
+  content: '\E922';
+  font-size: 9px;
+}
+.down-select-arrow.tf:after{
+  content: '\E94B';
+  font-size: 6px;
+}
+.up-chevron.tf:after{
+  content: '\E923';
+  font-size: 9px;
+}
+.left-chevron.tf:after{
+  content: '\E939';
+}
+.search.tf:after{
+  content: '\E94A';
+}
+.telephone.tf:after{
+  content: '\E90B';
+}
+.email.tf:after{
+  content: '\E90A';
+}
+.location-pin.tf:after{
+  content: '\E909';
+}
+.truck.tf:after{
+  content: '\E91C';
+}
+.car.tf:after{
+  content: '\E91A';
+}
+.bike.tf:after{
+  content: '\E91B';
+}
+.scooter.tf:after{
+  content: '\E919';
+}
+.cycle.tf:after{
+  content: '\E917';
+}
+.walk.tf:after{
+  content: '\E918';
+}
+.view-icon.tf:after{
+  content: '\E915';
+  font-size: 16px;
+}
+.tf-move.tf:after{
+  content: '\E912';
+}
+.tf-region.tf:after{
+  content: '\E911';
+}
+.tf-delete.tf:after{
+  content: '\E92B';
+}
+.task-icon.tf:after{
+  content: '\E93B';
+}
+.more-menu.tf:after{
+  content: '\E941';
+  font-size: 5px;
+}
+.android.tf:after{
+  content: '\E954';
+}
+.export.tf:after{
+  content: '\E929';
+}
+.export-round.tf:after{
+  content: '\E924';
+}
+.import-round.tf:after{
+  content: '\E925';
+}
+.logout.tf:after{
+  content: '\E93D';
+}
+.hover-line:after, .tk-link:after {
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  content: '';
+  background: #1394ff;
+  width: 0;
+  height: 1px;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+.hover-line:hover:after, .tk-link:hover:after {
+  width: 100%;
+}
+.tk-link:after {
+  bottom: -3px;
+  height: 2px;
+}
+
+.icon-Agents:before {
+  content: "\e92d";
+  color: #fff;
+}
+.icon-Customers .path1:before {
+  content: "\e92e";
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+.icon-Customers .path2:before {
+  content: "\e92f";
+  margin-left: -1.400390625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Dashboard:before {
+  content: "\e930";
+  // color: #fff;
+}
+.icon-Marketplace:before {
+  content: "\e931";
+  /* color: #fff; */
+}
+.icon-Merchants .path1:before {
+  content: "\e932";
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-Merchants .path2:before {
+  content: "\e933";
+  margin-left: -0.857421875em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-Merchants .path3:before {
+  content: "\e934";
+  margin-left: -0.857421875em;
+  color: rgb(255, 255, 255);
+  opacity: 0.7;
+}
+.icon-Merchants .path4:before {
+  content: "\e935";
+  margin-left: -0.857421875em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-Merchants .path5:before {
+  content: "\e936";
+  margin-left: -0.857421875em;
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+.icon-Settings_2:before {
+  content: "\e937";
+  color: #fff;
+}
+.icon-Support .path1{
+  font-family: 'tookan-icon-2';
+  &:before {
+    content: "\e938";
+  }
+}
+.icon-Support .path2{
+  font-family: 'tookan-icon-2';
+  &:before {
+   content: "\e939";
+   margin-left: -32px;
+  }
+}
+
+.icon-Add:before {
+  content: "\e900";
+  color: #fff;
+}
+.icon-Arrow_Down:before {
+  content: "\e901";
+}
+.icon-Arrow_Left:before {
+  content: "\e902";
+  color: #fff;
+}
+.icon-Arrow_Right:before {
+  content: "\e903";
+  color: #fff;
+}
+.icon-Arrow_Up:before {
+  content: "\e904";
+  color: #f2f2f2;
+}
+.icon-Attachment:before {
+  content: "\e905";
+  color: #1394ff;
+}
+.icon-Close:before {
+  content: "\e906";
+}
+.icon-Dark_Arrow:before {
+  content: "\e907";
+}
+.icon-Export:before {
+  content: "\e908";
+}
+.icon-Filter_2:before {
+  content: "\e909";
+  color: #f2f2f2;
+}
+.icon-Filter:before {
+  content: "\e90a";
+}
+.icon-Import:before {
+  content: "\e90b";
+}
+.icon-List_View:before {
+  content: "\e90c";
+}
+.icon-Loading .path1:before {
+  content: "\e90d";
+  color: rgb(178, 178, 178);
+  opacity: 0.2;
+}
+.icon-Loading .path2:before {
+  content: "\e90e";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.8;
+}
+.icon-Loading .path3:before {
+  content: "\e90f";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.0500;
+}
+.icon-Loading .path4:before {
+  content: "\e910";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.4;
+}
+.icon-Loading .path5:before {
+  content: "\e911";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.1;
+}
+.icon-Loading .path6:before {
+  content: "\e912";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.6;
+}
+.icon-Loading .path7:before {
+  content: "\e913";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+}
+.icon-Loading .path8:before {
+  content: "\e914";
+  margin-left: -1em;
+  color: rgb(178, 178, 178);
+  opacity: 0.3;
+}
+.icon-Magnifying_Glass:before {
+  content: "\e915";
+}
+.icon-Main_Menu:before {
+  content: "\e916";
+  color: #fff;
+}
+.icon-Map_Focus:before {
+  content: "\e917";
+  color: #fff;
+}
+.icon-Map_View:before {
+  content: "\e918";
+}
+.icon-Map_Zoom_In:before {
+  content: "\e919";
+  color: #fff;
+}
+.icon-Map_Zoom_Out:before {
+  content: "\e91a";
+  color: #fff;
+}
+.icon-Menu:before {
+  content: "\e91b";
+}
+.icon-Refresh:before {
+  content: "\e91c";
+}
+.icon-Settings:before {
+  content: "\e91d";
+}
+.icon-Tick_Blue:before {
+  content: "\e91e";
+  color: #1394ff;
+}
+.icon-Tick_White:before {
+  content: "\e91f";
+  color: #fff;
+}
+.icon-Toggle_Off .path1:before {
+  content: "\e920";
+  color: rgb(228, 228, 228);
+}
+.icon-Toggle_Off .path2:before {
+  content: "\e921";
+  margin-left: -1.8330078125em;
+  color: rgb(255, 255, 255);
+}
+.icon-Toggle_On_Blue .path1:before {
+  content: "\e922";
+  color: rgb(20, 147, 255);
+}
+.icon-Toggle_On_Blue .path2:before {
+  content: "\e923";
+  margin-left: -1.8330078125em;
+  color: rgb(255, 255, 255);
+}
+.icon-Toggle_On_Green .path1:before {
+  content: "\e924";
+  color: rgb(108, 198, 77);
+}
+.icon-Toggle_On_Green .path2:before {
+  content: "\e925";
+  margin-left: -1.8330078125em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path1:before {
+  content: "\e926";
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path2:before {
+  content: "\e927";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path3:before {
+  content: "\e928";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path4:before {
+  content: "\e929";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path5:before {
+  content: "\e92a";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path6:before {
+  content: "\e92b";
+  margin-left: -6.06640625em;
+  color: rgb(255, 255, 255);
+}
+.icon-Tookan_Logo .path7:before {
+  content: "\e92c";
+  margin-left: -6.06640625em;
+  color: rgb(19, 148, 255);
+}

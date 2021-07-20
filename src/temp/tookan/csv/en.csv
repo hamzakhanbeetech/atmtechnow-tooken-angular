@@ -1,0 +1,1902 @@
+key,value
+PLACEHOLDER,Search Map
+TASK_LEFT,Task Remaining
+TASKS_LEFT,tasks left
+DAY_LEFT,Day Remaining
+DAYS_LEFT,Days Remaining
+ADD_NEW_TASK,Add New
+IMPORT_BULK_TASKS,Bulk Import 
+ALL_ALERTS,All Alerts
+DASHBOARD,Dashboard
+ANALYTICS,Analytics
+MORE,More
+WHATS_NEW,What's New
+ACCOUNT,Account
+SUPPORT,Support
+LOGOUT,Logout
+TODAY,Today
+NEW_DASHBOARD,New Dashboard
+BUSINESS_VIEW,Business View
+OLD_DASHBOARD,Switch back to old dashboard
+LIST,List
+OVERALL,Overall
+UNVERIFIED,Unverified
+POWER_SETTINGS_NEW,power_settings_new
+VISIT_BILLING_PAGE,Visit Billing Page
+PAY_NOW,Pay Now
+YOUR_TASSK_CREATED,Your task #7548 has been created.
+REPEAT_THIS_TASK,Repeat this task
+DONUT_SMALL,donut_small
+PERSON,person
+MORE_HORIZ,more_horiz
+EXPLORE,explore
+REDEEM,redeem
+EXIT_TO_APP,exit_to_app
+BANNER,Banner
+ANOTHER_OFFERING,Add Another Offering
+MENU,Menu
+ALERT_SOUND,Alert Sound
+FULL_SCREEN,Full Screen
+ALERTS,Alerts
+TRAIL_PERIOD,Trial Period
+TASKS,Tasks
+OPTIMIZE_ROUTE,Optimize Route
+TIME,Time
+FILTER,Filter
+DISTANCE,Distance
+SELECT_UNASSIGNED,Select Unassigned tasks
+TIME_RANGE,Time Range
+TO,to
+NO_TASK_MSG,You don't have any task for selected time range
+SELECT,Select
+MIN_TASK,Minimum Task Per
+MAX_TASK,Maximum Task Per
+MAX,Maximum
+MIN,min
+ROUTE_OPTIMIZATION_PRIORITY,Route Optimization Priority
+START_LOCATION,Agent Start Location
+CURRENT_LOCATION,Current Location
+BUSINESS_LOCATION,Business Location
+CUSTOM_LOCATION,Custom Location
+SELECT_ALL,Select All
+TASK,Task
+UNROUTED_TASK,Unrouted Task
+TASKS_NOT_ROUTED,tasks were not routed
+ROUTING,Routing
+ROUTE_OPTIMIZATION_PARAMETERS,Select Route Optimization Parameters
+OPTIMIZED_VIA,The routes can be optimized via
+ENTER_CUSTOM_LOCATION,Enter Custom Location
+TASK_DURATION,"The Duration of a task is by default equal to 5 minutes, but it can customized using the Custom Task Duration Option."
+DURATION_DEFAULT,"The Duration of a task is by default equal to difference between end time and start time, but it can customized using the Custom Task Duration Option."
+DEFAULT_5MINUTES,Task duration is 5 minutes by default
+DURATION_DIFFERENCE,Task duration is difference between start and end time by default.
+PER,per
+CONSIDER_PICKUP_DELIVERY_TIME,Consider Pick-Up and Delivery Time
+MINIMIZE_DRIVE_TIME,The agent Minimize the drive time
+DRIVE_ON_TIME_END,The agent should always arrive on time
+WILL_BE_OPTIMIZE_TASK,task will be optimized within end time constraints but may result in unassigned task
+WILL_BE_OPTIMIZE_ENTIRE_TASK,task will be optimized for entire day irrespective of task end time
+custom_task_duration,Custom Task Duration
+MAX_task_per_fleet,MAXIMUM TASK PER Agent
+routed_task,Routed task
+ASSIGN_AGENTS,Assign Agents
+SELECT_TEAM,Select Team
+SUBMIT,Submit
+DETAILS,Details
+ADDRESS,Address
+CUSTOMER_NAME,Customer Name
+CUSTOMER_PHONE,Customer Phone
+TASK_ID,Task ID
+TASK_DETAILS,Task Details
+TASK_TYPE,Task Type
+DESCRIPTION,Description
+TASK_STATUS,Task Status
+CUSTOMER_DETAILS,Customer Details
+COMPLETE_TIME,Complete Time
+THIS,This
+DELETED,Deleted
+ADD_AGENT,Add Agent
+LAST_NAME,Last Name
+PHONE,Phone
+ASSIGN,Assign
+SCHEDULE_PERMISSIONS,Schedule Permissions to agents
+CONTACT,Contact
+NAME,What's your name
+TIMELINE,Timeline
+NO_TIMELINE,No timeline available for the day
+NOT_UPDATED,Not updated
+LAST_STOPPAGE_TIME,Last Stoppage Time
+LAST_MOVING_TIME,Last Moving Time
+AGENTS,Agents
+STATUS,Status
+TASK_DESCRIPTION,Task Description
+CUSTOM_FIELDS,Custom Fields
+REFERENCE_IMAGE,Reference Image
+ACTIVITY_TIMELINE,Activity Timeline
+PATH_HISTORY,Path History
+START_BEFORE,Start Before
+COMPLETE_BEFORE,Complete Before
+CUSTOMER,Customer
+TOTAL_TIME_TAKEN,Total Time Taken
+DISTANCE_TRAVELLED,Distance Travelled
+REASSIGN,Reassign
+EDIT_TASKS,Edit Task
+DUPLICATE_TASKS,Duplicate Task
+CHANGE_STATUS,Change Status
+DELETE_TASKS,Delete Task
+Export_Tasks,Export Task
+CUSTOMER_RATING,Customer Rating
+TASK_DETAIL,Details
+HISTORY,History
+CONNECTED_TASKS,Connected Tasks
+TRACKING_LINK,Tracking Link
+CLICK_TO_TRACK,Click here to track
+PENDING,Pending
+COMPLETED,Completed
+CANCELLED,Cancelled
+NO_TASKS,No task available for the day
+TEAM,Team
+SEEN,Seen
+UNSEEN,Unseen
+SEARCH_FLEET,Search
+FLEET_RIGHT_2_TEXT_1,All
+FLEET_TEAM,Team
+FLEET_NAME,Agent Name
+FLEET_ID,Agent Id
+FLEET_EMAIL,Email
+FLEET_TAGS,Tags
+PERMISSIONS,Permissions
+ACTIVATE,Activate
+MANAGER_RIGHT_2_CLICK_HERE,Click here
+SCHEDULE,Schedule for your account.
+CONTROL,Control
+MANAGER,Manager
+SUB_HEADER,Set Default Working Hours for your agent
+SUB_HEADER_2,Set Access Rights for your Manager
+MANAGER_RIGHT_1,Managers can't access
+MANAGER_RIGHT_2,Managers can view & edit
+MANAGER_RIGHT_2_TEXT_1,All Managers can access by default.
+MANAGER_RIGHT_2_TEXT_2,to change this settings.
+SUB_HEADER_3,Set Access Rights for your
+FLEET_RIGHT_1,can't access
+FLEET_RIGHT_2,can view & edit
+FLEET_RIGHT_2_TEXT_2,can access by default.
+FLEET_RIGHT_2_TEXT_3,to change this setting.
+UPDATE_MANAGER_PERMISSIONS,Update Manager Permissions
+SET_MANAGER_RIGHTS,Set View & Edit Rights for your Manager
+SEARCH_MANAGER,Search Manager
+MANGER_NAME,Manager Name
+MANGER_EMAIL,Manager Email
+MANGER_TEAM,Manager Team
+MANAGER_ID,ID
+SEARCH_TEAM,Search Team
+CANCEL_FILTERS,Cancel Filters
+SET_FLEET_RIGHTS,Set View & Edit Rights for your
+SEARCH_TAG,Search Tag
+STEP,Step
+OF,of
+VIEW_ONLY,View Only
+VIEW&EDIT,View & EDIT
+SEARCH_MANAGER_PLACEHOLDER,Manager Name
+CUSTOM_RIGHT_AGENT,You have set custom rights for every
+update_agent_schedule,Update Employee Schedule
+activate_agent_schedule,Activate Employee Schedule
+search_customer,Search Customer
+IMPORT_CSV,Import CSV
+SELECT_FILE,Select File
+IMPORT_CUSTOMERS,Import Customers
+CLICK_HERE_TEXT,to download CSV file template with sample values for customer's data import
+DRAG_DROP,Drag & Drop CSV File
+GET_IN_TOUCH,Get in Touch
+SELECT_TEMPLATE,Select Template
+CREATE_TASK_VIA_CSV,Create Tasks via CSV
+DOWNLOAD_SAMPLE_FILE,Download Sample File
+HAVE_CUSTOM_FILE,Have a Custom File?
+SELECT_CUSTOM_FIELD,Select Custom Field Template
+REMOVE_TEMPLATE,Remove Template
+DROP_FILE,"Drop file to attach, or"
+BROWSE,Browse
+CSV_UPLOAD,CSV Upload Report
+REASON,Reason
+UPLOAD_STATUS,Upload Status
+SUCCESS,Success
+FAILED,Failed
+DELIVERY,Delivery
+PICK_UP,Pickup
+CSV,via CSV
+CREATE,Create
+PICKUP,Pickup
+APP_ADD_REQ,Appointment address is required
+ENSURE_FIELDS_BEFORE_UPLOAD,Please ensure that the header fields in sample CSV are not modified before uploading.
+FOR,For
+HEADING,Account Setup
+NEW_TASK,New Task
+AUTO_ASSIGN,Auto Assign
+SELECT_AGENTS,Select Agents
+HELP_TEXT_1,You have no active
+CHANGE_TASK_STATUS,Change task status
+SELECT_A_TEAM,Select a team before optimizing route
+HELP_TEXT_2,To add
+SELECT_DELIVERY_OPTIONS,Select delivery options to view fields
+SELECT_PICKUP_OPTIONS,Select pick up options to view fields
+LATITUDE,Latitude
+LONGITUDE,Longitude
+DELIVERY_ADDRESS,Delivery Address *
+TIMINGS,Timings
+PICKUP_TIME,Pickup time
+GREATER_TIME,Time should be greater than current time
+DELIVERY_TIME,Delivery Time
+START_TIME,Start Time
+END_TIME,End Time
+ENT_TIME_GREATER,End time should be greater than Start time
+CLIENT,Client
+REFERENCE_IMAGES,Reference Images
+ENABLE,Enable
+LABEL,Label
+VALUE,Field Value
+ACTION,Action
+ADD_ROW,Add row
+BUSSINESS_NAME,Business Name
+MERCHANT_CONTACT,Merchant Contact
+PICKUP_POINT,Pickup Point
+START_WITH,Start With
+LOCATION,Location
+ADD_CUSTOM_FIELDS,Add Custom Fields
+DELIVERY_TIME_GREATER,Delivery time should be greater than Pick-up time.
+REPEAT_TASK,Repeat Task
+ASIGN_AGENT,Assign Agent
+VIA_PARTNER,via Partner
+CREATE_TASK,to create task from app.
+MANUALLY,Manually
+SWITCH_GEO_ON,Switch On Geo-fencing
+SELECT_AGENT,Select_Agent
+NO,No
+AVAILABLE,Available
+YES,Yes
+PICK_UP_DETAILS,Pick-up Details
+DELIVERY_DETAILS,Delivery Details
+RESET,Reset
+SELECT_PARTNER,Select Partner
+ASSIGN_TASKS,Assign Connected Tasks to same Team and
+ALL_TASKS,All
+PICKUP_ADDRESS,Pickup Address
+END_TIME_GREATER,End Time*
+Task_DESCRIPTION,Task Description
+ADD_GEOFENCE,Add task address to enable Geo-fence filter.
+NO_GEOFENCE,You haven\'t setup any Geo-fence regions yet
+MATCHES_FILTER,matches the filter
+AUTO,Auto
+MANUAL,Manual
+NO_TEAM,"No teams available, please add a team to continue."
+NO_RESULT,No Result
+AUTOMATIC_ASSIGN,Automatic assign
+PARTNER,Partner
+DUPLICATE_STOP,Duplicate Stop
+UPDATE_STOP,Update Stop
+CREATE_STOP,Create Stop
+SELECT_A_PARTNER,Select a Partner
+ENTER_COMMA_SEPARATED_MSG,Please enter comma separated
+ENABLE_ACKNOWLEDGE_TYPE_NONE,Please disable auto-assignment to enable acknowledgement type none.
+add_a_pickup_point,Add a pickup point
+add_another_pickup_point,Add another pickup point
+add_a_delivery_point,Add a delivery point
+add_another_delivery_point,Add another delivery point
+automatically,automatically
+ENTER_BARCODE,Enter Barcode
+ALL_TEAMS,All Teams
+BATTERY_LAVEL,Battery Level
+NEW,New
+COPY_DESC_STOP,Copy description to all stops
+THIS_OVERRIDE_STOPS_DESC,This will override all stops description
+REASIGN_AGENT,Reassign agent
+assign_connected_task_to_same_agent,Assign Connected Tasks to same Team and Agent
+NOTES,Notes
+EMAIL_OPTIONAL,Email
+DELIVER_BEFORE,Deliver Before *
+PICKUP_BEFORE,Pickup Before *
+OR,Or
+CLICK_OR_BROWSE,Click to browse or drop an image file
+SHOW_COORDINATES,Show Coordinates
+REPEAT_HEADER,Repeat
+REPEATS_HEADER,Repeats
+REPEATS_ON,Repeats On
+STARTS_ON,Starts On
+ENDS_ON,Ends On
+AFTER_TEXT,After
+OCCURENCES_TEXT,Occurences
+ON_TEXT,On
+SUMMARY_TEXT,Summary
+DAILY,Daily
+MONTHLY,Monthly
+WEEKLY,Weekly
+YEARLY,Yearly
+ALTERNATE_DAYS,Alternate Days
+FORTNIGHTLY,Fortnightly
+ALL_DAYS,all days
+ENDS_AFTER,Ends after
+FORCE_ARRIVAL,Force Arrival
+FORCE_COMPLETE,Force Complete
+UNASSIGN,Unassign
+FORCE,Force
+ORDER_EDITED_MSG,"This Order has been edited on JD, so the data in the new OM might be incorrect. Please refer to the following link for exact details -"
+KM,km
+ORDER,Order
+DRIVER_INSTRUCTIONS,Driver Instructions
+MERCHANT,Merchant
+AGENT,Agent
+STOPS,Stops
+STOP_ID,Stop ID
+DATE_TIME,Date-Time
+PERFORM_MSG,Are you sure you want to perform this action
+FORCE_COMPLETE_ORDER,Force Complete Order
+RIDE_DISTANCE,Ride Distance
+RETURN_DISTANCE,Return Distance
+PARKING_FARE,Parking Fare
+RIDE_TIME,Ride Time
+PICKUP_DISTANCE,Pickup Distance
+PICKUP_WAITING_TIME,Pickup Waiting Time
+DROP_ADDRESS,Drop Address
+ADD_REMARKS,Add Remarks
+ACTIVATE_recur_task,Would you like to Activate the Recurring task Add on ?
+DEACTIVATE_recur_task,Do you really want to deactivate your add on ?
+DEACTIVATE_recur_task_sub_text,"Note: The currently active recurring rules will remain active and their task will be created as per the configuration. To disable them, please delete individual rules from the recurring rule detail page."
+ACTIVATE_tookan_client,Would you like to Activate the Tookan Client Add on ?
+ACTIVATE_tookan_partner,Would you like to Activate the Tookan Partner Add on ?
+DEACTIVATE_fugu_chat,This will deactivate Fugu chat for your app.
+ACTIVATE_rating_add_on,Would you like to Activate Rating Add on ?
+ACTIVATE_barcode_add_on,Would you like to Activate Bar Code Add on ?
+ACTIVATE_earning_pricing,activate Earning and Pricing for your account
+DEACTIVATE_earning_pricing,deactivate Earning and Pricing for your account
+deactivate_fugu_for_app,This will deactivate Fugu chat for your agent  app
+fugu_for_business_app,Fugu Chat for your Business App
+activate_customer_rating,This will activate Customer Rating in your account.
+deactivate_customer_rating,This will deactivate Customer Rating in your account.
+deactivate_bar_code,This will deactivate Bar Code for your account
+activate_bar_code,This will activate Bar Code for your account
+idm_for_agent_app_activate,This will activate Identity Management for your agent  App
+customer_signup_app_activate,This will activate Customer Signup for your Customer App.
+till_end_of_march,Till end of March
+go_to_fugu_dashboard,Go to Fugu Dashbaord
+customer_signup_app_deactivate,This will deactivate Customer Signup for your Customer App.
+idm_for_agent_app_deactivate,This will deactivate Identity Management for your agent  App
+no_agent_matches,No agent matches the filter
+lower_case_category,category
+HIDDEN_FIELD,Hidden Field
+TASK_TEMPLATES,Templates
+TEMPLATE_NAME,Template Name
+READ_ONLY,Read Only
+ADD_CUSTOM_FIELD,Add Custom Field
+CUSTOM_TEMPLATE_NAME,Custom Template Name
+DELETE_MSG,Are you sure? This cannot be undone.
+INPUT_TYPE_DROPDOWN,Input type: Dropdown
+HELP_MSG_1,"When input type is dropdown, insert comma separated values as field value. These comma separated values will appear as options for dropdown on"
+APP,App
+INPUT_TYPE_CHECKLIST,Input type: Checklist
+HELP_MSG_2,"When input type is checklist, insert comma separated values as field value.These comma separated values will appear as options for checklist on"
+INPUT_TYPE_DATA_FUTURE,Input type: Date-Future
+HELP_TEXT_3,go to
+INPUT_TYPE_DATA_PAST,Input type: Date-past
+HELP_TEXT_4,"page. Once added, the"
+ADD_TEMPLATE,Add Template
+TABLE_DETAIL,Table Details
+INPUT_TYPE,Input Type
+NUMBER,Number
+TEXT,Text
+TELEPHONE,Telephone
+HEADER_NAME,Header Name
+ADD_MORE,Add More
+CUSTOM_FIELD_TEMPLATE,Custom Field Templates
+TEMPLATES_SUB_HEADING,Custom fields allow you to capture the information in a form that is specific to your business.
+EDIT_TEMPLATE,Edit Template
+DUPLICATE_TEMPLATE,Duplicate Template
+DELETE_TEMPLATE,Delete Template
+TEMPLATE_LIBRARY,Template Library
+ADD_TO_MY_TEMPLATE,Add To My Templates
+SAMPLE_HELP_TEXT,"You can edit this template, once you add it to your template list."
+TEMPLATE_NAME_TOOLTIP,"Give an easy name to your template, so that you can choose the right one while creating a task. (spaces not allowed)"
+FIELD_NAME,Field Name
+ACTIONABLE,Actionable
+FIELD_MANDATE,Field Mandate
+ADD_COLUMN,Add Column
+ADVANCED,Advanced Settings
+APP_POPUP_NOTIFICATION,App Pop-up Notifications
+APP_POPUP_NOTIFICATION_TOOLTIP,Configure the fields that will reflect on the app pop-up notification when a task is sent to your Agent.
+PAYMENT_INVOICE_TEMPLATE,Payment Invoice Template
+PAYMENT_INVOICE_TEMPLATE_TEXT_1,"Create a dynamic payment invoice template that will be shown to your Agent within the app, after the task is complete.You can also use "
+PAYMENT_INVOICE_TEMPLATE_TEXT_2,"within the app, after the task is complete.You can also use"
+PAYMENT_INVOICE_TEMPLATE_TEXT_3,arithmetic and if-else formulas
+PAYMENT_INVOICE_TEMPLATE_TEXT_4,while creating this template.
+FIELD_NAME_TOOLTIP,"Field names reflect directly in the agent mobile app, so keep them relevant."
+APP_SIDE_DISPLAY_TOOLTIP,"Permission to read only (agents can only see), read & write (agents can add or modify the field) or it is hidden from agents."
+INPUT_TYPE_TOOLTIP,"Validate the data entered, with the correct data type. You get options like number, email, text and more..."
+TEMPLATE_VALUE_TOOLTIP,"Pre-define the value of the field, add the value while creating a task or (with read/write option) allow agents to add the value from the mobile app."
+TEMPLATE_MANDATORY_TOOLTIP,Choose whether the field is mandatory or not mandatory while completing the task. (Agent can't complete the task if mandatory fields are not filled)
+TEMPLATE_MANDATORY_TOOLTIP_1,Configure the options you would like to reflect on the
+INVOICE_SAMPLE,Payment Invoice Sample Formulas
+AIRTMETIC_TYPES,There are various types of arithmetic and if-else expressions that you can use in order to generate a dynamic invoice. Below are a few examples which you can use or modify depending on your business requirement
+SIMPLE_AIRTMETIC,Simple Arithmetic
+COMPLEX_AIRTMETIC,Complex Arithmetic
+SIMPLE_IF_ELSE,Simple if-else (Calculating Fare Based on distance and time)
+COMPLEX_IF_ELSE,Complex if-else
+READ_MORE,Read more about this
+HELP,Help
+INPUT_TYPE_TEXT,"When input type is dropdown or checklist, insert comma separated values as field value. These comma separated values will appear as options for dropdown/checklist on"
+MY_TEMPLATES,My Templates
+SELECT_DATA_TYPE,Select data type
+DELETE,Delete
+ALLOW_AGENT_INPUT,Allow Agent Input
+APP_SIDE_DISPLAY,Mobile App Permissions
+MANDATORY,Mandatory
+COLUMN,Column
+NONE_SELECTED,None Selected
+FIELD_1,field 1
+FIELD_2,field 2
+SELECT_TAG,Select Tag
+TIME_SPENT_FOR_JOBS,Time spent for job
+EARNING_RULE,Earnings Rule
+RULE_NAME,Rule Name
+SAVE_TEMPLATE_MSG,You need to save the template before adding a Task Pricing and earning rule rule.
+ADD_RULE,Add Rule
+DRIVER_EARNINGS,Driver Earnings
+FEES_EARNED_PER_TASK,Fees earned per task
+BASE_FARE,Base Fare
+DURATION_FEE,Duration Fee
+DISTANCE_FEE,Distance Fee
+DEDUCTIONS,Deductions
+FEES_DEDUCTED_PER_TASK,Fees deducted per task
+COMMISSION,Commission
+SAVE_CHANGES,Save Changes
+FORMULA_NAME,Formula Name
+FORMULA,Formula
+FINAL_EARNING,Final Earning
+APPLY_TO,Apply To
+ALL_AGENTS,All Agents /
+SELECTED_AGENTS,Selected Agents
+PICKUP_ONLY,Pickup only
+DELIVERY_ONLY,Delivery only
+BOTH,Both pick-up & delivery
+UPDATE_CHANGES,Update Changes
+ADDITIONS,Additions
+TASK_PRICING_AND_EARNING_RULE,Task Pricing & Earning Rule
+DEDUCTION,Deduction
+APPLIES_TO,Applies to
+DATE,Date
+DATE_FUTURE,Date-Future
+DATE_PAST,Date-Past
+DATETIME_FUTURE,Datetime-Future
+DATETIME_PAST,Datetime-Past
+EMAIL,Email
+URL,URL
+TABLE,Table
+BARCODE,Barcode
+CHECKBOX,Checkbox
+CHECKLIST,Checklist
+DROPDOWN,Dropdown
+IMAGE,Image
+CAMERA_GALLERY,Camera and Gallery
+CAMERA_ONLY,Camera Only
+NOT_MANDATORY,Not Mandatory
+audio,Audio
+RATING,Rating
+Ratings_&_REVIEW,Ratings And Review
+EXPORT_TABLE_AS_CSV,Export table as CSV
+FEEDBACK,Feedback
+review,Review
+REFRESH,Refresh
+TEAM_NAME,Team Name
+MANAGE_SCHEDULE,Manage Schedule
+SETTINGS,Settings
+SEARCH_BY_PLACEHOLDER,Search by
+SEARCH_BY_PLACEHOLDER_1,or Team Name
+BUSY,Busy
+UNAVAILABLE,Unavailable
+AVAILABLE_HOURS,Available Hours
+BOOKED_TIME,Booked Time
+AVAILABILITY,Availability
+UNAVAILABLE_TIME,Unavailable Time
+NO_DATA,No Data Available
+JOBS_AVAILABLE,Jobs Available
+ENABLE_AVAILABILITY,Enable Availability
+BILLING_DETAILS,Billing Details
+UPGRADE_PLANS,Upgrade Plan
+NAME_OF_THE_PLAN,Name of the Plan
+CHANGE_PLAN,Change Plan
+ACCOUNT_NAME,Account Name
+NEXT_BILLING_DATE,Next Billing Date
+CREDIT_CARD_DETAILS,Credit Card Details
+ADD_CARD,Add Card
+CHANGE_CARD,Change Card
+PAYMENT_HISTORY,Payment History
+RECEIPT_NUMEBR,Receipt Number
+AMOUNT,Amount
+BILLING_MONTH,Billing Month
+TRAIL_PERIOD_EXPIRE,Trial period expires on
+PLAN,Plan
+EXPIRY_DATE,Expiry
+CREDITS,Credits
+CARD_DETAILS,Card Details
+UPGRADE_PLAN,Please wait until 1st of the next month or upgrade your plan to continue using the App.
+CURRENT_TOTAL,Your current business involves a total of
+CURRENT_TOTAL_AND,and
+CHOOSE_PLAN,Choose Plan
+PAYABLE_MONTHLY,Payable Monthly
+BASED,Based
+SHORT_BUSINESSES,Preferable for businesses with short duration tasks
+DEALING_LARGE,Advantageous when dealing with very large pool of tasks against countable workforce.
+AGAINST_WORKFORCE,against countable workforce.
+UNLIMITED,Unlimited
+BUSINESSES_INVOLVING,Preferable for businesses involving tasks with multiple business days completion time.
+MULTIPLE_DAYS,with multiple business days completion time.
+PAY_JUST,Pay just for the
+UNDERTAKEN,undertaken
+NO_RESTRICTION,No restriction on the workforce
+FREE_FOREVER,Free Forever
+ALLOW_USAGE,Allow usage of only 3 agents
+UPTO_300,Upto 300 Tasks per month
+PER_MONTH,per month
+NO_BILLS,No bills forever
+PAY_PER_AGENTS,PAY PER Agent
+CARD_NUMBER,Card Number
+SKIP,Skip
+CANCEL,Cancel
+NO_CARD,No credit card added yet
+CHOOSE_RIGHT_PLAN,Choose the right plan for your business
+MONTH,Month
+ALLOW_USAGE_ONLY,Allow usage of only
+ADDIIONAL_STOP_SAME_TASK,Additional Stop within same task
+BULK_TASK,Bulk Task
+TASK_EMI,Task EMI
+TASK_BASED,Task Based
+CURRENT_PLAN,Current Plan
+DELETE_ACCOUNT,Delete Account
+TOTAL_PENDING_PAYMENT,Total pending payment is
+INVOICE,Invoice
+UPTO,Upto
+MMYY,mm / yyyy
+CVV,CVV
+TASKPER_MOTH,Tasks per month
+UNLIMITED_TASK,Unlimited Tasks per Agent
+PAY_PER_TASK,Pay Per Task
+agnet_based_plan,Agent Based Plan
+agnet_emi,Agent EMI
+bulk_agent,Bulk Agent
+task_plural,tasks
+agent_plural,agents
+agent_plural1,agents
+you_can_add_only_3,You can only select 3 drivers in this plan
+TEAMS,Teams
+MANAGERS,Managers
+ADD_MANAGER,Add Manager
+ALLOW_ACCESS_TO_UNASSIGNED_TASKS,Allow access to unassigned tasks
+ASSIGN_TEAMS,Assign Team(s)
+EDIT_MANAGER,Edit Manager
+DELETE_MANAGER,Delete Manager
+PASSWORD,Password
+ALLOW_CREATE_TASK,Allow Create Task
+ALLOW_EDIT_TASK,Allow Edit Task
+FIRST_NAME,First Name
+USERNAME,Username
+ACTIONS,Actions
+MANAGER_HEADING,Add Managers to create and edit the Tasks and assign them to agents in their teams. Assign multiple teams to the Managers and give permissions to add agents or allow access to unassigned Tasks.
+OPTIONAL,Optional
+MANAGER_HEADING_1,"Multiple teams can be assigned to managers and they in-turn can manage unassigned tasks, add drivers and assign them to tasks etc."
+MANAGER_HEADING_2,in their teams. Assign multiple teams to the Managers and give permissions to add
+MANAGER_HEADING_3,or allow access to unassigned Tasks.
+ALLOW_ADD_AGENTS Agent,Allow add Agent
+CUSTOMERS,Customers
+EXPORT_CUSTOMERS,Export Customers
+ADD_CUSTOMER_VIA_CSV,Add Customer via CSV upload
+EDIT_CUSTOMER,Edit Customer
+CUSTOMER_EMAIL,Customer Email
+CUSTOMER_ADDRESS,Customer Address
+DELETE_CUSTOMER,Are you sure you want to delete this customer?
+CLICK_TO_SHOW,Click To Show More
+NO_RESULTS,No results to display
+ENTER_LOCATION,Please enter a valid location.
+SEARCH_PLACEHOLDER,Search tasks by address
+NEW_TASKS,New Tasks
+PICKUP_ADD,Pick up address is required
+T_GREATER_CT,Time should be greater than current time.
+TAB,Tab
+DEL_ADDRESS,Delivery address is required
+DT_GREATER_PT,Delivery time should be greater than Pick-up time.
+ET_GREATER_ST,End time should be greater than Start time.
+EDIT_STOP,Edit Stop
+DELETE_CUSTOMER_?,Delete Customer ?
+NOT_AVAILABLE,Not Available
+AVG_RATING,Average Rating
+ENTER_LOC,Enter a location
+RATINGS_REVIEW,Ratings & Review
+BILLING,Billing
+ADD_ONS,Marketplace
+API_KEY,API KEY
+PROMO,Promo Code
+ADD_PROMO,Add Promotions
+AUTO_ASSIGNMENT,Auto-assignment Enabled
+VENDORS,Portals
+VENDORS_SETTING,Portals
+VENDORS_LIST,Portal Users
+WORKFLOW,Workflow
+BUSINESS,Business Type
+NOTIFICATIONS,Notifications
+GEOFENCE,Geofence
+PROFILE,Profile
+BUSINESS_APP,Business App
+CUSTOM_APPS,Custom Apps
+CATEGORY,Category
+PARENT_CATEGORY,Parent Category
+SUBCATEGORY,Sub Category
+AGENT_SCHEDULE,Agent Schedule
+CUSTOMER_NOTIFICATIONS,Notifications
+TRIGGERS,Triggers
+WEBHOOK,Webhook
+SMS,your SMS Account
+PICKUP_NOTIFICATIONS,Pickup Notifications
+DELIVERY_NOTIFICATIONS,Delivery Notifications
+INSERT_TAG,Insert Tag
+SUBJECT,Subject
+PREVIEW,Preview
+MESSAGE,Message
+NOTIFICATION_TEXT,"Send custom SMS's, emails and webhooks based on each trigger and customize the content by clicking on the pencil icon."
+ENABLE_NOTIFICATION,Are you sure you want to enable this notification?
+DISABLE_NOTIFICATION,Are you sure you want to disable this notification?
+RATE_YOUR_FEEDBACK,Rate Your Feedback
+SELECT_WORKFLOW,Select Workflow
+CHOOSE_THE_WORKFLOW_THAT_BEST_COMPLIMENTS_YOUR_BUISNESS,Choose the workflow that best compliments your business.
+PICKUP_&_DELIVERY,Pick-up & Delivery
+MANAGE_ON_DEMAND_PICKUPS_AND_DELIVERIES_EFFICIENTLY,Manage on demand pickups and deliveries efficiently
+BUISNESS_THAT_USE_THIS_WORKFLOW_INCLUDE,Business that use this workflow include
+SMS_WEB,SMS and Webhooks
+APPOINTMENT,Appointment
+UPDATE,Update
+EMAIL_ATTACHMENT,Email Attachment
+APPLICATION_JSON,application/json
+APPLICATION_URLENCODED,application/x-www-form-urlencoded
+TAG,tag
+REQUEST_RECEIVED,Request Received
+AGENT_STARTED,Agent Started
+AGENT_ARRIVED,Agent Arrived
+SUCCESSFUL,Successful
+TASK_UPDATE,Task Update
+REQUEST_ACCEPTED,Request Accepted
+CREATE_TEAM,Create Team
+EDIT_TEAM,Edit Team
+HELP_TEXT_BATTERY_HEADING,Set Location Accuracy for Agent app
+TEAM_MEMBERS,Team Members
+PLEASE_SELECT,Please Select
+LOW,Low
+MEDIUM,Medium
+HIGH,High
+HELP_TEXT_BATTERY_SUB_HEADING,(For Battery Optimization)
+HELP_TEXT_HIGH_DESC,(3 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)
+HELP_TEXT_MEDIUM_DESC,(30 Seconds Location Refresh Rate + 30 Seconds Server Hit) (GPS + Network Location)
+HELP_TEXT_LOW_DESC,(60 Seconds Location Refresh Rate + 60 Seconds Server Hit) (Network Location Only)
+HELP_TEXT_TAGS,Please insert comma separated values. These tags will be used to categorize your team.
+ORGANIZE,Organize your
+BASED_ON,"in groups based on geography, zones in a city, type of vehicle and other factors."
+AND,and
+ASSIGNED_ATLEAST,should be assigned to at least one team.
+ID,Id
+NO_TRACKING,No Tracking
+DELETE_TEXT,Delete or shift your
+DELETE_TEXT_2,to other team. In order to delete a team.
+CREATE_A_TEAM,"Create a team of drivers, in the teams tab."
+ENTER_NAME,Enter Team Name
+SET_LOCATION,Set Location Accuracy for
+HELP_TEXT_NO_TRACKING_DESC,Location tracked only for task status changes and when the agent opens the app
+SET_LOCATION_FOR_APP,Set Location Accuracy for Driver App.
+ORGANIZE_TEXT,"Organize your Driver in groups based on geography, zones in a city, type of vehicle and other factors. Managers in groups based on geography, zones in a city, type of vehicle and other factors. Driver should be assigned to at least one team."
+TAGS,TAGS
+DELETE_TEAM,Delete Team
+ORGANIZE_TEXT_1,"Organize your Agent in groups based on geography, zones in a city, type of vehicle and other factors. Managers in groups based on geography, zones in a city, type of vehicle and other factors.Agent should be assigned to at least one team."
+ORGANIZE_TEXT_2,"in groups based on geography, zones in a city, type of vehicle and other factors. Managers in groups based on geography, zones in a city, type of vehicle and other factors."
+ORGANIZE_TEXT_3,should be assigned to at least one team.
+ADD,Add
+IMPORT,Import
+DEVICE_VERSION,Device Version
+IN_TRANSIT,In Transit
+FIRST_LOGIN_REQUIRED,First Login Required
+BLOCKED,Blocked
+BLOCK_MSG,Are you sure you want to block this vendor
+UNBLOCK_MSG,Are you sure you want to unblock this Agent
+ASSIGN_TEAM,Assign to Team
+TRANSPORT_TYPE,Transport Type
+TRANSPORT_DESC,"Transport Description (Year,Model)"
+LIC_PLATE,Licence Plate
+COLOR,Color
+TAGS_HELP_TEXT,Please insert comma separated values. These tags will be used to categorize your
+IMPORT_LINK_TEXT,to download CSV file template with sample values for adding new
+SCHEDULE_TO,Schedule Permissions to
+CANT_ACCESS,Agent Can’t Access
+VIEW_AND_EDIT,Can View & Edit
+DRIVERS,Drivers
+ADD_DRIVERS,Add drivers and assign them to a team
+CSV_HEADER,CSV header
+TEAM_ID,ID
+MANDATORY_CONDITION,Mandatory (login username that will be used by the agent to login to the app)
+MANDATORY_TEAM_ID,Mandatory (Input the numerical Team ID that you can get from the team's page)
+OPTIONAL_CONDITION,Optional (will be autogenerated if you leave it empty)
+TRANSPORT_TYPE_5,Transport Type (0-5)
+OPTIONAL_NUMERIC,Optional ( Input the numerical Transportation type for your
+AVAILABLE_TRANSPORT_TYPES,Available Transport Type
+CAR,Car : 0
+MOTORCYCLE,Motor Cycle : 1
+BICYCLE,Bicycle : 2
+SCOOTER,Scooter : 3
+FOOT,Foot : 4
+TRUCK,Truck : 5
+TRANSPORT_DESCRIPTION,Transport Description
+LICENSE,License
+DOWNLOAD_CSV,Download your task data in a CSV file
+EMAIL_ADDRESS,Email Address
+PHONE_NUMBER,Phone Number
+USER_NAME,Username
+PROCEED_TO_DASHBOARD,Proceed To Dashboard
+PLEASE_SELECT_ATLEAST_ONE_VALUE,Please Select Atleast One Value
+MEMBERS_RECEIVE_AN_EMAIL/SMS_TO_DOWNLOAD_THE_MOBILE_APP,Members receive an email/sms to download the mobile app.
+THE,The
+ADD_YOURSELF_AS,Add yourself as
+YOU_ADDED,You Added
+FILTERS,Filters
+EDIT,Edit
+DEVICE_TYPE,Device Type
+AGENTS_ID,ID
+IDLE,Idle
+OFFLINE,Offline
+NEED_SIGNUP_VERIFICATION,Need Signup Verification
+UPDATE_AGENT,Update Agent
+FIELDS_SUBMITTED,Fields submitted during signup
+REASON_FOR_RESUBMISSION,Reason for resubmission
+REMAINING,remaining
+UPDATE_STATUS,Update Status
+SELECT_AN_OFFERING,Select an offering
+GENERAL,General
+CATEGORY_NAME,Category Name
+CAT_IMAGE,Category Image
+FORM_ID,Form ID
+ADD_CATEGORY,Add a Category
+MAX_SIZE,Maximum Size
+PER_KILO,Per Kilometer Charge
+MIN_FARE,Minimum Fare
+CANC_CHARGE,Cancellation Charges
+CAT_TYPE,Category Type
+SET_IMAGE,Set Category Image
+PER_MIN,Per Minute Charge
+ALL_CATEGORIES,All Categories
+CATEGORY_IMAGE,Category Image
+SEL_CATEGORY_IMAGE,Selected Category Image
+ALL_PROMO,All Promotions
+PROMO_NAME,Promo Name
+SHORT_DISCR,Short Description
+TYPE,Type
+STARTING,Starting From
+ENDING,Ending On
+EDIT_CATEGORY,Edit Category
+LAST_LOCATION,Last Location
+STORE_VERSION,Store Version
+AVG_CSTM_RAT,Avg Cust Rating
+LAST_UPDATED_LOCATION_TIME,Last Updated Location Time
+FLEET_STATUS_COLOR,Fleet Status Color
+SUB_CAT_NAME,Sub Category Name
+agents_can_VIEW_ONLY,Agent View Only
+PERSONAL_ACCESS_TOKEN,Personal Access Token
+TEXT_1,Personal access token function like a combined name and password for API authentication. View API documentation for more.
+TEXT_2,API documentation
+TEXT_3,for more.
+API_TOKEN,V1 API Access Token
+REFER_API,You can refer to the v1 API documentation
+REFER_API_HERE,here .
+API_DEPRECATED,These APIs will be deprecated and lose support after 30th Sept 2017
+V2_API_KEYS,V2 API KEYS
+GENERATE_KEY,Generate Key
+NO_API,No API keys
+REFER_API_V2,You can refer to the v2 API documentation
+AUTHENTICATE_V2,Keys are used to authenticate all v2 API requests.
+HERE,here
+MAX_KEYS,You can generate a maximum of 10 API keys.
+DASHBOARD_MODULES,Dashboard and Mobile App Modules
+CHOOSE_WORKFLOW,Choose your business type and Tookan will adapt accordingly.
+PICKUP_&_DELIVERY_TEXT,Manage on-demand pickups and deliveries efficiently.
+APPOINTMENT_TEXT,Manage at-home services and keep your customers happy.
+FIELD_WORKFORCE_TEXT,Manage your on-street customer acquisition teams effortlessly.
+BUSINESS_TEXT,Business that use this workflow include:
+FOOD_DELIVERY,Food Delivery
+COURIER_SERVICES,Courier Services
+LAUNDRY_SERVICES,Laundry Services
+GROCERY_DELIVERY,Grocery Delivery
+ALCOHOL_DELIVERY,Alcohol Delivery
+MAKE_UP_ARTISTS,Make Up Artists
+WEDDING_STYLISTS,Wedding Stylists
+HOUSE_REPAIR_SERVICES,House Repair Services
+MASSAGE_THERAPISTS,Massage Therapists
+AUTO_REPAIR_SERVICES,Auto Repair Services
+FIELD_MARKETING,Field Marketing
+PRODUCT_DEMO,Product Demo
+CUSTOMER_DEVELOPMENT,Customer Acquisition/Development
+TARGET_MARKETING,Target Marketing/Sales
+MARKET_RESEARCH,Market Research/Surveys
+TASK_ATTRIBUTES_TEXT,Customize the dashboard by selecting the modules based on your business requirement.
+ENABLE_AUTO_ASSIGNMENT,Enable Auto Allocation
+BROADCAST_TO_AGENTS,Broadcast To
+ONE_BY_ONE,One By One
+ONE_BE_ONE_HELP_TEXT_1,Request goes to one
+ONE_BE_ONE_HELP_TEXT_2,"(nearest & available) first and if the timer runs out or if the agent declines the task, it goes to the second best option. You can set the timer expiry time."
+REQUEST_EXPIRE,Request Expires in
+SECONDS,sec
+SEND_TO_ALL,Send To All
+SEND_TO_ALL_HELP_TEXT_1,Request is sent to all the available
+SEND_TO_ALL_HELP_TEXT_2,and whosoever accepts/ acknowledges the task first will receive it.
+START_RADIUS,Start Radius
+ENTER_START_RADIUS,Enter Start Radius
+RADIUS_INC,Radius Increment
+ENTER_RADIUS_INC,Enter Radius Increment
+MAXIMUM_RADIUS,Maximum Radius
+ENTER_MAX_RADIUS,Enter Maximum Radius
+BATCH_PROCESSING_TIME,Batch Processing Time
+ENTER_BATCH_PROCESSING_TIME,Enter Batch Processing Time
+REQ_TIME,Request Time
+ENTER_REQ_TIME,Enter Request Time
+MAX_BATCH_SIZE,Maximum Batch Size
+ENTER_MAX_BATCH_SIZE,Enter Maximum Batch Size
+BATCH_SIZE_INC,Batch Size Increment
+ENTER_BATCH_SIZE_INC,Enter Batch Size Increment
+TASK_TIMER,Task Timer
+ENTER_TASK_TIMER,Enter Task Timer
+ATTEMPT_LIMIT,Maximum Batch Limit
+ENTER_ATTEMPT_LIMIT,Enter Attempt Limit
+CREATE_TEMPLATE,Create Template
+MOBILE_APP_MODULES,Mobile App Modules
+MOBILE_APP_MODULES_TEXT,Customize the mobile app by selecting the modules you need and view the changes live in the mobile mockup.
+ACKNOWLEDGEMENT_TYPE,Acknowledgement Type
+ACKNOWLEDGE,Acknowledge
+ACCEPT_OR_DECLINE,Accept/Decline
+NONE,None
+ACTION_BLOCK,Action Block
+ADD_NOTES,Add Notes
+ADD_IMAGES,Add Images
+ADD_SIGNATURE,Add Signature
+APP_MILESTONES,App Milestones
+SHOW_ARRIVED_BUTTON,Show Arrived Button
+INTERACTION_LAYOUT,Interaction Layout
+SHOW_BUTTONS,Show Buttons
+SHOW_SLIDERS,Show Sliders
+ACTION_CONFIRMATION,Action Confirmation
+SHOW_CONFIRMATION_POPUPS,Show confirmation pop-ups
+ADD_CUSTOM_TEMPLATE,Add Custom Template
+EDIT_CUSTOM_FIELD,Edit Custom Field
+DUPLICATE_CUSTOM_FIELD,Duplicate Custom Field
+SUB_HEADING,Choose your business type and Tookan will adapt accordingly. Also configure the options you would like to reflect on the agent mobile app.
+BUSINESS_TYPE,Business Type
+MOBILE_APP_SETUP,Mobile App Setup
+MOBILE_APP_SETUP_TOOLTIP_2,mobile app. Increase Business Rectangle Size to match Mobile setup
+ACKNOWLEDGE_TEXT_1,Agent can either acknowledge the receipt of the Task or accept/decline a Task based on your selection below
+ACKNOWLEDGE_TEXT_2,or accept/decline a
+ACKNOWLEDGE_TEXT_3,based on your selection below.
+APP_MILESTONES_TEXT_1,"Reduce the number of milestones required to complete a Task Basic milestones include Start, Arrive, Successful."
+APP_MILESTONES_TEXT_2,"Basic milestones include Start, Arrive, Successful."
+HIDE_CANCEL_BUTTON,Hide Cancel Button
+HIDE_FAILED_BUTTON,Hide Failed Button
+INTERACTION_LAYOUT_TEXT_1,Choose between the button or slider inputs to complete the
+INTERACTION_LAYOUT_TEXT_2,milestones.
+ACTION_BLOCK_TEXT_1,"Agent can add notes, images & signature during a Task."
+ADD_BARCODE,Add Barcode
+AUTO_ASSIGNMENT_TEXT_1,Enable this option to automatically assign Tasks to your Agent.You can select the assignment logic that best suits your business needs.
+AUTO_ASSIGNMENT_TEXT_2,to your
+AUTO_ASSIGNMENT_TEXT_3,You can select the assignment logic that best suits your business needs.
+ONE_BY_ONE_TEXT_1,"Sends the task request notification to the Agent nearest to the task location. If the Agent doesn’t accept the task within the request expiry time, the task request is sent to the next nearest Agent. If no Agent accepts the task, it remains unassigned."
+ONE_BY_ONE_TEXT_2,nearest to the task location. If the
+ONE_BY_ONE_TEXT_3,"doesn’t accept the task within the request expiry time, the task request is sent to the next nearest"
+ONE_BY_ONE_TEXT_4,If no
+BATCH_WISE_TEXT_4,"accepts the task, it remains unassigned."
+ROUND_ROBIN_TEXT_1,Agent within a defined radius are circularly force assigned
+ROUND_ROBIN_TEXT_2,tasks based on the maximum task limit set per
+NEAREST_TEXT_1,Force assigns the task to an Agent based on availability and distance.
+NEAREST_TEXT_2,based on availability and distance.
+to_OFF_DUTY,ASSIGN TASK TO OFF-DUTY/ LOGGED-OUT AGENT
+DISTANCE_SETTINGS,Distance Settings
+BATCH_SETTINGS,Batch Settings
+NEAREST_AVAILABLE,Nearest Available
+ALLOWED,Allowed
+CHOOSE_WORKFLOW_BUSINESS,Choose the workflow that best fits your business
+BUSINESS_INCLUDE,"Business that use this include: Food Delivery, Courier Services, Grocery Delivery, Laundry Delivery, Alcohol Delivery"
+BUSINESS_INCLUDE_SERVICES,"Business that use this include: Make Up Artists, Wedding Stylists, House Repair Services, Massage Therapists, Auto Repair Services"
+BUSINESS_INCLUDE_PRODUCTS,"Business that use this include: Field Marketing, Product Demo, Customer Acquisition/Development, Target Marketing/Sales, Market Research/Surveys"
+BUSINESS_INCLUDE_PICKUP,Businesses that use Pickup & Delivery include
+BUSINESS_APPOINTMENT,Businesses that use Appointment include
+BUSINESS_USE_FIELD,Businesses that use Field Workforce include
+CUSTOMIZE_TRACKING,Customize your account's real time tracking links
+DISABLE_RATING,Disable Customer Rating
+SELECT_METHOD,Select a method to auto-allocate the tasks
+NUMBER_OF_RETRIES,Number of Retries
+RETRIES,Retries
+TIME_SETTINGS,Time Settings
+MANAGE_AT_HOME_SERVICES_AND_KEEP_YOUR_CUSTOMERS_HAPPY,Manage at home services and keep your customers happy.
+MANAGE_YOUR_ON_STREET_CUSTOMER_ACQUISITION_TEAMS_EFFORTLESSLY,Manage your on street customer acquisition teams effortlessly
+CREATE_YOUR_FIRST_TEAM,Create your first team
+TEAMS_HELP_YOU_CLUB_A_GROUP_OF_AGENT_MEMBERS_BASED_ON_CITY_AREA_ETC,Teams help you club a group of agent members based on city area etc.
+CONTINUE,Continue
+PLEASE_SELECT_WORKFLOW,Please Select Workflow
+CALL_THEM_DRIVERS_ARTISTS_SERVICE_PROVIDERS_AVENGERS?_NO_WORRIES_NAME_IT_WILL_CHANGE_EVERYWHERE_IN_YOUR_DASHBOARD,"Call them Drivers,Artists,Service Providers,Avengers? No worries name it here and it will change everywhere in dashboard."
+FIELD_WORKFORCE,Field Workforce
+SEND_TO_ALL_TEXT_1,"Sends the task request notification to the Agent available in the task time-slot. The task gets assigned to the"" Agent who accepts the task request first. If no Agent accepts the task, it remains unassigned."""
+SEND_TO_ALL_TEXT_2,"available in the task time-slot. The task gets assigned to the"""
+SEND_TO_ALL_TEXT_3,who accepts the task request first. If no
+SEND_TO_ALL_TEXT_4,"accepts the task, it remains unassigned."""
+BATCH_WISE_TEXT_1,"Sends the task request notification to Agent in batches. You can create batches based on distance, time and group size settings. The task gets assigned to the Agent who accepts the task request first. If no Agent accepts the task, it remains unassigned."
+BATCH_WISE_TEXT_2,"in batches. You can create batches based on distance, time and group size settings. The task gets assigned to the"
+BATCH_WISE_TEXT_3,who accepts the task request first. If no
+BATCH_WISE,Batch Wise
+ROUND_ROBIN,Round Robin
+MAID_CLEANING,Maid Cleaning
+HOME_SERVICE,Home Service
+MAX_RADIUS,Maximum Radius
+MAXIMUM,MAXIMUM TASKS ALLOWED
+TASK_RADIUS,Radius
+ONE_BY_ONE_TEXT_5,"accepts the task, it remains unassigned."
+CHOOSE_BUSINESS_TYPE,Choose your business type and
+ADAPT_ACCORDINGLY,will adapt accordingly.
+CONFIGURE_OPTIONS_MSG,Also configure the options you would like to reflect on the agent mobile app.
+AGENT_SIGNUP_SETUP,Agent Signup Setup
+AUTO_VERIFICATION,Auto Verification
+DASHBOARD_VIEW,Dashboard View
+MULTIPLE_DESTINATIOM_MSG,Choose whether to show multiple destinations (pickups/drop-offs/appointments) for a single task in combined task view or show as individual stops.
+TASK_VIEW,Task View
+STOP_VIEW,Stop View
+TASK_PANE_CUSTOMIZATION,Task Pane Customisation
+CUSTOMISE_INFO_MSG,Customise the information shown in the individual task tile in Map view.
+RESET_SETTINGS,Reset Settings
+SECTION,SECTION
+DISPLAY,DISPLAY
+VEHICLE_TYPE_OR_PHOTO,’S VEHICLE TYPE OR PHOTO
+VEHICLE_TYPE,Vehicle Type
+PROFILE_PHOTO,Profile Photo
+PICKUP_LINE_1,PICKUP SECTION LINE 1
+PICKUP_LINE_2,PICKUP SECTION LINE 2
+DELIVERY_SECTION_LINE_1,DELIVERY SECTION LINE 1
+DELIVERY_SECTION_LINE_2,DELIVERY SECTION LINE 2
+RUNNING_LATE,RUNNING LATE
+TASK_ID_729401,Task Id 729401
+PANE_CUSTOMIZATION,Pane Customisation
+CUSTOMIZE_INDIVIDUAL_INFO,Customise the information shown in individual Agent tile in Map view.
+TILE_MAP_VIEW,tile in Map view.
+LINE1,LINE1
+LINE2,LINE2
+LINE3,LINE3
+TEXT_HERE,Text Here
+IMAGE_CAPTION,Add Image Caption
+AWAITING_VERIY_TXT,Awaiting verification text
+CUSTOMER_SIGNUP,Customer Signup Setup
+CHARACTER,character
+MSG_TOOLTIP1,This message will be shown to the
+MSG_TOOLTIP2,when he is awaiting verification.
+FULL_MSG_TOOLTIP2,This message will be shown to the customer when he is awaiting verification.
+AGENT_PANE_CUSTOMIZATION,Agent Pane Customisation
+fleet_VEHICLE_TYPE,fleet vehicle type
+ADD_VENDOR,Add Portal User
+EDIT_VENDOR,Edit Portal User
+DOMAIN,Domain
+CHOOSE_DOMAIN,Choose Domain
+DELETE_DOMAIN,Are you sure you want to delete this domain
+DOMAIN_NAME,Domain Name
+JOB_TYPE,Job Type
+TEMPLATE,Template
+THEME_COLOR,Theme Color
+IS_LOGIN,Is Login Required
+SIGNUP_ALLOWED,SIGN UP ALLOWED
+AUTOFILL,Autofill Info Enabled
+DARK_MAP,Show Dark Map
+CONFIRM_PASSWORD,Confirm Password
+VENDOR_ID,ID
+DELETE_VENDOR,Delete
+CLIENT_ID,Client ID
+EDIT_DOMAIN,Add Domain
+ADD_NEW,Add New Domains
+EDIT_DOMAINS,Edit Domains
+DOMAIN_DETAILS,Domain Details
+VENDOR_NAME,Name
+COMPANY,Company
+LOGO,Logo
+SMALL_LOGO,Small Logo
+SEARCH_PORTAL_USR,Search Portal Users
+REVIEW_VENDOR,Review Vendor
+UPDATE_VENDOR,Update Vendor
+VERIFY,Verify
+REJECT,Reject
+NEED_RESUBMISSION,Needs Resubmission
+ADD_REGION,Add a Region
+GEOFENCE_SUBHEADING_1,Geofencing allows you to categorize agents and simplifies the process of task assignment by letting you create virtual boundaries. You can add a geofenced area by drawing its boundaries on the map.
+GEOFENCE_SUBHEADING_2,coming from that boundary is assigned to the particular
+GEOFENCE_EDIT_TEXT_1,"Tasks will be auto-assigned to Agent , if new Task destination is within the region."
+GEOFENCE_EDIT_TEXT_2,", if new"
+GEOFENCE_EDIT_TEXT_3,destination is within the region.
+MAP_TEXT,Tap on polygon to start editing it.
+POLYGON_TOOL,"Choose polygon drawing tool (polygon icon, top-center of the map) and tap on map to draw polygon."
+GEOFENCE_DETAILS,Geo-fence Details
+DELETE_REGION_MSG,Are you sure you want to delete this region
+CLEAR_REGION,Clear Region
+MOVE_MAP,Move Map
+MARK_REGION,Mark Region
+SELECT_GEO,Select geo-fence
+enter_name,Enter Name
+no_geofence_found,No Geo-fence found
+last_updated,Last Updated
+VENDOR_FORM_TEXT,Host a customer facing form within a few seconds. Get your business specific domain setup and start getting your orders right away. Domain example: yourbusiness.xyz.com.
+INTEGRATE_WITH_ZAPIER_TEXT,"Integrate with Zapier Integrate Zapier is a tool to connect together web apps. Whenever the trigger happens in one app, Zapier will automatically perform the required actions in our system. Accept invitation to our app on Zapier by clicking on the Integrate button and authenticate all of your requests using your API key"
+SMS_ACCOUNT_TEXT,We allows you to automate your messages to the customers in the form of SMS notifications. Now you can easily connect your own SMS service provider account like Twilio or Plivo
+CUSTOM_CSV_SUPPORT_TEXT,"We offer the support any custom csv format, making your bulk task import process seamless. Just click on the Get in Touch button and send us you sample csv file that you want us to support. Once we activate it for your account, in a day’s time, then you will be able to smoothly upload the tasks from your csv to our platform."
+POS_INTEGRATIONS_TEXT,Integrate our platform into your already existing ordering or delivery management systems. Just click on the Get in Touch button and send us a mail.
+MASKING_TEXT,"Mask personal phone numbers for secure calling and texting . Protect a user's number while enabling seamless communications. Phone nos. are never exposed on either side of a conversation, once this add is activated. For further info on the add on, please contact us"
+WHITE_LABEL_TEXT,"We are happy to announce a unique offering of giving a fully branded dashboard and mobile apps, with your own app icon. In this offering, we replace the current logo everywhere and put your own business logo instead. Just click on the Get in Touch button and send us a mail."
+BCC_EMAIL_TEXT,"With this addon, we have enabled you to bcc yourself  in all the end-customer emails via Tookan, so that you can maintain records of the all the communication to your customers. You can add multiple receivers and costing is $1 monthly per receiver, chargeable monthly."
+BCC_EMAIL,BCC yourself to customer emails to maintain the record of customer communication.
+ROUTE_OPTIMIZATION,Route Optimization
+ROUTE_OPTIMIZATION_TEXT,"Users can now choose route optimization according to the “Distance” or “Time”. In addition, optimization can also be done for particular agents."
+WHITE_LABEL,Branded Driver Applications
+POS_INTEGRATIONS,POS Integrations
+CUSTOM_CSV_SUPPORT,Custom CSV Support
+ADD_CARD_DETAILS,Add Card Details
+ACTIVATE_ADD_ON,Activate Add-on
+MASKING,Number Masking
+INTEGRATE_WITH_ZAPIER,Integrate with Zapier
+INTEGRATE_WITH_ZAPIER_BUTTON,Integrate
+MOBILE_APP_OFFLINE_SYNC,Power your agent to work anytime anywhere even without an internet connection.
+MOBILE_APP_OFFLINE_SYNC_TEXT,"Give the power to your field workforce to work anytime and anywhere, totally unplugged. This add-on enables the agent mobile app to work without the internet connection. Note: The location geostamp and timestamp might have lesser accuracy in the offline mode."
+SMS_ACCOUNT,Connect Your SMS Account
+DEACTIVATE,Deactivate
+VENDOR_FORM,Booking Forms (App Editor)
+CONTROL_SCHEDULE,Control Agent Schedule
+AMPLIFIED_PRODUCTIVITY,"An amplified view of the driver schedule with an option to oversee the scheduling and steer the allotment of task according to the availability of the drivers, thus leading to surpassed efficiency and increased productivity"
+CHAT_BOT,Facebook Messenger Chat Bot
+BOT_MSG,"Customers can just open the messenger and text their order to the ‘Assistant App’. Also, Businesses would be able to create"
+BOT_MSG_AND_GET,and get
+BOT_MSG_STATUS,status on Messenger itself.
+BOT_MSG_ASSIGNMENT,assignment is automatically done by the our Platform at backend.
+EMAIL_PARSING,Рассылка электронной почты
+EMAIL_PARSING_TEXT,"Easily connect your Grubhub, Eat24, Takeaway, Eat Now, Hungry House, E_Order Start, Eat Street, Delivery.com, Blizzfull, Shin Ramen with us by forwarding your emails to a unique email ID and save hours of manual Task creation time. We have automatically parsed their email formats so that you don't have to do anything manually."
+INTEGRATE_FOOD,Integrate with GloriaFood -  Restaurant Ordering System
+INTEGRATE_FOOD_TEXT,This is a commission-free online ordering platform for restaruants. Restaurants can accept delivery orders placed online. Whenever the order gets accepted it also gets pushed to our system. You need first to sign-up for a restaurant account.You may enable integration via API from the online ordering administration area.
+SIGN_UP,Sign up
+JUGNOO_DELIVERY,Jugnoo Delivery
+FREE,Free
+JUGNOO_DELIVERY_TEXT,"With this addon, you get the opportunity to utilize Jugnoo Delivery's large fleet at your disposal. You can activate this Add-on, by simply logging in with your Jugnoo account credentials. All the payments will be automatically deducted from linked Jungoo Wallet Account.This add on is currently available only in"
+JUGNOO_DELIVERY_TEXT_INDIA,INDIA
+RECURRING_TASKS,Recurring Tasks
+RECURRING_TASKS_TEXT,"Now you can create recurring tasks, similar to repeating events in Google Calendar using this Add on. Once activated, you will be able to see a"
+RECURRING_TASKS_TEXT_REPEAT,Repeat
+RECURRING_TASKS_TEXT_RELEVENT_DETAILS,"option in the create task page. Fill in the relevant task details, check"
+RECURRING_TASKS_TEXT_CREATE_TASK,"set your rule and create the task. Set the rule once and the task will be auto-created every morning, as per your rule settings."
+BECOME_PARTNER,Become our Partner
+BECOME_PARTNER_TEXT,"This add on allows you to receive tasks from other Account Owners and provide services to them, using your own agent teams. Data is synched seamlessly between the accounts, with both the owners keeping track of the tasks in realtime on both the dashboards."
+CONNECT_PARTNER,Connect with Our Partners
+CONNECT_PARTNER_TEXT,"This add on allows you to connect with our Partner accounts, that allow sharing their agents for your tasks. Once your account is connected with a Partner Account, you will be able to dispatch tasks to their agents, track their location and get the complete task history synched to your account. This add on allows you to expand your fleet, further by utilizing the partner accounts."
+STUART_DELIVERY,Stuart Delivery
+STUART_DELIVERY_TEXT,"With this addon, you get the opportunity to utilize Stuart Delivery's large fleet at your disposal. You can activate this Add-on, by simply logging in with your Stuart account credentials."
+ADD_EMAILS,Add Emails
+DEACTIVATE_ADD_ON,Deactivate Add-on
+CONNECT_JUGNOO,Connect Your Jugnoo Delivery Account
+TOOKAN_PARTNER,Become a Tookan Partner
+DISPLAY_NAME,Display Name
+EMAIL_ID,Email Id
+REMOVE,Remove
+TOOKEN_CLIENT,Become a Tookan Client
+REVOKED_ACCESS,Your Tookan Partner may have revoked your access!
+PARTNER_TOKEN,Tookan Partner Token
+PARTNER_TOOKEN,Partner Token
+UNIQUE_ID,Unique ID for Email Parsing
+CONNECT_STUART_ACCOUNT,Connect Your Stuart Delivery Account
+CLIENT_SECRET,Client Secret
+CONNECT_SMS,Connect Your SMS Account
+CHOOSE_PROVIDER,Choose Service Provider
+PHONE_NO,What's your phone number
+ACCOUNT_SID,AccountSID
+AUTHTOKEN,AuthToken
+SENDERID,SenderID
+SHORT_CODE,Short Code
+USER_ID,User ID
+MASK,Mask
+ACTIVATED_ON,Activated on
+CREATE_TASK_PREFERENCES,Create Tasks Preferences
+CREATE_TASK_PREFERENCES_TEXT,"This feature allows the agents to create task from their application, thus giving them the freedom to create tasks on the field. This feature especially helps in the use cases related to data collection on the field, and takes a lot of load off the dashboard owner."
+APP_INVOICE,App Invoicing Module
+APP_INVOICE_TEXT,"This feature allows you to display your own custom html invoice in the agent app at the time when the task completes. Once you activate this add on, you can setup the invoice html for each template individually from within the template pages."
+THIS_WILL,This will
+ROUTE,route optimization for your account
+INVOICE_FOR_ACCOUNT,app invoice for your account
+ALLOW_TO_CREATE,allow your agents to create tasks
+MASKING_ACCOUNT,number masking for your account
+VENDOR_FOR_ACCOUNT,vendor form for your account
+PARSING_FOR_ACCOUNT,Email Parsing for your account.
+CACHING_ACCOUNT,app side caching for your account.
+EMAIL_TRACKING,customer email tracking for your account.
+JD_INTEGRATION,Jugnoo Delivery Integration.
+ACTIVATE_RECURRING,Would you like to Activate the Recurring Task Add on ?
+REALLY_DEACTIVATE,Do you really want to deactivate your add on ?
+ACTIVATE_TOOKAN,Would you like to Activate the Tookan Client Add on ?
+ACTIVATE_TOOKAN_PARTNER,Would you like to Activate the Tookan Partner Add on ?
+NOTE,"Note: You can also update the end date of the recurring rule, by selecting the Carry forward option. If you disable 2 dates, the end date would extend for 2 more occurrences."
+BILLING_PLAN_2,$10.00
+ROUTE_OPTIMIZATION_TEXT1,You can efficiently optimise the agent routes saving both time and money. This is a premium feature charged separately on top of your current account.
+BILLING_PLAN_3,$0.10
+CONTROL_SCHEDULE_TEXT,"An amplified view of the driver schedule with an option to oversee the scheduling according to the availability of the drivers, thus leading to surpassed efficiency and increased productivity."
+WHITE_LABEL_TEXT1,"In this offering, we replace the current logo everywhere and put your own business logo instead. Just click on the Get in Touch button and let us do the rest."
+MASKING_TEXT1,Mask personal phone numbers for secure calling and texting . Protect a user's number while enabling seamless communications.
+BILLING_PLAN_2_Masking,$4.99
+BILLING_PLAN_3_Masking,$0.10
+CHAT_BOT_TEXT,"Customers can just open the messenger and text their order to the ‘Assistant App’. Also, Businesses would be able to createTask, update Task and get Task status on Messenger itself."
+CREATE_TASK_PREFERENCES_TEXT1,"This feature allows the agents to create task from their application, thus giving them the freedom to create tasks on the field."
+POS_INTEGRATIONS_TEXT1,Integrate our platform into your already existing ordering or delivery management systems. Just click on the Get in Touch button and let us do the rest.
+CUSTOM_CSV_SUPPORT_TEXT1,"We offer the support any custom csv format, making your bulk task import process seamless."
+APP_INVOICE_TEXT1,This feature allows you to display your own custom html invoice in the agent app when a task is completed by the agent.
+VENDOR_FORM_TEXT1,Host a customer facing form within a few seconds. Get your business specific domain setup and start getting your orders right away.
+BILLING_PLAN,$14.99
+SMS_ACCOUNT_TEXT1,"We allows you to automate your messages to the customers in the form of SMS notifications. Now you can easily connect your own SMS service provider account like Twilio, Plivo and many others."
+EMAIL_PARSING_TEXT1,"Easily connect your Grubhub, Eat24, Takeaway, Eat Now, Hungry House, E_Order Start, Eat Street, Delivery.com, Blizzfull, Shin Ramen with us and save hours of manual Task creation time."
+BILLING_PLAN_EMAIL_PARSING,$14
+MOBILE_APP_OFFLINE_SYNC_TEXT1,"Give the power to your field workforce to work anytime and anywhere, totally unplugged. This add-on enables the agent mobile app to work without the internet connection."
+INTEGRATE_WITH_ZAPIER_TEXT1,Integrate with Zapier Integrate Zapier is a tool to connect together web apps. Accept invitation to our app on Zapier by clicking on the Integrate button and authenticate all of your requests using your API key.
+BCC_EMAIL_TEXT1,"With this addon, we have enabled you to bcc yourself in all the end-customer emails via {{is_reseller?company_name:'Tookan'}}, so that you can maintain records of the all the communication to your customers. You can add multiple receivers too."
+BILLING_PLAN_BCC_EMAIL,$1.49
+INTEGRATE_FOOD_TEXT1,This is a commission-free online ordering platform for restaurants. Restaurants can accept delivery orders placed online. Whenever the order gets accepted it also gets pushed to our system.
+JUGNOO_DELIVERY_TEXT1,"With this add-on, you get the opportunity to utilise Jugnoo Delivery's large fleet at your disposal.  Just login with your Jugnoo credentials. Currently available only in India."
+RECURRING_TASKS_TEXT1,"Now you can create recurring tasks, similar to repeating events in Google Calendar using this Add on. Fill in the relevant task details, check Repeat, set your rule and create the task."
+BECOME_PARTNER_TEXT1,"This add on allows you to receive tasks from other Account Owners and provide services to them, using your own agent teams realtime."
+CONNECT_PARTNER_TEXT1,"This add on allows you to expand your fleet, further by utilising the partner accounts, sharing their agents for your tasks."
+STUART_DELIVERY_TEXT1,"With this add-on, you get the opportunity to utilise Stuart Delivery's large fleet at your disposal. You can activate this Add-on, by simply logging in with your Stuart account credentials."
+AGENT_SIGNUP,Agent Signup
+AGENT_SIGNUP_TEXT,"With this add-on, your agents will be able to sign up directly from their mobile app. On activating this add-on you will have an option to select a login form that your agents will submit. And you will able to verify or reject their submissions right from your agent list page."
+TOOKAN_NAME,Tookan
+COMPANY_BEAUTY,Beauty
+COMPANY_BEAUTY_TEXT,beauty customer app provides the interface that can be used by your end customers to make at-home or in-salon appointments. It comes with a comprehensive dashboard to manage and monitor the schedules of your stylists.
+HOME_SERVICES,Home Services
+HOME_SERVICES_TEXT,"Home Services is an app for your customers to make service bookings. It comes with a configurable service catalog and you can design as per your business offerings. Now you can seamlessly manage your customers, bookings and workforce from one dashboard."
+CUSTOM_BUSINESS_APPS,Custom Business Apps
+CUSTOM_BUSINESS_APPS_TEXT,"Build app for your target customers with custom catalog including different categories and products. Using this, you can also change the way your customer facing apps looks from the dashboard itself. You can also configure various app modules such as pricing, custom templates and app theme."
+FUGU_INTEGRATION_BUSINESS,Fugu Integration for Business App
+FUGU_INTEGRATION_BUSINESS_TEXT,"With Fugu, you can add live chat in your product to provide customer support from anywhere and anytime. It helps your customer service team to answer customer queries, resolve issues and provide customer assistance on the go from web as well as mobile devices."
+FUGU_INTEGRATION_AGENT,Fugu Integration for Agent App
+FUGU_INTEGRATION_AGENT_TEXT,"With Fugu, you can add live chat in your product to provide support from anywhere and anytime. It helps your customer service team to answer agent queries, resolve issues and provide assistance on the go from web as well as mobile devices."
+INTEGRATE_BUMBL,Integrate with Bumbl
+INTEGRATE_BUMBL_TEXT,"Easy automation for busy people. Bumbl moves info between your web apps automatically, so you can focus on your most important work. So connect now."
+CAR_WASH,Car Wash
+CAR_WASH_TEXT,Car Wash app helps your customers book your services instantly. It comes with a comprehensive dashboard to manage jobs and monitor the schedules of your employees.
+ACTIVATE_EARNING_AND_PRICING,Activate Earning and Pricing for your account
+DEACTIVATE_EARNING_AND_PRICING,Deactivate Earning and Pricing for your account
+FUGU_CHAT_AGENT,Fugu chat for your agent app.
+FUGU_INTEGRATION_BUSINESS_YOUR,Fugu integration for your business app.
+GET_IN_TOUCH_DEACTIVATE,Please get in touch with us to deactivate this add-on.
+BECOME_A,Become a
+RECURRING_TASKS_CREATE_TEXT,Select the time when the recurring task should be created daily
+CUSTOM_BUSINESS_SETUP,Custom Business App Setup
+APP_NAME,App Name
+SENDER,Sender
+EXOTEL_SID,ExotelSID
+EXOTEL_TOKEN,ExotelToken
+TWILIO,Twilio
+PLIVO,Plivo
+2_FACTOR,2 factor
+GUPSHUP,Gupshup
+EXOTEL,Exotel
+SMART_SMS,Smart SMS
+TASK_EARNING_HEADING,Task Earning & Pricing
+TASK_EARNING_DESC_1,This add-on will allow agent earning & customer pricing to be defined for every task using a template. A new menu will appear in the templates section to allow you to configure it’s settings. Supported on
+TASK_EARNING_DESC_2,app version 3.0.7 and above.
+LAUNDRY,Laundry
+LAUNDRY_DESC_1,Laundry is an app for your customers to request laundry services. Your workforce can be easily integrated with
+LAUNDRY_DESC_2,to receive and complete laundry pickup and delivery tasks.. No development required.
+RATING_HEADING,Rate your customers
+RATING_DESC_1,App on successful completion of the task. Ratings given by the agent can be viewed on the dashboard in the customer section.
+MULTIPLE_ID,"Multiple email IDs allowed, separated by commas"
+ENTER_DISPLAY_NAME,Enter Display Name
+ENTER_DESC,Enter Description
+ENTER_EMAIL,Enter Email
+ENTER_PARTNER_TOKEN,Enter Partner Token
+ENTER_USER_ID,Enter User ID
+ENTER_PASSWORD,Enter Password
+ENTER_EMAIL_ID,Enter Mask ID (optional)
+SEARCH_TASKS,Search Tasks
+INTEGRATE_FUGU_WITH,Integrate Fugu with
+route_opt,Efficiently optimises agent routes saving both time and money.
+fugu_agent,"Enable in-app chats between agents, Managers and Customers seamlessly."
+control_agent,Create and manage agents schedules according to agents availability.
+branded_agent_app,Customize our platform with your business branding and use it like your own.
+work_time,Work Time
+kato,Get access to powerful analytics and trends to derive business insights.
+number_masking,Protect customer\'s identity by masking phone numbers for secure calling/texting.
+zapier,Integrate with Zapier and connect Tookan with thousands of apps.
+fb_messenger,Customers can text task on Facebook Messenger and managers get status updates.
+create_task_from_app,Create task form App
+pos_integration,Integrate our platform into your existing ordering or delivery management systems.
+custom_csv,Make your bulk task import process seamless using any custom CSV format.
+app_invoice,Display custom HTML invoice in the agent app on task completion by the agent
+vendor_form,Setup a customer booking form on your desired domain name.
+sms,Connect Your SMS Account
+email_parsing,"Easily connect your GrubHub, Eat24, Takeaway, Eat Now, Hungry House, E_Order Start, Eat Street, Delivery.com, Blizzfull, Shin Ramen with us and save hours of manual task creation time."
+gloria_food,Integrate your GloriaFood account seamlessly and manage orders with this add-on.
+jugnoo_delivery,Utilise Jugnoo Delivery\'s large agent using your Jugnoo credentials (for India).
+recurring_task,"Create recurring task with various rules, similar to google calendar."
+become_partner,Partner with other account owners and provide them services using your agent.
+connect_partner,Expand your agent by utilising agents of partner accounts for your  task.
+stuart_delivery,Utilise Stuart Delivery\'s large agent using your Stuart account credentials.
+agent_signup,Admin can select a custom template which will be shown to agents during Signup.
+customer_signup,Admin can select custom template which will be shown to customers during Signup.
+beauty,Enable customers to get at-home or in-salon appointments using Beauty Services.
+taxi,Taxi
+agent_earning,Track your agent earnings & customer pricing with configurable rule settings.
+laundry,Complete laundry pickup and delivery task by integrating Laundry Services.
+home_service,Home Services is an app for your customers to make service bookings.
+car_wash,Car Wash app helps your customers book your services instantly.
+customer_app,"Build your own customer facing app and configure pricing, themes and catalogue."
+agent_rating,"agents can rate customers after completing a task, viewable by managers."
+barcode,agents can scan a barcode and related task are assigned automatically.
+bumble,"Bumbl moves info between your web apps automatically, automating your processes."
+workforce,"This app enables you to make use of high end face detection and recognition technology on agent Mobile app to confirm identity of your workforce. Every time agent sign’s into duty, then the app would trigger camera for a real time identification of the agent"
+sub_desc,Apps to solve your business needs.
+Utility,Utility
+Integration,Integration
+Categories,Categories
+chat,chat
+branded_app,Branded Agent Applications
+kato_powered_by,Powered by
+gloria,Integrate with Gloria Food
+Beauty_Services,Beauty Services
+Taxi_Services,Taxi Services
+Laundry_Services,Laundry Services
+Home_Services,Home Services
+Car_Wash_Services,Car Wash Services
+Customer_Business_Apps,Customer Business Apps
+Scan_to_Assign,Scan to Assign
+Workforce_Identity_Management,Workforce Identity Management
+fugu_chat_integration,Fugu Chat Integration
+ADVANCED_ANALYTICS,Advanced Analytics
+Customer_Signup,Customer Signup
+interested,I’m interested!
+please_confirm,Please Confirm
+this_will,This will
+ro_for_acc,route optimization for your account
+app_invoice_for_acc,App Invoiceing Module for your account
+not,not
+allow_your_agent_create_task,create task from agent app
+number_masking_for_account,number masking for your account
+ro_activate,This will activate Route Optimization on your account.
+ro_deactivate,This will deactivate Route Optimization on your account.
+app_invoice_activate,This will deactivate App Invoicing Module for your account.
+app_invoice_deactivate,This will deactivate App Invoicing Module for your account.
+create_task_from_driver_activate,This will activate Create Task from Agent App.
+create_task_from_driver_deactivate,This will deactivate Create Task from Agent App.
+number_masking_for_account_activate,This will activate Number Masking for your account.
+number_masking_for_account_deactivate,This will deactivate Number Masking for your account.
+vendor_form_for_your_account_activate,This will activate Booking Form for your account.
+vendor_form_for_your_account_deactivate,This will deactivate Booking Form for your account.
+PARSING_FOR_ACCOUNT_activate,This will activate Email Parsing for your account
+PARSING_FOR_ACCOUNT_deactivate,This will deactivate Email Parsing for your account
+app_side_caching_for_your_account_activate,This will activate App Offline Syncing for your account.
+app_side_caching_for_your_account_deactivate,This will deactivate App Offline Syncing for your account.
+customer_email_tracking_for_your_account_activate,This will activate Customer Email Tracking for your account
+customer_email_tracking_for_your_account_deactivate,This will deactivate Customer Email Tracking for your account.
+driver_schedule_activate,This will activate Agent Schedule for your account.
+driver_schedule_deactivate,This will deactivate Agent Schedule for your account.
+earning_pricing_activate,This will activate Earning and Pricing for your account.
+earning_pricing_deactivate,This will deactivate Earning and Pricing for your account.
+vendor_form_for_your_account,Booking Form for your account
+your_SMS_Account,your SMS Account
+Email_Parsing_for_account,Email Parsing for your account.
+app_side_caching_for_your_account,App Offline Syncing for your account.
+customer_email_tracking_for_your_account,customer email tracking for your account.
+Schedule_for_your_account,Schedule for your account.
+Jugnoo_Delivery_Integration,Jugnoo Delivery Integration.
+CONTACT_US_PRICING,Contact us for pricing
+customer,Customer
+ONLY_PICKUP,Only pick-up
+ONLY_DELIVERY,Only delivery
+TASK_TEMPLATE,TASK TEMPLATE
+PICKUP_TASK,Pickup Task Template
+DELIVERY_TASK,Delivery Task Template
+LOGIN_REQUIRED,LOG IN REQUIRED
+AUTO_ASSIGNED,AUTO ASSIGNED ENABLED
+ALLOW_AUTO_FILL,ALLOW AUTO FILL INFORMATION
+ICON_TEXT,This icon will be visible on the Login Page(if applicable)
+ORDER_ICON_TEXT,"This icon will be visible on the Order Page/Form, in the center of the screen on the navigation bar."
+ADD_FIRST,Add First
+PRODUCT,Product
+ADD_SUB_CATEGORY,Add Sub-Category
+ADD_PRODUCTS,Add Products
+NEXT_ARROW_MSG,Click the arrow next to a category to add sub-categories/products.
+NAME_IS_REQUIRED,Name is required
+DROP_DRAG,"Drag & Drop images, or"
+FROM_PC, from computer
+IMAGE_IS_REQUIRED,Image is required
+PRODUCT_NAME,PRODUCT NAME
+PRODUCT_NAME_IS_REQUIRED,Product Name is required
+BASE_UNIT,Base Unit
+BASE_UNIT_IS_REQUIRED,Base Unit is required
+PRICE,Price
+PRICE_IS_REQUIRED,Price is required
+UPLOAD_PRODUCT_IMAGE,Upload Product Image
+PRODUCT_IMAGE_IS_REQUIRED,Product Image is required
+SEARCH_PROMO,Search Promotions
+CATALOG_TITLE,Catalog
+LAYOUT,Layout
+PRICING,Pricing
+PRODUCTS,Products
+MISCELLANEOUS,Miscellaneous
+WELCOME_BUSINESS_SETUP,Welcome to Business Apps’ Setup
+SET_PRICING,Set Pricing
+ADD_PRODUCT_TO,Add Product to
+ADD_PRODUCT,Add a Product
+SEARCH_CAT,Search Category
+ADD_FIRST_product,Add First Product
+ORDER_SUMMARY,Order Summary
+STREET_ADDRESS,Street Address
+CASH_COLLECTED,Cash To Be Collected
+HAS_RETURN,Has Return
+DUPLICATE_DELIVERY_MSG,Are you sure you want to order delivery without delivery point(s)?
+NO_DELIVERY,No. of deliveries for this order
+RECHARGE_WALLET,Please Recharge  Wallet
+DEBT_MSG,Merchant's current Jugnoo Debt {{vendorDebt}} is more than the allowed value. Please ask the merchant to recharge his wallet and then click on the Settle button to continue placing the order.
+SETTLE,Settle
+TELECALLER,Telecaller
+MERCHANT_NAME,Merchant Name
+LOADING_REQUIRED,Loading Required
+DROPOFF_POINT,Dropoff Point
+UNLOADING_REQUIRED,Unloading Required
+ADD_DROPOFF_POINT,ADD DROPOFF POINT
+BIKE,Bike
+MINI_TRUCK,Mini Truck
+RETURN_REQUIRED,Return Required
+SCHEDULE_FOR_LATER,Schedule for Later?
+APPLY,APPLY
+SET_ALTERNATE_NO,Set as Alternate Phone No.
+CREATE_ORDER,CREATE ORDER
+MAP,Map
+ORDER_HISTORY,Order History
+SUGGESTED_ADDRESSES,Suggested addresses
+DRIVER_DETAILS,Driver Details
+FARE,Fare
+ACTION_FAILED,Action Failed!
+NOTIFICATION,Notification
+ADD_NEW_OFFERING,Add New Offering
+OFFERING_NAME,OFFERING NAME
+OFFERING_NAME_REQUIRED,Offering name is required
+SELECT_APP,Select a Business App
+DOES_CATALOG_HAVE,Does your catalog have…
+CATEGORIES_AND_PRODUCTS,Categories & Products
+PRODUCTS_ONLY,Products Only
+CATALOG_NOT_ENABLED_MSG,Catalog is not enabled for this offering.
+BASE_PRICE_REQUIRED,Base Price is required
+BASE_PRICE,Base price
+GEO_FENCE_PRICING,Geo-fence based pricing
+SET_DIFF_GEO_FENCE_PRICING,Set different pricing for different Geo-fences
+GEO_FENCE_REQUIRED,Geo-fence is required
+CHANGE_PRICE_ANOTHER_GEO,Change pricing for another Geo-fence
+NOMORE_GEOFENCE,No more geo-fence available
+ENTER_BASEPRICE,Enter Base Price
+BASIC_DESC_PRODUCT,Basic description of the Product
+KILO_LITRES_QUANTITY,"kilograms, litres, quantity, etc."
+STANDARD_PRICE_PRODUCT,Standard price for the product
+APP_SETTINGS,App Settings
+GENERAL_APP_SETTINGS,General App Settings
+SOCIAL_PLUGINS,Social Plugins
+VERIFICATION,Verification
+VERIFICTION_VIA_OTP,Verification via one time password
+PAYMENT,Payment
+ENABLE_CREDIT,Enable credit
+PROMO_FEATURE,Promo feature
+REFERAL_FEATURE,REFERRAL FEATURE
+REFERAL_COMBO,REFERRAL COMBINATION
+REFERAL_COMBO_RQD,Referal combination is required
+SHARE_MSG,share message
+SHARE_MSG_RQD,Share message is required
+FB_SHARE_MSG,facebook share message
+FB_SHARE_MSG_RQD,facebook Share message is required
+SHARE_IMG,Share Image
+SHARE_IMG_RQD,Share image is required
+TAXES,Taxes
+SERVICE_TAX,Service tax
+SERVICE_TAX_RQD,Service Tax is required
+IS_RQD,is required
+OFFERING_SETTINGS,Offering Settings
+GEN_OFFERING_SETTINGS,General Offering Settings
+FORCE_PICKUP,Force Pick-up & Delivery
+ASSIGNMENT,Task assignment
+MANDATORY_DESTINATION,Mandatory Destination
+DESTINATION_BEFORE_RIDE,Will ask for destination before requesting a ride
+ENABLE_SCHEDULING,Enable Ride Scheduling
+SCHEDULING_NUMBER_RQD,Scheduling time is required
+TIME_GREATER_MSG,Scheduling time should be greater than or equal to 30 minutes
+SHOW_WAIT_SCR,Show Waiting Screen
+WAIT_SCR_TIME_RQD,Waiting screen time is required
+TIME_GREATER_MSG_SEC,Waiting screen time should be greater than or equal to 30 secs.
+THEME_SET,Theme Settings
+APP_ICON,App Icon
+MAP_THEME,Map Theme
+INVALID_CODE,Invalid color code
+RATING_REVIEW,Rating and Review
+CANCELLATION_CONFIGURATION,Cancellation Configuration
+ALLOW_CANCCELLATION,Allow Cancellation of Task on selected option(s)
+ON_SELECTED_OPTION,on selected option
+OTHER_SETTINGS,Other Settings
+PREFILL_DATA,Prefill user data
+SHOW_SERVICE_PROVIDERS,Show Service Providers
+CALL_TASK_AS,call tasks as
+LAYOUT_TYPE,Layout Type
+ENTER,Enter
+SCHEDULE_TIME,Scheduling time
+IN_MINUTES,IN MINUTES
+WAITING_SCREEN_TIME,Waiting screen time
+IN_SECONDS,in seconds
+ALL_PRODUCTS,All Products
+ALL_SUB_CATEGORY,All Sub Categories
+SUB_CATEGORY,Sub-Categories
+BASIC_DESC,Basic Description
+RANDOM_STRING,Random String
+NAME_COMBINATION,Name Combination
+WHITE,White
+BLACK,Black
+add_from_library,Add From Library
+create_custom,Create Custom
+your_template,Your Templates
+fleet_can,Agent can
+FIELD_TYPE,Field type
+ACCOUNT_PROFILE,PROFILE
+RETYPE_PASSWORD,Retype Password
+ACCOUNT_INFORMATION,Account Information
+COMPANY_NAME,What's your company name
+COMPANY_ADDRESS,What's your company address
+COUNTRY,Country
+DISPLAY_IMAGE,Display Image
+COMPANY_LOGO,Company's Logo
+PICTURE,Agent Picture
+AGENT_POPOVER_TEXT_1,You can set the Agent display images in Menu > More > Agent > Edit under Actions.
+AGENT_POPOVER_TEXT_2,display images in Menu > More >
+AGENT_POPOVER_TEXT_3,> Edit under Actions.
+UPLOAD_NEW_IMAGE,Upload New Image
+DISPLAY_AGENT_NAME_AS,Display Agent Name As
+SET_DEFAULT_LANGUAGE,Set Default Language
+SELECT_LANGUAGE,Select language
+ALLOW,Allow
+TO_CREATE_TASK,to Create Tasks
+UNIT_PREFERENCES,Unit Preferences
+KILOMETER,Kilometer
+MILES,Miles
+CHANGE_PASSWORD,CHANGE PASSWORD
+ENTER_CURRENT_PASSWORD,Enter Current Password
+CURRENT_PASSWORD,Current Password
+NEW_PASSWORD,New Password
+ENTER_NEW_PASSWORD,Enter New Password
+CUSTOMIZE_AGENT,Customize Agent text as
+OLD_PASSWOWRD,Old Password
+BUSINESS_ADDRESS,Business Address
+SKIP?,Skip?
+SORRY!_THIS_PASSWORD_LINK_IS_NO_LONGER_VALID,Sorry! This password link is no longer valid:
+BACK_TO_LOGIN,Back To Login
+CREATE_PASSWORD,Create Password
+SET_PASSWORD,Set up your account password
+WELCOME,"Welcome to Tookan,"
+FORGOT_PASSWORD?,Forgot Password?
+LOGIN,LOGIN ICON
+DONT_HAVE_AN_ACCONT,Don't have an account?
+CREATE_NEW_HERE,Create New Here
+RESET_IT,Reset it
+RESET_PASSWORD,Reset Password
+ENTER_YOUR_EMAIL_TO_RECEIVE_INSTRUCTIONS_ON_HOW_TO_RESET_YOUR_PASSWORD,Enter your email to receive instructions on how to reset your password.
+CREATE_ACCOUNT_FOR_FREE,Create Account For Free
+ALREADY_HAVE_AN_ACCOUNT,Already have an account
+BY_PROCEEDING_TO_CREATE_YOUR_ACCOUNT_YOU_AGREEING_TO_OUR_TERMS_OF_SERVICES_AND_PRIVACY_POLICY,"By proceeding to create your account,you are agreeing to our Terms of Servicce and Privacy Policy."
+TERMS_&_CONDITIONS,Terms & Conditions
+GO_TO_APP,Go to App
+REGISTER,Register
+CALL,Call
+UPLOAD,Upload
+SET_LANGUAGE,SET LANGUAGE
+SELECT_DASHBOARD_LANGUAGE,SELECT DASHBOARD LANGUAGE
+SELECT_TRACKING_PANEL_LANGUAGE,SELECT TRACKING PANEL LANGUAGE
+Web_Push_Notifications,Web Push Notifications
+DISABLE,Disable
+CUSTOMIZE_AGENT_TOOLTIP,"Call them agents, artists or service providers? Customize the display text here and it will change everywhere in the dashboard accordingly."
+search_placeholder,Select or search a country..
+DEFAULT_DASHBOARD_VIEW,Default Dashboard View
+MAP_VIEW,Map View
+LIST_VIEW,List View
+SEARCH_CUSTOMER,Search Customer
+UNABLE_TO_AUTO_ASSIGN,Unable to auto assign
+AUTO_ASSIGNING,Auto assigning
+NO_AGENT,No agent available
+VERSION,Version
+BATTERY,Battery
+DEVICE,Device
+NA,NA
+IOS,iOS
+ANDROID,Android
+AGENT_ID,Agent ID
+AGENT_NOT_OPTIMIZED,Agent route is not optimized.
+OPTIMIZE_NOW,Optimize Now
+ALL_INCLUSIVE,all_inclusive
+HELP_OUTLINE,help_outline
+CUSTOM,Custom
+DURATION,Duration
+VALUE_REQUIRED,This value is required.
+VIEW_EDIT,Agent Can View & Edit
+SELECT_TAGS,Select Tags
+TAG_NAME,TAG NAME
+OFF_DUTY,OFF DUTY
+ON_DUTY,ON DUTY
+EDIT_AGENT,Edit Agent
+BLOCK,Block
+INFO,Info
+VIEW_ALL,View All
+NO_TASK_AVAILABLE,No task available for the day
+ASSIGNED,Assigned
+UNASSIGNED,Unassigned
+SHOW_MORE,Show More
+EXPORT_PDF,Export as PDF
+EXPORT_CSV,Export as CSV
+SHOW_ON_MAP,SHOW ON MAP
+retry,Retry
+no_recipient,No Recipient
+ACTIVE,Active
+TOTAL,Total
+PUT_OFF_DUTY,Put Off-duty
+iOS_TEXT,iOS
+HELP_TEXT_5,should login on mobile App to become idle/active.
+SEARCH_AGENTS,Search
+LEFT,left
+SHOW_TRAFFIC_LAYER,Show Traffic Layer
+HIDE_COMPLETED_TASKS,Hide Completed Tasks
+SHOW_DARK_MAP,Show Dark Map
+CHECK_CIRCLE,check_circle
+RADIO_BUTTON,radio_button_unchecked
+SHOW_SATELLITE,Show Satellite View
+ARROW_DROP_DOWN,arrow_drop_down
+ARROW_DROP_UP,arrow_drop_up
+HIDE_OFFLINE,Hide Offline agent
+SHOW_TASKS_IN_CLUSTERS,Show Tasks in Clusters
+SHOW_WEB_NOTIFICATION,Show Web Notifications
+SATELLITE,Satellite
+ROUTED_TASKS,tasks left
+OTHER_TASKS,Other Tasks
+MOVING,Moving
+STOPPAGE,Stoppage
+TRAVELLED,Travelled
+Optimize_ROUTE,Optimize Route
+VIEW_DETAILS,View Details in Task Pane
+CONTENT_COPY,content_copy
+PERSON_OUTLINE,person_outline
+RECURRING_TASK,Recurring Task
+VIEW_RECURRING_RULE,View recurring rule
+CUSTOMER_COMMENT,Customer Comment
+ONE_ATTACHMENT,1 Attachment
+ATTACHMENT,Attachment
+S,s
+SHOW_PATH_HISTORY,Show Path History
+ALL_STOPS,All Stops
+DRIVER,Driver
+DRIVER_PHONE,Driver Phone
+TASK_VEHICLE,Task Vehicle
+TASK_SOURCE,Task Source
+INACTIVE,Inactive
+MORE_INFO,More Info
+LESS_INFO,Less Info
+TRY_TOOKAN_NOW,Try Tookan for your business now
+FREE_SIGN_UP,Free Sign Up
+ARRIVED,Arrived
+PARTIAL,Partial
+ACCEPTED,Accepted
+STARTED,Started
+INTRANSIT,InTransit
+DECLINED,Declined
+ACKNOWLEDGED,Acknowledged
+INPROGRESS,InProgress
+EFFICIENCY,Efficiency (%)
+PICKUP_DELIVERY,Pickup And Delivery
+SEEN_BY_AGENT,Seen by Agent
+IGNORED,Ignored
+SUN,S
+MON,M
+TUE,T
+WED,W
+TRU,T
+FRI,F
+SAT,S
+RECORDS_PER,records per page
+ZERO_RECORDS,Showing 0 to 0 of 0 records
+SHOWING,Showing
+ENTRIES,entries
+FILTERFROM,filtered from
+TOTAL_RECORDS,total records
+PAID,Paid
+INVALID_VAL,Invalid Value
+ENTER_PRICE,Enter Price
+FACEBOOK,Facebook
+SELECT_STATUS,Select Status
+DELETE_APPOINT,Delete appointment
+DELETE_STOP,Delete stop
+EXPORT_STOP,Export stop
+STOP,stop
+CANCEL_STOP,Cancel stop
+CHANGE_STOP_STATUS,Change stop status
+ALLOW_ALL,Allow All
+CHAR_REMAIN,CHARACTERS REMAINING
+TRUE,TRUE
+FALSE,FALSE
+ITEMS_SELECTED,Items selected
+ITEM_SELECTED,Item selected
+BY_AGENT,By agent
+SERCH_AGENTS,Search Agents
+IMPORT_AGENT,Import Agents
+INPREGRESS,InProgress
+ACCEPTED_TEXT,accepted the task.
+ACKNOWLEDGED_TEXT,acknowledged the task.
+STARTED_TEXT,started this task.
+INPREGRESS_TEXT,reached the destination.
+COMPLETED_TEXT,Completed the task successfully.
+FAILED_TEXT_1,marked the task as failed.
+FAILED_TEXT_2,Task status was changed to failed.
+CANCELLED_TEXT_1,marked the task as cancelled.
+CANCELLED_TEXT_2,Task was cancelled
+DECLINED_TEXT,declined the task.
+NO_TASK,No task available for the day
+CLEAR,clear
+EXPORT_TABLE,Export
+ORDER_ID,Order ID
+FILTER_COLUMNS,Filter Columns
+AGENT_NAME,Agent Name
+task_status,Task status
+TODAY_TASKS,Today's Tasks
+CUSTOM_SELECTION,Custom Selection
+INCLUDE_TIMELINE,Include Activity Timeline
+DUPLICATE,Duplicate
+FILTER_TASK,Filter With Date
+End_DATE,End Date
+CHANGE,Change
+EDIT_TASK,Edit Task
+CHOOSE,Choose Icon
+TEMPLATE_CSV,"Choose the Task template, that you want to see in CSV."
+EMAIL_CC,Would you like to cc anybody else on this email ?
+DELETE_THESE,You're about to delete these tasks.
+DELETE_THIS,You're about to delete this task.
+TASK_CREATION,Creation of task from the App
+THIS_ALLOWS,This new option allows
+UI_REVAMPING,UI revamping of the 'Template section'  as the dedicated 'Task Template' page
+REVAMPING_TEXT,Tookan now has a dedicated column for “Custom Fields” which was earlier located under the “Workflow” tab. This newly improved column has more options than before.
+DATA_TYPES,New data-types in the “Custom Field
+DAATA_TYPE_TEXT,Data-Type like Tables are added in the “Custom Field” option.
+FILTER_OPTION,“Filters” option in the “All Task Page”
+FILTER_TEXT,The option of “Filters” is introduced to the “All Task Page”. This option can be used to sort through specific tasks in accordance with their “Start” and “End” date.
+TRACKING_STATUS,The customer tracking link status
+TRACKING_STATUS_TEXT,"This feature has the ability to show that whether the customer has opened the tracking link of the delivery progress, or not."
+WEB_DASHBOARD,Web Dashboard is now Mobile Responsive
+WEB_DASHBOARD_TEXT,"Business manager/owner can now view the Tookan dashboard on any mobile device such as Smartphone, iPad, Android Tabs, etc."
+BULK_IMPORT,Bulk import of agents via a .csv file
+BULK_IMPORT_TEXT,This feature allows the users to add agents in a single go. You can create and then upload a CSV file for all the information on the agents into the Tookan’s “Agent Section”.
+INTEGRATIONS,Various Integrations
+INTEGRATIONS_TEXT,"Tookan has successfully conducted integrations with Zapier, Shopify, Square, QuickBooks, Xero, Revel, GloriaFoods, Clover, OpenDining, Pinnacle Cart, etc."
+CUSTOM_WEBFORMS,Custom Webforms
+CUSTOM_WEBFORMS_TEXT,Users can now create their own “Custom Webforms”. All the tasks created in the webforms will be automatically added to the “Unassigned” tab on the dashboard.
+APRIL_20,April 20
+EXPORT,Export
+START_DATE,Start Date
+END_DATE,End Date
+CHECK_ALL,Check All
+SET_AS_DEFAULT_TEMPLATE,Set as default template
+GETTING,Getting
+AWAY,away
+BULK_ASSIGN,Bulk Assign
+UNCHECK_ALL,Uncheck All
+ANALYTICS_AND_REPORTS,Analytics and Reports
+REPORTS,Reports
+TEMP_ID,Id
+SUCCESSFUL_TASKS,Successful Tasks
+CANCELLED_TASKS,Cancelled Tasks
+FAILED_TASKS,Failed Tasks
+TOTAL_TASKS,Total Tasks
+ONTIME_TASKS,On time tasks
+DELAYED_TASKS,Delayed tasks
+INTRANSIT_TIME,Intransit Time(Hours)
+IDLE_TIME,Idle Time (Hours)
+TOTAL_TIME,Total Time (Hours)
+INTRANSIT_DISTANCE,Intransit Distance (KM)
+IDLE_DISTANCE,Idle Distance (KM)
+TOTAL_DISTANCE,Total Distance (KM)
+TIME_PRODUCTIVITY,Time Productivity (%)
+TASK_PERFORMANCE,Task Performance
+TASK_COMPLETION,Task Completion
+TASK_COMPLETION_TITLE,Graph showing successful v/s failed tasks.
+TASK_PUNCTUALITY,Task Punctuality
+TASK_PUNCTUALITY_TITLE,Graph showing on-time v/s delayed tasks.
+EFFECTIVENESS,Effectiveness
+TIME_BASED_ACTIVITY,Time Based Activity
+TIME_BASED_ACTIVITY_TITLE,Graph showing fleet total intransit v/s total idle time.
+DISTANCE_BASED_ACTIVITY,Distance Based Activity
+DISTANCE_BASED_ACTIVITY_TITLE,Graph showing the fleet total intransit and idle distance.
+TIME_BASED_PRODUCTIVITY,Time Based Productivity
+TIME_BASED_PRODUCTIVITY_TITLE,Graph showing fleet efficiency based on intransit to the total task time ratio.
+TASK_EFFICIENCY,Task Efficiency
+SUCCESSFUL_TASK,Successful
+SUCCESSFUL_TASK_TITLE,Graph showing successful to total tasks ratio expressed in percentage.
+ON_TIME_TASK_TITLE,Graph showing on-time to total task ratio expressed in percentage.
+PAST_WEEK,Past Week
+PAST_MONTH,Past Month
+CUSTOM_DATE,Custom Date
+EXPORT_REPORT,Export Report
+ON_TIME_TASK,On Time
+INTRANSIT_DISTANCE_UNIT,Intransit Distance
+IDLE_DISTANCE_UNIT,Idle Distance
+TOTAL_DISTANCE_UNIT,Total Distance
+EARNINGS,Earnings
+PRICINGS,Pricing
+PRICING_EARNINGS,Pricing & Earning
+TOTAL_ASSIGNED_TASKS,Total Assigned Tasks
+BALANCE_TASKS,Balance Tasks
+DECLINED_TASKS,Declined Tasks
+DAYS,Days
+DELAYED,Delayed
+COMPLETION,Completion
+PUNCTUALITY,Punctuality
+IN_HOURS,in Hours
+PRODUCTIVITY,Productivity
+IN_PERCENT,in percent
+TOTAL_DELETED_TASKS,Total deleted tasks
+CUSTOMER_PRICING,Customer Pricing
+CANCELLED_TASK,Cancelled
+FAILED_TASK,Failed
+TOTAL_ASSIGNED_TASK,Total Assigned
+BALANCE_TASK,Balance
+DECLINED_TASK,Declined
+TOTAL_TASK,Total
+AGENT_EARNINGS,Agent Earnings
+Atribuir equipe (s),Allow add
+COPY,Copy
+CONFIRM,Confirm
+DONE,Done
+CLOSE,Close
+SAVE,Save
+CLICK,Click
+NEXT,Next
+BACK,Back
+CREATE_NEW,Create New
+CLICK_HERE,Click Here
+VIEW,View
+UNBLOCK,Unblock
+PREVIOUS,Previous
+COPIED,Copied
+HIDE,Hide
+BACK_TO_ALL_TASKS,Back to All Tasks
+OTHER_DETAILS,Other Details
+RECURRING_RULE,Recurring Rule
+DUPLICATE_RULE,Duplicate Rule
+DELETE_RULE,Delete Rule
+REPEAT_TASKS,Repeat Tasks
+COMPLETED_TASKS,Completed Tasks
+PROJECTED_TASKS,Projected Tasks
+PROJECTED_OCCURENCES,Projected Occurences
+CANCEL_SELECTED,Cancel Selected
+COMPLETED_REPEATED_TASKS,Completed Repeated Tasks
+EXPORT_TASKS,Export Tasks
+TASK_TIMINGS,Task Timings
+RULE_DELETED,This rule has been deleted
+UPCOMING_TASKS,Upcoming Tasks
+ARE_YOU_SURE,Are you sure
+DISABLE_ONLY,Disable only
+CANT_DISABLE,You are about to disable the tasks on the selected dates.
+SURE_DELETE,Are you sure you want to delete this rule?
+SUMMARY,Summary
+NO_FUTURE_TASKS,No future Tasks
+COMPLETED_RECURRING_TASKS,Completed Recurring Tasks
+CARRY_FORWARD,Carry forward
+GEOFENCES,Geofences
+no,No
+available_for_the_day,available for the day
+FARE_EARNED_END,for each task
+FARE_EARNED_START,Fare earned by the
+COMMISION_CHARGE_AGENT,Commission charged to the agent for each task
+EARNING,earning
+BASE_FARE_EARNED_START,Base fare earned by the agent and charged to the customer on task Completion
+BASE_FARE_EARNED_END,Base fare earned by the Agent on task completion
+FARE_EARNED_DURATION_END,Fare earned by the Agent per minute
+FARE_EARNED_DISTANCE_END,Fare earned by the Agent or every {km} travelled for the task
+PERCENTAGE_TOTAL_EARNING,Percentage of total fare deducted from the Agent earning
+FARE_CHARGE_CUSTMER,Fare charged to customer for each
+PERCENTAGE_GIVEN_CUSTOMER,Percentage discount given to the customer
+BASE_FARE_CHARGED_CUSTOMER,Base fare charged to the customer on
+FARE_CHARGED_CUSTOMER_MINUTE,Fare charged to the customer per minute
+FARE_CHARGED_CUSTOMER_DISTANCE,Fare charged to the customer for every {km} travelled for the
+FARE_DEDUCTION_CUSTOMER,Percentage of total fare deducted as discount for the customer
+EARNING_N_PRICING,Both Earning And Pricing
+FARE_CHARG_CUST_EARN_AGENT,Fare charged to customer or earned by the agent for each
+PER_DIS_CUSTOMER_COMMISION_CHARGE_AGENT,Percentage discount given to the customer or commission charged to the agent for each
+CHARGED_TO_CUSTOMER_ON,and charged to the customer on
+CHARGED_TO_CUSTOMER_ONMINUTE,and charged to the customer per minute
+CHARGED_TO_CUSTOMER_DISTANCE,and charged to the customer for every {km} travelled for the
+EARNING_AS_DISC_CUSTOMER,Percentage of total fare deducted from the agent earning and as discount for the customer
+HI,Hi
+NICE_TO_MEET,nice to meet you
+SEND_LINKS,We'll use this to send you the links and credentials to download our mobile app.
+LAST_ONE,This is really the last one
+GLAD_TO_HAVE,We're glad to have you aboard.
+TAKE_TOUR,Take a Tour
+ALMOST_THERE,Almost there
+CONGRATULATIONS,Congratulations!
+FIRST_TASK,on creating your first task
+HAPPY_DISPATCHING,Happy Dispatching
+CANT_FIND,We couldn't find this page.
+PAGE_DONT_EXIT,The page you are looking for does not exists.
+search_placeholder_cusotmer,Search Tasks by Cusotmer
+SMALL_ICON,Choose Small Icon
+NAVIGATION,NAVIGATION ICON
+SCOPE,SCOPE
+LIMITED,Limited
+GLOBAL,Global
+MAX_LIMIT,Maximum limit 50 characters
+LONG_DESCRIPTION,LONG DESCRIPTION
+PROMO_SETTINGS,Promotion Settings
+COUPON_CODE,COUPON CODE
+FLAT_OFF,Flat Off
+PERCENT_OFF,Percent Off
+VALUE_GRETER_MSG,This value must be greater than one.
+DATE_AND_TIME,Date and Time
+START,START
+END,END
+END_TIME_GREATER_MSG,EndTime should be greater than current time.
+USAGE,Usage
+MAX_USAGE_TOTAL,MAXIMUM TIMES A PROMOTION CAN BE USED (IN TOTAL)
+MAX_USAGE_PER_CUSTOMER,MAXIMUM USAGE PER CUSTOMER
+CREATE_A_PROMOTION,Create Promotion
+EDIT_PROMOTION,Edit Promotion
+START_DATE_TIME,Start Date and Time
+END_DATE_TIME,End Date and Time
+FLAT,FLAT
+OFF,Off
+FREE_CREDITS,Free Credits
+FREE_TASKS,Free Tasks
+PROMOTION,PROMOTION
+COUPON,COUPON
+REFERRAL,REFERRAL
+AMT_TO_BE_DISCOUNTED,AMOUNT TO BE DISCOUNTED
+SELECT_START_DATE_TIME,Select Start Date Time
+SELECT_END_DATE_TIME,Select End Date Time
+SHORT_DESC,A short description of the promotion
+DETAILED_DESC,A detailed description of the promotion
+PERCENTAGE_TO_BE_DISCOUNTED,PERCENT TO BE DISCOUNTED
+sign_up_for_free,Sign up for a Free Account!
+signing_up,Signing up
+sign_up_successful,Signup successful
+valid_email,Please enter a valid email
+field_required,This field is required.
+try_tookan_free,Try Tookan free for 14 days
+oops_email_alredy_exist,"Oops, an account with this email already exists. If you are the owner of this account, please"
+login_to_continue,log in to continue.
+pwd_must_6_char,Password must be atleast 6 characters long
+setting_up_dashboard,Setting up dashboard!
+initiating_walkthrough,Initiating a walkthrough
+download_agent_app,Download Agent App
+sent_sms_to_download_app,We have sent you a SMS/ Email to download our agent app.
+login_with_cred,Login with your credentials to start receiving new Tasks as soon as they are assigned to you. 
+login_with_credentials,Credentials:
+walk_for_product_demo,This is a walkthrough for product demonstration - Skip
+adding_2_dummy,Adding 2 Dummy Agents
+added_2_dummy_agents,We have added 2 dummy agents to your team for completing the walkthrough.
+new_received_task,New Received Tasks
+see_all_your_task,Here you will see all your tasks/ orders/ bookings received from your customers.
+smart_auto_assignment,Smart Auto-assignment
+smart_engine,Our smart engine will find the best available agent for completing the task automatically.
+agent_live_tracking,Agent live tracking
+track_the_location,You will be able to track the location of all your agents in real-time here.
+walk_complete,Your walkthrough is complete now.
+successfully_added_first_task,"You have successfully added & assigned your first task. Now you’re ready to explore platform on your own. If you ever need a hand, feel free to contact us."
+go_to_your_dashboard,Go to your dashboard
+create_your_first_task,Create your first Task
+streamline_your_business,"To streamline your business operations with a breeze, click below to add in your first Task."
+always_click_here_to_create_task,You can always click here to create tasks instantly.  
+click_here_to_add_manage_agents,Click here to add or manage your agents.
+invite_all_agents,Invite all your agents and start tracking them in real time.
+add_your_own_agents,Add your own agents
+resend_link,Resend link
+do_you_want_skip,Do you really want to skip the walkthrough ?
+skip_walk,Skip Walkthrough
+click_to_choose,Click to Choose
+ecommerce,E-Commerce
+medical_delivery,Medicine Delivery
+health_care,Health care
+spa_services,Spa services
+can_change_workflow,You can always change your workflow from settings panel
+choose_your_workflow,Choose Your Workflow

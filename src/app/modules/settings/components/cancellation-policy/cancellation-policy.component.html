@@ -1,0 +1,213 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Charges & Fees</h2>
+    </div>
+    <div class="panel profile-panel change-password-panel cancellationPolicy">
+      <form [formGroup]="cancellationPolicyForm" class="profile-form row col-12 m-0 p-0">
+        <div class="form-group col-12">
+
+          <h4 class="form_heading">Cancellation Policy</h4>
+        </div>
+
+        <div class="form-group col-12">
+          <span class="spn-font">
+            Once a service request is created, if the customer cancels after
+            <span style="width: 120px;">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                class="form-control input-width  add-dev-form-control" formControlName="minutes"
+                placeholder="Enter Minutes">
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.minutes">
+              </control-messages>
+            </span>
+            minutes
+            <span style="width: 120px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="price" placeholder="Enter Price">
+
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.price">
+              </control-messages>
+            </span>
+            <span style="margin-left:24px;">amount will be charged.</span>
+          </span>
+        </div>
+        <br>
+        <div class="form-group col-12">
+          <h4 class="form_heading">No Access Fee</h4>
+        </div>
+        <div class="form-group col-12">
+          <span class="spn-font">
+            No Access fees
+            <span style="width: 130px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="no_access_fee" placeholder="Enter Price">
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.no_access_fee">
+              </control-messages>
+
+            </span>
+            <span style="margin-left:24px;">will be charged after </span>
+            <span style="width: 130px;">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                class="form-control input-width add-dev-form-control" formControlName="access_fee_minutes"
+                placeholder="Enter Minutes">
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.access_fee_minutes">
+              </control-messages>
+            </span>
+            Minutes if the customer does not provide access.
+          </span>
+        </div>
+        <br>
+
+        <div class="form-group col-12">
+          <span class="spn-font">
+            Additional waiting charges to restart the no access clock
+            <span style="width: 120px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="no_access_wait_time_fare" placeholder="Enter Price">
+              <control-messages style="display:flex;"
+                [control]="cancellationPolicyForm.controls.no_access_wait_time_fare">
+              </control-messages>
+            </span>
+            for every
+            <span style="width: 120px;">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                class="form-control input-width  add-dev-form-control" formControlName="no_access_wait_minutes"
+                placeholder="Enter Minutes">
+              <control-messages style="display:flex;"
+                [control]="cancellationPolicyForm.controls.no_access_wait_minutes">
+              </control-messages>
+            </span>
+            <span style="margin-left:24px;">minutes.</span>
+          </span>
+        </div>
+        <br>
+        <div class="form-group col-12" style="margin-top:2%;">
+          <h4 class="form_heading">Hourly charges</h4>
+        </div>
+        <div class="form-group col-12">
+          <span class="spn-font">
+            After every
+            <span style="margin:0 5px;width: 180px;">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                class="form-control input-width add-dev-form-control" formControlName="access_fee_interval_minutes"
+                placeholder="Enter Minutes">
+              <control-messages style="display:flex;"
+                [control]="cancellationPolicyForm.controls.access_fee_interval_minutes"></control-messages>
+            </span>
+            minutes it will be
+            <span style="width: 180px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="access_fee_interval_price" placeholder="Enter Price">
+
+              <control-messages style="display:flex;"
+                [control]="cancellationPolicyForm.controls.access_fee_interval_price"></control-messages>
+            </span>
+            <span style="margin-left:24px;"> applied per minute.</span>
+          </span>
+
+        </div>
+        <div class="form-group col-12" style="margin-top:2%;">
+
+          <h4 class="form_heading">Spare Part Timer</h4>
+        </div>
+
+        <div class="form-group col-12">
+          <span class="spn-font">
+            If the response for the spare part is not answered in
+            <span style="margin:0 5px;width: 180px;">
+
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="diagnostic_time" placeholder="Enter Price">
+
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.diagnostic_time">
+              </control-messages>
+            </span>
+            minutes, then service request will be rendered
+          </span></div>
+        <div class="form-group col-12">
+          <span class="spn-font">
+            a diagnostic and
+            <span style="margin:0 5px;width: 180px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="diagnostic_fee" placeholder="Enter Price">
+
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.diagnostic_fee">
+              </control-messages>
+            </span>
+            will be charged
+          </span>
+        </div>
+        <div class="form-group col-12" style="margin-top:2%;">
+          <h4 class="form_heading">Spare part pick up and drop</h4>
+        </div>
+        <div class="form-group col-12">
+          <span class="spn-font">
+            The charges for the pickup and drop spare part are based on the base price
+            <span style="width: 120px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="base_fare" placeholder="Enter Price">
+
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.base_fare">
+              </control-messages>
+            </span>
+            <span style="margin-left: 24px">which are calculated</span>
+          </span>
+        </div>
+        <div class="form-group col-12">
+          <span class="spn-font">
+            on the basis of Distance
+            <span style="width: 120px;">
+              <span class="input-group-btn">
+                $
+              </span>
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                style="padding:10px 10px 10px 30px;" class="form-control input-width add-dev-form-control"
+                formControlName="distance_fare" placeholder="Enter Price">
+
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.distance_fare">
+              </control-messages>
+            </span>
+            <span style="margin-left: 24px">/ mile and time </span>
+            <span style="width: 120px;">
+              <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial"
+                class="form-control input-width  add-dev-form-control" formControlName="time_fare"
+                placeholder="Enter minutes">
+              <control-messages style="display:flex;" [control]="cancellationPolicyForm.controls.time_fare">
+              </control-messages>
+            </span>
+            minutes
+          </span>
+        </div>
+        <div>
+          <button class="btn btn-update" (click)="onSubmit(cancellationPolicyForm)"
+            style="margin-top:10%;">Update</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

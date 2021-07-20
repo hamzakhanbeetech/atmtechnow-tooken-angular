@@ -1,0 +1,124 @@
+@import "~assets/css/variables";
+.side-menu-container{
+  box-shadow: none;
+  background: #f5f7f9;
+  position: fixed;
+  width: 185px;
+  min-height: 100%;
+  left: 0;
+  top: 100px;
+  display: none;
+  }
+.side-menu-container.show-in-sm{
+  display: block;
+  z-index: 99;
+  padding-top: 60px;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  .sm-sidemenu-hide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: 40px;
+    left: 185px;
+    background-color: #f5f7f9;
+    border-bottom-right-radius: 4px;
+    width: 40px;
+    cursor: pointer;
+  }
+}
+.settings-content-container{
+  right: 0;
+  float: right;
+  left: auto;
+  background: #fafafa;
+  min-height: calc(100vh - 60px);
+  margin-top: 110px;
+  width: 100%;
+}
+.top-header{
+  background-color: $color-secondary;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 15;
+}
+.inner-padding{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media  (min-width:992px){
+  .settings-content-container{
+    width: calc(100% - 185px);
+    margin-top: 60px;
+  }
+  .side-menu-container{
+    display: block;
+    top: 60px;
+    .sm-sidemenu-hide{
+      display: none!important;
+    }
+  }
+  .second-top-nav {
+    display: none;
+  }
+  .inner-padding {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+//secondary top nav bar
+.second-top-nav {
+  background-color: #fff;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  top: 60px;
+  // padding: 0 15px;
+  z-index: 7;
+  box-shadow: 2px 0 4px #b9b9b9;
+  .right-chevron{
+    display: flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+.pac-container {
+  z-index: 2050 !important;
+}
+
+
+
+ .ui-calendar {
+  width: 250px;
+}
+ .ui-inputtext.ui-widget.ui-stat {
+  width: 100%;
+  padding: 5px;
+}
+ .ui-datepicker {
+  left: 0 !important;
+  width: 100%;
+  background-color: #fff;
+  z-index: 7 !important;
+}
+ .bs-datepicker-head{
+  background-color: $color-blue !important;
+}
+.theme-blue .bs-datepicker-body table td span.selected, 
+.theme-blue .bs-datepicker-body table td.selected span,
+.theme-blue .bs-datepicker-body table td span[class*="select-"]:after,
+.theme-blue .bs-datepicker-body table td[class*="select-"] span:after {
+  background-color: $color-blue !important;
+}
+.theme-blue .bs-datepicker-body table td.week span {
+  color: $color-blue !important;
+}

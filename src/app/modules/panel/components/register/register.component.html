@@ -1,0 +1,122 @@
+<div class="container-fluid ele-ht-wd">
+  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 register-col-lg-12 ele-ht pos-rel bg-white" id="imgDiv">
+    <img src="assets/images/signup-bg.svg" class="map-overlay-bg-signup">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 div-display ele-ht" id="imgDiv" style="height: 100vh">
+
+      <div class="tookan_logo_modify pos-rel">
+        <div class="row d-flex">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex">
+            <img [ngClass]="{'white-label-logo-height':commonService.pageSettings.is_wht_lable==1}" [src]="commonService.pageSettings.brand_img_page || '/assets/images/logo_dark_new.svg'"
+              alt="Image" class="img-responsive signup_logo_img" id="signup_logo_img" />
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 brand_poweredby">
+            <span class="powered-by">Powered By</span>
+            <a href="https://jungleworks.co/" target="_blank">
+              <img src="assets/images/jw-logo.svg" alt="Image" class="img-responsive jw-logo" id="jw_logo_img" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="form-container pos-rel col-xs-12" style="margin-top: 30px">
+        <p class="custom_register_h1" [ngClass]="{'opacity-0': btnState.id > 2 }">Try Tookan free for 14 days</p>
+        <form [formGroup]="signupForm" name="userForm" (submit)="register()" autocomplete="off" class="ele-ht {{btnState.class} "
+          id="signupForm" style="padding-top:10px" [ngClass]="{'d-none': btnState.id > 2 }">
+          <div class="to-hide">
+            <div class="form-group input-container input-img-name" style="position: relative;">
+              <input id="siFname" type="text" autocomplete="off" formControlName="name" class="focusable form-control custom_register_form-control"
+                placeholder="Enter Name" name="username" [ngClass]="{'error':signupForm.controls.name.invalid && !signupForm.controls.name.pristine}"
+              />
+              <control-messages [control]="signupForm.controls.name"></control-messages>
+            </div>
+            <div class="form-group input-container input-img-email" style="position: relative;">
+              <img src="assets/images/Spinner.svg" class="email-spinner" [ngClass]="{'d-none':(validatingEmail!='loading'|| !signupForm.controls.email.valid)}"
+              />
+              <span class="email-success" [ngClass]="{'d-none':(validatingEmail!='success' || !signupForm.controls.email.valid)}">
+                <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                  <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                </svg>
+              </span>
+              <input id="siEmail1" type="email" autocomplete="off" formControlName="email" class="focusable form-control custom_register_form-control"
+                placeholder="Enter Email" name="email" [ngClass]="{'error':(signupForm.controls.email.invalid || validatingEmail=='failed') && !signupForm.controls.email.pristine}"
+              />
+              <control-messages [control]="signupForm.controls.email"></control-messages>
+              <span class="error" *ngIf="signupForm.controls.email.valid && validatingEmail=='failed'">Oops, an account with this email already exists. If you are the owner of this account, please
+                <a class="color-blue" (click)="redirectToLogin()">Log in to continue.</a>
+              </span>
+            </div>
+            <div class="form-group input-container input-img-password" style="position: relative;">
+              <svg width="26px" height="18px" viewBox="0 0 26 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                tabIndex="-1" id="showPassword" (click)="togglePassword('siPassword')">
+                <title>eye icon</title>
+                <desc>Created with Sketch.</desc>
+                <defs></defs>
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                  <g id="eye-icon" fill-rule="nonzero">
+                    <g id="noun_67883_cc" transform="translate(5.000000, 4.000000)">
+                      <path d="M15.9265,5.32 C14.687,2.271 11.501,0.2225 8,0.2225 C4.4985,0.2225 1.313,2.271 0.0735,5.3195 L0,5.5 L0.0735,5.6805 C1.313,8.729 4.4985,10.777 8,10.777 C11.501,10.777 14.687,8.7285 15.9265,5.6805 L16,5.5 L15.9265,5.32 Z M1.038,5.5 C1.7955,3.786 3.2645,2.4505 5.0535,1.742 C3.939,2.6175 3.2215,3.976 3.2215,5.5 C3.2215,7.0235 3.9395,8.382 5.0535,9.2575 C3.264,8.5495 1.795,7.214 1.038,5.5 Z M8,9.32 C5.8935,9.32 4.18,7.6065 4.18,5.5 C4.18,3.3935 5.8935,1.68 8,1.68 C10.1065,1.68 11.8205,3.3935 11.8205,5.5 C11.8205,7.6065 10.1065,9.32 8,9.32 Z M10.947,9.2575 C12.0615,8.382 12.779,7.0235 12.779,5.5 C12.779,3.9765 12.0615,2.618 10.947,1.7425 C12.736,2.4505 14.205,3.786 14.963,5.5 C14.2045,7.214 12.736,8.5495 10.947,9.2575 Z M8,3.25 C6.7575,3.25 5.75,4.2575 5.75,5.5 C5.75,6.7425 6.7575,7.75 8,7.75 C9.2425,7.75 10.25,6.7425 10.25,5.5 C10.25,4.2575 9.2425,3.25 8,3.25 Z"
+                        id="Shape"></path>
+                    </g>
+                  </g>
+                </g>
+              </svg>
+              <input id="siPassword" type="password" autocomplete="off" formControlName="password" class="focusable form-control custom_register_form-control"
+                placeholder="Enter Password" name="password" [ngClass]="{'error':signupForm.controls.password.invalid && !signupForm.controls.password.pristine}"
+              />
+              <control-messages [control]="signupForm.controls.password"></control-messages>
+            </div>
+            <div class="form-group input-container input-img-phone" style="position: relative;">
+              <int-phone-prefix #intlTelInput id="companyPhone" class="pl-0 focusable" [locale]="'en'" formControlName="phone" [placeholder]="'Phone'"
+                ></int-phone-prefix>
+              <control-messages [control]="signupForm.controls.phone"></control-messages>
+            </div>
+            <div>
+              <!--  [ngClass]="[{Sign_Up_Final_AppTookanapp:!(signupForm .invalid || validatingEmail!='success' || phoneInvalid)}]" -->
+              <button type="submit" id="btnLoader" class="btn btn-primary custom_register_btn-primary" [ngClass]="{Sign_Up_Final_AppTookanapp:!(signupForm.invalid || validatingEmail!='success')}"
+                name="Register">
+                <span class="button-tick">
+                  <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                  </svg>
+                </span>
+                <!-- {{btnState.text}} -->
+                <span class="button-text">{{btnState.text}}</span>
+                <span class="btn-loader" *ngIf=" btnState.id == 1" [ngClass]="{'d-block': btnState.id == 1 }"></span>
+              </button>
+            </div>
+            <!--  *ngIf="btnState.id==0" -->
+            <div class="form-group text-center" *ngIf=" btnState.id == 0" style="margin-bottom:30px !important;">
+              <p class="custom_register_span">Already have an account?
+                <a (click)="redirectToLogin()" class="color-blue" style="cursor: pointer">Login</a>
+              </p>
+            </div>
+            <input type='hidden' id="zc_gad" name="zc_gad" value="" />
+          </div>
+        </form>
+
+        <div class="div-states {{btnState.class}}">
+          <div class="btn-dyn-txt t1 {{btnState.class}}">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+            <span>Signup successful</span>
+          </div>
+          <div class="btn-dyn-txt t2 {{btnState.class}} ">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+            <span class="span-loader"></span>
+            <span class="txt">Setting up dashboard!</span>
+          </div>
+          <div class="btn-dyn-txt t3 {{btnState.class}}">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+              <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+            </svg>
+            <span class="span-loader"></span>
+            <span class="txt">Initiating a walkthrough</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="load-dyn"></div>

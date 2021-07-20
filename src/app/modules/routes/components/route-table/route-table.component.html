@@ -1,0 +1,219 @@
+<div class="container-dispatcher-page  ele-ht">
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading" i18n>Routes</h2>
+      <p class="main-sub-heading pro-rg-font">
+        <ng-container i18n>Create optimized routes for a group of </ng-container>
+        <span class="text-lowercase">
+          {{commonService.loginData.call_tasks_as}}
+        </span>
+        <ng-container i18n> and assign </ng-container>
+        <span class="text-lowercase">
+          {{commonService.loginData.call_fleet_as}}</span>.
+        <span *ngIf="!!commonService.loginData.is_dispatcher">(If the manager unassigns the route, it gets removed from the list)</span>
+      </p>
+    </div>
+  </div>
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <!-- Table -->
+
+        <p-table #dt [columns]="columns" [value]="routesData" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true" [rows]="rows"
+          [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,routesData)" (onFilter)="onFilterChange($event)"
+          (onSort)="onPageChange({ rows: +rows, first: 0 },rows,routesData)">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" class="column-search" pInputText size="50" placeholder="Search Routes" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'route_id'" class="col-one col-1-pd">
+                <ng-container i18n>Route ID</ng-container>
+                <p-sortIcon [field]="'route_id'"></p-sortIcon>
+              </th>
+              <!-- <th [pSortableColumn]="'routed'" >
+                <ng-container i18n><span style="text-transform: uppercase">{{commonService.loginData.call_tasks_as}}</span> ID</ng-container>
+                <p-sortIcon [field]="'routed'"></p-sortIcon>
+              </th> -->
+              <th [pSortableColumn]="'team_name'">
+                <ng-container i18n>TEAM NAME</ng-container>
+                <p-sortIcon [field]="'team_name'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'fleet_name'">
+                <ng-container i18n>{{commonService.loginData.call_fleet_as}} NAME</ng-container>
+                <p-sortIcon [field]="'fleet_name'"></p-sortIcon>
+              </th>
+              <th>
+                <ng-container i18n>STATUS</ng-container>
+              </th>
+              <th>
+                <ng-container i18n>ACTIONS</ng-container>
+              </th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+
+              <td class="col-1-pd assign-agent" (click)="showRoutePreview(item.polylines, item.routed , item.user_id,0)">{{item.route_id}}</td>
+
+              <!-- <td class="">
+                <span *ngIf="item.routed.length < 6"><span *ngFor="let task of item.routed; let i = index">{{(i == item.routed.length-1) ? task : task+', '}}</span></span>
+                <span *ngIf="item.routed.length > 6"><span *ngFor="let task of (item.routed).slice(0,6); let i = index">{{(i == item.routed.length-1) ? task : task+', '}}</span><span>...</span><span class="see-more-link" (click)="showTaskList(item.routed)">See more</span></span>
+              </td> -->
+
+              <td class="">
+                <span>{{item.team_name}}</span>
+              </td>
+
+              <td class="">
+                <span>{{item.fleet_name}}</span>
+              </td>
+              <td class="">
+                <div *ngIf="item.fleet_id != ''" class="status-label circle-success-assigned">Assigned</div>
+                <div *ngIf="item.fleet_id == ''" class="status-label circle-success-unassigned">Unassigned</div>
+              </td>
+              <td class="">
+                <div class="menu-box">
+                  <i class="tf more-menu" (click)="showActionMenu($event)"></i>
+                  <ul class="menu-list">
+                    <li *ngIf="item.fleet_id == ''" (click)="openAssignAgentPopup(item.route_id , item.user_id)" class="list-item">
+                      <ng-container i18n>Assign Route</ng-container>
+                    </li>
+                    <li *ngIf="item.fleet_id != ''" (click)="unassignAgent(item.route_id , item.fleet_id , item.user_id)" class="list-item">
+                      <ng-container i18n>Unassign Route</ng-container>
+                    </li>
+                    <li (click)="deleteRoute(item.route_id , item.fleet_id , item.user_id)">
+                      <ng-container i18n>Delete</ng-container>
+                    </li>
+                    <li (click)="showTaskList(item.taskDetails)">
+                      <ng-container i18n>View Job</ng-container>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            <div>
+              {{infotext}}
+            </div>
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows" (change)="onPageChange({ rows: +rows, first: 0 },rows,routesData)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+
+  <!-- popup for route preview -->
+  <app-popup *ngIf="showPolylinePopup" [modalType]="popupModalType.LARGE" [minHeight]="'250px'" header="Route Preview" i18n-header
+    (onClose)="onCancelClick()">
+    <div body>
+      <app-route-popup [tasksData]="tasksData" [polylineInput]="selectedPolyline"></app-route-popup>
+    </div>
+    <div footer class="footer-buttons " style="text-align: right">
+      <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Close</ng-container>
+      </button>
+    </div>
+  </app-popup>
+
+
+  <!-- popup for assign agent -->
+  <app-popup class="assign-ag" [modalType]="popupModalType.MEDIUM" *ngIf="showAgentPopup" [minHeight]="'200px'" header="Assign Agent"
+    i18n-header (onClose)="onCancelClick()">
+    <div body>
+      <app-assign-agent [routeID]="selectedRoute" (assignObj)="assignRouteToFleet($event)"></app-assign-agent>
+    </div>
+    <div footer class="footer-buttons " style="text-align: right">
+      <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+      <button id="create-button" class="btn common-btn-green export_btn" (click)="assignAgent()">
+        <ng-container i18n>Save</ng-container>
+      </button>
+    </div>
+  </app-popup>
+
+
+
+
+  <!-- popup for task id list -->
+
+
+  <app-popup class="assign-ag" [modalType]="popupModalType.MEDIUM" *ngIf="showTaskIdPopup" [minHeight]="'200px'" [header]="taskPopupHeader"
+    i18n-header (onClose)="onCancelClick()">
+    <div body  class="scrolling">
+    
+      <div class="card" *ngFor="let data of taskList">
+        <div class="card-body">
+
+<div style="float:right;">
+            <div *ngIf="data.fleet_id != ''" class="status-label circle-success-assigned">Assigned</div>
+            <div *ngIf="data.fleet_id == ''" class="status-label circle-success-unassigned">Unassigned</div>
+          </div>
+<h6 class="grey_color" >{{data.job_id}}</h6>
+
+
+
+
+
+<h6 class="grey_color" *ngIf="data.job_type==3">
+{{data.job_address}}
+</h6>
+
+<h6 class="grey_color" *ngIf="data.job_type==0 ||data.job_type==1">
+    {{data.job_pickup_address}}
+    </h6>
+
+  
+
+
+        </div>
+      </div>
+    
+   
+  
+ 
+    </div>
+    <div footer class="footer-buttons " style="text-align: right">
+      <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Close</ng-container>
+      </button>
+    </div>
+  </app-popup>
+</div>
+
+
+
+
+<ng-template #buttonTemplate>
+  <li>
+    <input type="text" [bsConfig]="bsConfig" [(ngModel)]="selectedDate" placeholder="Choose a Date" class="date-form-control"
+      (onHidden)="onDateChange()" (change)="onDateChange()" bsDatepicker>
+  </li>
+</ng-template>

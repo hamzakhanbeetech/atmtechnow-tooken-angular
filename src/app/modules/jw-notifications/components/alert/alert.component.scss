@@ -1,0 +1,93 @@
+@import '~assets/css/variables';
+#alertPopupContainer{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 9;
+}
+#alertPopup{
+    width:calc(100% - 30px);
+    max-width: 520px;
+    padding: 25px 0 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1);
+}
+#alertPopup .header{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #0c212a;
+    margin-bottom: 10px;
+    padding: 0 25px;
+}
+#alertPopup .body{
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 20px;
+    line-height: normal;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    padding: 0 25px;    
+}
+#alertPopup .footer{
+    justify-content: center;
+    display: flex;
+    padding: 18px 0px 0;
+    border-top: 1px solid #d8d8d8;    
+}
+#alertPopup .btn-ok,#alertPopup .btn-cancel{
+    min-width: 130px;
+    height: 38px;
+    font-size: 14px;
+    font-family: $mont-light;    
+    cursor: pointer;
+    border-radius: 100px;
+}
+#alertPopup .btn-ok{
+    background-color: $color-primary;
+    border:2px solid $color-primary;
+    color: white;   
+    &:hover {
+        background-color: transparent;
+        color: $color-primary;
+    } 
+}
+#alertPopup .btn-cancel{
+    background-color: $color-tertiary;
+    border:2px solid $color-tertiary;
+    color: black;
+    margin-right: 5px;
+    &:hover{
+        background-color: transparent;        
+    } 
+}
+@media (min-width: 768px) {
+    #alertPopupContainer{
+        position: fixed;
+        height: 100%;
+    }
+    #alertPopup{
+        width: 400px;
+        .footer{
+            justify-content: flex-end;
+            padding: 18px 25px 0;
+        }
+    }
+    #alertPopup .body{
+        margin-bottom: 25px;
+    }
+}

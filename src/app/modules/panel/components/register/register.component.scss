@@ -1,0 +1,558 @@
+@import '~assets/css/variables'; 
+    .custom_register_btn-primary {
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1400px) {
+        span.btn-dyn-txt {
+            font-size: 20px!important;
+        }
+    }
+
+    .map-overlay-bg-signup {
+        min-width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    div.form-container .custom_register_h1 {
+        opacity: 0.8;
+        font-family: $proxima-reg;
+        font-size: 20px;
+        font-weight: 600;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #333333;
+        max-width: 450px;
+        margin: auto;
+    }
+
+    div.form-container{
+        margin-top: 20px;
+        padding: 0;
+        margin: auto;
+    }
+    div.form-container form{
+        max-width: 440px;
+        margin: auto;
+    }
+
+    .custom_register_form-control::-webkit-input-placeholder{
+        color: #bbbbbb;
+    }
+    .custom_register_form-control::-moz-placeholder{
+        color: #bbbbbb;
+    }
+    .custom_register_form-control:-ms-input-placeholder{
+        color: #bbbbbb;
+    }
+    .custom_register_form-control:-moz-placeholder{
+        color: #bbbbbb;
+    }
+
+
+    @media screen and (max-width: 1094px) {
+        span.btn-dyn-txt {
+            margin-left: 8px!important;
+        }
+        .loading-dots {
+            padding: 0px 1px 0px 5px!important;
+        }
+    }
+
+    @media screen and (max-width: 426px) {
+        .login_register_pass_demo_img {
+            display: none !important;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .mrn-top-xxlg {
+            margin-top: 20px !important;
+        }
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    @media (max-width:767px) and (orientation: landscape) {
+        div.login_register_pass_demo_img {
+            display: none !important;
+
+        }
+    }
+
+    span.btn-loader {
+        display: inline-flex;
+        right: 0;
+        border: 2px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 2px solid #555;
+        width: 25px;
+        height: 25px;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+        vertical-align: inherit;
+        margin-left: 10px;
+        float: right;
+        margin-top: 2px;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    #btnLoader {
+        min-width: 100%;
+        border-radius: 4px;
+        border: 2px solid #1394ff;
+        height:50px!important;
+    }
+
+    #btnLoader.btn-loading span.button-tick,
+    #btnLoader span.button-tick {
+        opacity: 0;
+        display: none;
+    }
+
+    #btnLoader .btn-loader {
+        display: none
+    }
+
+    #btnLoader.btn-loading .btn-loader {
+        display: inline-block;
+    }
+
+    @keyframes btnTick {
+        0% {
+            min-width: 240px;
+        }
+        100% {
+            min-width: 24px;
+            transform: translateX(0%);
+            padding: 13px;
+        }
+    }
+
+    div.div-states {        
+        overflow: hidden;
+        opacity: 0;
+        transition: opacity 0.16s ease;
+        display: none;
+        vertical-align: top;
+    }
+
+    div.div-states.btn-tick,
+    div.div-states.btn-logging-in,
+    div.div-states.btn-walkthrough {
+        display: block;
+    }
+    div.btn-dyn-txt{
+        opacity: 0;
+    }
+    div.div-states.btn-tick,div.div-states.delete-content{
+        opacity:1;
+        /* transition: 0.32s ease-in; */
+        transform: translate3d(0,20px,0);
+        margin: auto;
+        /* max-width: 440px; */
+        max-width: 300px;
+        padding-top: 20px;
+    }
+    div.div-states .btn-dyn-txt .checkmark{
+        height: 35px;
+        vertical-align: middle;
+        border-radius: 100%;
+        display: none;
+        transform: scale(0);
+        background-color: transparent;
+        opacity: 0;
+    }
+    .span-loader{
+        display: none;
+        border: 2.5px solid #5a565673;
+        border-radius: 50%;
+        border-top: 3px solid #2695fb;
+        width: 35px;
+        height: 35px;
+        -webkit-animation: spin 1s linear infinite;
+        animation: spin 1s linear infinite;
+        vertical-align: inherit;
+        margin-left: 0!important;
+    }
+   
+    div.div-states .btn-dyn-txt.t2.btn-tick .span-loader{
+        display: inline-block
+    }
+    div.div-states .btn-dyn-txt.t3.btn-tick .span-loader{
+        opacity: 0;
+    }
+    div.div-states .btn-dyn-txt.t3.btn-logging-in .span-loader{
+        display: inline-block;
+        opacity: 1;
+    }
+    
+    div.div-states .btn-dyn-txt.t1.btn-tick .checkmark,
+    div.div-states .btn-dyn-txt.t1.btn-logging-in .checkmark,
+    div.div-states .btn-dyn-txt.t1.btn-walkthrough .checkmark,
+    div.div-states .btn-dyn-txt.t2.btn-logging-in .checkmark,
+    div.div-states .btn-dyn-txt.t2.btn-walkthrough .checkmark,
+    div.div-states .btn-dyn-txt.t3.btn-walkthrough .checkmark{
+        display: inline-block;
+        stroke: #ffffff!important;
+        stroke-width: 5;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.32s 0.16s ease forwards;
+        background-color: #79dd23!important;
+        transition: all 0.32s 0.16s ease-in;
+        transform: scale(1);
+    }
+    div.div-states .btn-dyn-txt.t2.btn-logging-in .span-loader,
+    div.div-states .btn-dyn-txt.t2.btn-walkthrough .span-loader,
+    div.div-states .btn-dyn-txt.t3.btn-walkthrough .span-loader{
+        display: none;
+    }
+    div.div-states .btn-dyn-txt span.txt{
+        opacity: 0.5;
+    }
+    div.div-states .btn-dyn-txt.t1.btn-tick span.txt,
+    div.div-states .btn-dyn-txt.t1.btn-logging-in span.txt,
+    div.div-states .btn-dyn-txt.t1.btn-walkthrough span.txt,
+    div.div-states .btn-dyn-txt.t2.btn-logging-in span.txt,
+    div.div-states .btn-dyn-txt.t2.btn-walkthrough span.txt,
+    div.div-states .btn-dyn-txt.t3.btn-walkthrough span.txt{
+        opacity: 1;
+        transition: 0.16s ease;
+    }
+    div.div-states .btn-dyn-txt span{
+        display: inline-block;
+        vertical-align: middle;
+        font-family:  $proxima-reg;
+        margin-left:10px;
+        font-size: 20px;
+    }
+    div.div-states.delete-content div.btn-dyn-txt{
+        margin-bottom: 30px;
+    }
+    div.div-states.delete-content div.btn-dyn-txt.t1{
+        transition: .32s ease-in;
+        transform: translate3d(0,-20px,0);
+        opacity: 1     
+    }
+    div.div-states.delete-content div.btn-dyn-txt.t2{
+        transition: .32s .32s ease-in;
+        transform: translate3d(0,-20px,0);
+        opacity: 1     
+    }
+    div.div-states.delete-content div.btn-dyn-txt.t3{
+        transition: .32s .64s ease-in;
+        transform: translate3d(0,-20px,0);
+        opacity: 1     
+    }
+
+    #btnLoader:disabled {
+        opacity: 1!important;
+        cursor: not-allowed!important;
+        pointer-events: all;
+        background-color: #1394ff;
+    }
+
+    #signupForm input[disabled] {
+        background-color: rgba(0, 0, 0, 0.05)!important;
+    }
+
+    #signupForm input[disabled]:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0.05) inset;
+        color: #757575ad;
+        -webkit-text-fill-color: #757575ad;
+    }
+
+    #signupForm.btn-tick label,
+    #signupForm.btn-walkthrough label,
+    #signupForm.btn-loading label,
+    #signupForm.btn-loading label,
+    #signupForm.btn-logging-in label {
+        opacity: 0.5;
+    }
+
+    .input-img-name::after{
+        background-image:url('/assets/images/name-icon.svg');
+    }
+    .input-img-name:focus-within::after{
+        background-image:url('/assets/images/name-icon-blue.svg');
+    }
+    .input-container:not(.input-img-phone) input{
+        padding-left: 40px;
+        padding-right: 35px;
+    }
+    .input-img-email .email-spinner,.input-img-email .email-success{
+        display: block;
+        position: absolute;
+        right: 0;
+    }
+
+    .email-success{
+        width: 20px;
+        height: 20px;
+        right: 12px!important;
+        top: 12px;
+    }
+    .email-success .checkmark{    
+        stroke: #ffffff!important;
+        stroke-width: 5;
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.32s 0.32s ease-in forwards;
+        border-radius: 100%;
+        background-color: #79dd23!important;
+    }
+    span.error,#invalid-companyPhone{
+        font-family:  $proxima-reg;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #d41616;
+    }
+    #invalid-companyPhone{
+        margin-top: 3px;
+    }
+
+    .swap-name{
+        transform: translate3d(0,60px,0);
+    }
+    .swap-email{
+        transform: translate3d(0,-60px,0);
+    }
+    #btnLoader:not(.btn-loading):not(:disabled):hover{
+        background-color: white;
+        color: #1394ff
+    }
+    .color-blue{
+        color: #1394ff!important;
+    }
+    #showPassword{
+        display: block;
+        position: absolute;
+        top: 11px;
+        right: 8px;
+        height: 20px;
+    }
+    #showPassword #eye-icon{
+        fill: #999;
+    }
+    #showPassword #eye-icon.selected{
+        fill: #1394ff!important;
+    }
+    #showPassword:hover #eye-icon{
+        fill: #1394ff;
+    }
+    #siPassword{
+        padding-right: 31px;
+    }
+    .opacity-0{
+        opacity: 0!important;
+        pointer-events: none;
+    }
+
+    .checkmark {
+        /* width: 56px;
+  height: 56px; */
+        border-radius: 50%;
+        display: block;
+        stroke-width: 2;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        /* margin: 10% auto; */
+        box-shadow: inset 0px 0px 0px #7ac142;
+        animation: fill 0.4s ease-in-out 0.4s forwards, scale 0.3s ease-in-out 0.9s both;
+    }
+
+    #btnLoader.btn-tick .checkmark__check,
+    #btnLoader.btn-logging-in .checkmark__check {
+        /* transform-origin: 50% 50%; */
+        stroke-dasharray: 48;
+        stroke-dashoffset: 48;
+        animation: stroke 0.32s cubic-bezier(0.65, 0, 0.45, 1) 0.32s forwards;
+    }
+
+    @keyframes stroke {
+        100% {
+            stroke-dashoffset: 0;
+            transform:scale(1);
+            opacity:1
+        }
+    }
+
+    @-webkit-keyframes dot-keyframes {
+        0% {
+            opacity: .4;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+        50% {
+            opacity: 1;
+            -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+        }
+        100% {
+            opacity: .4;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+
+    @keyframes dot-keyframes {
+        0% {
+            opacity: .4;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+        50% {
+            opacity: 1;
+            -webkit-transform: scale(1.2, 1.2);
+            transform: scale(1.2, 1.2);
+        }
+        100% {
+            opacity: .4;
+            -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+        }
+    }
+
+    .loading-dots {
+        text-align: center;
+        width: 100%;
+        display: inline;
+        padding-right: 1px;
+        padding-left: 8px;
+    }
+
+    .loading-dots--dot {
+        -webkit-animation: dot-keyframes 1.5s infinite ease-in-out;
+        animation: dot-keyframes 1.5s infinite ease-in-out;
+        background-color: #000;
+        border-radius: 10px;
+        display: inline-block;
+        height: 6px;
+        width: 6px;
+        margin: 2px;
+    }
+
+    .loading-dots--dot:nth-child(2) {
+        -webkit-animation-delay: .5s;
+        animation-delay: .5s;
+    }
+
+    .loading-dots--dot:nth-child(3) {
+        -webkit-animation-delay: 1s;
+        animation-delay: 1s;
+    }
+    #btnLoader:not(:disabled):hover{
+        box-shadow: none;
+    }
+    #btnLoader > *{
+        pointer-events: none;
+    }
+
+    .spinner {
+        margin: 100px auto 0;
+        width: 70px;
+        text-align: center;
+    }
+
+    .spinner>div {
+        width: 18px;
+        height: 18px;
+        background-color: #333;
+
+        border-radius: 100%;
+        display: inline-block;
+        -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+        animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+
+    .spinner .bounce1 {
+        -webkit-animation-delay: -0.32s;
+        animation-delay: -0.32s;
+    }
+
+    .spinner .bounce2 {
+        -webkit-animation-delay: -0.16s;
+        animation-delay: -0.16s;
+    }
+
+    @-webkit-keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0)
+        }
+        40% {
+            -webkit-transform: scale(1.0)
+        }
+    }
+
+    @keyframes sk-bouncedelay {
+        0%,
+        80%,
+        100% {
+            -webkit-transform: scale(0);
+            transform: scale(0);
+        }
+        40% {
+            -webkit-transform: scale(1.0);
+            transform: scale(1.0);
+        }
+    }
+
+    #signupForm.btn-tick div.to-hide > div {
+        opacity: 0;
+        transform: translate3d(0,-20px,0);
+        transition: 0.4s ease-out;
+    }
+    #signupForm.delete-content{
+        display: none;
+    }   
+    /* media queries */
+    @media (min-width: 768px){
+        /* tablets */
+        div.form-container .custom_register_h1{
+            font-size: 35px!important;
+            margin-bottom: 15px!important;
+            /* text-align: left; */
+        }
+    }
+    @media (max-width: 384px) {
+        .button-text {
+            font-size: 14px;
+        }
+
+        :host /deep/ .intl-tel-input .dropdown-content {
+            max-width: calc(100vw - 70px) !important;
+        }
+    }
+
+:host /deep/ .intl-tel-input .form-control {
+    padding-left: 50px !important;
+    border-color: #bcbcbc !important;
+}
+
+:host /deep/ .intl-tel-input{
+   width: 100%;
+}

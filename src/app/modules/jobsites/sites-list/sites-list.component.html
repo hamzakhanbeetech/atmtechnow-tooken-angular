@@ -1,0 +1,96 @@
+
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-paddin p-1 m-0">
+
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+      <div class="fullwidth">
+        <div class="table-responsive">
+      <p-table #dt [value]="allSites" [columns]="cols" [style]="{width:'100%'}" [paginator]="true" [rows]="req_body.limit"  [totalRecords]="total_records"
+          [lazy]="true" (onLazyLoad)="loadOrdersLazy($event)">
+    
+    
+              <ng-template pTemplate="caption">
+                  <div class="search-control">
+                    <i class="tf search icon_search"></i>
+                    <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search Job Site" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+                  </div>
+                </ng-template>
+    
+        <ng-template pTemplate="header">
+            <tr>
+  
+              <th style="padding-left: 12px;">Customer ID</th>
+               <th>Name</th>
+               <th>Email</th>
+               <th>Phone Number</th>
+
+               <th>Job Sites</th>
+            </tr>
+        </ng-template>
+    
+        <ng-template pTemplate="body" let-data>
+            <tr>
+              <td style="padding-left: 12px;">{{data.customer_id}}</td>
+              <td>{{data.customer_username}}</td>
+              <td>{{data.email}}</td>
+              <td>{{data.customer_phone}}</td>
+
+              <td>
+                <span *ngIf="data.job_sites.length==1">{{data.job_sites[0]}}</span>
+                <span *ngIf="data.job_sites.length>1" class="tk-link" (click)="ViewJobSites(data.job_sites)">View Job Sites</span>
+
+              </td>
+
+              </tr>
+        </ng-template>
+        <ng-template pTemplate="emptymessage" let-columns>
+          <tr>
+            <td [attr.colspan]="columns.length">
+              <ng-container i18n>No Data Available</ng-container>
+            </td>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+          <div class="d-flex d-flex align-items-center">
+            <div>
+              <select class="custom-dropdown" [(ngModel)]="req_body.limit" (change)="changeLimit()">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+
+              </select>
+            </div>
+            <div class="paginatorCaption d-flex align-items-center">
+              <ng-container i18n>records per page</ng-container>
+            </div>
+          </div>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft" let-state>
+          <div>
+              {{records_text}}
+          </div>
+      </ng-template>
+      </p-table>
+      </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <app-popup 
+    *ngIf="showPopup"
+     [minHeight]="'250px'"
+     header="Job Sites"
+     [modalType]="popupModalType.MEDIUM"
+     i18n-header
+     (onClose)="onPopupCancelClick()">
+     <div body class="scrolling">
+       <ul class="list-group">
+         <li class="list-group-item" *ngFor="let sites of sitesList">
+           {{sites}}
+         </li>
+       </ul>
+    </div>
+  
+    </app-popup>

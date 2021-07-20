@@ -1,0 +1,221 @@
+<div class="container-dispatcher-page  ele-ht">
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading" i18n>{{commonService.loginData.call_fleet_as}} Wallet</h2>
+      <p *ngIf="(selectedAgent.fleet_id != -1)" class="main-sub-heading pro-rg-font">
+        <span *ngFor="let wallet of walletBalance">
+          <ng-container [ngSwitch]="wallet.wallet_type">
+            <span class="wallet-type" *ngSwitchCase="walletTypeEnum.WALLET">Wallet Balance</span>
+            <span class="wallet-type credit-balance" *ngSwitchCase="walletTypeEnum.CREDITS">Credits Balance</span>
+            <span class="wallet-balance">{{wallet.wallet_balance}}</span>
+          </ng-container>
+        </span>
+      </p> 
+    </div>
+
+    <div class="transaction-div">
+        <button *ngIf="(!!!commonService.loginData.is_dispatcher || !!commonService.loginData.dispatcher_permissions.edit_fleet_wallet) && (selectedAgent.fleet_id != -1)"
+          type="button" class="btn common-btn-green export_btn create-button" style="padding: 5px;" (click)="showAddPopup()">
+          <ng-container i18n>Add Transaction</ng-container>
+        </button>
+    </div>
+  </div>
+
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <!-- Table -->
+        <p-table #dt [columns]="columns" [value]="agentWalletData" (onLazyLoad)="onLazyLoad($event)" [totalRecords]="totalRecords"
+          [lazy]="true" [pageLinks]="8" [paginator]="true" [rows]="rows" [style]="{width:'100%'}">
+          <!-- <p-table #dt [columns]="columns" [value]="agentWalletData" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true"
+          [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,agentWalletData)"
+          (onFilter)="onFilterChange($event)" (onSort)="onPageChange({ rows: +rows, first: 0 },rows,agentWalletData)"> -->
+          <!-- <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" class="column-search" pInputText size="50" placeholder="Search" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template> -->
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'reference_id'" class="">
+                <ng-container i18n>Order Id</ng-container>
+                <!-- <p-sortIcon [field]="'reference_id'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'creation_datetime'" class="">
+                <ng-container i18n>Date and Time</ng-container>
+                <!-- <p-sortIcon [field]="'creation_datetime'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'username'" class="">
+                <ng-container i18n>{{commonService.loginData.call_fleet_as}} Name</ng-container>
+                <!-- <p-sortIcon [field]="'creation_datetime'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'amount'" class="">
+                <ng-container i18n>Debit</ng-container>
+                <!-- <p-sortIcon [field]="'amount'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'transaction_type'" class="">
+                <ng-container i18n>Credit</ng-container>
+                <!-- <p-sortIcon [field]="'transaction_type'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'description'" class="">
+                <ng-container i18n>Description</ng-container>
+                <!-- <p-sortIcon [field]="'description'"></p-sortIcon> -->
+              </th>
+              <th [pSortableColumn]="'remarks'" class="">
+                <ng-container i18n>Remarks</ng-container>
+                <!-- <p-sortIcon [field]="'remarks'"></p-sortIcon> -->
+              </th>
+
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td>{{item.reference_id || '-'}}</td>
+              <td>{{item.creation_datetime | date : (commonService.loginData.date_format_angular5+' '+commonService.loginData.time_format)  || '-'}}</td>
+              <td>{{item.username}}</td>
+              <td>{{item.transaction_type==transactionTypeEnum.DEBIT?item.amount:'-'}}</td>
+              <td>{{item.transaction_type==transactionTypeEnum.CREDIT?item.amount:'-'}}</td>
+              <td>{{item.description|| '-'}}</td>
+              <td>{{item.remarks || '-'}}</td>
+            </tr>
+          </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            <div>
+              {{infotext}}
+            </div>
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows" (change)="onSelectedAgentWalletData()">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+  <!-- popup for add transaction -->
+  <app-popup *ngIf="showAddTransactionPopup" [minHeight]="'250px'" header="Add Transaction" i18n-header (onClose)="onCancelClick()">
+    <div body>
+      <form [formGroup]="addTransactionForm">
+        <div class="row d-flex">
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>ORDER ID</ng-container>
+            </label>
+            <input type="text" name="order_id" class="form-control add-dev-form-control" formControlName="order_id" autofocus/>
+            <control-messages [control]="addTransactionForm.get('order_id')"></control-messages>
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>AMOUNT</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+            <input type="number" name="amount" class="form-control add-dev-form-control" formControlName="amount" />
+            <control-messages [control]="addTransactionForm.get('amount')"></control-messages>
+          </div>
+
+        </div>
+        <div class="row d-flex">
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>Description</ng-container>
+            </label>
+            <textarea name="Description" class="form-control add-dev-form-control" formControlName="description"></textarea>
+            <control-messages [control]="addTransactionForm.get('description')"></control-messages>
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>Remarks</ng-container>
+            </label>
+            <textarea name="remarks" class="form-control add-dev-form-control" formControlName="remarks"></textarea>
+            <control-messages [control]="addTransactionForm.get('remarks')"></control-messages>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>Wallet TYPE</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+            <select name="wallet_type" id="wallet_type" formControlName="wallet_type">
+              <option value="" i18n>Please select a type</option>
+              <option [ngValue]="walletTypeEnum.WALLET" i18n>Wallet</option>
+              <option [ngValue]="walletTypeEnum.CREDITS" i18n>Credits</option>
+            </select>
+            <control-messages [control]="addTransactionForm.get('wallet_type')"></control-messages>
+          </div>
+          <div class="form-group col-sm-6">
+            <label class="control-label">
+              <ng-container i18n>TRANSACTION TYPE</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+            <select name="transaction_type" id="transaction_type" formControlName="transaction_type">
+              <option value="" i18n>Please select a type</option>
+              <option [ngValue]="transactionTypeEnum.DEBIT" i18n>Debit</option>
+              <option [ngValue]="transactionTypeEnum.CREDIT" i18n>Credit</option>
+            </select>
+            <control-messages [control]="addTransactionForm.get('transaction_type')"></control-messages>
+          </div>
+        </div>
+
+      </form>
+    </div>
+    <div footer class="footer-buttons " style="text-align: right">
+      <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+      <button id="create-button" class="btn common-btn-green export_btn create-button" (click)="addTransaction()">
+        <ng-container i18n>Create</ng-container>
+      </button>
+    </div>
+  </app-popup>
+</div>
+
+
+<ng-template #filterTemplate>
+  <li>
+    <p-dropdown filter="true" (onChange)="onSelectedAgentWalletData()" [(dropdownIcon)]="dropdownIcon"
+    [style]="{'width':'200px'}"
+      [options]="agentOptions" [autoDisplayFirst]="true" optionLabel="username" [(ngModel)]="selectedAgent" filterPlaceholder="{{'Choose '+commonService.loginData.call_fleet_as}}"></p-dropdown>
+  </li>
+  <li>
+    <input #daterangepicker type="text" placeholder="Choose a Date" class="date-form-control" [bsConfig]="bsConfig" [(ngModel)]="selectedDate"
+      (onHidden)="onSelectedAgentWalletData()" bsDaterangepicker>
+    <!-- <p-calendar  [(ngModel)]=" bsValueChange selectedDate" selectionMode="range" readonlyInput="true" (onSelect)="onSelectedAgentCallHistory()"></p-calendar> -->
+  </li>
+  <li>
+      <!-- Wallet Type filter -->
+      <p-dropdown (onChange)="onSelectedAgentWalletData()" [(dropdownIcon)]="dropdownIcon"
+      [(ngModel)]="selectedWalletFilter" [options]="walletFilters" [autoDisplayFirst]="true" optionLabel="label" placeholder="Choose wallet type"></p-dropdown>
+  </li>
+</ng-template>
+<ng-template #buttonTemplate>
+  <!-- <li>
+    <button *ngIf="!!!commonService.loginData.is_dispatcher || !!commonService.loginData.dispatcher_permissions.edit_fleet_wallet"
+      type="button" class="btn btn-primary dev-add-button" (click)="showAddPopup()">
+      <ng-container i18n>Add Transaction</ng-container>
+    </button>
+  </li> -->
+  <li>
+    <button (click)="onSelectedAgentWalletData(true)" class="tf tfont export-round btn"></button>
+  </li>
+</ng-template>

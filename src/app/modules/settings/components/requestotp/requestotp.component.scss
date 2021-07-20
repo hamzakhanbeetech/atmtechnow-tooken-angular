@@ -1,0 +1,89 @@
+@import "~assets/css/variables";
+.inner-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0px;
+  }
+
+  .fullwidth {
+    width: 100%;
+    float: left;
+    padding-top: 12px;
+  }
+
+  .page-heading {
+    color: rgba(51, 51, 51, 0.8);
+    font-size: 24px;
+    margin-bottom: 5px;
+    // margin-top: 14px;
+    font-family: $proxima-semi-bold;
+  }
+
+  .main-sub-heading {
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    margin: 0 0 10px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .pro-rg-font {
+    font-family: $proxima-reg;
+  }
+
+  .requestotp {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .page-sub-heading{
+    letter-spacing: 0.2px;
+    color: rgba(51, 51, 51, 0.8);
+    margin: 0 0 5px;
+    font-family: $proxima-semi-bold;
+    font-size: 15px;
+  }
+
+  .panel{
+    padding: 15px 0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    border: 1px solid transparent;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+  }
+  .taskHeaderSub{
+    font-size: 15px;
+    line-height: 1.18;
+    color: rgba(0, 0, 0, 0.42);
+  }
+
+  button#create-button {
+    color: white;
+    background-color: $color-primary;
+    border-radius: 25px;
+    cursor: pointer;
+    border: 2px solid $color-primary;
+    width: 130px;
+    &:hover {
+      color: $color-primary;
+      background-color: white;
+      border: solid 2px $color-primary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  .verify-char {
+    position: absolute;
+    right: 15px;
+    top: 95%;
+  }
+
+  .characters-label {
+    font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      color: rgba(0,0,0,.57);
+      text-transform: uppercase;
+  }

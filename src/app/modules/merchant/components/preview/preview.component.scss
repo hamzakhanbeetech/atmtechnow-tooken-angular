@@ -1,0 +1,106 @@
+.fullwidth { 
+    display: flex;
+    justify-content: center;
+}
+.panel {
+    color: #423939;
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .body {
+        margin-top: 75px;
+        display: flex;
+        flex-wrap: wrap;
+        .checkbox-box {
+            justify-content: center; 
+            margin-top: 30px;
+            .radio-ck-label2 {
+               // padding-top: 20px;
+               margin-bottom: 0px;
+            } 
+            .radio-ck-label {
+                font-weight: 700;
+                font-size: 15px;
+            }
+            // .rating {
+            // //    :host /deep/ .ui-rating {
+            // //        a {
+            // //            color: #e1be03 !important;
+            // //        }
+            // //    }
+            // }
+        }
+    }
+
+    .view-buttons {
+        margin-top: 70px;
+        .btn2 {
+            margin-left: 30px;
+            width: auto !important;
+        }
+    }
+
+    .documents {
+        margin-top: 50px;
+        .checkbox-box{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 300px;
+            .prev-doc {
+                display: flex;
+                justify-content: space-between;
+                .view-button {
+                    font-size: 12px;
+                    text-decoration: none;
+                }
+            }
+        
+        }
+    }
+}
+.view-buttons{
+    
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#create-button{
+    margin: 0px
+}
+// .panel{
+//     // padding: 0px !important;
+// }
+.documents{
+    display: flex;
+}
+@media (min-width: 768px){
+    .view-buttons{
+        justify-content: flex-start;
+        font-size: 14px;
+        flex-direction: row;
+    }
+    .panel{
+       padding:  15px 20px;
+    }
+    .mid{
+    text-align: right;
+    }
+}
+
+@media (max-width: 380px) {
+    .documents {
+        padding: 0px !important;
+
+        .checkbox-box {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+    }
+}

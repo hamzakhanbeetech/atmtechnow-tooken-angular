@@ -1,0 +1,153 @@
+<div class="sidebar-div" [ngClass]="{'show':visible}" (click)="$event.stopPropagation()">
+    <a class="logo_space">
+        <i class="tf-new icon-Main_Menu menu-trigger desktop-menu d-none d-lg-block cp" (click)="close()"></i>
+        <i class="tf tfont cross menu-trigger mobile-menu d-lg-none cp" (click)="close()"></i>
+        <!-- <i class="full-logo easy-3s mobile-cross ng-scope" ng-if="is_wht_lable == 2" ng-click="gotoDashboard()" role="button"
+      tabindex="0" style=""> -->
+        <img class="img-logo cp" [src]="commonService.loginData.logo||'assets/images/tookan-new-logo.svg'" (click)="redirectToDashboard()">
+    </a>
+    <div class="items">
+        <ul class="top-navbar" (click)="close()" *ngIf="!sidebarApps.length;else developerApps">
+            <li class="setting bottom dropdown-submenu" (click)="commonService.emitDataToParentWindow('app.dashboard')">
+                <span class="menu-img">
+              <span class=" tf-new icon-Dashboard"></span>
+                </span>
+                <span class="full-text" i18n>Dashboard</span>
+            </li>
+            <li class="setting bottom dropdown-submenu" (click)="commonService.emitDataToParentWindow('app.serviceRequest')">
+                <span class="menu-img">
+          <span class=" tf-new icon-Dashboard"></span>
+                </span>
+                <span class="full-text" i18n>Service Request</span>
+            </li>
+
+            <!--ADD MERCHANT-->
+            <li class="setting bottom dropdown-submenu" *ngIf="!!!commonService.loginData.is_merchant && !!commonService.loginData.merchant_add_on && !!!commonService.loginData.is_dispatcher" [routerLink]="['/merchant']" [routerLinkActiveOptions]="{exact: false}"
+                routerLinkActive="active" (click)="commonService.emitDataToParentWindow('app.merchant')">
+                <span class="menu-img">
+          <span class="tf agent-icon"></span>
+                </span>
+                <span class="full-text">Enterprise Platform</span>
+            </li>
+            <!--  -->
+
+            <li class="setting bottom dropdown-submenu" (click)="commonService.emitDataToParentWindow('app.allcustomers')">
+                <span class="menu-img">
+          <span class="customer tf"></span>
+                </span>
+                <span class="full-text" i18n>Operators</span>
+            </li>
+           
+            <li class="setting bottom dropdown-submenu" (click)="commonService.emitDataToParentWindow('app.settings.agents-list')">
+                <span class="menu-img">
+          <span class="tf agent-icon"></span>
+                </span>
+                <span class="full-text">{{commonService.loginData.call_fleet_as||"Agent"}}</span>
+            </li>
+
+
+         
+
+             <!-- Routes -->
+             <li class="setting bottom dropdown-submenu" *ngIf="!!commonService.loginData.has_routing" [routerLink]="['/routes']" [routerLinkActiveOptions]="{exact: false}" routerLinkActive="active" (click)="commonService.emitDataToParentWindow('app.routes')">
+                <span class="menu-img">
+          <span style="font-size: 20px" class="fas fa-route"></span>
+                <!-- <span><img src='assets/images/route-solid.svg'></span> -->
+                </span>
+                <span class="full-text">Routes</span>
+            </li>
+            <li class="setting bottom dropdown-submenu"  [routerLink]="['/customer']" [routerLinkActiveOptions]="{exact: false}"
+            routerLinkActive="active" (click)="commonService.emitDataToParentWindow('app.customer')">
+            <span class="menu-img">
+      <span class="tf agent-icon"></span>
+            </span>
+            <span class="full-text">Merchant</span>
+        </li>
+
+        <li class="setting bottom dropdown-submenu" 
+         [routerLink]="['/jobsites']"
+         [routerLinkActiveOptions]="{exact: false}"
+        routerLinkActive="active"
+         (click)="commonService.emitDataToParentWindow('app.jobsites')">
+        <span class="menu-img">
+        <span class="fas fa-route"></span>
+        </span>
+        <span class="full-text">Job Sites</span>
+    </li>
+            <!--  -->
+            <!-- <li class="setting bottom dropdown-submenu" style="position: relative;" (click)="commonService.emitDataToParentWindow('app.analytics')" *ngIf="!(!!commonService.loginData.is_merchant)">
+        <span class="menu-img">
+          <span class="tf analytics"></span>
+        </span>
+        <span class="full-text" i18n>Analytics</span> -->
+            <!-- <img src="assets/images/new-tag.svg" alt="" class="new-tag-sidebar"> -->
+            <!-- </li> -->
+            <!-- Add settings here -->
+            <li class="setting bottom dropdown-submenu" routerLinkActive="active" [routerLink]="['/settings']" (click)="commonService.emitDataToParentWindow('app.preferences')" [routerLinkActiveOptions]="{exact: false}">
+                <span class="menu-img">
+          <span class=" tf-new icon-Settings"></span>
+                </span>
+                <span class="full-text" i18n>Settings</span>
+            </li>
+        </ul>
+        <ng-template #developerApps>
+            <ul class="top-navbar" (click)="close()">
+                <li *ngFor="let app of sidebarApps" (click)="onDeveloperAppsClick(app)" style="position: relative;">
+                    <!-- <a [href]="app.functionalize.url" [target]="app.functionalize.target"> -->
+                    <span class="menu-img">
+            <span class="{{app.icon}}"></span>
+                    </span>
+                    <span class="full-text">{{app.name}}</span>
+                    <img *ngIf="app.functionalize.url == '#/app/analytics'" src="assets/images/new-tag.svg" alt="" class="new-tag-sidebar">
+                    <!-- </a> -->
+                </li>
+
+                <!-- Seettings tab -->
+                <li class="setting bottom dropdown-submenu" routerLinkActive="active" (click)="!!commonService.loginData.is_merchant ? commonService.emitDataToParentWindow('app.account')  : commonService.emitDataToParentWindow('app.preferences')" [routerLinkActiveOptions]="{exact: false}">
+                    <span class="menu-img">
+            <span class=" tf-new icon-Settings"></span>
+                    </span>
+                    <span class="full-text" i18n>Settings</span>
+                </li>
+            </ul>
+        </ng-template>
+        <ul class="bottom-navbar" (click)="close()">
+            <!-- <li class="setting bottom dropdown-submenu" routerLinkActive="active" (click)="commonService.emitDataToParentWindow('app.preferences')" [routerLinkActiveOptions]="{exact: false}">
+        <span class="menu-img">
+          <span class=" tf-new icon-Settings"></span>
+        </span>
+        <span class="full-text" i18n>Settings</span>
+      </li> -->
+            <li class="hippo-icon" *ngIf=" commonService.loginData.fugu_chat==1" (click)="goToHippoDashboard()">
+                <span class="menu-img ">
+          
+        </span>
+
+                <span class="full-text" i18n>Tech Talk</span>
+            </li>
+            <li style="display: none;" *ngIf="!!!commonService.loginData.is_dispatcher && !!!commonService.loginData.is_merchant " (click)="goToMarketpalce()">
+                <span class="menu-img">
+          <i class="tf-new icon-Marketplace"></i>
+        </span>
+
+                <span class="full-text" i18n>Marketplace</span>
+            </li>
+            <!-- <li class="tookan-guide" *ngIf="(commonService.loginData.is_whitelabel!=1 ||(!!!commonService.loginData.is_dispatcher && commonService.loginData.is_whitelabel==1 && !!!commonService.loginData.reseller ))&& !!!commonService.loginData.is_merchant" (click)="goToTookanGuide()">
+        <span class="menu-img ">
+          
+        </span>
+
+        <span class="full-text" i18n>Tookan Guide</span>
+      </li> -->
+            <li *ngIf="commonService.loginData.is_whitelabel!=1" (click)="openHippoWidget()">
+                <span class="menu-img">
+          <i class="tf-new icon-Support">
+            <span class="path1"></span>
+                <span class="path2"></span>
+                </i>
+                </span>
+                <span class="full-text" i18n>Support</span>
+            </li>
+        </ul>
+    </div>
+</div>

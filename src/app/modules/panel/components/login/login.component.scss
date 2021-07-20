@@ -1,0 +1,335 @@
+@import '~assets/css/variables';
+    .intl-tel-input .flag-container{
+        height: 40px !important;
+    }
+    .login_register_pass_demo_img .terms-links a{
+        color: #fff;
+    }
+    body{
+        background: #fff !important;
+    }
+    #imgDiv{
+        padding: 0;
+    }
+    .custom_register_btn-primary{
+        width: 100% !important;
+        border-radius: 100px;
+        background-color: $color-primary;
+        height: 50px !important;
+        margin-bottom: 18px;
+        margin-top: 15px;
+        padding: 0 30px;
+        min-width: 150px;
+        border-radius: 4px;
+        border: 2px solid $color-primary!important;
+        font-family:  $proxima-reg;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    @media screen and (min-width: 1200px){
+        /* .custom_register_row {
+            padding: 10px 100px 0 !important;
+        } */
+    }
+    .map-overlay-bg{
+        min-width: 100%;
+        height: auto;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .tookan_logo_modify {
+        color: #fff;
+        padding-top: 25px;
+        padding-left: 20px;
+        position: relative;
+    }
+    .custom_register_row,
+    .custom_register_span{
+        color: #949098 !important;
+        font-size: 15px;
+        font-family:  $proxima-reg;
+    }
+    .custom_register_row label{
+        font-size: 12px !important;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+        color: #7f8388 !important;
+        text-transform: uppercase;
+    }
+    .custom_register_row .custom_register_form-control{
+        font-size: 15px !important;
+        color: #272727;
+        padding: 0 10px;
+        font-family: $proxima-reg;        
+        letter-spacing: 1.2px;
+    }
+    .signup_logo_img{
+        max-height: 30px !important;
+        margin: auto;
+    }
+    .white-label-logo-height.signup_logo_img{
+        max-height: 55px !important;
+    }
+    .login_register_pass_demo_img{
+        background-image: url('/assets/images/map-backdots.png');
+        background-size: cover;
+        background-position: right;
+    }
+    .custom_register_row .custom_register_h1 {
+        font-size: 26px !important;
+        color: #505050 !important;
+    }
+    .mrn-top-xxlg {
+        margin-top: 50px !important;
+    }
+    .custom_register_form-control, :host /deep/ input[type="text"] {
+        /* height: 40px !important; */
+        height: 45px !important;
+        border: 1px solid #BBBBBB !important;
+        border-radius: 3px;    
+        font-family: $proxima-reg;
+        font-size: 16px;
+    }
+    .frame-img:before, .frame_before {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    .ele-ht {
+        height: 100%;
+    }
+    .ele-ht-wd {
+        height: 100% !important;
+        width: 100% !important;
+    }
+    .pos-rel {
+        position: relative;
+    }
+  
+    @media screen and (max-width: 1094px) {
+
+        .tookan_logo_modify{
+            padding-left: 0px !important;
+        }
+    }
+    @media screen and (max-width: 426px) {
+        .login_register_pass_demo_img {
+            display: none !important;
+        }
+    }
+    @media (max-width:767px) and (orientation: landscape){
+        div.login_register_pass_demo_img{
+            display:none !important;
+
+        }
+    }
+    @media (max-width: 767px) {
+        .mrn-top-xxlg {
+            margin-top: 20px !important;
+        }
+    }
+    label{
+        font-weight: normal;
+    }
+    .login_via_weedmaps_btn-primary{
+        width: 380px !important;
+        background-color: #00CDBE;
+        height:60px !important;
+        margin-bottom: 18px;
+        margin-top: 15%;
+        padding: 0 30px;
+        padding-left: 15px;
+        min-width: 150px;
+        font-size: 16px;
+        color: white;
+    }
+    .login_via_weedmaps_btn-primary:hover{
+        background-color: rgb(28,207,201);
+
+    }
+    .login_via_weedmaps_img{
+       height: 45px;
+       
+       
+    }
+    @media (max-width: 768px) {
+        .login_via_weedmaps_btn-primary{
+        width: 250px !important;
+        font-size: 12px;
+        padding-right:5px;
+        padding-left: 5px;
+       
+    }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        .login_via_weedmaps_btn-primary{
+        width: 350px !important;
+        
+    }
+    }
+    @media (max-width: 768px) {
+        .login_via_weedmaps_img{
+            height: 30px;
+           
+         }
+    }
+    .weedmap_logo{
+        margin-top: 30%!important;
+    }
+    .connect_with_weedmap_text{
+        padding-right: 0px; word-spacing:2px;padding-left: 30px;letter-spacing: 0.5px;
+    }
+    @media (max-width: 768px) {
+        .connect_with_weedmap_text{
+           padding-left: 20px;
+        }
+    }
+     #loginForm{
+        width: 440px;
+        margin: auto;
+        padding-bottom: 15px;
+        max-width: 100%;
+    }
+    .custom_register_row{
+        padding: 0!important;
+    }
+    .input-container::after{
+        content: '';
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    } 
+    .input-img-password::after{
+        background-image:url('/assets/images/password-icon.svg');
+    }
+    .input-img-password:focus-within::after{
+        background-image:url('/assets/images/password-icon-blue.svg');
+    }
+    .input-img-email::after{
+        background-image:url('/assets/images/email-icon.svg');
+    }
+    .input-img-email:focus-within::after{
+        background-image:url('/assets/images/email-icon-blue.svg');
+    }
+    .input-container:not(.input-img-phone) input{
+        padding-left: 40px;
+        padding-right: 30px;
+    }
+    .custom_register_h1{
+        text-align: center;
+        font-family:  $proxima-reg;
+        margin: 20px 0px;
+        margin-top:30px;
+    }
+    .custom_register_btn-primary:disabled{
+        pointer-events: none;
+    }
+    .custom_register_btn-primary:not(:disabled):hover{
+        background-color: white;
+        color: $color-primary;
+        box-shadow: none;
+    }
+    .powered-by{
+        width: 75px;
+        height: 17px;
+        font-family:  $proxima-reg;
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: right;
+        color: #333333;
+        /* float: left; */
+    }
+    .jw-logo{
+        margin-left: 6px;
+        display: inline-block;
+        height: 16px;
+    }
+    .brand_poweredby{
+        margin-top: 10px;
+        text-align: center;
+        float: left;
+    }
+    .remove-padding{
+        padding:0;
+    }
+    .parsley-errors-list li{
+        font-family:  $proxima-reg;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #d41616;
+    }
+    .input-img-password input{
+            padding-right: 30px!important;
+    }
+    input.error, input.error:focus{
+        border: solid 2px #ed3535!important;
+    }
+    .custom_register_form-control:not(.error):focus, :host /deep/ input.form-control:not(.error):focus{
+        border: 1px solid #2296ffb0 !important;
+    }
+    #showPassword{
+        display: block;
+        position: absolute;
+        top: 11px;
+        right: 5px;
+        height: 20px;
+    }
+    #showPassword #eye-icon{
+        fill: #999;
+    }
+    #showPassword #eye-icon.selected{
+        fill: $color-primary!important;
+    }
+    #showPassword:hover #eye-icon{
+        fill: $color-primary;
+    }
+    .load-dyn{
+        background-image:url('/assets/images/email-icon-blue.svg'),url('/assets/images/name-icon-blue.svg'),url('/assets/images/password-icon-blue.svg');
+        background-size: 0;
+        width: 0;
+        height: 0;
+        display: none;
+    }
+    @media (min-width: 768px){
+        /* tablets */
+        .brand_poweredby{
+            text-align: right;
+            float: right;
+        }
+        .powered-by{
+            float: none;
+        }
+        .signup_logo_img{
+            margin: 0;
+        }
+        #imgDiv{
+            background-image: url('/assets/images/signup-bg-2.svg');
+            /* background-position: bottom center; */
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 calc(100vh - 32vh);
+            height: 100%;
+        }
+        .jw-logo {
+            float: right;
+            height: 19px;
+        }
+
+    }

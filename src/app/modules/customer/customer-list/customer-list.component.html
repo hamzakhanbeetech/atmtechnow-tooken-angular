@@ -1,0 +1,254 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-paddin p-1 m-0">
+
+    <div class="col-12 row inner-padding">
+      <div class="fullwidth">
+        <button id="create-button" class="btn common-btn-green export_btn" style="float:right;"
+          (click)="add_merchant_popup()">
+          <ng-container i18n>Add Merchant</ng-container>
+        </button>
+      </div>
+    </div>
+
+    <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+      <div class="fullwidth">
+        <div class="table-responsive">
+          <p-table #dt [value]="merchant_data" [columns]="cols" [style]="{width:'100%'}" [paginator]="true"
+            [rows]="req_body.limit" [totalRecords]="total_records" [lazy]="true" (onLazyLoad)="loadOrdersLazy($event)">
+
+
+            <ng-template pTemplate="caption">
+              <div class="search-control">
+                <i class="tf search icon_search"></i>
+                <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search Merchant"
+                  i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+              </div>
+            </ng-template>
+
+            <ng-template pTemplate="header">
+              <tr>
+
+                <th style="padding-left: 12px;"> ID</th>
+                <th [pSortableColumn]="'name'">Name
+                  <p-sortIcon [field]="'name'"></p-sortIcon>
+                </th>
+
+                <th [pSortableColumn]="'email'">Email
+                  <p-sortIcon [field]="'email'"></p-sortIcon>
+                </th>
+
+                <th>Phone Number</th>
+                <th [pSortableColumn]="'customer_company_name'">
+                  Company Name
+                  <p-sortIcon [field]="'customer_company_name'"></p-sortIcon>
+                </th>
+
+                <th>Company Phone </th>
+
+                <th> Company Address</th>
+                <th>Enterprise</th>
+
+                <th>Actions</th>
+
+              </tr>
+            </ng-template>
+
+            <ng-template pTemplate="body" let-merchant_data>
+              <tr>
+                <td style="padding-left: 12px;">{{merchant_data.merchat_customer_id}}</td>
+
+                <td>{{merchant_data.name}}</td>
+                <td>{{merchant_data.email}}</td>
+                <td>{{merchant_data.phone}}</td>
+                <td>{{merchant_data.customer_company_name}}</td>
+                <td>{{merchant_data.company_phone}}</td>
+                <td>{{merchant_data.company_address}}</td>
+                <td>{{merchant_data.company_name}}</td>
+                <td>
+                  <div class="menu-box">
+                    <i class="tf more-menu" (click)="showActionMenu($event)"></i>
+                    <ul class="menu-list">
+                      <li class="list-item" (click)='editMerchant(merchant_data)'>
+                        <ng-container i18n>Edit</ng-container>
+                      </li>
+                      <li class="list-item" (click)='deleteMerchant(merchant_data.merchat_customer_id)'>
+                        <ng-container i18n>Delete</ng-container>
+                      </li>
+
+                    </ul>
+                  </div>
+                </td>
+              </tr>
+            </ng-template>
+            <!-- <ng-template pTemplate="paginatorleft" let-state>
+        <div>
+            {{req_body.skip +1 }} - {{merchant_data.length}}
+        </div>
+    </ng-template> -->
+
+            <ng-template pTemplate="emptymessage" let-columns>
+              <tr>
+                <td [attr.colspan]="columns.length">
+                  <ng-container i18n>No Data Available</ng-container>
+                </td>
+              </tr>
+            </ng-template>
+            <ng-template pTemplate="paginatorright">
+              <div class="d-flex d-flex align-items-center">
+                <div>
+                  <select class="custom-dropdown" [(ngModel)]="req_body.limit" (change)="changeLimit()">
+                    <option value="10">10</option>
+                    <option value="20">20</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+    
+                  </select>
+                </div>
+                <div class="paginatorCaption d-flex align-items-center">
+                  <ng-container i18n>records per page</ng-container>
+                </div>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="paginatorleft" let-state>
+              <div>
+                {{records_text}}
+              </div>
+            </ng-template>
+
+          </p-table>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<app-popup [minHeight]="'250px'" *ngIf="openPopup" [header]="merchantEditMode ? 'Edit Merchant':'Add Merchant'"
+  i18n-header (onClose)="onPopupCancelClick()">
+  <div body>
+
+    <form [formGroup]="addMerchantForm">
+      <div class="row d-flex">
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>FIRST NAME</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <input type="text" pInputText name="driver_fname" class="form-control add-dev-form-control"
+            formControlName='first_name' placeholder="First Name" autocomplete='first-name' />
+          <control-messages [control]="addMerchantForm.controls.first_name"></control-messages>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>LAST NAME</ng-container>
+          </label>
+          <input type="text" pInputText name="driver_lname" class="form-control add-dev-form-control"
+            formControlName='last_name' placeholder="Last Name" autocomplete='first-name' />
+          <control-messages [control]="addMerchantForm.controls.last_name"></control-messages>
+        </div>
+      </div>
+
+      <div class="row d-flex">
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>COMPANY NAME</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <input type="text" pInputText name="driver_fname" class="form-control add-dev-form-control"
+            placeholder="Company Name" formControlName='company_name' autocomplete='first-name' />
+          <control-messages [control]="addMerchantForm.controls.company_name"></control-messages>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>COMPANY PHONE NUMBER</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <int-phone-prefix #intlTelInput2 class="pl-0 focusable" [locale]="'en'" formControlName="company_phone_number"
+            [placeholder]="'Enter Phone'"></int-phone-prefix>
+          <control-messages [control]="addMerchantForm.controls.company_phone_number"></control-messages>
+        </div>
+
+      </div>
+      <div class="row d-flex mrgn-top">
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>EMAIL</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <input type="text" pInputText name="driver_fname" [attr.disabled]="merchantEditMode ? true : null"
+            class="form-control add-dev-form-control" placeholder="Email" formControlName='email'
+            autocomplete='first-name' />
+          <control-messages [control]="addMerchantForm.controls.email"></control-messages>
+        </div>
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>COMPANY ADDRESS</ng-container>
+            <span class="required-class">*</span>
+          </label>
+          <app-autocomplete formControlName="company_address" [customPlaceholder]="'Company Address'"
+            (latLng)="onLatLngEvent($event)"></app-autocomplete>
+          <control-messages [control]="addMerchantForm.controls.company_address"></control-messages>
+
+        </div>
+
+
+
+      </div>
+
+      <div class="row d-flex">
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n> PHONE NUMBER</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <int-phone-prefix #intlTelInput class="pl-0 focusable" [locale]="'en'" formControlName="phone_number"
+            [placeholder]="'Enter Phone'"></int-phone-prefix>
+          <control-messages [control]="addMerchantForm.controls.phone_number"></control-messages>
+        </div>
+
+
+
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n>Enterprise Platform</ng-container>
+            <span style='color:#FF0000'>*</span>
+          </label>
+          <p-dropdown [options]="companiesList" placeholder="Select Enterprise Platform"
+            filterPlaceholder="Select Enterprise Platform" optionLabel="company_name" formControlName="company">
+          </p-dropdown>
+          <control-messages [control]="addMerchantForm.controls.company"></control-messages>
+        </div>
+
+      </div>
+
+      <div class="row d-flex">
+        <div class="form-group col-sm-6">
+          <label class="control-label">
+            <ng-container i18n> PASSWORD</ng-container>
+            <span style='color:#FF0000' *ngIf="!merchantEditMode">*</span>
+          </label>
+          <input type="password" pInputText name="driver_fname" class="form-control add-dev-form-control"
+            placeholder="Password" formControlName='password' autocomplete='off' />
+
+          <control-messages [control]="addMerchantForm.controls.password"></control-messages>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div footer>
+    <div class="action-buttons" style="margin-top: 10px;">
+
+      <button id="close-button" class="btn btn-default" (click)="onPopupCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+      <button id="create-button" class="btn common-btn-green export_btn" (click)="save_merchant()">
+        <ng-container i18n>{{!merchantEditMode ? 'Add':'Update'}}</ng-container>
+      </button>
+    </div>
+  </div>
+
+</app-popup>

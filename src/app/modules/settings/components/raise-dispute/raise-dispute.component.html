@@ -1,0 +1,105 @@
+<div class="container-dispatcher-page  ele-ht">
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading">Disputes</h2>
+    </div>
+  </div>
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <p-table #dt [columns]="columns" [value]="disputes" [paginator]="true" [alwaysShowPaginator]="true"
+          [rows]="req_body.limit" [totalRecords]="total_records" [style]="{width:'100%'}" [autoLayout]='true'
+          [lazy]="true" (onLazyLoad)="loadOrdersLazy($event)">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search by SID"
+                i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th class="">
+                <ng-container i18n>SID</ng-container>
+              </th>
+              <th class="">
+                <ng-container i18n>Raised Date</ng-container>
+              </th>
+              <th class="">
+                <ng-container i18n>Raise By</ng-container>
+              </th>
+              <th class="">
+                <ng-container i18n>Address</ng-container>
+              </th>
+              <th class="">
+                <ng-container i18n>Description</ng-container>
+              </th>
+              <th class="">
+                <ng-container i18n>Actions</ng-container>
+              </th>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+            <tr class="row-bg-color">
+              <td>{{item.job_id}}</td>
+              <td>{{item.creation_datetime | date: "dd/MM/yyyy HH:mm:ss"}}</td>
+              <td>
+                  <div *ngIf="item.vendor_id; else technician">
+                      <p>Operator</p>
+                    </div>
+                    <ng-template #technician>
+                      <p>
+                       Technician
+                      </p>
+                    </ng-template>
+              </td>
+              <td>{{item.address}}</td>
+              <td><span class="tk-link" (click)="viewDescription(item.description)">View</span></td>
+              <td>
+                <p-dropdown [options]="disputeStatus" optionLabel='label' [(ngModel)]='item.status'
+                  (onChange)="statusChanged(item.status,item)"></p-dropdown>
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="req_body.limit" (change)="changeLimit()">
+                  <option value="10">10</option>
+                  <option value="20">20</option>
+                  <option value="50">50</option>
+                  <option value="100">100</option>
+
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="paginatorleft" let-state>
+            <div>
+              {{records_text}}
+            </div>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- ADD/EDIT POPUP FOR TAXES -->
+<app-popup *ngIf="showPopup" [minHeight]="'250px'" header="Description" [modalType]="popupModalType.SMALL"
+  (onClose)="onCancelClick()">
+  <div body>
+    <div class="popup-text">{{currentDescription}}</div>
+  </div>
+</app-popup>

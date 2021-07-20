@@ -1,0 +1,156 @@
+@import "~assets/css/variables";
+.top-header{
+  display: flex;
+  justify-content: space-between;
+  background-color:$color-black;
+  background-color: $color-secondary;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  .header-ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-left: 20px;
+  }
+  .full-logo{
+    max-width: 185px;
+    margin-left: -6px;
+    display: block;
+    margin-right: 8px;
+    img{
+      max-width: 185px;
+      max-height: 45px;
+      &.others{
+        height: 45px;
+      }
+    }
+    
+  }
+  .icon-Main_Menu{
+    width: 38px;
+    &::before{
+      font-size: 15px!important;
+    }
+  }
+}
+.left-side-header{
+  display: flex;
+}
+ul.header-right, ul.header-left{
+  margin: 0;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  margin-right: 20px;
+  list-style-type: none;
+  li{
+    list-style-type: none;
+  }
+
+  
+}
+ul.header-left{
+  padding-left: 14px;
+}
+ul.header-right{
+  padding: 0;
+  .billing-remaining{
+    .billing-trail-period {
+      border: 2px solid #ff8f00;
+      display: inline-block;
+      width: 125px;
+      height: 29px;
+      margin-right: 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+      border-radius: 3px;
+        .billing-trail-days {
+          width: 40px;
+          display: inline-flex;
+          justify-content: center;
+          font-size: 16px;
+          color: $color-orange;
+          height: 100%;
+          font-weight: 700;
+          align-items: center;
+          padding-top: 2px;
+          line-height: 21px;
+          float: left;
+      }
+      .billing-trail-text {
+        width: calc(100% - 40px);
+        display: flex;
+        background-color:$color-orange;
+        color: #fff;
+        height: 100%;
+        padding-top: 1px;
+        padding: 5px;
+        font-size: 10px;
+        text-align: center;
+        line-height: 10px;
+        align-items: center;
+    }
+    }
+  }
+}
+.sidebar-container{
+  width: 0;
+  transition: background-color .3s ease;
+}
+.sidebar-container.show{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 999;
+  left: 0;
+  top: 0;
+}
+
+@media (min-width:768px){
+  ul.header-right{
+    margin-right: 25px;
+  }
+  .header-ul{
+    padding-left: 24px!important;
+  }
+}
+
+.btn-logout{
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+  line-height: 10px;
+  min-height: 28px;
+  color: white;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  font-size: 21px;
+  text-align: center;
+  vertical-align: bottom;
+  // margin-left: 5px;
+}
+:host /deep/ p-dropdown  .ui-dropdown-panel .ui-dropdown-items-wrapper{
+  color: $color-black;
+}
+:host /deep/ p-dropdown  .ui-dropdown {
+    box-shadow: none;
+    border: 1px solid rgba(230, 230, 230, 0.61);
+    line-height: 28px;
+    height: 28px;
+    margin: 6px 4px;
+    vertical-align: middle;
+    overflow: visible;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+    .ui-dropdown-trigger {
+      border-left: 1px solid #cecece;
+    }
+    label{
+      padding-left: 9px;
+    }
+}

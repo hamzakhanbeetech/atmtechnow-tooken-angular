@@ -1,0 +1,245 @@
+<div class="inner-padding" style="padding-top: 12px;">
+    <!-- <p class="page-sub-heading m-0">Profile</p> -->
+    <p-accordion (onOpen)="closeOtherAccordion(1)" expandIcon="fa fa-fw fa-caret-down" collapseIcon="fa fa-fw fa-caret-up">
+        <p-accordionTab [selected]="openedAccordion==1" header="Profile">
+            <div class="panel profile-panel change-password-panel">
+                <form [formGroup]="profileForm" class="profile-form row col-12 m-0 p-0">
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">First Name</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="first_name" placeholder="First Name">
+                        <control-messages [control]="profileForm.controls.first_name"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Last Name</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="last_name" placeholder="Last Name">
+                        <control-messages [control]="profileForm.controls.last_name"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Phone</label>
+                        <int-phone-prefix #intlTelInput [locale]="'en'" formControlName="phone" [placeholder]="'Enter Phone'"></int-phone-prefix>
+                        <control-messages [control]="profileForm.controls.phone"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Email</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="email" placeholder="Email">
+                        <control-messages [control]="profileForm.controls.email"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Company Name</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="company_name" placeholder="Company Name">
+                        <control-messages [control]="profileForm.controls.company_name"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Company Address</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="company_address" placeholder="Company Address" #search>
+                        <control-messages [control]="profileForm.controls.company_address"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">Country</label>
+                        <p-dropdown [filter]="true" [options]="countries" filterPlaceholder="Select or search a country" optionLabel="name" formControlName="country"></p-dropdown>
+                        <control-messages [control]="profileForm.controls.country"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">User Id</label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="user_id" placeholder="User Id">
+                        <control-messages [control]="profileForm.controls.user_id"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                            <label class="control-message">Start Job Radius</label>
+                            <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="start_job_radius" placeholder="Job Radius">
+                            <control-messages [control]="profileForm.controls.start_job_radius"></control-messages>
+                        </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <span class="span-tooltip control-message" pTooltip="Call them agents, artists or service providers? Customize the display text here and it will change everywhere in the dashboard accordingly." tooltipPosition="right">
+              Customize agent text as
+            </span>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="call_agent_as" placeholder="Name">
+                        <control-messages [control]="profileForm.controls.call_agent_as"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6 display-image">
+                        <label class="control-message" pTooltip="{{'Select the image that will be displayed to the customer on '+commonService.loginData.call_fleet_as+' tracking link once the '+commonService.loginData.call_tasks_as+' starts.'}}">Display Image</label>
+                        <div class="row col-12 m-0 p-0 h-100 d-flex align-items-center">
+                            <div class="radio col-12 col-md-6 p-l-0">
+                                <input id="radio-1" name="display_image" formControlName="display_image" type="radio" value="2" [checked]="profileForm.controls.display_image.value==2">
+                                <label for="radio-1" class="radio-label text-uppercase" pTooltip="{{'You can set the '+commonService.loginData.call_fleet_as+' display images in Side Menu'}} > {{commonService.loginData.call_fleet_as}} > Edit under Actions." tooltipPosition="top">{{commonService.loginData.call_fleet_as}}'S IMAGE</label>
+                            </div>
+                            <!-- pTooltip="{{'Upload your company's logo to be displayed on '+commonService.loginData.call_fleet_as+' tracking link.'}}" -->
+                            <div class="radio col-12 col-md-6 p-l-0">
+                                <input id="radio-2" name="display_image" formControlName="display_image" type="radio" value="1" [checked]="profileForm.controls.display_image.value==1">
+                                <label for="radio-2" class="radio-label" pTooltip="{{'Upload your company\'s logo to be displayed on '+commonService.loginData.call_fleet_as+' tracking link.'}}" tooltipPosition="top">Company LOGO</label>
+                            </div>
+                            <div class="col-12 row m-0" *ngIf="profileForm.controls.display_image.value==1">
+                                <div class="col-12 col-md-6 p-0">
+                                    <img class="driver-image img-circle img-responsive" [src]="profileForm.controls.image.value||'assets/images/default-user.png'">
+                                    <control-messages [control]="profileForm.controls.image"></control-messages>
+                                </div>
+                                <div class="col-12 col-md-4 p-0">
+                                    <button class="btn-uplaod btn" (click)="fileInput.click()">
+                    <span class="fa fa-folder-open"></span> Upload</button>
+                                    <input type="file" class="d-none" (change)="onUpload($event)" #fileInput>
+                                </div>
+                            </div>
+                     
+                        </div>
+                        <control-messages [control]="profileForm.controls.display_image"></control-messages>
+                    </div>
+            
+
+
+
+
+               
+               
+
+
+
+
+                    <div class="form-group col-12 col-sm-6 display-image">
+                        <label class="control-message">Technician Home Screen Logo</label>
+                        <div class="row col-12 m-0 p-0 h-100 d-flex align-items-center">
+                            <div class="col-12 row m-0">
+                                <div class="col-12 col-md-6 p-0">
+                                    <img class="driver-image img-circle img-responsive" id="logoImage" [src]="profileForm.controls.logo.value||'assets/images/default-user.png'">
+                                    <div class="col-12" style="padding: 0;"><span id="showLogoMessage" style="color:red;font-size: 14px;display: none;">Height and Width must not exceed 400px.</span></div>
+                                </div>
+                                <div class="col-12 col-md-4 p-0">
+                                    <button class="btn-uplaod btn" (click)="fileInput1.click()">
+                    <span class="fa fa-folder-open"></span> Upload</button>
+                                    <input type="file" accept="image.*" class="d-none" (change)="onUploadLogo($event)" #fileInput1>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                 
+
+
+                    <div class="form-group col-12 col-sm-6" style="position:relative;top:10px;">
+                        <span class="span-tooltip control-message" style="position:relative;left:10px;">
+              Technician Background Image
+              </span>
+
+
+<div class="row" style="position:relative;top:16px;">
+
+
+              <div class="col-md-3 col-sm-3 col-lg-3" style="margin-left:10px;">
+                    <img class="driver-image img-circle img-responsive" [src]="profileForm.controls.driver_image.value||'assets/images/default-user.png'">
+
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 offset-md-2 offset-lg-2 offset-sm-2" style="position:relative;top:30px;">
+
+                    <button class="btn-uplaod btn" (click)="fileInput7.click()">
+    <span class="fa fa-folder-open"></span> Upload</button>
+                    <input type="file" class="d-none" (change)="onUploadDriverImage($event)" #fileInput7>
+                </div>
+            
+        </div>
+
+                    </div>
+
+
+
+                    <div class="form-group col-12 col-sm-6" style="position:relative;top:10px;">
+                        <span class="span-tooltip control-message" style="position:relative;left:10px;">
+              Technician Banner Image
+              </span>
+
+
+<div class="row" style="position:relative;top:16px;">
+
+
+              <div class="col-md-3 col-sm-3 col-lg-3" style="margin-left:10px;">
+                    <img class="driver-image img-circle img-responsive" [src]="profileForm.controls.banner_image.value||'assets/images/default-user.png'">
+
+            </div>
+            <div class="col-md-4 col-sm-4 col-lg-4 offset-md-2 offset-lg-2 offset-sm-2" style="position:relative;top:30px;">
+
+                    <button class="btn-uplaod btn" (click)="fileInput5.click()">
+    <span class="fa fa-folder-open"></span> Upload</button>
+                    <input type="file" class="d-none" (change)="onUploadBannerImage($event)" #fileInput5>
+                </div>
+            
+        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-end" style="width:100%;padding:15px;">
+                        <button class="btn btn-update" (click)="onProfileSubmit()">Update</button>
+                    </div>
+
+
+
+                </form>
+
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+
+    <!-- <p class="page-sub-heading m-0">Change Password</p> -->
+    <p-accordion (onOpen)="closeOtherAccordion(2)" expandIcon="fa fa-fw fa-caret-down" collapseIcon="fa fa-fw fa-caret-up">
+        <p-accordionTab [selected]="openedAccordion==2" header="Change Password">
+            <div class="panel profile-panel change-password-panel">
+                <form [formGroup]="changePasswordForm" class="profile-form row col-12 m-0 p-0">
+                    <div class="form-group col-12 col-sm-6">
+                        <input type="email" name="email" class="form-control add-dev-form-control" style="display: none" />
+                        <input type="password" name="password" class="form-control add-dev-form-control input-box-agent" style="display: none" />
+
+                        <label class="control-message">ENTER CURRENT PASSWORD</label>
+                        <input #oldpassword autocomplete="off" type="password" class="form-control" formControlName="old_password" placeholder="Current Password">
+                        <control-messages [control]="changePasswordForm.controls.old_password"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">ENTER NEW PASSWORD</label>
+                        <input type="password" autocomplete="off" class="form-control" formControlName="new_password" placeholder="New Password">
+                        <control-messages [control]="changePasswordForm.controls.new_password"></control-messages>
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label class="control-message">CONFIRM PASSWORD</label>
+                        <input type="password" class="form-control" autocomplete="off" formControlName="confirm_password" placeholder="Retype Password">
+                        <control-messages [control]="changePasswordForm.controls.confirm_password"></control-messages>
+                    </div>
+                    <div class="d-flex justify-content-end" style="width:100%;padding:15px;">
+                        <button class="btn btn-update" (click)="updateNewPassword()">Update</button>
+                    </div>
+                </form>
+            </div>
+        </p-accordionTab>
+    </p-accordion>
+
+    <!-- Rights and delete account not to be shown to manager -->
+    <!-- Accordian for delete -->
+    <!-- <p-accordion *ngIf="!!!commonService.loginData.is_dispatcher" (onOpen)="closeOtherAccordion(4)" expandIcon="fa fa-fw fa-caret-down" collapseIcon="fa fa-fw fa-caret-up">
+        <p-accordionTab [selected]="openedAccordion==4" header="Delete Account">
+            <div class="panel profile-panel change-password-panel">
+                <p class="main-sub-heading pro-rg-font col-12" style="margin-bottom: 20px">If you are deleting your account, you will not be able to regain access to your account again. Most personally identifiable information will be removed from our database.</p>
+
+                <form [formGroup]="deleteAccountPasswordModalForm" class="profile-form row col-12 m-0 p-0">
+                    <div class="form-group col-12 col-sm-6">
+                        <input type="email" name="email" class="form-control add-dev-form-control" style="display: none" />
+                        <input type="password" name="password" class="form-control add-dev-form-control input-box-agent" style="display: none" />
+
+                        <label class="control-message">ENTER CURRENT PASSWORD</label>
+                        <input #deletePasswordInput autocomplete="off" type="password" class="form-control" formControlName="password" placeholder="Current Password">
+                        <control-messages [control]="deleteAccountPasswordModalForm.controls.password"></control-messages>
+                    </div>
+                    <div class="d-flex justify-content-end" style="width:100%;padding:15px;">
+                        <button class="btn btn-update" (click)="checkDeleteCard()">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </p-accordionTab>
+    </p-accordion> -->
+
+    <!-- <p class="page-sub-heading m-0">Exercise your rights</p> -->
+    <!-- <p-accordion *ngIf="!!!commonService.loginData.is_dispatcher" (onOpen)="closeOtherAccordion(3)" expandIcon="fa fa-fw fa-caret-down"
+    collapseIcon="fa fa-fw fa-caret-up">
+    <p-accordionTab [selected]="openedAccordion==3" header="Exercise your rights">
+      <div class="panel profile-panel change-password-panel rights-accordin-panel">
+        <app-rights></app-rights>
+      </div>
+    </p-accordionTab>
+  </p-accordion> -->
+    <!-- <a style="opacity: 0;min-height: 30px;" (click)="openDeleteAccountPasswordModal()" class="tk-link danger">Delete Account</a> -->
+
+</div>

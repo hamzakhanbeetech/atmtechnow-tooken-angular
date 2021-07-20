@@ -1,0 +1,16 @@
+@import "~assets/css/checkbox-radio";
+@import "~assets/css/radio-button";
+@import "~assets/css/multiselect";
+
+button.add-button {
+    color: white;
+    background-color:  $color-blue;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 170px;
+    &:hover {
+      color: $color-blue;
+      background-color: white;
+      border: solid 1px  $color-blue;
+    }
+  }

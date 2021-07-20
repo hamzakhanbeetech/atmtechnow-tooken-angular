@@ -1,0 +1,12 @@
+<div style="position: relative;">
+  <input type="text" autocomplete='address' [placeholder]="customPlaceholder ? customPlaceholder : ''" class="input-box" [(ngModel)]="text" #ctrl="ngModel" (blur)="onTouch()" #el>
+  <div class="pac-container" *ngIf="predictions.length">
+    <div class="pac-item" *ngFor="let prediction of predictions" (click)="onLocationSelect(prediction)">
+      <span class="pac-icon pac-icon-marker"></span>
+      <span class="pac-item-query">
+        {{prediction.description}}
+      </span>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop fade show" *ngIf="predictions.length" style="opacity:0" (click)="outsideClick()"></div>

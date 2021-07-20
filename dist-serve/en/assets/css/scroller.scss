@@ -1,0 +1,21 @@
+.scroll::-webkit-scrollbar {
+  width: 5px;
+  background: #fff;
+  cursor: pointer;
+}
+.scroll::-webkit-scrollbar-track{
+  border-radius: 3px;
+  direction: ltr;
+  background: rgba(160, 160, 160, 0.13);
+  cursor: pointer;
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 1px;
+  box-shadow: inset 5px 0 8px $color-primary;
+  background: $color-primary;
+  cursor: pointer;
+  display: none;
+}
+.scroll:hover::-webkit-scrollbar-thumb{
+    display: block!important
+}

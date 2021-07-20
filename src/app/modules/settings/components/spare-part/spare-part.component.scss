@@ -1,0 +1,33 @@
+button.add-button {
+    color: white;
+    background-color:#1394ff;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 140px;
+    
+    &:hover {
+      color:#1394ff;
+      background-color: white;
+      border: solid 1px #1394ff;
+    }
+  }
+  textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+
+
+[type=text].form-control:focus, 
+
+
+[contenteditable].form-control:focus {
+  box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.shift_from_top{
+  margin-top:15px;
+}
+
+.form-control
+{
+  color:grey;
+}

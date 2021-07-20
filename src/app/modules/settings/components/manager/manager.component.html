@@ -1,0 +1,333 @@
+<div class="container-dispatcher-page  ele-ht">
+
+    <div class="col-12 row inner-padding">
+        <div class="fullwidth">
+            <h2 class="page-heading">{{commonService.loginData.call_dispatcher_as}}</h2>
+            <p class="main-sub-heading pro-rg-font">
+                <ng-container i18n>You can add managers so that they have the ability to create or edit the {{commonService.loginData.call_tasks_as}}s. Managers in-turn can manage unassigned {{commonService.loginData.call_tasks_as}}s, permission to add drivers and assign
+                    them to {{commonService.loginData.call_tasks_as}}s etc.</ng-container>
+            </p>
+        </div>
+        <button type="button" class="btn common-btn-green export_btn add-button" (click)="showAddPopup()">
+      <ng-container i18n>Add</ng-container> {{commonService.loginData.call_dispatcher_as}}</button>
+    </div>
+    <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+        <div class="fullwidth">
+            <div class="table-responsive">
+                <!-- Table -->
+                <p-table #dt [columns]="columns" [value]="managerList" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true" [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,managerList)" (onFilter)="onFilterChange($event)"
+                    (onSort)="onPageChange({ rows: +rows, first: 0 },rows,managerList)" [autoLayout]='true' sortField="dispatcher_id" sortOrder="-1">
+                    <ng-template pTemplate="caption">
+                        <div class="search-control">
+                            <i class="tf search icon_search"></i>
+                            <input type="text" autofocus class="column-search" pInputText size="50" placeholder="Search Manager" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="header">
+                        <tr>
+                            <th [pSortableColumn]="'dispatcher_id'" class="pl-4">
+                                <ng-container i18n>ID</ng-container>
+                                <p-sortIcon [field]="'dispatcher_id'"></p-sortIcon>
+                            </th>
+                            <th [pSortableColumn]="'first_name'">
+                                <ng-container i18n>NAME</ng-container>
+                                <p-sortIcon [field]="'first_name'"></p-sortIcon>
+                            </th>
+                            <th [pSortableColumn]="'email'">
+                                <ng-container i18n>EMAIL</ng-container>
+                                <p-sortIcon [field]="'email'"></p-sortIcon>
+                            </th>
+                            <th [pSortableColumn]="'phone'">
+                                <ng-container i18n>Phone</ng-container>
+                                <p-sortIcon [field]="'phone'"></p-sortIcon>
+                            </th>
+                            <th [pSortableColumn]="'company'">
+                                <ng-container i18n>Company</ng-container>
+                                <p-sortIcon [field]="'company'"></p-sortIcon>
+                            </th>
+                            <!-- <th [pSortableColumn]="'teams'">
+                <ng-container i18n>Teams</ng-container>
+                <p-sortIcon [field]="'teams'"></p-sortIcon>
+              </th> -->
+                            <th>
+                                <ng-container>ACTIONS</ng-container>
+                            </th>
+                        </tr>
+                    </ng-template>
+                    <ng-template pTemplate="body" let-item>
+                        <tr class="row-bg-color">
+                            <td style="padding-left: 25px">{{item.dispatcher_id}}</td>
+                            <td>{{item.first_name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.phone}}</td>
+                            <td>{{item.company_name}}</td>
+                            <!--<td>{{item.teams.map(team => (team.team_name))}}</td>  | getTeamNameFromManagers -->
+                            <!-- <td>{{item.teamNames}}</td> -->
+                            <td class="actions-td">
+                                <div class="menu-box">
+                                    <i class="tf more-menu" (click)="showActionMenu($event)"></i>
+                                    <ul class="menu-list" id="actionMenu">
+                                        <li class="list-item" (click)="editManagerItem(item)">
+                                            <ng-container i18n>Edit</ng-container>
+                                        </li>
+                                        <li class="list-item" (click)="deleteManagerItem(item)">
+                                            <ng-container i18n>Delete</ng-container>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </ng-template>
+
+                    <ng-template pTemplate="paginatorleft" let-state>
+                        {{infotext}}
+                    </ng-template>
+                    <ng-template pTemplate="paginatorright">
+                        <div class="d-flex d-flex align-items-center">
+                            <div>
+                                <select class="custom-dropdown" [(ngModel)]="rows" (change)="onPageChange({ rows: +rows, first: 0 },rows,managerList)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+                            </div>
+                            <div class="paginatorCaption d-flex align-items-center">
+                                <ng-container i18n>records per page</ng-container>
+                            </div>
+                        </div>
+                    </ng-template>
+                    <ng-template pTemplate="emptymessage" let-columns>
+                        <tr>
+                            <td [attr.colspan]="columns.length">
+                                No Data Available
+                            </td>
+                        </tr>
+                    </ng-template>
+                </p-table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- popup for add/edit manager -->
+    <app-popup *ngIf="showAddManagerPopup" [minHeight]="'250px'" [header]="manager_popup_action_title" (onClose)="onCancelClick()">
+        <div body>
+            <form [formGroup]="addManagerForm">
+                <input type="email" name="email" class="form-control add-dev-form-control" style="display: none" />
+                <input type="password" name="password" class="form-control add-dev-form-control input-box-agent" style="display: none" />
+                <div class="row d-flex">
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>FIRST NAME</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="driver_fname" class="form-control add-dev-form-control" formControlName="fname" autofocus/>
+                        <control-messages [control]="addManagerForm.controls.fname"></control-messages>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>LAST NAME</ng-container>
+            </label>
+                        <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" name="driver_lname" class="form-control add-dev-form-control" formControlName="lname" />
+                        <control-messages [control]="addManagerForm.controls.lname"></control-messages>
+                    </div>
+                </div>
+                <div class="row d-flex">
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>PHONE</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+                        <int-phone-prefix #intlTelInput class="pl-0 focusable" [locale]="'en'" formControlName="phone" [placeholder]="'Enter Phone'"></int-phone-prefix>
+                        <!-- <control-messages [control]="addManagerForm.controls.phone"></control-messages> -->
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>EMAIL</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+                        <input type="email" name="email" class="form-control add-dev-form-control" formControlName="email" />
+                        <control-messages [control]="addManagerForm.controls.email"></control-messages>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>PASSWORD(MINIMUM 6)</ng-container>
+              <span style='color:#FF0000' *ngIf="!is_editing_manager">*</span>
+            </label>
+                        <input type="password" name="password" class="form-control add-dev-form-control input-box-agent" formControlName="password" />
+                        <control-messages [control]="addManagerForm.controls.password"></control-messages>
+                    </div>
+                    <div class="form-group col-sm-6">
+                        <label class="control-label">
+              <ng-container i18n>Affilated Program</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+                        <p-dropdown [options]="companiesList" placeholder="Select Affilated Program" filterPlaceholder="Select Affilated Program" optionLabel="company_name" formControlName="company"></p-dropdown>
+                        <control-messages [control]="addManagerForm.controls.company"></control-messages>
+                    </div>
+
+
+                    <div class="form-group col-sm-6" style="display: none;">
+                        <label class="control-label">
+              <ng-container i18n>ASSIGN TEAM(S)</ng-container>
+              <span style='color:#FF0000'>*</span>
+            </label>
+                        <p-multiSelect class="show-header" [options]="team_list" formControlName="dispatcher_teams" optionLabel="team_name" [selectedItemsLabel]="'{0} teams selected'"></p-multiSelect>
+                        <control-messages [control]="addManagerForm.controls.dispatcher_teams"></control-messages>
+                    </div>
+                    <div class="form-group col-sm-6" *ngIf="form_list.length">
+                        <label class="control-label">Forms</label>
+                        <p-multiSelect [options]="form_list" formControlName="dispatcher_forms" optionLabel="domain_name"></p-multiSelect>
+                    </div>
+                    <div class="col-12 form-group">
+                        <label class="control-label float-left">
+              <ng-container i18n>PERMISSIONS</ng-container>
+            </label>
+                        <div class="float-right">
+                            <label class="control-label">
+                <ng-container i18n>Allow All</ng-container>
+                <input type="checkbox" (click)="checkUncheckAllAccess()" formControlName="allow_all_access" />
+              </label>
+                        </div>
+                    </div>
+                    <div class="col-12 form-group p-0 row m-l-0 ">
+                        <div class="col-12 col-lg-6">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-1" formControlName="allow_access_unassigned_task" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-1" class="radio-ck-label">
+                  <ng-container i18n>Access All Unassigned {{commonService.loginData.call_tasks_as}}s (All Teams)</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-2" formControlName="allow_add_agent" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-2" class="radio-ck-label">
+                  <ng-container i18n>Add {{commonService.loginData.call_fleet_as}}</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6 ">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-3" formControlName="allow_create_task" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-3" class="radio-ck-label">
+                  <ng-container i18n>Create {{commonService.loginData.call_tasks_as}}</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-4" formControlName="allow_edit_task" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-4" class="radio-ck-label">
+                  <ng-container i18n>Edit {{commonService.loginData.call_tasks_as}}</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6" *ngIf="commonService.loginData.merchant_permissions ? commonService.loginData.merchant_permissions.add_video_links:true">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-7" formControlName="allow_addView_links" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-7" class="radio-ck-label">
+                  <ng-container i18n>Add / View Video Links</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6" *ngIf="commonService.loginData.merchant_permissions ? commonService.loginData.merchant_permissions.add_custom_notifications:true">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-6" formControlName="allow_addView_notifications" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-6" class="radio-ck-label">
+                  <ng-container i18n>Add / View Custom Notifications</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6" *ngIf="showAllowAccessToAutoAllocation" style="display:none;">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck-5" formControlName="view_auto_allocation" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-5" class="radio-ck-label">
+                  <ng-container i18n>Access to Auto Allocaton</ng-container>
+                </label>
+                            </label>
+                        </div>
+                        <div class="col-12 col-lg-6" *ngIf="!!commonService.loginData.fleet_wallet" style="display:none;">
+                            <label class="checkbox-box ">
+                <div class="check-radio">
+                  <input value="1" type="checkbox" id="radio-ck6" formControlName="edit_fleet_wallet" (change)="onPermissionsChange()">
+                  <span class="tf check"></span>
+                </div>
+                <label for="radio-ck-6" class="radio-ck-label">
+                  <ng-container i18n>Edit {{commonService.loginData.call_fleet_as}} Wallet</ng-container>
+                </label>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group col-12" style="display:none;">
+                        <label class="control-label">
+              <ng-container i18n>FLEET SCHEDULE</ng-container>
+            </label>
+                        <div class="row p-top-10">
+                            <div class="radio col-6 col-md-4 m-b-10">
+                                <input id="radio-1" name="fleet_schedule_permission" formControlName="fleet_schedule_permission" type="radio" [value]="FleetSchedulePermissionEnum.CANT_ACCESS">
+                                <label for="radio-1" class="radio-label ">
+                  <ng-container i18n>CAN’T ACCESS</ng-container>
+                </label>
+                            </div>
+                            <div class="radio col-6 col-md-4 m-b-10">
+                                <input id="radio-2" name="fleet_schedule_permission" formControlName="fleet_schedule_permission" type="radio" [value]="FleetSchedulePermissionEnum.VIEW_ONLY">
+                                <label for="radio-2" class="radio-label ">
+                  <ng-container i18n>VIEW ONLY</ng-container>
+                </label>
+                            </div>
+                            <div class="radio col-12 col-md-4 m-b-10">
+                                <input id="radio-3" name="fleet_schedule_permission" formControlName="fleet_schedule_permission" type="radio" [value]="FleetSchedulePermissionEnum.CAN_VIEW_AND_EDIT">
+                                <label for="radio-3" class="radio-label">
+                  <ng-container i18n>CAN VIEW & EDIT</ng-container>
+                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div footer class="footer-buttons " style="text-align: right">
+            <button id="close-button" class="btn btn-default" (click)="onCancelClick()">
+        <ng-container i18n>Cancel</ng-container>
+      </button>
+            <button id="create-button" class="btn common-btn-green export_btn add-button" style="line-height:0px;" (click)="addManager()">
+        <ng-container *ngIf="!is_editing_manager">
+          <ng-container i18n>Create</ng-container>
+        </ng-container>
+        <ng-container *ngIf="is_editing_manager">
+          <ng-container i18n>Update</ng-container>
+        </ng-container>
+      </button>
+        </div>
+    </app-popup>
+
+</div>
+<!-- <ng-template #buttonTemplate>
+  <li>
+    <button type="button" class="btn btn-primary dev-add-button" (click)="showAddPopup()"> <ng-container i18n>Add</ng-container> {{commonService.loginData.call_dispatcher_as}}</button>
+  </li>
+</ng-template> -->

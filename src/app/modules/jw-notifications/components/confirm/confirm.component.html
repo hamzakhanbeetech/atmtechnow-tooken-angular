@@ -1,0 +1,13 @@
+<div id="alertPopupContainer" [@layer]>
+  <div id="alertPopup" [@scale]>
+    <!-- <div class="header">{{confirmationService.header}}</div> -->
+    <div class="body">{{confirmationService.message}}</div>
+    <div class="footer">
+      <button  class="btn btn-cancel btn-secondary" (click)="onNoClick($event)"><ng-container i18n>Cancel</ng-container></button>
+      <button  class="btn btn-ok" (click)="onYesClick($event)">
+        <ng-container *ngIf="!confirmationService.confirmBtnText" i18n>Confirm</ng-container>
+        <ng-container *ngIf="confirmationService.confirmBtnText" >{{confirmationService.confirmBtnText}}</ng-container>
+      </button>      
+    </div>
+  </div>
+</div>

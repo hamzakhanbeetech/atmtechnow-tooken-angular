@@ -1,0 +1,613 @@
+<div class="content-container">
+  <div class="inner-padding">
+    <div class="row mobile-setup">
+      <div class="col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+        <form [formGroup]="form">
+          <!-- Acknowledgement -->
+          <div style="display: none;" class="form-group">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Acknowledgement Type</ng-container>
+            </h5>
+            <div class="panel">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    {{commonService.loginData.call_fleet_as}}
+                    <ng-container i18n>can either acknowledge the receipt of the</ng-container> {{commonService.loginData.call_tasks_as}}
+                    <ng-container i18n>or accept/decline a</ng-container> {{commonService.loginData.call_tasks_as}}
+                    <ng-container i18n>based on your selection below</ng-container>.
+                  </p>
+                </div>
+              </div> 
+              <div class="col-12 row m-0 p-0 acknowledge-mobile">
+                <div class="radio col-12 col-md-4">
+                  <input id="radio-1" name="acknowledgement" formControlName="acknowledgement" type="radio" value="0" (change)="updateUserLayout()">
+                  <label for="radio-1" class="radio-label" i18n>Acknowledge</label>
+                </div>
+                <div class="radio col-12 col-md-4">
+                  <input id="radio-2" name="acknowledgement" formControlName="acknowledgement" type="radio" value="1" (change)="updateUserLayout()">
+                  <label for="radio-2" class="radio-label" i18n>Accept/Decline</label>
+                </div>
+                <div class="radio col-12 col-md-4">
+                  <input *ngIf="!autoAssignEnabled" id="radio-3" name="acknowledgement" formControlName="acknowledgement" type="radio" value="2"
+                    (change)="updateUserLayout()">
+                  <input *ngIf="autoAssignEnabled" disabled id="radio-3" name="acknowledgement" formControlName="acknowledgement" type="radio"
+                    value="2">
+                  <label for="radio-3" class="radio-label radio-faded" [pTooltip]="autoAssignEnabled?'Please disable auto-assignment to enable acknowledgement type none':''"
+                    [ngClass]="{'cursor-not-allowed':autoAssignEnabled}" [tooltipZIndex]="6" tooltipPosition="bottom" i18n>None</label>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- App Milestones -->
+          <div style="display: none;" class="form-group" formGroupName="milestone">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>App Milestones</ng-container>
+            </h5>
+            <div class="panel">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    <ng-container i18n>Reduce the number of milestones required to complete a</ng-container> {{commonService.loginData.call_tasks_as}},
+                    <ng-container i18n>Mandatory milestones include Start, Arrive, Successful</ng-container>.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 row m-0 milestone-mobile">
+                <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-ck-1" formControlName="arrived" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-ck-1" class="radio-ck-label" i18n>Show Arrived Button</label>
+                  </label>
+                </div>
+                <div class="col-12 col-md-4  padding-mobile">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-ck-2" formControlName="cancel_btn" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-ck-2" class="radio-ck-label" i18n>Hide Cancel Button</label>
+                  </label>
+                </div>
+                <div class="col-12 col-md-4 p-r-0  padding-mobile">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-ck-3" formControlName="failed_btn" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-ck-3" class="radio-ck-label" i18n>Hide Failed Button</label>
+                  </label>
+                </div>
+              </div>
+              <!-- APP MILESTONE AUTO ARRIVAL -->
+              <div class="col-12 row  milestone-mobile" style="margin-left: 0px; margin-top: 12px" *ngIf="(form.controls.milestone['controls']['arrived']['value'])">
+                <div class="taskHeader col-12 p-0">
+                  <div class="col-12 p-0">
+                    <p class="page-sub-heading" style="font-size: 13px">
+                      <ng-container i18n>Auto Arrival Distance</ng-container>
+                    </p>
+                    <p class="taskHeaderSub tk-para" style="font-size: 13px">
+                      <ng-container i18n>This setting enables marking</ng-container> {{commonService.loginData.call_fleet_as}}s
+                      <ng-container i18n>auto arrived when they are within a certain distance from the stop location.</ng-container>
+                    </p>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 p-l-0 padding-mobile">
+                  <label class="checkbox-box " style="padding: 6px 12px !important;">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-autodist-1" formControlName="auto_arrival_distance_cb" (change)="form.controls.milestone['controls']['auto_arrival_distance'].value ? updateUserLayout() : ''">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-autodist-1" class="radio-ck-label" style="font-size: 12px" i18n>Auto Arrival Distance</label>
+                  </label>
+                </div>
+                <div class="col-12 col-md-4  padding-mobile">
+                  <input type="text" class="distance-form-control" style="padding: 8px 12px; font-size: 12px" [attr.disabled]="!form.controls.milestone['controls']['auto_arrival_distance_cb'].value ? '' : null"
+                    placeholder="Arrival distance" formControlName="auto_arrival_distance" (blur)="form.controls.milestone['controls']['auto_arrival_distance'].value ? updateUserLayout() : ''">
+                  <control-messages [control]="form.controls.milestone['controls']['auto_arrival_distance']"></control-messages>
+                  <span class="error" *ngIf="form.controls.milestone['controls']['auto_arrival_distance_cb'].value && form.controls.milestone['controls']['auto_arrival_distance'].value == ''">This field is required</span>
+                </div>
+                <span class="in-meter"> (in meters)</span>
+              </div>
+              <!--  -->
+
+            </div>
+          </div>
+          <!-- ON DEMAND ACTIVE FOR PICKUP N DELIVERY -->
+          <div class="form-group">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>On-Demand Workflow</ng-container>
+            </h5>
+            <div class="panel">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    <ng-container i18n>Enable this configuration to optimize your</ng-container>
+                    {{commonService.loginData.call_tasks_as}}
+                    <ng-container i18n>workflow for on-demand businesses.</ng-container>
+                    <ng-container i18n>This auto-starts the</ng-container>
+                    {{commonService.loginData.call_tasks_as}}
+                    <ng-container i18n>at acceptance by</ng-container>
+                    {{commonService.loginData.call_fleet_as}}
+                    <ng-container i18n>and allows only one</ng-container>
+                    {{commonService.loginData.call_tasks_as}}
+                    <ng-container>at a time.</ng-container>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 row m-0">
+                <div class="col-12 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <!--  name="addOnActivateValue" [ngModelOptions]="{standalone: true}" [(ngModel)]="addOnActivateValue"  -->
+                      <input value="1" type="checkbox" id="radio-act-1" formControlName="addOnActivateValue" (change)="addOnActivate($event)">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-act-1" class="radio-ck-label" i18n>Enable On-Demand workflow</label>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- IS DELIVERY DISABLED -->
+          <div class="form-group" formGroupName="on_delivery_disabled" *ngIf="commonService.loginData.layout_type == 0">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Connected</ng-container>
+              {{commonService.loginData.call_tasks_as}}
+              <ng-container i18n>View</ng-container>
+            </h5>
+            <div class="panel">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    <ng-container i18n>Enable this setting to allow</ng-container>
+                    {{commonService.loginData.call_fleet_as}}
+                    <ng-container i18n>to view only the upcoming stop.</ng-container>
+                    <ng-container i18n>Other stops will appear in the list but not clickable.</ng-container>
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 row m-0">
+                <div class="col-12 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-delivery-1" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-delivery-1" class="radio-ck-label">
+                      <ng-container i18n>Enable Restricted</ng-container>
+                      {{commonService.loginData.call_tasks_as}}
+                      <ng-container i18n>View</ng-container>
+                    </label>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!-- Action Block -->
+          <div class="form-group" formGroupName="action_block">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Action Block</ng-container>
+            </h5>
+            <div class="panel">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    {{commonService.loginData.call_fleet_as}}
+                    <ng-container i18n>can add notes, images & signature during a</ng-container> {{commonService.loginData.call_tasks_as}}
+                  </p>
+                </div>
+              </div>
+              <!-- Add notes -->
+              <div class="col-12 row m-0 align-items-center" formGroupName="notes">
+                <div class="col-10 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-mil-1" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-mil-1" class="radio-ck-label" i18n>Add Notes</label>
+                  </label>
+                </div>
+                <div class="col-2 col-md-3 p-l-0">
+                  <!-- <input type="checkbox" /> Mandatory -->
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                    <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Mandatory</p>
+                </div>
+              </div>
+              <!-- Add Images -->
+              <div class="col-12 row m-0 align-items-center" formGroupName="images">
+                <div class="col-10 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-mil-2" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-mil-2" class="radio-ck-label" i18n>Add Images</label>
+                  </label>
+                </div>
+                <div class="col-2 col-md-3 p-l-0">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                    <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Mandatory</p>
+                </div>
+              </div>
+              <!-- Add signature -->
+              <div class="col-12 row m-0 align-items-center" formGroupName="signature">
+                <div class="col-10 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-mil-3" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-mil-3" class="radio-ck-label" i18n>Add Signature</label>
+                  </label>
+                </div>
+                <div class="col-2 col-md-3 p-l-0">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                    <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Mandatory</p>
+                </div>
+              </div>
+              <!-- Add barcode -->
+              <div class="col-12 row m-0 align-items-center" formGroupName="barcode">
+                <div class="col-10 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-mil-4" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-mil-4" class="radio-ck-label" i18n>Add Barcode</label>
+                  </label>
+                </div>
+                <div class="col-2 col-md-3 p-l-0">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                    <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Mandatory</p>
+                </div>
+              </div>
+              <!-- Add image caption -->
+              <div class="col-12 row m-0 align-items-center" formGroupName="image_caption">
+                <div class="col-10 col-md-5 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-mil-5" formControlName="value" (change)="updateUserLayout()">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-mil-5" class="radio-ck-label" i18n>Add Image Caption</label>
+                  </label>
+                </div>
+                <div class="col-2 col-md-3 p-l-0">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                    <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Mandatory</p>
+                </div>
+              </div>
+                 <!-- Add videos -->
+                 <div class="col-12 row m-0 align-items-center" formGroupName="videos">
+                  <div class="col-10 col-md-5 p-l-0">
+                    <label class="checkbox-box ">
+                      <div class="check-radio">
+                        <input value="1" type="checkbox" id="radio-mil-5" formControlName="value" (change)="updateUserLayout()">
+                        <span class="tf check"></span>
+                      </div>
+                      <label for="radio-mil-5" class="radio-ck-label" i18n>Add Video</label>
+                    </label>
+                  </div>
+                  <div class="col-2 col-md-3 p-l-0">
+                    <label class="switch switch custom-switch" style="margin-bottom: 0px;    margin-left: 3px;">
+                      <input type="checkbox" formControlName="required" (change)="updateUserLayout()">
+                      <span></span>
+                    </label>
+                    <p class="sm-font" i18n>Mandatory</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </form>
+        <!-- Task Management -->
+        <div class="form-group" *ngIf="commonService.loginData.layout_type!=0">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>{{commonService.loginData.call_fleet_as}} Management</ng-container> - {{commonService.loginData.call_fleet_as}}
+            <ng-container i18n>Side</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="taskHeader">
+              <div class="col-12">
+                <p class="taskHeaderSub tk-para">
+                  <ng-container i18n>By default</ng-container>, {{commonService.loginData.call_fleet_as}}s
+                  <ng-container i18n>can receive multiple requests at the same time, enable this to limit the</ng-container> {{commonService.loginData.call_fleet_as}}s
+                  <ng-container i18n>to accept one task at a time</ng-container>.
+                </p>
+              </div>
+            </div>
+            <!-- this.commonService.loginData.block_agent_availability -->
+            <div class="col-12 row m-0 ">
+              <div class="col-12 col-md-5 p-l-0">
+                <label class="checkbox-box ">
+                  <div class="check-radio">
+                    <input value="1" type="checkbox" id="radio-dmr" [(ngModel)]="disableMultipleRequests" (change)="onDisableMultipleRequests($event)">
+                    <span class="tf check"></span>
+                  </div>
+                  <label for="radio-dmr" class="radio-ck-label" i18n>Disable multiple requests</label>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile phone -->
+      <div class="col-lg-4 col-md-6 col-sm-12 col-12" id="mockup_img">
+        <!-- *ngIf="form.controls.action_block['controls'] as ac" statement is to abbreviate the control statement to ac -->
+        <div class="fullwidth workflow-mobile" *ngIf="form.controls.action_block['controls'] as ac">
+          <img src="assets/images/workflow/1111.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( (ac.notes.controls.value.value) && (ac.images.controls.value.value) && (ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1110.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( (ac.notes.controls.value.value) && (ac.images.controls.value.value) && (ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1011.png" alt="" class="img-responsive" [ngClass]="{'d-none':!((ac.notes.controls.value.value) && (ac.images.controls.value.value) && !(ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1010.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( (ac.notes.controls.value.value) && (ac.images.controls.value.value) && !(ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1101.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( (ac.notes.controls.value.value) && !(ac.images.controls.value.value) && (ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1100.png" alt="" class="img-responsive" [ngClass]="{'d-none':!(  (ac.notes.controls.value.value) && !(ac.images.controls.value.value) &&  (ac.signature.controls.value.value) &&  !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1001.png" alt="" class="img-responsive" [ngClass]="{'d-none':!(  (ac.notes.controls.value.value) &&  !(ac.images.controls.value.value) &&  !(ac.signature.controls.value.value) &&  (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/1000.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( (ac.notes.controls.value.value) &&  !(ac.images.controls.value.value) &&  !(ac.signature.controls.value.value) &&  !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0111.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && (ac.images.controls.value.value) && (ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0110.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && (ac.images.controls.value.value) && (ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0011.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && (ac.images.controls.value.value) && !(ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0010.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && (ac.images.controls.value.value) && !(ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0101.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && !(ac.images.controls.value.value) && (ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0100.png" alt="" class="img-responsive" [ngClass]="{'d-none':!(!(ac.notes.controls.value.value) && !(ac.images.controls.value.value) && (ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0001.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && !(ac.images.controls.value.value) && !(ac.signature.controls.value.value) && (ac.barcode.controls.value.value))}">
+          <img src="assets/images/workflow/0000.png" alt="" class="img-responsive" [ngClass]="{'d-none':!( !(ac.notes.controls.value.value) && !(ac.images.controls.value.value) && !(ac.signature.controls.value.value) && !(ac.barcode.controls.value.value))}">
+        </div>
+      </div>
+
+
+      <div class="col-lg-8 col-md-8 col-sm-12 col-12 p-0">
+          <!-- Reminder Time Setup -->
+          <div class="form-group mobile-signup">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Technician Service Request Reminder</ng-container>
+            </h5>
+            <div class="panel">
+              <form [formGroup]="reminderTimeForm">
+                <div class="col-12 row m-0 p-0">
+                  <div class="col-sm-9">
+                    <label class="signup-template-upper-label" i18n>Set Reminder Time(in minutes)</label>
+                    <input type="text" pInputText [pKeyFilter]="commonService.blockSpecial" class="form-control" formControlName="reminder_time" placeholder="Reminder Time(in minutes)">
+                    <control-messages [control]="reminderTimeForm.controls.reminder_time"></control-messages>
+                  </div>
+                  <div class="col-sm-3 text-right mob-ver" style="top:10px;">
+                      <button id="create-button" class="" (click)="onUpdateReminderTime()">
+                          <ng-container i18n>Update</ng-container>
+                        </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+     
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+       
+          <div class="form-group mobile-signup">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Weapon agreement</ng-container>
+            </h5>
+            <div class="panel row" style="position:relative;top:10px;">
+
+
+              <div class="col-4">
+                <input type="file" accept='image/application/pdf' class="d-none" (change)="onUpload($event,4)" #fileInput4>
+                <h6 class="page-sub-heading">
+                    <ng-container i18n>Weapon License</ng-container>
+                  </h6>
+
+              <img class="images" [src]="weapon_license_sample"  (click)="onImageSelectionClick4(fileInput4)" style="margin-top:10px;">
+              <h6 class="page-sub-heading" style="position: relative;left:16px;top:10px;cursor:pointer;" *ngIf="image_changed"
+              
+              (click)="previeWeaponLicense()">
+                  <ng-container i18n>PREVIEW</ng-container>
+                </h6>
+              </div>
+
+              <div class="col-4">
+                  <input type="file" accept='image/application/pdf' class="d-none" (change)="onUpload($event,5)" #fileInput5>
+                  <h6 class="page-sub-heading">
+                      <ng-container i18n>Training Certificate</ng-container>
+                    </h6>
+  
+                <img class="images" [src]="training_certificate_sample"  (click)="onImageSelectionClick5(fileInput5)" style="margin-top:10px;">
+                <h6 class="page-sub-heading" style="position: relative;left:16px;top:10px;cursor:pointer;" *ngIf="image_changed2"
+                (click)="previeTrainingCertificate()"
+                >
+                    <ng-container i18n>PREVIEW</ng-container>
+                  </h6>
+                </div>
+
+                <div class="col-sm-3 text-right mob-ver" style="top:60px;">
+                    <button id="create-button" class="" (click)="onUpdatePdfs()">
+                        <ng-container i18n>Update</ng-container>
+                      </button>
+                </div>
+            </div>
+
+
+            
+          </div>
+        </div>
+
+     
+
+
+
+
+
+
+
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0" style="position:relative;top:20px;">
+          <!-- Fleet privacy pdfs -->
+          <div class="form-group mobile-signup">
+            <h5 class="page-sub-heading">
+              <ng-container i18n>Privacy</ng-container>
+            </h5>
+            <div class="panel">
+              <form [formGroup]="privacyForm">
+                <div class="col-12 row m-0 p-0">
+                  <div class="col-sm-4">
+                      <label class="signup-template-upper-label" i18n>Privacy policy</label>
+                      <button class="btn-uplaod btn mybtn" (click)="onImageSelectionClick(fileInput)">
+                        <span class="fa fa-cloud-upload icon-cloud"></span> 
+                        <span style="color:black">{{privacyFileName}}</span>
+                      </button>
+                      <input type="file" accept='application/pdf' class="d-none" (change)="onUpload($event,0)" #fileInput>
+                      <control-messages [control]="privacyForm.controls.fleet_privacy_pdf"></control-messages>
+                    </div>
+                    <div class="col-sm-4">
+                        <label class="signup-template-upper-label" i18n>NDA</label>
+                        <button class="btn-uplaod btn mybtn" (click)="onImageSelectionClick2(fileInput2)">
+                          <span class="fa fa-cloud-upload icon-cloud"></span> 
+                          <span style="color:black">{{ndaFileName}}</span>
+                        </button>
+                        <input type="file" accept='application/pdf' class="d-none" (change)="onUpload($event,1)" #fileInput2>
+                        <control-messages [control]="privacyForm.controls.fleet_nda_pdf"></control-messages>
+                      </div>
+                      <div class="col-sm-4">
+                        <label class="signup-template-upper-label" i18n>Terms & Conditions</label>
+                        <button class="btn-uplaod btn mybtn" (click)="onImageSelectionClick3(fileInput1)">
+                          <span class="fa fa-cloud-upload icon-cloud"></span> 
+                          <span style="color:black">{{termsConditionsFileName}}</span>
+                        </button>
+                        <input type="file" accept='application/pdf' class="d-none" (change)="onUpload($event,2)" #fileInput1>
+                        <control-messages [control]="privacyForm.controls.fleet_tnc_link"></control-messages>
+                      </div>
+                      <div class="col-sm-12 text-right mob-ver" style="top:10px;">
+                          <button id="create-button" class="" (click)="onUpdatePdfs()">
+                              <ng-container i18n>Update</ng-container>
+                            </button>
+                      </div>
+              </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      <div class="col-lg-12 col-md-12 col-sm-12 col-12 p-0" style="display:none;">
+        <!-- Driver signup setup -->
+        <div class="form-group mobile-signup" *ngIf="!!commonService.loginData.fleet_signup">
+          <h5 class="page-sub-heading">
+            {{commonService.loginData.call_fleet_as}}
+            <ng-container i18n>Signup Setup</ng-container>
+          </h5>
+          <div class="panel">
+            <form [formGroup]="fleetSignUpForm">
+              <div class="col-12 row m-0 p-0">
+                <div class="col-sm-9">
+                  <label class="signup-template-upper-label" i18n>SELECT TEMPLATE</label>
+                  <p-dropdown [options]="templateOptions" optionLabel="template" filter="true" resetFilterOnHide="true" [placeholder]="fleetSignUpForm.controls.signup_template_name.value||'Select Template'"
+                    formControlName="selected_template" (onChange)="onTemplateSelection()">
+                    <ng-template let-item pTemplate="selectedItem">
+                      <span>{{item.label | removeUnderscore}}</span>
+                    </ng-template>
+                    <ng-template let-car pTemplate="item">
+                      <span>
+                        {{car.label | removeUnderscore}}
+                      </span>
+                    </ng-template>
+
+                  </p-dropdown>
+                </div>
+                <div class="col-sm-3 text-right mob-ver">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;">
+                    <input type="checkbox" formControlName="auto_verify_signup">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Auto Verification</p>
+                </div>
+              </div>
+
+              <div class="col-12 row m-0 p-0">
+                <div class="col-sm-9 template-select-box">
+                  <label class="signup-template-upper-label" i18n>AWAITING VERIFICATION TEXT</label>
+                  <div class="tool-tip">
+                    <i class="fa fa-info-circle " pTooltip="This message will be shown to the {{commonService.loginData.call_fleet_as}} when he is awaiting verification"
+                      tooltipPosition="top"></i>
+                  </div>
+                  <textarea class="verification-text" placeholder="Awaiting verification text" formControlName="fleet_signup_info" maxlength="140">
+                </textarea>
+                  <div class="verify-char">
+                    <label class="characters-label">{{140 - fleetSignUpForm.controls.fleet_signup_info.value.length}}
+                      <ng-container i18n>characters remaining</ng-container>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 fullwidth text-left d-flex align-items-center mob-tag">
+                <label class="switch switch custom-switch" style="margin-bottom: 0px;">
+                  <input type="checkbox" formControlName="is_team_enabled">
+                  <span></span>
+                </label>
+                <label class="signup-template-upper-label pl-1">
+                  <ng-container i18n>ALLOW</ng-container>
+                  {{commonService.loginData.call_fleet_as}}
+                  <ng-container i18n>TO SELECT TEAM OPTION</ng-container>
+                </label>
+              </div>
+
+              <div class="col-12 fullwidth text-left  d-flex align-items-center mob-tag2" style="margin-top: 15px">
+                <label class="switch switch custom-switch" style="margin-bottom: 0px;">
+                  <input type="checkbox" formControlName="is_editable">
+                  <span></span>
+                </label>
+                <label class="signup-template-upper-label pl-1">
+                  <ng-container i18n>ALLOW</ng-container>
+                  {{commonService.loginData.call_fleet_as}}
+                  <ng-container i18n>TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</ng-container>
+                </label>
+              </div>
+
+              <div class="col-12 text-right">
+                <button id="create-button" class="" (click)="onUpdateFleetSignup()">
+                  <ng-container i18n>Update</ng-container>
+                </button>
+              </div>
+
+
+
+
+            </form>
+
+
+        
+
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+</div>

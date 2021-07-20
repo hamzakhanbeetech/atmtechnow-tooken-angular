@@ -1,0 +1,9 @@
+<router-outlet></router-outlet>
+<app-alert *ngIf="commonService.errorMessage" [header]="'Error'" [message]="commonService.errorMessage" (okClick)="commonService.onAlertOkClick()"></app-alert>
+<app-confirm *ngIf="confirmationService.showPopup"></app-confirm>
+<p-growl></p-growl>
+<div id="loader" *ngIf="commonService.showLoader">
+    <span class="bg-color">
+        <span class="btn-loading"></span>
+    </span>
+</div>

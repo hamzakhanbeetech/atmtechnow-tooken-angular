@@ -1,0 +1,621 @@
+<div class="content-container">
+  <div class="inner-padding">
+    <div class="row mobile-setup">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 p-0">
+        <!-- WORKFLOW  -->
+
+        <form [formGroup]="workflowForm">
+          <div class="form-group">
+            <h5 class="page-sub-heading" style="margin-left: 13px;">
+              <ng-container i18n>Business Type</ng-container>
+            </h5>
+            <ul id="setup-tabs" class="nav">
+              <li class="col-sm-6">
+                <label class="workflow-box workflowbox mb-0">
+                  <img src="assets/images/preferences_updated.jpg" class="workflow-img" />
+
+                  <div class=" fancy-checkbox-container ">
+                    <!-- <div class="checkbox-outer checkbox-container triangle-up-right triangle-up-right1">
+                              <input type="checkbox" />
+                              <span class="checkbox tf check" style="padding-top: 2px;"></span>
+                          </div> -->
+                    <label class="checkbox-box checkbox-outer checkbox-container triangle-up-right triangle-up-right1" style="width: 20%;margin: 0px;border: none;">
+                      <div class="check-radio">
+                        <input value="0" type="radio" name="workflowType" formControlName="workflowType" (change)="onWorkflowChange()">
+                        <span class="tf check"></span>
+                      </div>
+                    </label>
+                    <div class="checkbox-content panel-title">
+                      <div class="row row-margin">
+                        <div>
+                          <ng-container i18n>Pick-Up & Delivery</ng-container>
+                        </div>
+                      </div>
+                      <div class="row row-margin font-size-small" style="width: 100%">
+                        <span class="tk-para sm-font" i18n>Manage on-demand pickups and deliveries efficiently.</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="more tk-para ">
+                    <p class='mrn-btm-field-sm' style="color:#fff !important;opacity: 1 !important;">
+                      <ng-container i18n>Business that use this workflow include:</ng-container>
+                    </p>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Food Delivery</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Courier Services</span>
+                    </span>
+
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Grocery Delivery</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Alcohol Delivery</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Laundry Services</span>
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              <li class="col-sm-6 ">
+                <label class="workflow-box workflowbox mb-0">
+                  <img src="assets/images/agent-1.png" class="workflow-img" />
+
+                  <div class=" fancy-checkbox-container ">
+                    <!-- <div class="checkbox-outer checkbox-container triangle-up-right triangle-up-right2">
+                              <input type="checkbox" />
+                              <span class="checkbox tf check" style="padding-top: 2px;"></span>
+                          </div> -->
+                    <label class="checkbox-box checkbox-outer checkbox-container triangle-up-right triangle-up-right1" style="width: 20%;margin: 0px;border: none;">
+                      <div class="check-radio">
+                        <input value="1" type="radio" name="workflowType" formControlName="workflowType" (change)="onWorkflowChange()">
+                        <span class="tf check"></span>
+                      </div>
+                    </label>
+                    <div class="checkbox-content panel-title">
+                      <div class="row row-margin">
+                        <div>
+                          <ng-container i18n>Appointment</ng-container>
+                        </div>
+                      </div>
+                      <div class="row row-margin font-size-small" style="width: 100%">
+                        <span class="tk-para  sm-font" i18n>Manage at-home services and keep your customers happy.</span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <div class="more tk-para">
+                    <p class='mrn-btm-field-sm' style="color:#fff !important;opacity: 1 !important;">
+                      <ng-container i18n>Business that use this workflow include:</ng-container>
+                    </p>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Make Up Artists</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Wedding Stylists</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Home Services</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Auto Repair Services</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Maid Cleaning</span>
+                    </span>
+                  </div>
+                </label>
+              </li>
+
+              <li class="col-sm-4 " style="display: none;">
+                <label class="workflow-box workflowbox mb-0">
+                  <img src="assets/images/field-workforce@2x.jpg" class="workflow-img" />
+
+                  <div class=" fancy-checkbox-container ">
+                    <!-- <div class="checkbox-outer checkbox-container triangle-up-right triangle-up-right3">
+                              <input type="checkbox" />
+                              <span class="checkbox tf check" style="padding-top: 2px;"></span>
+                          </div> -->
+                    <label class="checkbox-box checkbox-outer checkbox-container triangle-up-right triangle-up-right1" style="width: 20%;margin: 0px;border: none;">
+                      <div class="check-radio">
+                        <input value="2" type="radio" name="workflowType" formControlName="workflowType" (change)="onWorkflowChange()">
+                        <span class="tf check"></span>
+                      </div>
+                    </label>
+                    <div class="checkbox-content panel-title">
+                      <div class="row row-margin">
+                        <div>
+                          <ng-container i18n>Field-workforce</ng-container>
+                        </div>
+                      </div>
+                      <div class="row row-margin font-size-small" style="width: 100%">
+                        <span class="tk-para  sm-font" i18n>Manage your on-street customer acquisition teams effortlessly.</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="more tk-para ">
+                    <p class='mrn-btm-field-sm' style="color:#fff !important;opacity: 1 !important;">
+                      <ng-container i18n>Business that use this workflow include:</ng-container>
+                    </p>
+
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Field Marketting</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Product Demo</span>
+                    </span>
+
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Customer Acquisition/Development</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Target Marketing/Sales</span>
+                    </span>
+                    <span class="custom_labels_h5">
+                      <span class="label label-default" i18n>Market Research/Surveys</span>
+                    </span>
+                  </div>
+                </label>
+              </li>
+            </ul>
+
+          </div>
+
+
+
+          <!-- Driver Pane customisation -->
+
+          <h5 class="page-sub-heading">
+            {{commonService.loginData.call_fleet_as}}
+            <ng-container i18n>Pane customisation</ng-container>
+          </h5>
+
+          <div class="panel" formGroupName="driverPanel">
+            <div class="taskHeader">
+              <div class="col-12">
+                <p class="taskHeaderSub tk-para">
+                  <ng-container i18n>Customise the information shown in individual</ng-container> {{commonService.loginData.call_fleet_as}}
+                  <ng-container i18n>tile in Map view</ng-container>.
+                  <span class=" Reset-Settings" style="cursor:pointer" (click)="resetAgent()">
+                    <ng-container i18n>Reset</ng-container>
+                  </span>
+                </p>
+              </div>
+            </div>
+
+
+            <div class="col-12 d-flex p-0" style="flex-wrap: wrap">
+
+              <div class="col-lg-6 col-sm-12 row m-0 p-0 lang-box">
+                <div class="col-sm-12">
+                  <label class="signup-template-upper-label">
+                    <ng-container i18n>LINE1</ng-container>
+                  </label>
+                  <input type="text" style="display:none" class="form-control input-chip" formControlName="agentStr1">
+                  <div id="input1" contenteditable class="input Rectangle-6-Copy-15" (keydown)="bindToModel('line1' , '1')" (keyup)="bindToModel('line1' , '1')">
+                    <!-- <span *ngFor="let items of workflowForm.controls.driverPanel.controls.agentStr1.value" contentEditable="false" ><span class="tag" *ngIf = "items != ''">{{items}}</span></span> -->
+                  </div>
+                  <div class="dropdown">
+                    <span class="tf tfont hamburger" id="dropdownMenu11" style="z-index: 1;" (click)="showDropDown(dropDownEnum.DROPDOWN_ONE)">
+
+                    </span>
+                    <ul id="showDropdown1" class="dropdown-menu custom-dropdownMenu tk-para" [ngClass]="{'show': viewDropdown == dropDownEnum.DROPDOWN_ONE }">
+                      <li *ngFor="let field of agentFields" class="agent-li">
+                        <a (click)="fillValues('line1',field)">{{field.label}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 20px">
+                  <label class="signup-template-upper-label">
+                    <ng-container i18n>LINE2</ng-container>
+                  </label>
+                  <input type="text" style="display:none" class="form-control input-chip" formControlName="agentStr2">
+                  <div id="input2" contenteditable class="input Rectangle-6-Copy-15" (keydown)="bindToModel('line2', '2')" (keyup)="bindToModel('line2' , '2')">
+                    <!-- <span *ngFor="let items of workflowForm.controls.driverPanel.controls.agentStr2.value" contentEditable="false" ><span class="tag" *ngIf='items !== ""'>{{items}}</span></span>                                            -->
+                  </div>
+                  <div class="dropdown">
+                    <span class="tf tfont hamburger" id="dropdownMenu12" style="z-index: 1;" (click)="showDropDown(dropDownEnum.DROPDOWN_TWO)">
+
+                    </span>
+                    <ul id="showDropdown2" class="dropdown-menu custom-dropdownMenu tk-para" [ngClass]="{'show': viewDropdown == dropDownEnum.DROPDOWN_TWO }">
+                      <li *ngFor="let field of agentFields" class="agent-li">
+                        <a (click)="fillValues('line2',field)">{{field.label}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12" style="margin-top: 20px">
+                  <label class="signup-template-upper-label">
+                    <ng-container i18n>LINE3</ng-container>
+                  </label>
+                  <input type="text" style="display:none" class="form-control input-chip" formControlName="agentStr3">
+                  <div id="input3" contenteditable class="input Rectangle-6-Copy-15" (keydown)="bindToModel('line3' , '3')" (keyup)="bindToModel('line3' , '3')">
+                    <!-- <span *ngFor="let items of workflowForm.controls.driverPanel.controls.agentStr3.value" contentEditable="false" ><span class="tag" *ngIf = "items != ''">{{items}}</span></span> -->
+
+                  </div>
+                  <div class="dropdown">
+                    <span class="tf tfont hamburger" style="z-index: 1;" id="dropdownMenu13" (click)="showDropDown(dropDownEnum.DROPDOWN_THREE)">
+
+                    </span>
+                    <ul id="showDropdown3" class="dropdown-menu custom-dropdownMenu tk-para" [ngClass]="{'show': viewDropdown == dropDownEnum.DROPDOWN_THREE }">
+                      <li *ngFor="let field of agentFields" class="agent-li">
+                        <a (click)="fillValues('line3',field)">{{field.label}}</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 col-sm-12 row prev-mob" style="justify-content: flex-end; cursor: default;">
+                <div class="fullwidth preview-panel">
+                  <span class="Preview" i18n>PREVIEW</span>
+                  <br/>
+                  <div class="Combined-Shape agentPreviewTile">
+                    <div class="fullwidth single-agent single-task appointment tab-content-container-inner" style=" display: flex; align-items: center;"
+                      role="button" tabindex="0">
+                      <div class="col-3 text-center left-thumb online">
+                        <img src="assets/images/default-user.png" alt="Image" class="img-circle" alt="">
+                        <span class="status-dot" style="background-color: rgb(99, 174, 12);"></span>
+                      </div>
+                      <div class="col-9 row task-detail pull-right" style="cursor:default">
+                        <div class="view-more detail-view">
+                          <i class="tf right-chevron md"></i>
+                        </div>
+                        <div class="col-9">
+                          <div class="row d-flex" style="flex-direction: column">
+                            <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="client-name">
+                              <span style="padding: 2px">{{prevStr1}}</span>
+                            </div>
+                            <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="online-status agentSubText">
+                              <span style="padding: 2px">{{prevStr2}}</span>
+                            </div>
+                            <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;" class="online-status agentSubText">
+                              <span style="padding: 2px">{{prevStr3}}</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-3">
+                          <div class="row tasks-count text-center" style="justify-content: center">
+                            <div class="count">0</div>
+                            <span class="agentSubText" style="padding-top: 5px">Tasks</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="col-12 text-right">
+              <button id="create-button" class="" (click)="setCustomPanelFields()">
+                <ng-container i18n>Update</ng-container>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="col-12 p-0">
+          <div class="form-group">
+              <h5 class="page-sub-heading">
+                <ng-container i18n>Error Codes</ng-container>
+              </h5>
+              <div class="panel">
+                <div class="col-12 row m-0 p-0">
+                    <div class="col-sm-6">
+                    <label class="signup-template-upper-label" i18n>Import Error Codes</label>
+                    <button class="btn-uplaod btn" (click)="onSelectingFile(fileInput)">
+                      <span class="fa fa-cloud-upload icon-cloud"></span> 
+                      Upload
+                    </button>
+                    <span style="color:black">{{errorCodeFile}}</span>
+                    <input type="file" accept='.doc,.docx,.csv' class="d-none" (change)="onUpload($event)" #fileInput>
+                    </div>
+                    <div class="col-sm-6 text-right">
+                        <button id="create-button" class="" (click)="exportErrorCodes()">
+                            <ng-container i18n>Export Error Codes</ng-container>
+                          </button>
+                    </div>
+                </div>
+                <!-- <div class="col-6 text-right">
+                  <button id="create-button" class="" (click)="updateErrorCodes()">
+                    <ng-container i18n>Update</ng-container>
+                  </button>
+                </div> -->
+              </div>
+            </div>
+        <!-- Default dashboard view -->
+        <div class="form-group">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Default Dashboard View</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="col-12 row m-0 p-0">
+              <div class="col-sm-6">
+                <label class="signup-template-upper-label" i18n>DEFAULT DASHBOARD VIEW</label>
+                <input disabled type="text" pInputText value="Map View" class="form-control">
+              </div>
+            </div>
+          
+          </div>
+        </div>
+
+        <!-- Dashboard View -->
+        <div class="form-group">
+          <h5 class="page-sub-heading" style="display:none;">
+            <ng-container i18n>Default Account Settings</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="col-12 row m-0 p-0">
+              <div class="col-sm-6">
+                <label class="signup-template-upper-label" i18n>Default Account Settings</label>
+                <input disabled type="text" pInputText value="Task View" class="form-control">
+              </div>
+            </div>
+         
+          </div>
+        </div>
+
+        <!-- Language -->
+        <div class="form-group">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Language</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="col-12 row m-0 p-0 lang-box" style="display: flex; flex-direction: column">
+              <div class="col-sm-6">
+                <label class="signup-template-upper-label" i18n>DASHBOARD LANGUAGE</label>
+                <input disabled type="text" pInputText value="English" [pKeyFilter]="commonService.blockSpecial" class="form-control">
+                <!-- <p-dropdown [options]="languageOptions" optionLabel="label" [(ngModel)]="dashboardLang" filter="true" resetFilterOnHide="true"></p-dropdown> -->
+              </div>
+              <div class="col-sm-6" style="margin-top: 20px">
+                <label class="signup-template-upper-label" i18n>TRACKING LINK LANGUAGE</label>
+                <input disabled type="text" pInputText value="English" [pKeyFilter]="commonService.blockSpecial" class="form-control">
+                <!-- <p-dropdown [options]="languageOptions" optionLabel="label" [(ngModel)]="trackingLang" filter="true" resetFilterOnHide="true"></p-dropdown> -->
+              </div>
+            </div>
+            <div class="col-12 text-right" style="display:none;">
+              <button id="create-button" class="" (click)="updateActionForType('tracking_language');updateActionForType('language');">
+                <ng-container i18n>Update</ng-container>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Date time format -->
+        <div class="form-group">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Date Time Format</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="col-12 row m-0 p-0 lang-box" style="display: flex; flex-direction: column">
+              <div class="col-sm-6">
+                <label class="signup-template-upper-label" i18n>DATE FORMAT</label>
+                <p-dropdown [options]="dateFormatOptions" optionLabel="label" [(ngModel)]="dateFormat" filter="true" resetFilterOnHide="true"></p-dropdown>
+              </div>
+              <div class="col-sm-6" style="margin-top: 20px">
+                <label class="signup-template-upper-label" i18n>TIME FORMAT</label>
+                <p-dropdown [options]="timeFormatOptions" optionLabel="label" [(ngModel)]="timeFormat" filter="true" resetFilterOnHide="true"></p-dropdown>
+              </div>
+            </div>
+            <div class="col-12 text-right">
+              <button id="create-button" class="" (click)="updateActionForType('date_format');updateActionForType('time_format');">
+                <ng-container i18n>Update</ng-container>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Distance Unit -->
+        <div class="form-group">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Distance Unit</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="col-12 row m-0 p-0">
+              <div class="col-sm-6">
+                <label class="signup-template-upper-label" i18n>UNIT</label>
+                <p-dropdown [options]="distanceOptions" optionLabel="label" [(ngModel)]="distanceUnit"></p-dropdown>
+              </div>
+            </div>
+            <div class="col-12 text-right">
+              <button id="create-button" class="" (click)="updateActionForType('distance_in')">
+                <ng-container i18n>Update</ng-container>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Customer signup setup -->
+        <div style="display: none;" class="form-group mobile-signup" *ngIf="!!!commonService.loginData.is_dispatcher &&  customerSignupActive">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Customer Signup Setup</ng-container>
+          </h5>
+          <div class="panel">
+            <form [formGroup]="customerSignupForm">
+              <div class="col-12 row m-0 p-0">
+                <div class="col-sm-9">
+                  <label class="signup-template-upper-label" i18n>SELECT TEMPLATE</label>
+                  <p-dropdown [options]="templateOptions" filter="true" resetFilterOnHide="true" placeholder="Select Template" formControlName="selected_template"
+                    (onChange)="onTemplateSelection()" optionLabel="template" [placeholder]="customerSignupForm.controls.signup_template_name.value">
+                    <ng-template let-item pTemplate="selectedItem">
+                      <span>{{item.label | removeUnderscore}}</span>
+                    </ng-template>
+                    <ng-template let-car pTemplate="item">
+                      <span>
+                        {{car.label | removeUnderscore}}
+                      </span>
+                    </ng-template>
+                  </p-dropdown>
+                </div>
+                <div class="col-sm-3 text-right mob-ver">
+                  <label class="switch switch custom-switch" style="margin-bottom: 0px;">
+                    <input type="checkbox" formControlName="auto_verify_signup">
+                    <span></span>
+                  </label>
+                  <p class="sm-font" i18n>Auto Verification</p>
+                </div>
+              </div>
+
+              <div class="col-12 row m-0 p-0">
+                <div class="col-sm-9 template-select-box">
+                  <label class="signup-template-upper-label" i18n>AWAITING VERIFICATION TEXT</label>
+                  <div class="tool-tip">
+                    <i class="fa fa-info-circle " pTooltip="This message will be shown to the customer when he is awaiting verification" tooltipPosition="top"></i>
+                  </div>
+                  <textarea class="verification-text" placeholder="Awaiting verification text" i18n-placeholder formControlName="vendor_signup_info"
+                    maxlength="140">
+                </textarea>
+                  <div class="verify-char">
+                    <label class="characters-label">{{140 - customerSignupForm.controls.vendor_signup_info.value.length}}
+                      <ng-container i18n>characters remaining</ng-container>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 fullwidth text-left d-flex align-items-center mob-tag">
+                <label class="switch switch custom-switch" style="margin-bottom: 0px;">
+                  <input type="checkbox" formControlName="is_editable">
+                  <span></span>
+                </label>
+                <label class="signup-template-upper-label pl-1" i18n>ALLOW CUSTOMER TO EDIT SIGNUP TEMPLATE AFTER VERIFCATION</label>
+              </div>
+
+              <div class="col-12 text-right">
+                <button id="create-button" class="" (click)="onUpdateVendorSignup()">
+                  <ng-container i18n>Update</ng-container>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- Customer Data Protection -->
+        <div class="form-group" *ngIf="!!!commonService.loginData.is_dispatcher">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Customer Data Protection</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="taskHeader">
+              <div class="col-12">
+                <p class="taskHeaderSub tk-para">
+                  <ng-container>Mark this setting to control accessibility of your customer’s data across teams. If this option is selected,
+                    managers will be limited to only customer profile’s who have previously had tasks in their assigned teams.</ng-container>.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 row m-0 ">
+              <div class="col-12 col-md-3 p-l-0">
+                <label class="checkbox-box ">
+                  <div class="check-radio">
+                    <input value="1" type="checkbox" id="radio-dmr" [(ngModel)]="disableCustomerTeam" (change)="onDisableCustomerTeam($event)">
+                    <span class="tf check"></span>
+                  </div>
+                  <label for="radio-dmr" class="radio-ck-label" i18n>Enable Controlled Access</label>
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Customer Rating-->
+        <div class="form-group" *ngIf="!!!commonService.loginData.is_dispatcher">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Tracking Link Settings</ng-container>
+          </h5>
+          <div class="panel">
+            <div class="taskHeader">
+              <!-- Customer tracking -->
+              <div class="col-12">
+                <p class="taskHeaderSub tk-para">
+                  <ng-container i18n>Disable customer rating option on tracking link when tasks get completed</ng-container>.
+                </p>
+              </div>
+            </div>
+            <div class="col-12 row m-0 ">
+              <div class="col-12 col-md-3 p-l-0">
+                <label class="checkbox-box ">
+                  <div class="check-radio">
+                    <input value="1" type="checkbox" id="radio-dmr-2" [(ngModel)]="customerRating" (change)="updateCustomerRating($event,'disable_rating')">
+                    <span class="tf check"></span>
+                  </div>
+                  <label for="radio-dmr-2" class="radio-ck-label" i18n>Disable Ratings on Tracking Link</label>
+                </label>
+              </div>
+            </div>
+            <!-- Tracking Link -->
+            <div class="" *ngIf="commonService.loginData.layout_type == 0">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    <ng-container i18n>Enable single tracking link for connected tasks</ng-container>.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 row m-0 ">
+                <div class="col-12 col-md-3 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-dmr-3" [(ngModel)]="openTrackingLink" (change)="updateCustomerRating($event,'single_tracking')">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-dmr-3" class="radio-ck-label" i18n>Enable Single Tracking Link</label>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <!-- Customer Rating-->
+        <div style="display: none;" class="form-group" *ngIf="!!!commonService.loginData.is_dispatcher">
+          <h5 class="page-sub-heading">
+            <ng-container i18n>Auto Allocation Settings</ng-container>
+          </h5>
+          <div class="panel">
+            <!-- Auto Allocation Settings -->
+            <div class="" *ngIf="!!!commonService.loginData.is_dispatcher">
+              <div class="taskHeader">
+                <div class="col-12">
+                  <p class="taskHeaderSub tk-para">
+                    <ng-container i18n>Enable Allocation settings at team level. This will enable Managers to override settings for their teams.
+                      You will have to additionally provide access to Managers in their profile section.</ng-container>.
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 row m-0 ">
+                <div class="col-12 col-md-3 p-l-0">
+                  <label class="checkbox-box ">
+                    <div class="check-radio">
+                      <input value="1" type="checkbox" id="radio-dmr-4" [(ngModel)]="enableAutoAllocationTeamLevel" (change)="updateCustomerRating($event,'team_level_auto_assignment')">
+                      <span class="tf check"></span>
+                    </div>
+                    <label for="radio-dmr-4" class="radio-ck-label" i18n>Enable Auto Allocation at Team level</label>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+</div>
+
+<div id="dropdown-overlay" (click)="hideDropdown()" [ngClass]="{'show': viewDropdown == dropDownEnum.DROPDOWN_ONE || viewDropdown == dropDownEnum.DROPDOWN_TWO || viewDropdown == dropDownEnum.DROPDOWN_THREE }">
+</div>

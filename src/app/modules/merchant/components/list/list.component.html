@@ -1,0 +1,156 @@
+<div style="background-color:  #fafafa" class="container-dispatcher-page  ele-ht">
+    <div class="col-12 row inner-paddin p-1 m-0">
+        <!-- <div class="top">
+        <div class="merchant-filter">
+          <label class="merchant-filter">
+            <input type="text" class="search-merchant" placeholder="Search Merchant">
+            <div class="tf-search">
+              <i class="tf search icon_search"></i>
+            </div>
+          </label>
+        </div>
+      </div> -->
+        <!-- DYNAMIC TABLE -->
+        <div class="merchant-table">
+            <!-- Table -->
+            <p-table #dt [columns]="columns" [responsive]="true" [value]="merchantsData" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true" [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,merchantsData)"
+                (onFilter)="onFilterChange($event)" (onSort)="onPageChange({ rows: +rows, first: 0 },rows,merchantsData)" [autoLayout]="true">
+                <ng-template pTemplate="caption">
+                    <div class="search-control">
+                        <i class="tf search icon_search tf-search"></i>
+                        <input type="text" class="search-merchant" pInputText size="50" placeholder="Search Enterprise Platform" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th style="width:64px" [pSortableColumn]="'id'" class="table-head pl-2">
+                            <ng-container i18n>ID</ng-container>
+                            <p-sortIcon [field]="'id'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'company_name'">
+                            <ng-container i18n>Enterprise Platform Name</ng-container>
+                            <p-sortIcon [field]="'company_name'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'username'">
+                            <ng-container i18n>Contact Person</ng-container>
+                            <p-sortIcon [field]="'username'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'phone'">
+                            <ng-container i18n>PHONE</ng-container>
+                            <p-sortIcon [field]="'phone'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'email'">
+                            <ng-container i18n>EMAIL</ng-container>
+                            <p-sortIcon [field]="'email'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'company_address'">
+                            <ng-container i18n>ADDRESS</ng-container>
+                            <p-sortIcon [field]="'company_address'"></p-sortIcon>
+                        </th>
+                        <th [pSortableColumn]="'is_blocked'">
+                            <ng-container i18n>STATUS</ng-container>
+                            <p-sortIcon [field]="'is_blocked'"></p-sortIcon>
+                        </th>
+                        <th class="table-head pr-5" style="width:50px">
+                            <ng-container i18n>ACTIONS</ng-container>
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-item>
+
+                    <tr class="row-bg-color">
+                        <td style="width:64px; padding-left: 15px">
+                            <span class="ui-column-title">ID</span> {{item.id}}
+                        </td>
+                        <td>
+                            <span class="ui-column-title">AFFILIATE PROGRAM NAME</span> {{item.company_name}}
+                        </td>
+                        <td class="table-item">
+                            <div class="ui-column-title">USERNAME</div>
+                            <div>
+                                {{item.username}}
+                            </div>
+                        </td>
+                        <td>
+                            <span class="ui-column-title">PHONE</span> {{item.phone}}
+                        </td>
+                        <td>
+                            <span class="ui-column-title">EMAIL</span> {{item.email}}
+                        </td>
+                        <td class="table-item">
+                            <div class="ui-column-title">ADDRESS</div>
+                            <div> {{item.company_address}}
+                            </div>
+
+                        </td>
+                        <td class="green-color" [ngClass]="{'red-color': !!!item.is_active}">
+                            <span class="ui-column-title" style="color: #767A8C">STATUS</span> {{item.is_active ?'Active': 'Blocked' }}
+                        </td>
+                        <td class="actions-td ">
+                            <span class="ui-column-title">ACTIONS</span>
+                            <div class="menu-box">
+                                <i class="tf more-menu" (click)="showActionMenu($event)"></i>
+                                <ul class="menu-list" id="actionMenu">
+                                    <li class="list-item" (click)="editMerchant(item)">
+                                        <ng-container i18n>Edit</ng-container>
+                                    </li>
+                                    <li class="list-item" (click)="blockMerchantItem(item)">
+                                        <ng-container i18n>{{item.is_active ? 'Block': 'Unblock'}}</ng-container>
+                                    </li>
+                                    <!-- <li class="list-item" (click)="previewMerchant(item)">
+                    <ng-container i18n>Preview</ng-container>
+                  </li> -->
+                                    <!-- <li class="list-item" (click)="deleteMerchantItem(item)">
+                                        <ng-container i18n>Delete</ng-container>
+                                    </li> -->
+                                    <li class="list-item" (click)="openDashboard(item)">
+                                        <ng-container i18n>View</ng-container>
+                                    </li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="paginatorleft" let-state>
+                    <div>
+                        {{infotext}}
+                    </div>
+                </ng-template>
+                <ng-template pTemplate="paginatorright">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <select class="custom-dropdown" [(ngModel)]="rows" (change)="onPageChange({ rows: +rows, first: 0 },rows,merchantsData)">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+              </select>
+                        </div>
+                        <div class="paginatorCaption d-flex align-items-center">
+                            <ng-container i18n>records per page</ng-container>
+                        </div>
+                    </div>
+                </ng-template>
+
+                <ng-template pTemplate="emptymessage">
+                    <tr>
+                        <td [attr.colspan]="columns.length">
+                            No Data Available
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+        </div>
+
+    </div>
+</div>
+
+
+<ng-template #buttonTemplate>
+    <li>
+        <button type="button" class="btn btn-primary dev-add-button" (click)="addMerchantPopup()">
+      <ng-container i18n>Add Enterprise Platform</ng-container>
+    </button>
+    </li>
+
+</ng-template>

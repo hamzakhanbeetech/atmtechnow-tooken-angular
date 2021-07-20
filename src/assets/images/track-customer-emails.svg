@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>6BA61056-CBBA-4F13-982D-BD6CE8BE74E5</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M5.9715723,4.79616347e-13 C2.67356399,4.79616347e-13 -2.91322522e-13,2.67863712 -2.91322522e-13,5.97643348 L-2.91322522e-13,41.0235665 C-2.91322522e-13,44.3242596 2.67277112,47 5.9715723,47 L61.1526487,47 C64.450657,47 67.124221,44.3213629 67.124221,41.0235665 L67.124221,5.97643348 C67.124221,2.67574041 64.4514499,4.79616347e-13 61.1526487,4.79616347e-13 L5.9715723,4.79616347e-13 Z" id="path-1"></path>
+        <path d="M-2.91322522e-13,4.79616347e-13 L30.0081227,26.6417692 C31.9703076,28.4036667 35.1527148,28.4036667 37.1160983,26.6417692 L67.124221,4.79616347e-13 L-2.91322522e-13,4.79616347e-13 L-2.91322522e-13,4.79616347e-13 Z" id="path-3"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.138983243 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="16---Add-Ons" transform="translate(-968.000000, -1339.000000)">
+            <g id="track-customer-emails" transform="translate(966.000000, 1337.000000)">
+                <g id="Group" transform="translate(2.000000, 62.000000)" fill="#DDDDDD">
+                    <rect id="Rectangle" x="0" y="0" width="80" height="4" rx="2"></rect>
+                    <rect id="Rectangle-Copy" x="10" y="8" width="60" height="4" rx="2"></rect>
+                    <rect id="Rectangle-Copy-2" x="20" y="16" width="40" height="4" rx="2"></rect>
+                </g>
+                <g id="Group-30" transform="translate(42.000000, 37.500000) rotate(30.000000) translate(-42.000000, -37.500000) translate(8.000000, 14.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#3D87E2" xlink:href="#path-1"></use>
+                    <path d="M37.1160983,26.6417692 C35.1539135,28.4036667 31.9715062,28.4036667 30.0081227,26.6417692 L27.5065469,24.4207179 C19.6805819,31.443 -5.61328761e-13,47 -5.61328761e-13,47 L25.8991615,47 L41.2262582,47 L67.124221,47 C67.124221,47 47.4436391,31.443 39.6176742,24.4207179 L37.1160983,26.6417692 L37.1160983,26.6417692 Z" id="Shape" fill="#4695F6" mask="url(#mask-2)"></path>
+                    <g id="Shape" mask="url(#mask-2)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#4695F6" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

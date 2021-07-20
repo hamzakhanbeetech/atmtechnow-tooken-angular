@@ -1,0 +1,111 @@
+<div class="container-dispatcher-page  ele-ht">
+
+  <div class="col-12 row inner-padding">
+    <div class="fullwidth">
+      <h2 class="page-heading" i18n>Call History</h2>
+      <p class="main-sub-heading pro-rg-font">
+        <ng-container i18n>Connect your agents and customers through video calls. Facility to record calls for future reference.</ng-container>
+      </p>
+    </div>
+  </div>
+
+  <div class="table-responsive pg-ctnr ov-y-a bg-light-lite  fancy-table-outer inner-padding">
+    <div class="fullwidth">
+      <div class="table-responsive">
+        <!-- Table -->
+        <p-table #dt [columns]="columns" [value]="agentCallHistoryData" [paginator]="true" [pageLinks]="8" [alwaysShowPaginator]="true"
+          [rows]="rows" [totalRecords]="totalRecords" [style]="{width:'100%'}" (onPage)="onPageChange($event,rows,agentCallHistoryData)"
+          (onFilter)="onFilterChange($event)" (onSort)="onPageChange({ rows: +rows, first: 0 },rows,agentCallHistoryData)">
+          <ng-template pTemplate="caption">
+            <div class="search-control">
+              <i class="tf search icon_search"></i>
+              <input type="text" class="column-search" pInputText size="50" placeholder="Search" i18n-placeholder (input)="dt.filterGlobal($event.target.value, 'contains')">
+            </div>
+          </ng-template>
+          <ng-template pTemplate="header">
+            <tr>
+              <th [pSortableColumn]="'job_id'" class="">
+                <ng-container i18n>Order Id</ng-container>
+                <p-sortIcon [field]="'job_id'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'customer_name'" class="">
+                <ng-container i18n>Customer Name</ng-container>
+                <p-sortIcon [field]="'customer_name'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'date'" class="">
+                <ng-container i18n>Date</ng-container>
+                <p-sortIcon [field]="'date'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'time'" class="">
+                <ng-container i18n>Time</ng-container>
+                <p-sortIcon [field]="'time'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'call_duration'" class="">
+                <ng-container i18n>Duration</ng-container>
+                <p-sortIcon [field]="'call_duration'"></p-sortIcon>
+              </th>
+              <th [pSortableColumn]="'initiated_by'" class="">
+                <ng-container i18n>Incoming/Outgoing</ng-container>
+                <p-sortIcon [field]="'initiated_by'"></p-sortIcon>
+              </th>
+
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-item>
+              <tr class="row-bg-color">
+                <td><a class="opentok-link" (click)="fetchUrl(item.job_id)">{{item.job_id}}</a></td>
+                <td>{{item.customer_name}}</td>
+                <td>{{item.call_initiated_datetime | date : (commonService.loginData.date_format_angular5+' '+commonService.loginData.time_format)}}</td>
+                <td>{{item.call_initiated_datetime | date : (commonService.loginData.date_format_angular5+' '+commonService.loginData.time_format)}}</td>
+                <td>{{item.call_duration}}</td>
+                <td>{{item.initiated_by ? 'Outgoing' : 'Incoming' }}</td>
+              </tr>
+            </ng-template>
+
+          <ng-template pTemplate="paginatorleft" let-state>
+            <div>
+              {{infotext}}
+            </div>
+            <br>
+            <span class="note-class">*Click on order ID to access the recorded videos.</span>
+          </ng-template>
+          <ng-template pTemplate="paginatorright">
+            <div class="d-flex align-items-center">
+              <div>
+                <select class="custom-dropdown" [(ngModel)]="rows" (change)="onPageChange({ rows: +rows, first: 0 },rows,agentCallHistoryData)">
+                  <option value="10">10</option>
+                  <option value="25">25</option>
+                  <option value="50">50</option>
+                </select>
+              </div>
+              <div class="paginatorCaption d-flex align-items-center">
+                <ng-container i18n>records per page</ng-container>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template pTemplate="emptymessage" let-columns>
+            <tr>
+              <td [attr.colspan]="columns.length">
+                No Data Available
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<ng-template #buttonTemplate>
+  <li>
+    <p-dropdown (onChange)="onSelectedAgentCallHistory(false)" [(dropdownIcon)]="dropdownIcon" (onClick)="dropdownIcon==dropdownUpIcon?dropdownIcon=dropdownDownIcon:dropdownIcon=dropdownUpIcon"
+      [options]="agentOptions" [autoDisplayFirst]="true" optionLabel="username" [(ngModel)]="selectedAgent" placeholder="Choose an Agent"></p-dropdown>
+  </li>
+  <li>
+    <input type="text" placeholder="Choose a Date" class="date-form-control" 
+    [bsConfig]="bsConfig"
+    [(ngModel)]="selectedDate" (onHidden)="onSelectedAgentCallHistory(false)" bsDaterangepicker>
+    <!-- <p-calendar  [(ngModel)]=" bsValueChange selectedDate" selectionMode="range" readonlyInput="true" (onSelect)="onSelectedAgentCallHistory()"></p-calendar> -->
+  </li>
+</ng-template>
