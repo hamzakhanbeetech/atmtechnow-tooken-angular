@@ -1,0 +1,27 @@
+button#create-button {
+    color: white;
+    background-color: #007bff;
+    border-radius: 25px;
+    border: 2px solid;
+    cursor: pointer;
+    width: 130px;
+    &:hover {
+      color: #007bff;
+      background-color: white;
+      border: solid 2px #007bff;
+    }
+  }
+  
+  button#close-button {
+    color: #293038;
+    border: solid 2px #e2e4e6;
+    background-color: #e2e4e6;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 130px;
+    &:hover {
+      color: #293038;
+      border: solid 2px #e2e4e6;
+      background-color: #e2e4e6;
+    }
+  }

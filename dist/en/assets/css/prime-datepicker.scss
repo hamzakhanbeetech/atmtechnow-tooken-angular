@@ -1,0 +1,101 @@
+   /* ------------------ Date Picker ----------------------*/
+   :host /deep/ .exp-date .ui-fluid .ui-datepicker {
+    width: 100%;
+}
+:host /deep/ .exp-date .ui-calendar {
+  position: relative;
+  display: inline-block;
+}
+
+:host /deep/ .exp-date .ui-inputtext {
+  margin: 0;
+  outline: medium none;
+  padding: .25em;
+  background: #fff;
+  color: #222;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+:host /deep/ .exp-date .ui-corner-all {
+  border-radius: 3px;
+}
+:host /deep/ .exp-date .ui-state-default {
+  border: 1px solid #d6d6d6;
+}
+
+:host /deep/ .exp-date .ui-datepicker .ui-widget {
+  padding: 0;
+  display: block;
+  z-index: 7;
+  top: 25px;
+  left: 0px;
+  background-color: #fff !important;
+  opacity: 1;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget .ui-datepicker-header {
+  background-color: gray;
+  border-radius: 0;
+  border-top: 0 none;
+  border-left: 0 none;
+  border-right: 0 none;
+  color: white;
+}
+
+:host /deep/ .exp-date .ui-datepicker .ui-datepicker-prev {
+  color: white;
+  top: .125em;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+:host /deep/ .exp-date .ui-datepicker .ui-datepicker-next {
+  color: white;
+  top: .125em;
+  width: 1.8em;
+  height: 1.8em;
+}
+
+:host /deep/ .exp-date .ui-datepicker .ui-datepicker-title {
+  margin: 0 2.3em;
+  line-height: 1.8em;
+  text-align: center;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-active {
+  background-color: #186ba0;
+  color: #fff;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget .ui-datepicker-calendar td a {
+  border: 0 none;
+  text-align: center;
+  padding: 8px;
+}
+
+:host /deep/ .exp-date .ui-state-active {
+  border-color: #bebebe;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget .ui-datepicker-calendar td {
+  border-bottom: 1px solid hsla(0,0%,84%,.5);
+  padding: 0;
+}
+
+:host /deep/ .exp-date .ui-chips > ul.ui-inputtext {
+  border: none;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-highlight {
+  background-color: #d6d6d6;
+  color: #212121;
+}
+
+:host /deep/ .exp-date .ui-datepicker.ui-widget.ui-widget-content.ui-helper-clearfix.ui-corner-all.ui-shadow {
+  background-color: #fff !important;
+}
+
+:host /deep/ .exp-date .ui-state-disabled, .ui-state-disabled a {
+  color: rgb(160, 139, 139);
+}

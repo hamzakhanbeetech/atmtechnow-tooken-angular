@@ -1,0 +1,48 @@
+
+@import '~assets/css/variables';
+
+.radio, .radio label{
+  cursor: pointer;  
+}
+.radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+.radio input[type="radio"] + .radio-label:before {
+  content: '';
+  background: white;
+  border-radius: 100%;
+  border: 1px solid #ccc;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: -0.2em;
+  margin-right: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  text-align: center;
+  transition: all 250ms ease;
+}
+.radio input[type="radio"]:checked + .radio-label:before {
+  border-color: $color-radio;  
+  background-color: $color-radio;
+  box-shadow: inset 0 0 0 2px white;
+}
+.radio input[type="radio"]:focus + .radio-label:before, .radio input[type="radio"]:hover + .radio-label:before  {
+  outline: none;
+  border-color: $color-radio;
+}
+.radio input[type="radio"]:disabled + .radio-label:before {
+  box-shadow: inset 0 0 0 2px white !important;
+  border-color: #b4b4b4 !important;
+  background: white !important;
+  cursor: not-allowed !important;
+}
+.radio input[type="radio"] + .radio-label:empty:before {
+  margin-right: 0;
+}
+.radio-label{
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
